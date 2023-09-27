@@ -10,7 +10,6 @@ public class NextLevelButton : MonoBehaviour
     private Button _nextLevelButton;
     private EnderLevel _enderLevel;
     private Player _player;
-    private Saver _saver;
 
     private string _currentLevelName;
 
@@ -20,7 +19,6 @@ public class NextLevelButton : MonoBehaviour
         {
             _enderLevel = FindObjectOfType<EnderLevel>();
             _player = FindObjectOfType<Player>();
-            _saver = FindObjectOfType<Saver>();
         }
 
         _currentLevelName = SceneManager.GetActiveScene().name;
@@ -36,9 +34,6 @@ public class NextLevelButton : MonoBehaviour
 
     private void OnNextLevelButtonClick()
     {
-        _saver.SaveData();
-        _saver.SaveDataInCloud();
-
         SceneManager.LoadScene(_enderLevel.NextSceneName);        
     }
 
