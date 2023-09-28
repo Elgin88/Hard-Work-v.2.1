@@ -1,3 +1,4 @@
+using System.Collections;
 using Agava.YandexGames;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -11,6 +12,8 @@ public class NextLevelButton : MonoBehaviour
     private EnderLevel _enderLevel;
     private Player _player;
     private Saver _saver;
+    private WaitForSeconds _delay = new WaitForSeconds(0.5f);
+
 
     private string _currentLevelName;
 
@@ -37,7 +40,18 @@ public class NextLevelButton : MonoBehaviour
     private void OnNextLevelButtonClick()
     {
         _saver.SaveData();
-        SceneManager.LoadScene(_enderLevel.NextSceneName);        
+
+        StartCoroutine(LoadNextLevel());
+             
+    }
+
+    private IEnumerator LoadNextLevel()
+    {
+        yield return _delay;
+
+        SceneManager.LoadScene(_enderLevel.NextSceneName);
+
+        yield break;
     }
 
     private void ShowVideoInBrauser()
