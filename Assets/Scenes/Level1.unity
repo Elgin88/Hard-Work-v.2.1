@@ -23550,7 +23550,6 @@ GameObject:
   - component: {fileID: 1852628426}
   - component: {fileID: 1852628435}
   - component: {fileID: 1852628433}
-  - component: {fileID: 1852628436}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -23746,19 +23745,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b255e04cb3f34d79a5d79324ce7bc87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _audioMixer: {fileID: 24100000, guid: 5ae604ac24b2745a8bdf8b6fc2f40833, type: 2}
---- !u!114 &1852628436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852628423}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be13f86ad1a71402ab1314d0b0065276, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1863736410

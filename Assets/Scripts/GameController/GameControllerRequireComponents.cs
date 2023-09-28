@@ -7,7 +7,6 @@ using UnityEngine;
 [RequireComponent(typeof(EnderLevel))]
 [RequireComponent(typeof(ChooserMedals))]
 [RequireComponent(typeof(MuteSounds))]
-[RequireComponent(typeof(MaximizedWindowChecker))]
 
 [RequireComponent(typeof(AudioSource))]
 [RequireComponent(typeof(AudioSource))]
