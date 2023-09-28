@@ -8,6 +8,8 @@ using UnityEngine;
 [RequireComponent(typeof(ChooserMedals))]
 [RequireComponent(typeof(TurnOffSoundWhenMinimizingGame))]
 [RequireComponent(typeof(SoundController))]
+[RequireComponent(typeof(Saver))]
+[RequireComponent(typeof(Loader))]
 
 [RequireComponent(typeof(AudioSource))]
 [RequireComponent(typeof(AudioSource))]

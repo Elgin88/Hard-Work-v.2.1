@@ -5,17 +5,19 @@ using UnityEngine.UI;
 
 public class StartGameButton : MonoBehaviour
 {
-    [SerializeField] private string _loadLevelName;
     [SerializeField] private Button _button;
     [SerializeField] private AudioSource _audio;
 
+    private Loader _loader;
     private string _level1Name = "Level1";
+    private string _nameSceneForLoad;
 
     private WaitForSeconds _delay = new WaitForSeconds(0.5f);
     private Coroutine _loadScene;
 
     private void OnEnable()
     {
+        _loader = FindObjectOfType<Loader>();
         _button.onClick.AddListener(OnButtonClick);
     }
 
@@ -23,7 +25,12 @@ public class StartGameButton : MonoBehaviour
     {
         _audio.Play();
 
-        _loadLevelName = _level1Name;
+        _nameSceneForLoad = _level1Name;
+
+        if (_loader.GetSceneNameForLoad() != "")
+        {
+            _nameSceneForLoad = _loader.GetSceneNameForLoad();
+        }       
 
         _loadScene = StartCoroutine(LoadScene());
     }
@@ -33,7 +40,7 @@ public class StartGameButton : MonoBehaviour
         while (true)
         {
             yield return _delay;
-            SceneManager.LoadScene(_loadLevelName);
+            SceneManager.LoadScene(_nameSceneForLoad);
         }
     }
 }

@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     private Unloader _unloader;
     private Vector3 _collectionPointPosition;
     private int _money;
+    private Loader _loader;
 
     public PlayerSoundController SoundController => _soundController;
     public PlayerLoadController LoadController => _loadController;
@@ -35,12 +36,15 @@ public class Player : MonoBehaviour
     private void Start()
     {
         _collectionPointPosition = FindObjectOfType<CollectionPoint>().transform.position;
+        _loader = FindObjectOfType<Loader>();
 
         _mover = GetComponent<PlayerMover>();
         _loadController = GetComponent<PlayerLoadController>();
         _inventory = GetComponentInChildren<Inventory>();
         _unloader = GetComponentInChildren<Unloader>();
         _soundController = GetComponent<PlayerSoundController>();
+
+        _loader.SetPlayerMoney();
     }
 
     public void SlowDown()
