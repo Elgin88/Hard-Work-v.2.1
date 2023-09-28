@@ -8,8 +8,6 @@ public class GarageUI : MonoBehaviour
     [SerializeField] private float _rangeToClosePanel;
     [SerializeField] private GarageUI _garageUI;
 
-    private string _sceneName = "Level1";
-
     private DestroyerPoint _destroyerPoint;
     private GarageParkingArea _garageParkingArea;
     

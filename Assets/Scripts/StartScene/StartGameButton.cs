@@ -10,7 +10,6 @@ public class StartGameButton : MonoBehaviour
     [SerializeField] private AudioSource _audio;
 
     private string _level1Name = "Level1";
-    private string _savedLevelName = "currentLevelName";
 
     private WaitForSeconds _delay = new WaitForSeconds(0.5f);
     private Coroutine _loadScene;

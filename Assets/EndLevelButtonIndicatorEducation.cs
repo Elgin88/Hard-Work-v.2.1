@@ -8,7 +8,6 @@ public class EndLevelButtonIndicatorEducation : MonoBehaviour
     private string _levelName = "Level1";
     private float _deltaRangeInProcent = 30;
     private float _timeOfFlashInSeconds = 0.3f;
-    private float _timeToOffIndicatorByPress = 0.8f;
 
     private RectTransform _rectTransform;
     private Coroutine _flash;
@@ -18,7 +17,6 @@ public class EndLevelButtonIndicatorEducation : MonoBehaviour
     private Vector3 _startScale;
     private Vector3 _currentScale;
     private Vector3 _targetScale;
-    private bool _isNeedBarrelsIndicators = true;
 
     private float _deltaSclale => (_targetScale.x - _startScale.x) / (_timeOfFlashInSeconds / Time.deltaTime);
 

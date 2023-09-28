@@ -39,12 +39,6 @@ public class NextLevelButton : MonoBehaviour
 
     private void ShowVideoInBrauser()
     {
-#if UNITY_EDITOR
-        return;
-#endif
 
-#if UNITY_WEBGL
-        VideoAd.Show();
-#endif
     }
 }
