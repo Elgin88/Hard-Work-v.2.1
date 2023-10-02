@@ -13,9 +13,10 @@ public class NextLevelButton : MonoBehaviour
     private Player _player;
     private Saver _saver;
     private WaitForSeconds _delay = new WaitForSeconds(0.5f);
-
-
+    private SoundController _soundController;
     private string _currentLevelName;
+    private VideoAdController _videoAdController;
+    private SoundController soundController;
 
     private void OnEnable()
     {
@@ -24,6 +25,9 @@ public class NextLevelButton : MonoBehaviour
             _enderLevel = FindObjectOfType<EnderLevel>();
             _player = FindObjectOfType<Player>();
             _saver = FindObjectOfType<Saver>();
+            _soundController = FindObjectOfType<SoundController>();
+            _videoAdController = FindObjectOfType<VideoAdController>();
+            soundController = FindObjectOfType<SoundController>();
         }
 
         _currentLevelName = SceneManager.GetActiveScene().name;
@@ -40,9 +44,9 @@ public class NextLevelButton : MonoBehaviour
     private void OnNextLevelButtonClick()
     {
         _saver.SaveData();
+        _saver.SavePrefsInCloud();
 
-        StartCoroutine(LoadNextLevel());
-             
+        StartCoroutine(LoadNextLevel());             
     }
 
     private IEnumerator LoadNextLevel()
@@ -51,11 +55,8 @@ public class NextLevelButton : MonoBehaviour
 
         SceneManager.LoadScene(_enderLevel.NextSceneName);
 
+        _videoAdController.ShowVideoAd();
+
         yield break;
-    }
-
-    private void ShowVideoInBrauser()
-    {
-
     }
 }

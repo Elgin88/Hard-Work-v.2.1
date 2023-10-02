@@ -6,8 +6,6 @@ using Agava.YandexGames;
 
 public class StarterSDK : MonoBehaviour
 {
-    [SerializeField] private TMP_Text _statusSDK;
-
     private IEnumerator Start()
     {
 #if UNITY_EDITOR
@@ -15,20 +13,7 @@ public class StarterSDK : MonoBehaviour
 #endif
 
 #if UNITY_WEBGL
-        yield return YandexGamesSdk.Initialize();
-        
+        yield return YandexGamesSdk.Initialize();        
 #endif
-    }
-
-    private void FixedUpdate()
-    {
-#if UNITY_EDITOR
-        return;
-#endif
-
-#if UNITY_WEBGL
-        _statusSDK.text = YandexGamesSdk.IsInitialized.ToString() + " - status SDK";
-#endif
-
     }
 }

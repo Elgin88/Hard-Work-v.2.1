@@ -17,7 +17,8 @@ public class PlayerSpeedSetter : MonoBehaviour
     [SerializeField] private float _pushChangeSpeed;
     [SerializeField] private float _delayPush;
 
-    private PlayerSoundController _soundController;
+    private PlayerSoundController _playerSoundController;
+
     private Player _player;
     private PlayerMover _playerMover;
     private Coroutine _changeSpeedWork;
@@ -32,12 +33,13 @@ public class PlayerSpeedSetter : MonoBehaviour
     public float MaxSpeed => _maxSpeed;
     public float MinSpeed => _minSpeed;
 
-    private void Start()
+    private void OnEnable()
     {
         _player = GetComponent<Player>();
         _playerMover = GetComponent<PlayerMover>();
         _playerFuelController = GetComponent<PlayerFuelController>();
-        _soundController = GetComponent<PlayerSoundController>();
+        _playerSoundController = GetComponent<PlayerSoundController>();
+
 
         _player.IsPushed += IsPushedPlayer;
 
@@ -60,7 +62,7 @@ public class PlayerSpeedSetter : MonoBehaviour
         {
             if (_playerMover.IsJoystickTurn == true & _playerFuelController.IsFuelLoss == false)
             {
-                _currentSpeed = Mathf.MoveTowards(_currentSpeed, _maxSpeed, _deltaUpSpeed * Time.deltaTime);
+                _currentSpeed = Mathf.MoveTowards(_currentSpeed, _maxSpeed, _deltaUpSpeed * Time.deltaTime);                
             }
             else
             {
@@ -70,8 +72,8 @@ public class PlayerSpeedSetter : MonoBehaviour
             if (_playerFuelController.IsFuelLoss == true)
             {
                 _playerMover.StopCoroutineMove();
-                _soundController.StopMinEngineSound();
-                _soundController.StopMaxEngineSound();
+                _playerSoundController.StopMinEngineSound();
+                _playerSoundController.StopMaxEngineSound();
             }
             else
             {

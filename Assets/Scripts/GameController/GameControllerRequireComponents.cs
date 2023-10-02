@@ -6,13 +6,12 @@ using UnityEngine;
 [RequireComponent(typeof(CalculatorBlocks))]
 [RequireComponent(typeof(EnderLevel))]
 [RequireComponent(typeof(ChooserMedals))]
-[RequireComponent(typeof(TurnOffSoundWhenMinimizingGame))]
 [RequireComponent(typeof(SoundController))]
+[RequireComponent(typeof(TurnOffSoundWhenMinimizingGame))]
 [RequireComponent(typeof(Saver))]
 [RequireComponent(typeof(Loader))]
-
-[RequireComponent(typeof(AudioSource))]
-[RequireComponent(typeof(AudioSource))]
+[RequireComponent(typeof(VideoAdController))]
+[RequireComponent(typeof(TurnOffSoundWhenOpenVideoAd))]
 
 public class GameControllerRequireComponents : MonoBehaviour
 {

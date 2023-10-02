@@ -22,16 +22,13 @@ public class PlayerFuelController : MonoBehaviour
 
     public event UnityAction <float, float> IsFuelChanged;
 
-    private void Start()
+    private void OnEnable()
     {
         _garage = FindObjectOfType<Garage>();
 
-        if (_speedSetter == null)
-        {
-            _speedSetter = FindObjectOfType<PlayerSpeedSetter>();
-        }
-
         _player = GetComponent<Player>();
+
+        _speedSetter = FindObjectOfType<PlayerSpeedSetter>();        
 
         _currentFuel = _maxFuel;
 
@@ -62,6 +59,11 @@ public class PlayerFuelController : MonoBehaviour
 
             yield return null;
         }
+    }
+
+    public void SetMaxFuel()
+    {
+        _currentFuel = _maxFuel;
     }
 
     private void StartBurnFuel()
