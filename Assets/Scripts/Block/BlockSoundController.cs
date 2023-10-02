@@ -14,10 +14,10 @@ public class BlockSoundController : MonoBehaviour
     {
         _player = player;
 
-        _audioSourseBlockFlyOnCar = _player.SoundController.BlockFly;
-        _audioSourseBlockSetOnCar = _player.SoundController.BlockSetOnCar;
-        _ausioSourseBlockFlyToCollector = _player.SoundController.BlockFlyToCollerctor;
-        _audioSourseBlockPlaceInCollector = _player.SoundController.BlockPlaceInCollector;
+        _audioSourseBlockFlyOnCar = _player.PlayerSoundController.BlockFly;
+        _audioSourseBlockSetOnCar = _player.PlayerSoundController.BlockSetOnCar;
+        _ausioSourseBlockFlyToCollector = _player.PlayerSoundController.BlockFlyToCollerctor;
+        _audioSourseBlockPlaceInCollector = _player.PlayerSoundController.BlockPlaceInCollector;
     }
 
     public void PlayFlyOnCarSFX()

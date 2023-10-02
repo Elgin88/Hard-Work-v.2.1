@@ -1,4 +1,4 @@
-using Agava.YandexGames;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -7,31 +7,18 @@ using UnityEngine.UI;
 
 public class NextLevelButton : MonoBehaviour
 {
-    private Button _nextLevelButton;
-    private EnderLevel _enderLevel;
-    private Player _player;
-    private Saver _saver;
-<<<<<<< HEAD
     private WaitForSeconds _delay = new WaitForSeconds(0.5f);
     private SoundController _soundController;
-=======
-
->>>>>>> parent of b114f62 (Save and Load without Cloud)
+    private EnderLevel _enderLevel;
+    private Button _nextLevelButton;
+    private Player _player;
     private string _currentLevelName;
-    private VideoAdController _videoAdController;
-    private SoundController soundController;
 
     private void OnEnable()
     {
-        if (_player == null)
-        {
-            _enderLevel = FindObjectOfType<EnderLevel>();
-            _player = FindObjectOfType<Player>();
-            _saver = FindObjectOfType<Saver>();
-            _soundController = FindObjectOfType<SoundController>();
-            _videoAdController = FindObjectOfType<VideoAdController>();
-            soundController = FindObjectOfType<SoundController>();
-        }
+        _enderLevel = FindObjectOfType<EnderLevel>();
+        _player = FindObjectOfType<Player>();
+        _soundController = FindObjectOfType<SoundController>();
 
         _currentLevelName = SceneManager.GetActiveScene().name;
 
@@ -46,10 +33,6 @@ public class NextLevelButton : MonoBehaviour
 
     private void OnNextLevelButtonClick()
     {
-        _saver.SaveData();
-<<<<<<< HEAD
-        _saver.SavePrefsInCloud();
-
         StartCoroutine(LoadNextLevel());             
     }
 
@@ -59,11 +42,6 @@ public class NextLevelButton : MonoBehaviour
 
         SceneManager.LoadScene(_enderLevel.NextSceneName);
 
-        _videoAdController.ShowVideoAd();
-
         yield break;
-=======
-        SceneManager.LoadScene(_enderLevel.NextSceneName);        
->>>>>>> parent of b114f62 (Save and Load without Cloud)
     }
 }

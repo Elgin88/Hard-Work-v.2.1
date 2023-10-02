@@ -8,7 +8,6 @@ public class StartGameButton : MonoBehaviour
     [SerializeField] private Button _button;
     [SerializeField] private AudioSource _audio;
 
-    private Loader _loader;
     private string _level1Name = "Level1";
     private string _nameSceneForLoad;
 
@@ -17,7 +16,6 @@ public class StartGameButton : MonoBehaviour
 
     private void OnEnable()
     {
-        _loader = FindObjectOfType<Loader>();
         _button.onClick.AddListener(OnButtonClick);
 
         _nameSceneForLoad = _level1Name;
@@ -25,14 +23,7 @@ public class StartGameButton : MonoBehaviour
 
     private void OnButtonClick()
     {
-        _audio.Play();        
-
-        _loader.LoadPrefsFromCloud();
-
-        if (_loader.GetSceneNameForLoad() != "")
-        {
-            _nameSceneForLoad = _loader.GetSceneNameForLoad();
-        }       
+        _audio.Play();
 
         _loadScene = StartCoroutine(LoadScene());
     }

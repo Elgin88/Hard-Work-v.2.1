@@ -29,7 +29,7 @@ public class PlayerDestroyerTakeDamagePoint : MonoBehaviour
         {
             _particle.gameObject.SetActive(true);
             _particle.Play();
-            _player.SoundController.PlayBlockHitBumberSound();
+            _player.PlayerSoundController.PlayBlockHitBumberSound();
         }
     }    
 }

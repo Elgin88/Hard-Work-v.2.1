@@ -6,8 +6,8 @@ public class SectionOfBlocks : MonoBehaviour
 {
     [SerializeField] private Block [] _blocks;
 
-    private int _numberOfBlocks;
     private Player _player;
+    private int _numberOfBlocks;
 
     public int NumberOfBlocks => _blocks.Length;
 
@@ -23,7 +23,7 @@ public class SectionOfBlocks : MonoBehaviour
                 block.Init(_player);
             }
 
-            _player.SoundController.PlayObjectDestractionSound();
+            _player.PlayerSoundController.PlayObjectDestractionSound();
 
             gameObject.SetActive(false);
         }

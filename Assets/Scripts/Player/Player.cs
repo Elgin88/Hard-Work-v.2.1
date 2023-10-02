@@ -11,17 +11,16 @@ public class Player : MonoBehaviour
     [SerializeField] private int _hightOfInventory;
     [SerializeField] private float _deltaTimeBetweeUnloadBlocks;
 
-    private PlayerSoundController _soundController;
-    private PlayerLoadController _loadController;
+    private PlayerSoundController _playerSoundController;
+    private PlayerLoadController _playerLoadController;
     private PlayerMover _mover;
     private Inventory _inventory;
     private Unloader _unloader;
     private Vector3 _collectionPointPosition;
     private int _money;
-    private Loader _loader;
 
-    public PlayerSoundController SoundController => _soundController;
-    public PlayerLoadController LoadController => _loadController;
+    public PlayerSoundController PlayerSoundController => _playerSoundController;
+    public PlayerLoadController LoadController => _playerLoadController;
     public Inventory Inventory => _inventory;
     public Unloader Unloader => _unloader;
     public Vector3 CollectionPOintPosition => _collectionPointPosition;
@@ -36,15 +35,12 @@ public class Player : MonoBehaviour
     private void Start()
     {
         _collectionPointPosition = FindObjectOfType<CollectionPoint>().transform.position;
-        _loader = FindObjectOfType<Loader>();
+        _playerSoundController = FindObjectOfType<PlayerSoundController>();
 
         _mover = GetComponent<PlayerMover>();
-        _loadController = GetComponent<PlayerLoadController>();
+        _playerLoadController = GetComponent<PlayerLoadController>();
         _inventory = GetComponentInChildren<Inventory>();
         _unloader = GetComponentInChildren<Unloader>();
-        _soundController = GetComponent<PlayerSoundController>();
-
-        _loader.SetPlayerMoney();
     }
 
     public void SlowDown()
