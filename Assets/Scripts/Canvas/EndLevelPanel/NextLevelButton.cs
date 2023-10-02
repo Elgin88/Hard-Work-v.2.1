@@ -1,4 +1,3 @@
-using System.Collections;
 using Agava.YandexGames;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -12,8 +11,12 @@ public class NextLevelButton : MonoBehaviour
     private EnderLevel _enderLevel;
     private Player _player;
     private Saver _saver;
+<<<<<<< HEAD
     private WaitForSeconds _delay = new WaitForSeconds(0.5f);
     private SoundController _soundController;
+=======
+
+>>>>>>> parent of b114f62 (Save and Load without Cloud)
     private string _currentLevelName;
     private VideoAdController _videoAdController;
     private SoundController soundController;
@@ -44,6 +47,7 @@ public class NextLevelButton : MonoBehaviour
     private void OnNextLevelButtonClick()
     {
         _saver.SaveData();
+<<<<<<< HEAD
         _saver.SavePrefsInCloud();
 
         StartCoroutine(LoadNextLevel());             
@@ -58,5 +62,8 @@ public class NextLevelButton : MonoBehaviour
         _videoAdController.ShowVideoAd();
 
         yield break;
+=======
+        SceneManager.LoadScene(_enderLevel.NextSceneName);        
+>>>>>>> parent of b114f62 (Save and Load without Cloud)
     }
 }
