@@ -7,6 +7,9 @@ using UnityEngine;
 [RequireComponent(typeof(EnderLevel))]
 [RequireComponent(typeof(ChooserMedals))]
 [RequireComponent(typeof(SoundController))]
+[RequireComponent(typeof(TurnOffSoundWhenMinimizingWindow))]
+[RequireComponent(typeof(Saver))]
+[RequireComponent(typeof(Loader))]
 
 public class GameControllerRequireComponents : MonoBehaviour
 {

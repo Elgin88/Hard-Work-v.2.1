@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class NextLevelButton : MonoBehaviour
 {
+    private Saver _saver;
     private WaitForSeconds _delay = new WaitForSeconds(0.5f);
     private SoundController _soundController;
     private EnderLevel _enderLevel;
@@ -19,6 +20,7 @@ public class NextLevelButton : MonoBehaviour
         _enderLevel = FindObjectOfType<EnderLevel>();
         _player = FindObjectOfType<Player>();
         _soundController = FindObjectOfType<SoundController>();
+        _saver = FindObjectOfType<Saver>();
 
         _currentLevelName = SceneManager.GetActiveScene().name;
 
@@ -33,6 +35,9 @@ public class NextLevelButton : MonoBehaviour
 
     private void OnNextLevelButtonClick()
     {
+        _saver.SaveData();
+        _saver.SaveDataInCloud();
+
         StartCoroutine(LoadNextLevel());             
     }
 
