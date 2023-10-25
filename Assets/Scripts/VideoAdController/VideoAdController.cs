@@ -21,14 +21,12 @@ public class VideoAdController : MonoBehaviour
 #endif
 
 #if UNITY_WEBGL
-        Debug.Log("1");
         Agava.YandexGames.VideoAd.Show(null, null, OnCloseVideoAd(), null); ;
 #endif
     }
 
     private Action OnCloseVideoAd()
     {
-        Debug.Log("2");
         _pauserController.PauseOff();
 
         return _onCloseVideoAdCallback;

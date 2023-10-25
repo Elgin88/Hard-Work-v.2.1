@@ -3,14 +3,13 @@ using UnityEngine;
 
 public class BlockFixer : MonoBehaviour
 {
+    [SerializeField] private Player _player;
+
     private Coroutine _fixBlock;
-    private Player _player;
     private Block _block;
 
     private void OnEnable()
     {
-        _player = FindObjectOfType<Player>();
-
         _block = GetComponent<Block>();
     }
 

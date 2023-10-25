@@ -9,16 +9,16 @@ using UnityEngine;
 
 public class Block : MonoBehaviour
 {
+    [SerializeField] private Player _player;
+
     private int _cost = 1;
 
     private BlockSoundController _soundController;
     private BlockMoverToCollector _blockMoverToCollector;
     private BlockMoverToPlayer _moverBlock;
     private BoxCollider _boxCollider;
-    private Rigidbody _rigidbody;
-    private Player _player;
+    private Rigidbody _rigidbody;    
     private Point _point;
-    private BlockSoundController _blockSoundController;
     private bool _playerIsUnload;
 
     public BlockMoverToCollector BlockMoverToCollector => _blockMoverToCollector;
@@ -29,8 +29,6 @@ public class Block : MonoBehaviour
 
     private void Start()
     {
-        _player = FindObjectOfType<Player>();
-
         _rigidbody = GetComponent<Rigidbody>();
         _boxCollider = GetComponent<BoxCollider>();
 

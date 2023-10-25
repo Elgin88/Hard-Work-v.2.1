@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class BlockSoundController : MonoBehaviour
 {
-    private PlayerSoundController _playerSoundController;
+    [SerializeField] private PlayerSoundController _playerSoundController;
+
     private AudioSource _audioSourseBlockFlyOnCar;
     private AudioSource _audioSourseBlockSetOnCar;
     private AudioSource _ausioSourseBlockFlyToCollector;
@@ -12,8 +13,6 @@ public class BlockSoundController : MonoBehaviour
 
     private void Start()
     {
-        _playerSoundController = FindObjectOfType<PlayerSoundController>();
-
         _audioSourseBlockFlyOnCar = _playerSoundController.BlockFly;
         _audioSourseBlockSetOnCar = _playerSoundController.BlockSetOnCar;
         _ausioSourseBlockFlyToCollector = _playerSoundController.BlockFlyToCollerctor;

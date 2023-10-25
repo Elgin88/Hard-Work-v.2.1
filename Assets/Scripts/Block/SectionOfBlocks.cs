@@ -6,9 +6,7 @@ using UnityEngine;
 public class SectionOfBlocks : MonoBehaviour
 {
     [SerializeField] private Block [] _blocks;
-
     [SerializeField] private Player _player;
-    [SerializeField] private CalculatorBlocks _calculatorBlocks;
 
     private Coroutine _activeBlocks;
     private int _requireNumberActiveBlocks = 3;
@@ -18,10 +16,10 @@ public class SectionOfBlocks : MonoBehaviour
 
     private void Start()
     {
-        foreach (Block block in _blocks)
-        {
-            block.gameObject.SetActive(false);
-        }
+        //foreach (Block block in _blocks)
+        //{
+        //    block.gameObject.SetActive(false);
+        //}
     }
 
     private void OnCollisionEnter(Collision collision)

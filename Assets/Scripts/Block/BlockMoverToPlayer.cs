@@ -13,7 +13,6 @@ public class BlockMoverToPlayer : MonoBehaviour
     private float _tossHeight = 3;
 
     private BlockFixer _blockFixer;
-    private Rigidbody _rigidbody;
     private Coroutine _flightWork;
     private Vector3 _topPointPosition;
     private Vector3 _startBlockPosition;
@@ -24,8 +23,7 @@ public class BlockMoverToPlayer : MonoBehaviour
 
     private void OnEnable()
     {
-        _blockFixer = GetComponent<BlockFixer>();        
-        _rigidbody = GetComponent<Rigidbody>();        
+        _blockFixer = GetComponent<BlockFixer>();      
         _block = GetComponent<Block>();
         _blockMoverToCollector = GetComponent<BlockMoverToCollector>();
         _soundController = GetComponent<BlockSoundController>();
