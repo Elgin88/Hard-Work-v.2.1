@@ -9,12 +9,13 @@ public class BlockFixer : MonoBehaviour
 
     private void OnEnable()
     {
-        _block = GetComponent<Block>();        
+        _player = FindObjectOfType<Player>();
+
+        _block = GetComponent<Block>();
     }
 
     private IEnumerator FixBlock()
     {
-        _player = GetComponent<Block>().Player;
         _block.SoundController.PlayPlaceOnCarSFX();
 
         while (true)

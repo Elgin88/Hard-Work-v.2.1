@@ -1,4 +1,5 @@
 using System.Collections;
+using Agava.YandexGames;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -7,20 +8,27 @@ using UnityEngine.UI;
 
 public class NextLevelButton : MonoBehaviour
 {
-    private Saver _saver;
-    private WaitForSeconds _delay = new WaitForSeconds(0.5f);
+    private VideoAdController _videoAdController;
     private SoundController _soundController;
+    private WaitForSeconds _delay = new WaitForSeconds(0.5f);
     private EnderLevel _enderLevel;
     private Button _nextLevelButton;
     private Player _player;
+    private Saver _saver;
     private string _currentLevelName;
+
+    private Coroutine _startLoadNextLevel;
 
     private void OnEnable()
     {
-        _enderLevel = FindObjectOfType<EnderLevel>();
-        _player = FindObjectOfType<Player>();
-        _soundController = FindObjectOfType<SoundController>();
-        _saver = FindObjectOfType<Saver>();
+        if (_player == null)
+        {
+            _enderLevel = FindObjectOfType<EnderLevel>();
+            _player = FindObjectOfType<Player>();
+            _saver = FindObjectOfType<Saver>();
+            _videoAdController = FindObjectOfType<VideoAdController>();
+            _soundController = FindObjectOfType<SoundController>();
+        }
 
         _currentLevelName = SceneManager.GetActiveScene().name;
 
@@ -36,9 +44,8 @@ public class NextLevelButton : MonoBehaviour
     private void OnNextLevelButtonClick()
     {
         _saver.SaveData();
-        _saver.SaveDataInCloud();
 
-        StartCoroutine(LoadNextLevel());             
+        StartLoadNextLevel();           
     }
 
     private IEnumerator LoadNextLevel()
@@ -47,6 +54,20 @@ public class NextLevelButton : MonoBehaviour
 
         SceneManager.LoadScene(_enderLevel.NextSceneName);
 
-        yield break;
+        StopLoadNextLevel();
+    }
+
+    private void StartLoadNextLevel()
+    {
+        if (_startLoadNextLevel==null)
+        {
+            _startLoadNextLevel = StartCoroutine(LoadNextLevel());
+        }
+    }
+
+    private void StopLoadNextLevel()
+    {
+        StopCoroutine(_startLoadNextLevel);
+        _startLoadNextLevel = null;
     }
 }

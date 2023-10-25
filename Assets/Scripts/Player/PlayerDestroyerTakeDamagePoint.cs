@@ -20,7 +20,10 @@ public class PlayerDestroyerTakeDamagePoint : MonoBehaviour
         _player = FindObjectOfType<Player>();
         _particle = GetComponentInChildren<ParticleSystem>();
 
-        _particle.gameObject.SetActive(false);
+        if (_particle!=null)
+        {
+            _particle.gameObject.SetActive(false);
+        }        
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -29,7 +32,7 @@ public class PlayerDestroyerTakeDamagePoint : MonoBehaviour
         {
             _particle.gameObject.SetActive(true);
             _particle.Play();
-            _player.PlayerSoundController.PlayBlockHitBumberSound();
+            _player.SoundController.PlayBlockHitBumberSound();
         }
     }    
 }

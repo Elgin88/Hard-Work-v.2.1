@@ -23,17 +23,17 @@ public class BlockMoverToCollector : MonoBehaviour
 
     private ChooserMedals _chooserMedals;
 
+    private void Start()
+    {
+        _calculatorBlocks = FindObjectOfType<CalculatorBlocks>();
+        _chooserMedals = FindObjectOfType<ChooserMedals>();
+        _blockFixer = GetComponent<BlockFixer>();
+        _block = GetComponent<Block>();
+        _soundController = GetComponent<BlockSoundController>();
+    }
+
     private IEnumerator MoveToCollector()
     {
-        if (_blockFixer == null)
-        {
-            _calculatorBlocks = FindObjectOfType<CalculatorBlocks>();
-            _chooserMedals = FindObjectOfType<ChooserMedals>();
-            _blockFixer = GetComponent<BlockFixer>();
-            _block = GetComponent<Block>();
-            _soundController = GetComponent<BlockSoundController>();
-        }
-
         _blockFixer.StopCoroutineFixBlock();
 
         _collectionPoint = new Vector3(_collectionPoint.x + Random.Range(-1 * _deltaPointPosition, _deltaPointPosition), _collectionPoint.y, _collectionPoint.z + Random.Range(-1 * _deltaPointPosition, _deltaPointPosition));

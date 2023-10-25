@@ -52,12 +52,7 @@ public class FuelBar : MonoBehaviour
         {
             _currentValue = _slider.value;
 
-            _slider.value = Mathf.MoveTowards(_currentValue, _targetFuel/ _maxFuel, _speedOfChange * Time.deltaTime);
-
-            if (_slider.value == _targetFuel / _maxFuel)
-            {
-                StopChangeSliderValue();
-            }
+            _slider.value = _targetFuel / _maxFuel;
 
             yield return null;
         }

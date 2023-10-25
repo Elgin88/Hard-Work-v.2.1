@@ -8,27 +8,39 @@ using UnityEngine.UI;
 
 public class ReloadButton : MonoBehaviour
 {
+    [SerializeField] private Flasher1 _flasher1;
+
     private Button _button;
     private Scene _currentScene;
-
-    private void Start()
-    {
-        _currentScene = SceneManager.GetActiveScene();
-    }
+    private PlayerFuelController _playerFuelController;
 
     private void OnEnable()
     {
-        if (_button == null)
-        {
-            _button = GetComponent<Button>();
-        }
+        _currentScene = SceneManager.GetActiveScene();
+        _playerFuelController = FindObjectOfType<PlayerFuelController>();
+        _button = GetComponent<Button>();
+
         
         _button.onClick.AddListener(ReloadScene);
+        _playerFuelController.IsFuelChanged += FlashControler;
+    }
+
+    private void FlashControler(float currentFuel, float maxFuel)
+    {
+        if (currentFuel==0)
+        {
+            _flasher1.StartFlash();
+        }
+        else
+        {
+            _flasher1.StopFlash();
+        }
     }
 
     private void OnDisable()
     {
         _button.onClick.RemoveListener(ReloadScene);
+        _playerFuelController.IsFuelChanged -= FlashControler;
     }
 
     private void ReloadScene()

@@ -29,13 +29,14 @@ public class Block : MonoBehaviour
 
     private void Start()
     {
+        _player = FindObjectOfType<Player>();
+
         _rigidbody = GetComponent<Rigidbody>();
         _boxCollider = GetComponent<BoxCollider>();
+
         _moverBlock = GetComponent<BlockMoverToPlayer>();
         _blockMoverToCollector = GetComponent<BlockMoverToCollector>();
         _soundController = GetComponent<BlockSoundController>();
-
-        gameObject.SetActive(false);
     }
 
     private void BlocksUnloaded(bool isUnload)
@@ -50,7 +51,7 @@ public class Block : MonoBehaviour
             KinematicOff();
             GravityOn();
 
-            _soundController.InitSoundController(_player);
+            _soundController.InitSoundController(_player.SoundController);
             _player.SlowDown();
 
             if (_playerIsUnload != true & _player.LoadController.IsUnload == false)

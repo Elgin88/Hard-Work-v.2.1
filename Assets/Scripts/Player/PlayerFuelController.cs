@@ -19,16 +19,20 @@ public class PlayerFuelController : MonoBehaviour
 
     public bool IsFuelLoss => _isFuelLoss;
     public float MaxFuel => _maxFuel;
+    public float CurrentFuel => _currentFuel;
 
     public event UnityAction <float, float> IsFuelChanged;
 
-    private void OnEnable()
+    private void Start()
     {
         _garage = FindObjectOfType<Garage>();
 
-        _player = GetComponent<Player>();
+        if (_speedSetter == null)
+        {
+            _speedSetter = FindObjectOfType<PlayerSpeedSetter>();
+        }
 
-        _speedSetter = FindObjectOfType<PlayerSpeedSetter>();        
+        _player = GetComponent<Player>();
 
         _currentFuel = _maxFuel;
 
@@ -61,11 +65,6 @@ public class PlayerFuelController : MonoBehaviour
         }
     }
 
-    public void SetMaxFuel()
-    {
-        _currentFuel = _maxFuel;
-    }
-
     private void StartBurnFuel()
     {
         if (_burnFuel == null)
@@ -93,7 +92,7 @@ public class PlayerFuelController : MonoBehaviour
         }
     }
 
-    internal void TryBuyTank(int addVolumeTank)
+    public void TryBuyTank(int addVolumeTank)
     {
         if (_player.Money > _garage.TankCost)
         {
@@ -101,5 +100,10 @@ public class PlayerFuelController : MonoBehaviour
             _maxFuel += addVolumeTank;
             IsFuelChanged?.Invoke(_currentFuel, _maxFuel);
         }
+    }
+
+    public void SetMaxFuel()
+    {
+        _currentFuel = _maxFuel;
     }
 }

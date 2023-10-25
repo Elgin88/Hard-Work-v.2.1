@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider))]
@@ -6,10 +7,22 @@ public class SectionOfBlocks : MonoBehaviour
 {
     [SerializeField] private Block [] _blocks;
 
-    private Player _player;
-    private int _numberOfBlocks;
+    [SerializeField] private Player _player;
+    [SerializeField] private CalculatorBlocks _calculatorBlocks;
+
+    private Coroutine _activeBlocks;
+    private int _requireNumberActiveBlocks = 3;
+    private int _numberActiveBlocks = 0;
 
     public int NumberOfBlocks => _blocks.Length;
+
+    private void Start()
+    {
+        foreach (Block block in _blocks)
+        {
+            block.gameObject.SetActive(false);
+        }
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -17,16 +30,43 @@ public class SectionOfBlocks : MonoBehaviour
         {
             _player = destroyer.Player;
 
-            foreach (Block block in _blocks)
-            {
-                block.gameObject.SetActive(true);                
-                block.Init(_player);
-            }
-
-            _player.PlayerSoundController.PlayObjectDestractionSound();
-
-            gameObject.SetActive(false);
+            StartActiveBlocks();
+            _player.SoundController.PlayObjectDestractionSound();
         }
     }
 
+    private IEnumerator ActiveBlocks()
+    {
+        while (true)
+        {
+            foreach (Block block in _blocks)
+            {
+                block.gameObject.SetActive(true);
+                _numberActiveBlocks++;
+
+                if (_numberActiveBlocks > _requireNumberActiveBlocks)
+                {
+                    yield return null;
+                    _numberActiveBlocks = 0;
+                }
+            }
+
+            gameObject.SetActive(false);
+            StopActiveBlocks();
+        }
+    }
+
+    public void StartActiveBlocks()
+    {
+        if (_activeBlocks==null)
+        {
+            _activeBlocks = StartCoroutine(ActiveBlocks());
+        }
+    }
+
+    public void StopActiveBlocks()
+    {
+        StopCoroutine(_activeBlocks);
+        _activeBlocks = null;
+    }
 }

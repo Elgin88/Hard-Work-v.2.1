@@ -4,35 +4,38 @@ using UnityEngine;
 
 public class Saver : MonoBehaviour
 {
-    private string _nameOfSceneKey = "NameOfSceneKey";
-    private string _playerMoneyKey = "PlayerMoneyKey";
-    private EnderLevel _enderLevel;
     private Player _player;
+    private EnderLevel _enderLevel;
+    private string _saveKeyPlayerMoney = "PlayerMoney";
+    private string _saveKeyNextLevelName = "NextLevelName";
 
-    public string NameOfSceneKey => _nameOfSceneKey;
-    public string PlayerMoneyKey => _playerMoneyKey;
+    public string SaveKeyPlayerMoney => _saveKeyPlayerMoney;
+    public string SaveKeyNextLevelName => _saveKeyNextLevelName;
 
     private void Start()
     {
-        _enderLevel = FindObjectOfType<EnderLevel>();
         _player = FindObjectOfType<Player>();
+        _enderLevel = FindObjectOfType<EnderLevel>();
     }
 
     public void SaveData()
     {
-        PlayerPrefs.SetString(_nameOfSceneKey, _enderLevel.NextSceneName);
-        PlayerPrefs.SetInt(_playerMoneyKey, _player.Money);
+        PlayerPrefs.SetInt(_saveKeyPlayerMoney, _player.Money);
+        PlayerPrefs.SetString(_saveKeyNextLevelName, _enderLevel.NextSceneName);
         PlayerPrefs.Save();
+
+        SavePlayerPrefsInCloud();
     }
 
-    public void SaveDataInCloud()
+    public void SavePlayerPrefsInCloud()
     {
 #if UNITY_EDITOR
         return;
 #endif
 
 #if UNITY_WEBGL
-        
+        if (Agava.YandexGames.YandexGamesSdk.IsInitialized)
+            Agava.YandexGames.PlayerPrefs.Save();
 #endif
     }
 }

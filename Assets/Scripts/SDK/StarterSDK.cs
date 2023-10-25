@@ -1,29 +1,19 @@
 using System.Collections;
-using TMPro;
+using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using Agava.YandexGames;
 
 public class StarterSDK : MonoBehaviour
 {
-    [SerializeField] private TMP_Text _debug1;
-
-//    private IEnumerator Start()
-//    {
-//#if UNITY_EDITOR
-//        yield break;
-//#endif
-
-//#if UNITY_WEBGL
-        
-//#endif
-//    }
-
-    private void FixedUpdate()
+    private IEnumerator Start()
     {
 #if UNITY_EDITOR
-        return ;
+        yield break;
 #endif
 
 #if UNITY_WEBGL
+        yield return YandexGamesSdk.Initialize();
         
 #endif
     }

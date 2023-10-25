@@ -4,20 +4,25 @@ using UnityEngine;
 
 public class BlockSoundController : MonoBehaviour
 {
-    private Player _player;
+    private PlayerSoundController _playerSoundController;
     private AudioSource _audioSourseBlockFlyOnCar;
     private AudioSource _audioSourseBlockSetOnCar;
     private AudioSource _ausioSourseBlockFlyToCollector;
     private AudioSource _audioSourseBlockPlaceInCollector;
 
-    public void InitSoundController(Player player)
+    private void Start()
     {
-        _player = player;
+        _playerSoundController = FindObjectOfType<PlayerSoundController>();
 
-        _audioSourseBlockFlyOnCar = _player.PlayerSoundController.BlockFly;
-        _audioSourseBlockSetOnCar = _player.PlayerSoundController.BlockSetOnCar;
-        _ausioSourseBlockFlyToCollector = _player.PlayerSoundController.BlockFlyToCollerctor;
-        _audioSourseBlockPlaceInCollector = _player.PlayerSoundController.BlockPlaceInCollector;
+        _audioSourseBlockFlyOnCar = _playerSoundController.BlockFly;
+        _audioSourseBlockSetOnCar = _playerSoundController.BlockSetOnCar;
+        _ausioSourseBlockFlyToCollector = _playerSoundController.BlockFlyToCollerctor;
+        _audioSourseBlockPlaceInCollector = _playerSoundController.BlockPlaceInCollector;
+    }
+
+    public void InitSoundController(PlayerSoundController playerSoundController)
+    {
+
     }
 
     public void PlayFlyOnCarSFX()
