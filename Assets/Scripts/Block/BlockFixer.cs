@@ -4,14 +4,9 @@ using UnityEngine;
 public class BlockFixer : MonoBehaviour
 {
     [SerializeField] private Player _player;
+    [SerializeField] private Block _block;
 
     private Coroutine _fixBlock;
-    private Block _block;
-
-    private void OnEnable()
-    {
-        _block = GetComponent<Block>();
-    }
 
     private IEnumerator FixBlock()
     {

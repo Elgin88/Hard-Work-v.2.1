@@ -1,33 +1,23 @@
 using System.Collections;
 using UnityEngine;
 
-[RequireComponent(typeof(BlockSoundController))]
-[RequireComponent(typeof(Block))]
-[RequireComponent(typeof(BlockFixer))]
-
 public class BlockMoverToCollector : MonoBehaviour
 {
     [SerializeField] private CalculatorBlocks _calculatorBlocks;
     [SerializeField] private ChooserMedals _chooserMedals;
+    [SerializeField] private BlockFixer _blockFixer;
+    [SerializeField] private Block _block;
+    [SerializeField] private BlockSoundController _blockSoundController;
 
     private float _flightSpeed = 10;
     private float _tossHight = 0.005f;
     private float _deltaPointPosition = 0.001f;
-    private float _deltaHight = 0.005f;
-    private BlockSoundController _soundController;
-    private BlockFixer _blockFixer;
+    private float _deltaHight = 0.005f;   
     private Coroutine _move;
     private Vector3 _collectionPoint;
     private Vector3 _topPoint;
-    private Block _block;
+    
     private bool _isReachedTopPoint = false;
-
-    private void Start()
-    {
-        _blockFixer = GetComponent<BlockFixer>();
-        _block = GetComponent<Block>();
-        _soundController = GetComponent<BlockSoundController>();
-    }
 
     private IEnumerator MoveToCollector()
     {
@@ -40,7 +30,7 @@ public class BlockMoverToCollector : MonoBehaviour
         _block.Point.RemoveBlock();
         _block.Player.Inventory.InitEventBlockIsChanged();
 
-        _soundController.PlayFlyOnCollectorSFX();
+        _blockSoundController.PlayFlyOnCollectorSFX();
 
         while (true)
         {
@@ -65,7 +55,7 @@ public class BlockMoverToCollector : MonoBehaviour
                 _block.Player.AddMoney(_block.Cost);
                 _calculatorBlocks.CalculateUnloadBloks();
                 _chooserMedals.ChooseMedals();
-                _soundController.PlayBlockPlaceInCollector();
+                _blockSoundController.PlayBlockPlaceInCollector();
 
                 StopMoveToCollector();
 

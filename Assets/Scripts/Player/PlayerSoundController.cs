@@ -17,7 +17,7 @@ public class PlayerSoundController : MonoBehaviour
 
     public AudioSource BlockFly => _blockFly;
     public AudioSource BlockSetOnCar => _blockSetPlace;
-    public AudioSource BlockFlyToCollerctor => _blockFlyToCollector;
+    public AudioSource BlockFlyToCollector => _blockFlyToCollector;
     public AudioSource BlockPlaceInCollector => _blockPlaceInCollector;
     public AudioSource SectionDestractionSound => _sectionDestractionSound;
     public AudioSource BlockHitBamperSound => _blockHitBamperSound;

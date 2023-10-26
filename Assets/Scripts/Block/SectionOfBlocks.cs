@@ -14,20 +14,10 @@ public class SectionOfBlocks : MonoBehaviour
 
     public int NumberOfBlocks => _blocks.Length;
 
-    private void Start()
-    {
-        //foreach (Block block in _blocks)
-        //{
-        //    block.gameObject.SetActive(false);
-        //}
-    }
-
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.TryGetComponent<Destroyer>(out Destroyer destroyer))
         {
-            _player = destroyer.Player;
-
             StartActiveBlocks();
             _player.SoundController.PlayObjectDestractionSound();
         }
@@ -40,6 +30,8 @@ public class SectionOfBlocks : MonoBehaviour
             foreach (Block block in _blocks)
             {
                 block.gameObject.SetActive(true);
+                block.StartTimerPhysicsOff();
+
                 _numberActiveBlocks++;
 
                 if (_numberActiveBlocks > _requireNumberActiveBlocks)
@@ -51,6 +43,7 @@ public class SectionOfBlocks : MonoBehaviour
 
             gameObject.SetActive(false);
             StopActiveBlocks();
+            yield return null;
         }
     }
 
@@ -64,7 +57,10 @@ public class SectionOfBlocks : MonoBehaviour
 
     public void StopActiveBlocks()
     {
-        StopCoroutine(_activeBlocks);
-        _activeBlocks = null;
+        if (_activeBlocks!=null)
+        {
+            StopCoroutine(_activeBlocks);
+            _activeBlocks = null;
+        }
     }
 }

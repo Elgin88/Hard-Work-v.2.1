@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -10,32 +12,23 @@ using UnityEngine;
 public class Block : MonoBehaviour
 {
     [SerializeField] private Player _player;
+    [SerializeField] private Rigidbody _rigidbody;
+    [SerializeField] private BoxCollider _boxCollider;
+    [SerializeField] private BlockSoundController _soundController;
+    [SerializeField] private BlockMoverToCollector _blockMoverToCollector;
+    [SerializeField] private BlockMoverToPlayer _moverBlock;
 
     private int _cost = 1;
-
-    private BlockSoundController _soundController;
-    private BlockMoverToCollector _blockMoverToCollector;
-    private BlockMoverToPlayer _moverBlock;
-    private BoxCollider _boxCollider;
-    private Rigidbody _rigidbody;    
     private Point _point;
     private bool _playerIsUnload;
+    private Coroutine _timerPhysicsOff;
+    private WaitForSeconds _timerWFS = new WaitForSeconds(2);
 
     public BlockMoverToCollector BlockMoverToCollector => _blockMoverToCollector;
     public BlockSoundController SoundController => _soundController;
     public Player Player => _player;
     public Point Point => _point;
     public int Cost => _cost;
-
-    private void Start()
-    {
-        _rigidbody = GetComponent<Rigidbody>();
-        _boxCollider = GetComponent<BoxCollider>();
-
-        _moverBlock = GetComponent<BlockMoverToPlayer>();
-        _blockMoverToCollector = GetComponent<BlockMoverToCollector>();
-        _soundController = GetComponent<BlockSoundController>();
-    }
 
     private void BlocksUnloaded(bool isUnload)
     {
@@ -46,10 +39,6 @@ public class Block : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent<Destroyer>(out Destroyer destroyer))
         {
-            KinematicOff();
-            GravityOn();
-
-            _soundController.InitSoundController(_player.SoundController);
             _player.SlowDown();
 
             if (_playerIsUnload != true & _player.LoadController.IsUnload == false)
@@ -122,5 +111,31 @@ public class Block : MonoBehaviour
     internal void Init(Player player)
     {
         _player = player;
+    }
+
+    private IEnumerator TimerPhysicsOff()
+    {
+        yield return _timerWFS;
+
+        KinematicOn();
+        GravityOff();
+    }
+
+
+    public void StartTimerPhysicsOff()
+    {
+        if (_timerPhysicsOff == null)
+        {
+            _timerPhysicsOff = StartCoroutine(TimerPhysicsOff());
+        }
+    }
+
+    public void StopTimerPhysicsOff()
+    {
+        if (_timerPhysicsOff != null)
+        {
+            StopCoroutine(_timerPhysicsOff);
+            _timerPhysicsOff = null;
+        }
     }
 }

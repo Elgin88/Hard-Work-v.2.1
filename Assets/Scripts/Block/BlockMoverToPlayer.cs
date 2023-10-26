@@ -1,40 +1,26 @@
 using System.Collections;
 using UnityEngine;
 
-[RequireComponent(typeof(BlockFixer))]
-[RequireComponent(typeof(Rigidbody))]
-[RequireComponent(typeof(Block))]
-[RequireComponent(typeof(BlockMoverToCollector))]
-[RequireComponent(typeof(BlockSoundController))]
-
 public class BlockMoverToPlayer : MonoBehaviour
 {
+    [SerializeField] private BlockFixer _blockFixer;
+    [SerializeField] private Block _block;
+    [SerializeField] private BlockMoverToCollector _blockMoverToCollector;
+    [SerializeField] private BlockSoundController _blockSoundController;
+
     private float _flightSpeed = 10;
     private float _tossHeight = 3;
-
-    private BlockFixer _blockFixer;
     private Coroutine _flightWork;
     private Vector3 _topPointPosition;
     private Vector3 _startBlockPosition;
-    private Block _block;
     private bool _isReachTop;
-    private BlockMoverToCollector _blockMoverToCollector;
-    private BlockSoundController _soundController;
-
-    private void OnEnable()
-    {
-        _blockFixer = GetComponent<BlockFixer>();      
-        _block = GetComponent<Block>();
-        _blockMoverToCollector = GetComponent<BlockMoverToCollector>();
-        _soundController = GetComponent<BlockSoundController>();
-    }
 
     private IEnumerator Flight()
     {
         _isReachTop = false;
         _startBlockPosition = transform.position;
 
-        _soundController.PlayFlyOnCarSFX();
+        _blockSoundController.PlayFlyOnCarSFX();
 
         while (true)
         {
