@@ -514,6 +514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c97f7f54dee62407292d1ce107785579, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _garage: {fileID: 3104848041511164420}
 --- !u!1 &3467493456101965272
 GameObject:
   m_ObjectHideFlags: 0
@@ -853,14 +854,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e08bdc0605d04885ac6455f624b2253, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fuelLabelRU: "\u0422\u043E\u043F\u043B\u0438\u0432\u043E"
-  _tankLabelRU: "\u0411\u0430\u043A"
-  _placeLabelRU: "\u0418\u043D\u0432\u0435\u043D\u0442\u0430\u0440\u044C"
-  _powerLabelRU: "\u0414\u0432\u0438\u0433\u0430\u0442\u0435\u043B\u044C"
   _fuelCost: 5
   _tankCost: 200
   _placeCost: 300
   _powerCost: 500
+  _garageUI: {fileID: 0}
+  _canvasUI: {fileID: 0}
 --- !u!114 &8466611396032591842
 MonoBehaviour:
   m_ObjectHideFlags: 0

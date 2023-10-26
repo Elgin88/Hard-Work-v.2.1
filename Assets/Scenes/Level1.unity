@@ -1367,6 +1367,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 859f45043ed1d4398aaa7daddafde734, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &72362194 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1758577150085976944, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
+  m_PrefabInstance: {fileID: 827877611}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d5beb933086403cb11d15739de0ab9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &75559389 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
@@ -14691,6 +14702,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 859f45043ed1d4398aaa7daddafde734, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1398114053 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6390884785094593398, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
+  m_PrefabInstance: {fileID: 827877611}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e2c83d11dea54dacbc1a6673f4cb162, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1405451281
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16337,6 +16359,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3104848041511164420, guid: 9eaaded09bf5d4e61933ce28d75722f1, type: 3}
+      propertyPath: _canvasUI
+      value: 
+      objectReference: {fileID: 1398114053}
+    - target: {fileID: 3104848041511164420, guid: 9eaaded09bf5d4e61933ce28d75722f1, type: 3}
+      propertyPath: _garageUI
+      value: 
+      objectReference: {fileID: 72362194}
     - target: {fileID: 3104848041511164420, guid: 9eaaded09bf5d4e61933ce28d75722f1, type: 3}
       propertyPath: _tankLabel
       value: "\u041E\u0431\u044A\u0451\u043C \u0431\u0430\u043A\u0430"
