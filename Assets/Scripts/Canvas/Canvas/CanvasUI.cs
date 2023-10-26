@@ -9,7 +9,6 @@ public class CanvasUI : MonoBehaviour
     [SerializeField] private AddFuelIndicatorEducation[] _addFuelIndicators;
     [SerializeField] private EndLevelButtonIndicatorEducation[] _endLevelButtonIndicatorEducation;
     [SerializeField] private GarageUI _garageUI;
-    [SerializeField] Button _addFuelButtonForVideoAdd;
    
     [SerializeField] SoundController _soundController;
 
