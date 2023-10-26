@@ -6,20 +6,13 @@ using UnityEngine;
 
 public class CollectionParkingArea : MonoBehaviour
 {
-    private Unloader _unloader;
-    private Player _player;
-
-    private void OnEnable()
-    {
-        _player = FindObjectOfType<Player>();
-        _unloader = FindObjectOfType<Unloader>();
-    }
+    [SerializeField] private Collector _collector;
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.TryGetComponent<Destroyer>(out Destroyer destroyer))
         {
-            _unloader.StartUnload();
+            _collector.Unloader.StartUnload();
         }        
     }
 }
