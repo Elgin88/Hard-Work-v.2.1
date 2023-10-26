@@ -7,13 +7,10 @@ using UnityEngine.UI;
 public class TempButtonSoundOn : MonoBehaviour
 {
     [SerializeField] private Button _buttonOn;
-
-    private SoundController _soundController;
+    [SerializeField] private CanvasUI _canvasUI;
 
     private void OnEnable()
     {
-        _soundController = FindObjectOfType<SoundController>();
-
         _buttonOn.onClick.AddListener(OnButtonClick);
     }
 
@@ -24,6 +21,6 @@ public class TempButtonSoundOn : MonoBehaviour
 
     private void OnButtonClick()
     {
-        _soundController.SetMaxSoundValue();
+        _canvasUI.SoundController.SetMaxSoundValue();
     }
 }

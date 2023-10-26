@@ -7,15 +7,10 @@ public class EngineBarIconColorSetter : MonoBehaviour
 {
     [SerializeField] private Color _targetColor;
     [SerializeField] private float _duration;
+    [SerializeField] private Image _image;
 
-    private Image _image;
     private Color _currentColor;
     private Coroutine _changeColor;
-
-    private void Start()
-    {
-        _image = GetComponent<Image>();
-    }
 
     private IEnumerator ChangeColor()
     {

@@ -1,18 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class TempNextLevel : MonoBehaviour
 {
-    private Button _button;
-    private EnderLevel _enderLevel;
+    [SerializeField] private CanvasUI _canvasUI;
+    [SerializeField] private Button _button;
 
     private void OnEnable()
     {
-        _enderLevel = FindObjectOfType<EnderLevel>();
-
         _button = GetComponent<Button>();
         _button.onClick.AddListener(OnButtonClick);
     }
@@ -24,6 +20,6 @@ public class TempNextLevel : MonoBehaviour
 
     private void OnButtonClick()
     {
-        SceneManager.LoadScene(_enderLevel.NextSceneName);
+        SceneManager.LoadScene(_canvasUI.EnderLevel.NextSceneName);
     }
 }

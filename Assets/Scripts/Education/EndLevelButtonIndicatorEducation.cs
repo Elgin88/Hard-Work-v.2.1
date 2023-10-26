@@ -5,19 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class EndLevelButtonIndicatorEducation : MonoBehaviour
 {
+    [SerializeField] private RectTransform _rectTransform;
+
     private string _levelName = "Level1";
     private float _deltaRangeInProcent = 30;
     private float _timeOfFlashInSeconds = 0.3f;
-
-    private RectTransform _rectTransform;
     private Coroutine _flash;
     private Scene _currentScene;
     private float _currentPressTime;
-
     private Vector3 _startScale;
     private Vector3 _currentScale;
     private Vector3 _targetScale;
-
     private float _deltaSclale => (_targetScale.x - _startScale.x) / (_timeOfFlashInSeconds / Time.deltaTime);
 
     private void OnEnable()
@@ -29,8 +27,6 @@ public class EndLevelButtonIndicatorEducation : MonoBehaviour
             gameObject.SetActive(false);
             return;
         }
-
-        _rectTransform = GetComponent<RectTransform>();
 
         _startScale = _rectTransform.localScale;
         _targetScale = _startScale + _startScale * _deltaRangeInProcent / 100;

@@ -4,12 +4,10 @@ using UnityEngine.UI;
 public class TempButtonSoundOff : MonoBehaviour
 {
     [SerializeField] private Button _buttonSoundOff;
-
-    private SoundController _soundController;
+    [SerializeField] private CanvasUI _canvasUI;
 
     private void Start()
     {
-        _soundController = FindObjectOfType<SoundController>();
         _buttonSoundOff.onClick.AddListener(OnButtonClick);
     }
 
@@ -20,6 +18,6 @@ public class TempButtonSoundOff : MonoBehaviour
 
     private void OnButtonClick()
     {
-        _soundController.SetMinSoundValue();
+        _canvasUI.SoundController.SetMinSoundValue();
     }
 }

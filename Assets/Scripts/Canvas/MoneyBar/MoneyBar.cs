@@ -1,23 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 public class MoneyBar : MonoBehaviour
 {
     [SerializeField] private TMP_Text _moneyCount;
-
-    private Player _player;
+    [SerializeField] private CanvasUI _canvasUI;
+ 
 
     private void OnEnable()
     {
-        _player = FindObjectOfType<Player>();
-        _player.IsMoneyChanged += OnMoneyChanged;
+        _canvasUI.Player.IsMoneyChanged += OnMoneyChanged;
     }
 
     private void OnDisable()
     {
-        _player.IsMoneyChanged -= OnMoneyChanged;
+        _canvasUI.Player.IsMoneyChanged -= OnMoneyChanged;
     }
 
     private void OnMoneyChanged(int money)

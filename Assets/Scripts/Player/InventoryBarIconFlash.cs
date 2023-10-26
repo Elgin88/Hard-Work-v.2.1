@@ -11,26 +11,21 @@ public class InventoryBarIconFlash : MonoBehaviour
     [SerializeField] private float _deltaScale;
     [SerializeField] private float _duration;
     [SerializeField] private Color _targetColor;
+    [SerializeField] private RectTransform _rectTransform;
+    [SerializeField] private Image _image;
+    [SerializeField] private CanvasUI _canvasUI;
 
-    private RectTransform _rectTransform;
-    private Inventory _inventory;
     private Coroutine _flash;
     private Vector3 _startScale;
     private Vector3 _currentScale;
     private Vector3 _targetScale;
     private Color _startColor;
-    private Image _image;
     private float _deltaScaleCalculated;
-
     private int _currentCountOfBlocks;
     private int _maxCountOfBlocks;
 
     private void OnEnable()
     {
-        _inventory = FindObjectOfType<Inventory>();
-        _rectTransform = GetComponent<RectTransform>();
-        _image = GetComponent<Image>();
-
         _startColor = _image.color;
 
         _startScale = _rectTransform.localScale;
@@ -39,12 +34,12 @@ public class InventoryBarIconFlash : MonoBehaviour
 
         _deltaScaleCalculated = _deltaScale / (_duration / 2 / Time.deltaTime);
 
-        _inventory.IsChangedNumberBlocks += OnChangedNumberBlocksInInventory;
+        _canvasUI.Inventory.IsChangedNumberBlocks += OnChangedNumberBlocksInInventory;
     }
 
     private void OnDisable()
     {
-        _inventory.IsChangedNumberBlocks -= OnChangedNumberBlocksInInventory;
+        _canvasUI.Inventory.IsChangedNumberBlocks -= OnChangedNumberBlocksInInventory;
     }
 
     private void OnChangedNumberBlocksInInventory(int current, int max)

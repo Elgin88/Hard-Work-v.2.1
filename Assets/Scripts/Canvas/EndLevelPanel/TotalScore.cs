@@ -6,12 +6,10 @@ using UnityEngine;
 public class TotalScore : MonoBehaviour
 {
     [SerializeField] private TMP_Text _label;
-
-    private CalculatorBlocks _calculatorBlocks;    
+    [SerializeField] private CanvasUI _canvasUI;    
 
     private void OnEnable()
     {
-        _calculatorBlocks = FindObjectOfType<CalculatorBlocks>();
-        _label.text = _calculatorBlocks.Unload.ToString();
+        _label.text = _canvasUI.CalculatorBlocks.Unload.ToString();
     }
 }

@@ -6,39 +6,21 @@ using UnityEngine.UI;
 
 public class AddPowerButton : MonoBehaviour
 {
-
     [SerializeField] private TMP_Text _cost;
+    [SerializeField] private Button _button;
+    [SerializeField] private EngineBarIconFlash _flash;
+    [SerializeField] private CanvasSoundController _soundController;
+    [SerializeField] private CanvasUI _canvasUI;
 
-    private Button _button;
-    private Player _player;
-    private PlayerUpgrader _playerUpgrader;
-    private Garage _garage;
-    private GarageSoundController _garageSoundController;
-    private PlayerPowerController _powerController;
     private bool _isMaxLevelEngine;
-    private EngineBarIconFlash _flash;
-    private CanvasSoundController _soundController;
 
     private void OnEnable()
     {
-        _button = GetComponent<Button>();
-
-        if (_player == null)
-        {
-            _player = FindObjectOfType<Player>();
-            _playerUpgrader = _player.GetComponent<PlayerUpgrader>();
-            _garage = FindObjectOfType<Garage>();
-            _powerController = FindObjectOfType<PlayerPowerController>();
-            _flash = FindObjectOfType<EngineBarIconFlash>();
-            _soundController = FindObjectOfType<CanvasSoundController>();
-            _garageSoundController = FindObjectOfType<GarageSoundController>();
-        }
-
         _button.onClick.AddListener(OnButtonClick);
-        _player.IsMoneyChanged += OnMoneyChanged;
-        _powerController.IsEngineUpgrade += OnEngineLevelChanged;
+        _canvasUI.Player.IsMoneyChanged += OnMoneyChanged;
+        _canvasUI.PowerController.IsEngineUpgrade += OnEngineLevelChanged;
 
-        _cost.text = _garage.PowerCost.ToString();
+        _cost.text = _canvasUI.Garage.PowerCost.ToString();
 
         CheckButton();
     }
@@ -46,15 +28,15 @@ public class AddPowerButton : MonoBehaviour
     private void OnDisable()
     {
         _button.onClick.RemoveListener(OnButtonClick);
-        _player.IsMoneyChanged -= OnMoneyChanged;
-        _powerController.IsEngineUpgrade -= OnEngineLevelChanged;
+        _canvasUI.Player.IsMoneyChanged -= OnMoneyChanged;
+        _canvasUI.PowerController.IsEngineUpgrade -= OnEngineLevelChanged;
     }
 
     private void OnButtonClick()
     {
-        _playerUpgrader.TryAddPower();
+        _canvasUI.PlayerUpgrader.TryAddPower();
         _soundController.PlayBuySound();
-        _garageSoundController.StartPlaySoundFinEngine();
+        _canvasUI.GarageSoundController.StartPlaySoundFinEngine();
     }
 
     private void OnMoneyChanged(int money)
@@ -70,7 +52,7 @@ public class AddPowerButton : MonoBehaviour
 
     private void CheckButton()
     {
-        if (_player.Money > _garage.PowerCost & _isMaxLevelEngine == false)
+        if (_canvasUI.Player.Money > _canvasUI.Garage.PowerCost & _isMaxLevelEngine == false)
         {
             _button.interactable = true;
         }

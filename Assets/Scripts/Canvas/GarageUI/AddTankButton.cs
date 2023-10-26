@@ -7,34 +7,16 @@ using UnityEngine.UI;
 public class AddTankButton : MonoBehaviour
 {
     [SerializeField] private TMP_Text _cost;
-    [SerializeField] private Flasher _maxTextFlasher;
-    [SerializeField] private Flasher _middleTextFlasher;
-    [SerializeField] private Flasher _minTextFlasher;
-
-    private Button _button;
-    private Player _player;
-    private PlayerUpgrader _playerUpgrade;
-    private Garage _garage;
-    private GarageSoundController _garageSoundController;
-    private CanvasSoundController _soundController;
+    [SerializeField] private Button _button;
+    [SerializeField] private CanvasUI _canvasUI;
+    [SerializeField] private CanvasSoundController _canvasSoundController;
 
     private void OnEnable()
     {
-        _button = GetComponent<Button>();
-
-        if (_player == null)
-        {
-            _player = FindObjectOfType<Player>();
-            _playerUpgrade = _player.GetComponent<PlayerUpgrader>();
-            _garage = FindObjectOfType<Garage>();
-            _soundController = FindObjectOfType<CanvasSoundController>();
-            _garageSoundController = FindObjectOfType<GarageSoundController>();
-        }
-
-        _cost.text = _garage.TankCost.ToString();
+        _cost.text = _canvasUI.Garage.TankCost.ToString();
         _button.onClick.AddListener(OnAddTankButton);
 
-        _player.IsMoneyChanged += OnPlayerMoneyChanded;
+        _canvasUI.Player.IsMoneyChanged += OnPlayerMoneyChanded;
 
         CheckStatusButton();
     }
@@ -42,17 +24,14 @@ public class AddTankButton : MonoBehaviour
     private void OnDisable()
     {
         _button.onClick.RemoveListener(OnAddTankButton);
-        _player.IsMoneyChanged -= OnPlayerMoneyChanded;
+        _canvasUI.Player.IsMoneyChanged -= OnPlayerMoneyChanded;
     }
 
     private void OnAddTankButton()
     {
-        _playerUpgrade.TryBuyTank();
-        _soundController.PlayBuySound();
-        _maxTextFlasher.StartFlash();
-        _middleTextFlasher.StartFlash();
-        _minTextFlasher.StartFlash();
-        _garageSoundController.StartPlaySoundFinEngine();
+        _canvasUI.PlayerUpgrader.TryBuyTank();
+        _canvasSoundController.PlayBuySound();
+        _canvasUI.GarageSoundController.StartPlaySoundFinEngine();
     }
 
     private void OnPlayerMoneyChanded(int money)
@@ -62,7 +41,7 @@ public class AddTankButton : MonoBehaviour
 
     private void CheckStatusButton()
     {
-        if (_player.Money > _garage.TankCost)
+        if (_canvasUI.Player.Money > _canvasUI.Garage.TankCost)
         {
             _button.interactable = true;
         }

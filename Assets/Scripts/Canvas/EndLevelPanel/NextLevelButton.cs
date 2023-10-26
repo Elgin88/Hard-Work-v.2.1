@@ -1,5 +1,4 @@
 using System.Collections;
-using Agava.YandexGames;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -8,28 +7,15 @@ using UnityEngine.UI;
 
 public class NextLevelButton : MonoBehaviour
 {
-    private VideoAdController _videoAdController;
-    private SoundController _soundController;
-    private WaitForSeconds _delay = new WaitForSeconds(0.5f);
-    private EnderLevel _enderLevel;
-    private Button _nextLevelButton;
-    private Player _player;
-    private Saver _saver;
-    private string _currentLevelName;
+    [SerializeField] private CanvasUI _canvasUI;
+    [SerializeField] private Button _nextLevelButton;
 
+    private WaitForSeconds _delay = new WaitForSeconds(0.5f);    
+    private string _currentLevelName;
     private Coroutine _startLoadNextLevel;
 
     private void OnEnable()
     {
-        if (_player == null)
-        {
-            _enderLevel = FindObjectOfType<EnderLevel>();
-            _player = FindObjectOfType<Player>();
-            _saver = FindObjectOfType<Saver>();
-            _videoAdController = FindObjectOfType<VideoAdController>();
-            _soundController = FindObjectOfType<SoundController>();
-        }
-
         _currentLevelName = SceneManager.GetActiveScene().name;
 
         _nextLevelButton = GetComponent<Button>();
@@ -43,7 +29,7 @@ public class NextLevelButton : MonoBehaviour
 
     private void OnNextLevelButtonClick()
     {
-        _saver.SaveData();
+        _canvasUI.Saver.SaveData();
 
         StartLoadNextLevel();           
     }
@@ -52,7 +38,7 @@ public class NextLevelButton : MonoBehaviour
     {
         yield return _delay;
 
-        SceneManager.LoadScene(_enderLevel.NextSceneName);
+        SceneManager.LoadScene(_canvasUI.EndelLevel.NextSceneName);
 
         StopLoadNextLevel();
     }

@@ -8,18 +8,16 @@ public class EndLevelButtonFlash : MonoBehaviour
 {
     [SerializeField] private float _deltaScale;
     [SerializeField] private float _speedOfFlash;
+    [SerializeField] private RectTransform _rectTransform;
 
     private Vector3 _startScale;
     private Vector3 _currentScale;
     private Vector3 _targetScale;
 
-    private RectTransform _rectTransform;
     private Coroutine _flash;
 
     private void OnEnable()
     {
-        _rectTransform = GetComponent<RectTransform>();
-
         _startScale = _rectTransform.localScale;
         _currentScale = _startScale;
         _targetScale = new Vector3(_startScale.x + _deltaScale, _startScale.y + _deltaScale, _startScale.z + _deltaScale);

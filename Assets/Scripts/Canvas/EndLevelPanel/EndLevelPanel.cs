@@ -9,23 +9,16 @@ public class EndLevelPanel : MonoBehaviour
     [SerializeField] private MaxMedal _maxMedal;
     [SerializeField] private CanvasUI _canvasUI;
 
-    private ChooserMedals _chooserMedal;
-
     private void OnEnable()
     {
-        if (_chooserMedal==null)
-        {
-            _chooserMedal = FindObjectOfType<ChooserMedals>();
-        }
+        OpenPanels(_canvasUI.ChooserMedal.IsMinMedal, _canvasUI.ChooserMedal.IsMiddleMedal, _canvasUI.ChooserMedal.IsMaxMedal);
 
-        OpenPanels(_chooserMedal.IsMinMedal, _chooserMedal.IsMiddleMedal, _chooserMedal.IsMaxMedal);
-
-        _chooserMedal.IsMedalsChoosen += OnMedalsChoosen;
+        _canvasUI.ChooserMedal.IsMedalsChoosen += OnMedalsChoosen;
     }
 
     private void OnDisable()
     {
-        _chooserMedal.IsMedalsChoosen -= OnMedalsChoosen;
+        _canvasUI.ChooserMedal.IsMedalsChoosen -= OnMedalsChoosen;
     }
 
     private void OnMedalsChoosen(bool isMin, bool isMiddle, bool isMax)

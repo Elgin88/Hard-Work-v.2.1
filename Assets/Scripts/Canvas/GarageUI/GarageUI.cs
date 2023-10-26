@@ -6,21 +6,12 @@ using UnityEngine.SceneManagement;
 public class GarageUI : MonoBehaviour
 {
     [SerializeField] private float _rangeToClosePanel;
-    [SerializeField] private GarageUI _garageUI;
-
-    private DestroyerPoint _destroyerPoint;
-    private GarageParkingArea _garageParkingArea;
+    [SerializeField] private CanvasUI _canvasUI;
     
     private Coroutine _checkDistance;
 
     private void OnEnable()
     {
-        if (_destroyerPoint == null)
-        {
-            _destroyerPoint = FindObjectOfType<DestroyerPoint>();
-            _garageParkingArea = FindObjectOfType<GarageParkingArea>();
-        }
-
         StartCheckDistance();
     }
 
@@ -33,9 +24,9 @@ public class GarageUI : MonoBehaviour
     {
         while (true)
         {
-            if (Vector3.Distance(_destroyerPoint.transform.position, _garageParkingArea.transform.position) > _rangeToClosePanel)
+            if (Vector3.Distance(_canvasUI.DestroyerPoint.transform.position, _canvasUI.GarageParkingArea.transform.position) > _rangeToClosePanel)
             {
-                _garageUI.gameObject.SetActive(false);
+                gameObject.SetActive(false);
             }
 
             yield return null;

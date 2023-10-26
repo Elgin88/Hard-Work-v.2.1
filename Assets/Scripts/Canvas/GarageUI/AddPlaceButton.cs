@@ -8,34 +8,16 @@ using UnityEngine.UI;
 public class AddPlaceButton : MonoBehaviour
 {
     [SerializeField] private TMP_Text _cost;
-    [SerializeField] private Flasher _maxTextFlasher;
-    [SerializeField] private Flasher _middleTextFlasher;
-    [SerializeField] private Flasher _minTextFlasher;
-
-    private Button _button;
-    private Player _player;
-    private PlayerUpgrader _playerUpgrader;
-    private Garage _garage;
-    private GarageSoundController _garageSoundController;
-    private CanvasSoundController _soundController;
+    [SerializeField] private Button _button;
+    [SerializeField] private CanvasSoundController _soundController;
+    [SerializeField] private CanvasUI _canvasUI;
 
     private void OnEnable()
     {
-        _button = GetComponent<Button>();
-
-        if (_player == null)
-        {
-            _player = FindObjectOfType<Player>();
-            _playerUpgrader = _player.GetComponent<PlayerUpgrader>();
-            _garage = FindObjectOfType<Garage>();
-            _soundController = FindObjectOfType<CanvasSoundController>();
-            _garageSoundController = FindObjectOfType<GarageSoundController>();
-        }
-
         _button.onClick.AddListener(OnAddPlaceButtonClick);
-        _player.IsMoneyChanged += OnMoneyChanged;
+        _canvasUI.Player.IsMoneyChanged += OnMoneyChanged;
 
-        _cost.text = _garage.PlaceCost.ToString();
+        _cost.text = _canvasUI.Garage.PlaceCost.ToString();
 
         SetStatusButton();        
     }
@@ -43,19 +25,15 @@ public class AddPlaceButton : MonoBehaviour
     private void OnDisable()
     {
         _button.onClick.RemoveListener(OnAddPlaceButtonClick);
-        _player.IsMoneyChanged -= OnMoneyChanged;
+        _canvasUI.Player.IsMoneyChanged -= OnMoneyChanged;
     }
 
     private void OnAddPlaceButtonClick()
     {
-        _playerUpgrader.TryAddPlace();
+        _canvasUI.PlayerUpgrader.TryAddPlace();
         _soundController.PlayBuySound();
 
-        _maxTextFlasher.StartFlash();
-        _middleTextFlasher.StartFlash();
-        _minTextFlasher.StartFlash();
-
-        _garageSoundController.StartPlaySoundFinEngine();
+        _canvasUI.GarageSoundController.StartPlaySoundFinEngine();
     }
 
     private void OnMoneyChanged(int money)
@@ -65,7 +43,7 @@ public class AddPlaceButton : MonoBehaviour
 
     private void  SetStatusButton()
     {
-        if (_player.Money > _garage.PlaceCost)
+        if (_canvasUI.Player.Money > _canvasUI.Garage.PlaceCost)
         {
             _button.interactable = true;
         }

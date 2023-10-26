@@ -1,26 +1,19 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Flasher1 : MonoBehaviour
 {
     private float _deltaScaleInPercentages = 30;
     private float _timeOfFlashInSeconds = 0.3f;
-
     private Coroutine _flash;
-    private Transform _transform;
-
     private Vector3 _startScale;
     private Vector3 _currentScale;
     private Vector3 _targetScale;
-
     private float _deltaScale => (_targetScale.x - _startScale.x) / (_timeOfFlashInSeconds / Time.deltaTime);
 
     private void OnEnable()
     {
-        _transform = GetComponent<Transform>();
-
-        _startScale = _transform.localScale;
+        _startScale = transform.localScale;
         _currentScale = _startScale;
         _targetScale = _startScale * (100 + _deltaScaleInPercentages) / 100;
 
@@ -61,7 +54,7 @@ public class Flasher1 : MonoBehaviour
                 }
             }
 
-            _transform.localScale = _currentScale;
+            transform.localScale = _currentScale;
 
             yield return null;
         }

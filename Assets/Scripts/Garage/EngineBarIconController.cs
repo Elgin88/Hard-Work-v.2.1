@@ -15,8 +15,7 @@ public class EngineBarIconController : MonoBehaviour
     [SerializeField] private float _maxDeltaScaleY;
     [SerializeField] private float _maxDeltaScaleZ;
     [SerializeField] private float _duration;
-
-    private PlayerPowerController _powerController;
+    [SerializeField] private CanvasUI _canvasUI;
 
     public float MaxScaleX => _maxDeltaScaleX;
     public float MaxScaleY => _maxDeltaScaleY;
@@ -25,13 +24,12 @@ public class EngineBarIconController : MonoBehaviour
 
     private void OnEnable()
     {
-        _powerController = FindObjectOfType<PlayerPowerController>();
-        _powerController.IsEngineUpgrade += OnUpgradeEngine;
+        _canvasUI.PowerController.IsEngineUpgrade += OnUpgradeEngine;
     }
 
     private void OnDisable()
     {
-        _powerController.IsEngineUpgrade -= OnUpgradeEngine;
+        _canvasUI.PowerController.IsEngineUpgrade -= OnUpgradeEngine;
     }
 
     private void OnUpgradeEngine(int level, bool isMaxLevel)

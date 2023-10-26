@@ -10,25 +10,19 @@ using UnityEngine.UI;
 public class InventoryBar : MonoBehaviour
 {
     [SerializeField] private float _speedOfChange;
+    [SerializeField] private Slider _slider;
+    [SerializeField] private TMP_Text _maxText;
+    [SerializeField] private TMP_Text _middleText;
+    [SerializeField] private TMP_Text _minText;
+    [SerializeField] private CanvasUI _canvasUI;
 
-    private Slider _slider;
-    private TMP_Text _maxText;
-    private TMP_Text _middleText;
-    private TMP_Text _minText;
-    private Inventory _inventory;
     private Coroutine _changeValue;
-    private LineOfPointsCreater _lineOfPointsCreater;
-    private LineOfPoints _lineOfPoints;
     private float _currentSliderValue;
     private float _targetSliderValue;
-    private Player _player;
 
     private void Start()
     {
-        _player = FindObjectOfType<Player>();
-        _lineOfPoints = FindObjectOfType<LineOfPoints>();
-
-        int maxNumberBlocks = _player.MaxHightOfInventory * _lineOfPoints.NumberPoints;
+        int maxNumberBlocks = _canvasUI.Player.MaxHightOfInventory * _canvasUI.LineOfPoints.NumberPoints;
 
         _maxText.text = maxNumberBlocks.ToString();
         _middleText.text = (maxNumberBlocks / 2).ToString();
@@ -37,23 +31,20 @@ public class InventoryBar : MonoBehaviour
 
     private void OnEnable()
     {
-        _lineOfPointsCreater = FindObjectOfType<LineOfPointsCreater>();
-        _inventory = FindObjectOfType<Inventory>();
-
         _slider = GetComponent<Slider>();
         _maxText = GetComponentInChildren<InventoryBarMax>().GetComponent<TMP_Text>();
         _middleText = GetComponentInChildren<InventoryBarMiddle>().GetComponent<TMP_Text>();
         _minText = GetComponentInChildren<InventoryBarMin>().GetComponent<TMP_Text>();        
 
         _slider.value = 0;
-        _inventory.IsChangedNumberBlocks += OnChangedNumberBlocks;
-        _lineOfPointsCreater.IsChangedMaxNumberBlocks += OnChangedMaxNumberBlocks;
+        _canvasUI.Inventory.IsChangedNumberBlocks += OnChangedNumberBlocks;
+        _canvasUI.LineOfPointsCreater.IsChangedMaxNumberBlocks += OnChangedMaxNumberBlocks;
     }
 
     private void OnDisable()
     {
-        _inventory.IsChangedNumberBlocks -= OnChangedNumberBlocks;
-        _lineOfPointsCreater.IsChangedMaxNumberBlocks -= OnChangedMaxNumberBlocks;
+        _canvasUI.Inventory.IsChangedNumberBlocks -= OnChangedNumberBlocks;
+        _canvasUI.LineOfPointsCreater.IsChangedMaxNumberBlocks -= OnChangedMaxNumberBlocks;
     }
 
     private void OnChangedNumberBlocks(int target, int max)

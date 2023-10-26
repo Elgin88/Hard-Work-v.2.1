@@ -12,9 +12,9 @@ public class FuelBar : MonoBehaviour
     [SerializeField] private TMP_Text _max;
     [SerializeField] TMP_Text _middle;
     [SerializeField] TMP_Text _min;
+    [SerializeField] private Slider _slider;
+    [SerializeField] private CanvasUI _canvasUI;
 
-    private Slider _slider;
-    private PlayerFuelController _fuelController;
     private Coroutine _changeSliderValue;
     private float _currentValue;
     private float _targetFuel;
@@ -22,16 +22,15 @@ public class FuelBar : MonoBehaviour
 
     private void OnEnable()
     {
-        _fuelController = FindObjectOfType<PlayerFuelController>();        
         _slider = GetComponent<Slider>();
 
         _slider.value = 0;
-        _fuelController.IsFuelChanged += OnFuelChanged;
+        _canvasUI.PlayerFuelController.IsFuelChanged += OnFuelChanged;
     }
 
     private void OnDisable()
     {
-        _fuelController.IsFuelChanged -= OnFuelChanged;
+        _canvasUI.PlayerFuelController.IsFuelChanged -= OnFuelChanged;
     }
 
     private void OnFuelChanged(float target, float max)

@@ -227,6 +227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _targetColor: {r: 0.03529412, g: 0.62352943, b: 0.007843138, a: 0}
   _duration: 0.75
+  _image: {fileID: 3892546862685849552}
 --- !u!114 &8242116863154236292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1174,6 +1175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _targetColor: {r: 0.03529412, g: 0.62352943, b: 0.007843138, a: 0}
   _duration: 0.75
+  _image: {fileID: 6706425014728021782}
 --- !u!114 &7435210750926771100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2240,6 +2242,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _flasher1: {fileID: 4074697795345521279}
+  _button: {fileID: 1758577148977956223}
+  _canvasUI: {fileID: 6390884785094593398}
 --- !u!114 &4074697795345521279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2440,6 +2444,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speedOfChange: 0.3
+  _slider: {fileID: 1758577149254327660}
+  _canvasUI: {fileID: 6390884785094593398}
 --- !u!114 &8257724571488443745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2633,6 +2639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moneyCount: {fileID: 1758577150549101034}
+  _canvasUI: {fileID: 6390884785094593398}
 --- !u!1 &1758577149434410773
 GameObject:
   m_ObjectHideFlags: 0
@@ -2954,8 +2961,26 @@ MonoBehaviour:
   _endLevelButtonIndicatorEducation:
   - {fileID: 5947379165883800574}
   _garageUI: {fileID: 1758577150085976944}
-  _addFuelButtonForVideoAdd: {fileID: 0}
   _soundController: {fileID: 0}
+  _playerFuelController: {fileID: 0}
+  _player: {fileID: 0}
+  _videoAddController: {fileID: 0}
+  _calculatorBlocks: {fileID: 0}
+  _endelLevel: {fileID: 0}
+  _chooserMedals: {fileID: 0}
+  _videoAdController: {fileID: 0}
+  _enderLevel: {fileID: 0}
+  _saver: {fileID: 0}
+  _destroyerPoint: {fileID: 0}
+  _garageParkingArea: {fileID: 0}
+  _garage: {fileID: 0}
+  _garageSoundController: {fileID: 0}
+  _playerUpgrade: {fileID: 0}
+  _playerPowerController: {fileID: 0}
+  _lineOfPoints: {fileID: 0}
+  _lineOfPointsCreater: {fileID: 0}
+  _inventory: {fileID: 0}
+  _pauserGame: {fileID: 0}
 --- !u!82 &1791244643987670448
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3239,6 +3264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _duration: 0.5
   _range: 0.8
+  _rectTransform: {fileID: 0}
 --- !u!1 &1758577149615600957
 GameObject:
   m_ObjectHideFlags: 0
@@ -3386,6 +3412,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f552a52d1392d4d429dd83b115437e48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _canvasUI: {fileID: 6390884785094593398}
+  _nextLevelButton: {fileID: 1758577149615600959}
 --- !u!1 &1758577149661271912
 GameObject:
   m_ObjectHideFlags: 0
@@ -3593,6 +3621,8 @@ MonoBehaviour:
   _max: {fileID: 1758577149854974431}
   _middle: {fileID: 2838187938879632086}
   _min: {fileID: 1758577149584342472}
+  _slider: {fileID: 1758577149722923428}
+  _canvasUI: {fileID: 6390884785094593398}
 --- !u!1 &1758577149854974402
 GameObject:
   m_ObjectHideFlags: 0
@@ -3743,6 +3773,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _duration: 0.5
   _range: 0.8
+  _rectTransform: {fileID: 0}
 --- !u!1 &1758577149866542625
 GameObject:
   m_ObjectHideFlags: 0
@@ -3911,6 +3942,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _label: {fileID: 1758577150126409430}
+  _canvasUI: {fileID: 6390884785094593398}
 --- !u!1 &1758577150003654089
 GameObject:
   m_ObjectHideFlags: 0
@@ -4039,7 +4071,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rangeToClosePanel: 3.5
-  _garageUI: {fileID: 1758577150085976944}
+  _canvasUI: {fileID: 6390884785094593398}
 --- !u!1 &1758577150126409428
 GameObject:
   m_ObjectHideFlags: 0
@@ -5331,6 +5363,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _deltaScale: 0.1
   _speedOfFlash: 0.2
+  _rectTransform: {fileID: 1758577150933686441}
 --- !u!1 &1858924253834298723
 GameObject:
   m_ObjectHideFlags: 0
@@ -5557,6 +5590,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _duration: 0.5
   _range: 0.8
+  _rectTransform: {fileID: 0}
 --- !u!1 &2246327941631204277
 GameObject:
   m_ObjectHideFlags: 0
@@ -6581,6 +6615,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _buttonSoundOff: {fileID: 6936527466405663020}
+  _canvasUI: {fileID: 6390884785094593398}
 --- !u!1 &2892230924213309936
 GameObject:
   m_ObjectHideFlags: 0
@@ -6746,6 +6781,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _duration: 1
   _range: 0.8
+  _rectTransform: {fileID: 6560378067664415735}
 --- !u!1 &2921117931038877966
 GameObject:
   m_ObjectHideFlags: 0
@@ -7453,6 +7489,9 @@ MonoBehaviour:
   _deltaScale: 0.25
   _duration: 1.5
   _targetColor: {r: 1, g: 0.64705884, b: 0, a: 0}
+  _rectTransform: {fileID: 3954327739112490334}
+  _image: {fileID: 3954327739112490335}
+  _canvasUI: {fileID: 6390884785094593398}
 --- !u!1 &3954327739202157235
 GameObject:
   m_ObjectHideFlags: 0
@@ -7565,6 +7604,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speedOfChange: 0.3
+  _slider: {fileID: 3954327739202157239}
+  _maxText: {fileID: 3954327739963536395}
+  _middleText: {fileID: 1721183929818806194}
+  _minText: {fileID: 3954327740214279676}
+  _canvasUI: {fileID: 6390884785094593398}
 --- !u!1 &3954327739685474859
 GameObject:
   m_ObjectHideFlags: 0
@@ -7882,6 +7926,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _duration: 1
   _range: 0.8
+  _rectTransform: {fileID: 3954327739963536437}
 --- !u!1 &3954327740214279673
 GameObject:
   m_ObjectHideFlags: 0
@@ -8045,6 +8090,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _duration: 1
   _range: 0.8
+  _rectTransform: {fileID: 3954327740214279678}
 --- !u!1 &3965755999214498652
 GameObject:
   m_ObjectHideFlags: 0
@@ -8180,6 +8226,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51cc36ea5c9984079a5f7bb4163342b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _canvasUI: {fileID: 6390884785094593398}
+  _button: {fileID: 8923857495870198533}
 --- !u!1 &4027421184072830608
 GameObject:
   m_ObjectHideFlags: 0
@@ -8369,6 +8417,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02983398562e74a15a5a016f97cef640, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _canvasUI: {fileID: 6390884785094593398}
+  _button: {fileID: 2476234350686294123}
 --- !u!1 &4133321703883091921
 GameObject:
   m_ObjectHideFlags: 0
@@ -8647,6 +8697,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 441c20b3a9a8241f0ad98f9212d110cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rectTransform: {fileID: 579950674906151988}
 --- !u!1 &4478333124565773999
 GameObject:
   m_ObjectHideFlags: 0
@@ -8739,6 +8790,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _targetColor: {r: 0.03395466, g: 0.6226415, b: 0.008810949, a: 0}
   _duration: 0.75
+  _image: {fileID: 1294907548068571446}
 --- !u!114 &5965418285051728837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9104,6 +9156,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _cost: {fileID: 687222406478704323}
+  _button: {fileID: 5122951277019515478}
+  _canvasSoundController: {fileID: 4571318203383891565}
+  _canvasUI: {fileID: 6390884785094593398}
+  _addFuelIndicatorEducation:
+  - {fileID: 297987143312029106}
+  - {fileID: 7007768010406576580}
+  - {fileID: 6661776985926101572}
 --- !u!1 &5232990436621959398
 GameObject:
   m_ObjectHideFlags: 0
@@ -9315,6 +9374,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf97c9e710d814a818aad16d1bdc40c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _button: {fileID: 2424416136406413247}
+  _canvasUI: {fileID: 6390884785094593398}
 --- !u!1 &5600424197369348322
 GameObject:
   m_ObjectHideFlags: 0
@@ -9512,6 +9573,7 @@ MonoBehaviour:
   _maxDeltaScaleY: 1.3
   _maxDeltaScaleZ: 1.3
   _duration: 0.3
+  _canvasUI: {fileID: 6390884785094593398}
 --- !u!1 &5700204133238625903
 GameObject:
   m_ObjectHideFlags: 0
@@ -9827,6 +9889,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _cost: {fileID: 111131339884492738}
+  _button: {fileID: 5700204133601088343}
+  _flash: {fileID: 5965418285051728837}
+  _soundController: {fileID: 4571318203383891565}
+  _canvasUI: {fileID: 6390884785094593398}
 --- !u!1 &5700204133962779330
 GameObject:
   m_ObjectHideFlags: 0
@@ -9967,6 +10033,9 @@ MonoBehaviour:
   _maxTextFlasher: {fileID: 3974996649789447400}
   _middleTextFlasher: {fileID: 1082422131580184324}
   _minTextFlasher: {fileID: 1331711241213183303}
+  _button: {fileID: 5700204133962779329}
+  _soundController: {fileID: 4571318203383891565}
+  _canvasUI: {fileID: 6390884785094593398}
 --- !u!1 &5700204134028293366
 GameObject:
   m_ObjectHideFlags: 0
@@ -10107,6 +10176,9 @@ MonoBehaviour:
   _maxTextFlasher: {fileID: 7213294547040926376}
   _middleTextFlasher: {fileID: 410278125646992534}
   _minTextFlasher: {fileID: 2363475384221833565}
+  _button: {fileID: 5700204134028293365}
+  _canvasUI: {fileID: 6390884785094593398}
+  _canvasSoundController: {fileID: 4571318203383891565}
 --- !u!1 &6533289347556649745
 GameObject:
   m_ObjectHideFlags: 0
@@ -10708,6 +10780,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _buttonOn: {fileID: 3976357487252215837}
+  _canvasUI: {fileID: 6390884785094593398}
 --- !u!1 &7421428531279286580
 GameObject:
   m_ObjectHideFlags: 0

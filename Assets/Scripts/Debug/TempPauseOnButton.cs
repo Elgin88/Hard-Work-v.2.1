@@ -5,15 +5,11 @@ using UnityEngine.UI;
 
 public class TempPauseOnButton : MonoBehaviour
 {
-    private PauserGame _pauserGame;
-    private Button _button;
+    [SerializeField] private Button _button;
+    [SerializeField] private CanvasUI _canvasUI;
 
     private void Start()
     {
-        _pauserGame = FindObjectOfType<PauserGame>();
-
-        _button = GetComponent<Button>();
-
         _button.onClick.AddListener(OnPauseButtonClisk);
     }
 
@@ -24,6 +20,6 @@ public class TempPauseOnButton : MonoBehaviour
 
     private void OnPauseButtonClisk()
     {
-        _pauserGame.PauseOn();
+        _canvasUI.PauserGame.PauseOn();
     }
 }

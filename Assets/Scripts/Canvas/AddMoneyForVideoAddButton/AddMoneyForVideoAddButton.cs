@@ -13,12 +13,9 @@ public class AddMoneyForVideoAddButton : MonoBehaviour
     [SerializeField] private float _delay;
 
     private WaitForSeconds _delayWFS;
-    private PauserGame _pauserGame;
 
     private void Start()
     {
-        _pauserGame = FindObjectOfType<PauserGame>();
-
         _button.onClick.AddListener(OnButtonClick);
 
         _delayWFS = new WaitForSeconds(_delay);
@@ -42,7 +39,7 @@ public class AddMoneyForVideoAddButton : MonoBehaviour
         yield return _delayWFS;
 
         _canvasUI.VideoAddController.ShowVideoAd();
-        _pauserGame.PauseOn();
+        _canvasUI.PauserGame.PauseOn();
 
         StopCoroutine(ShowVideoAd());
     }
