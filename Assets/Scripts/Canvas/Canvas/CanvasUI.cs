@@ -1,5 +1,7 @@
 using UnityEngine;
 
+[RequireComponent(typeof(CanvasSoundController))]
+
 public class CanvasUI : MonoBehaviour
 {
     [SerializeField] private JoystickIndicatorEducation[] _joystickIndicators;

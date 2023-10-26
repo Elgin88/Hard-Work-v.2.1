@@ -14,12 +14,15 @@ public class AddFuelButton : MonoBehaviour
     [SerializeField] private AddFuelIndicatorEducation[] _addFuelIndicatorEducation;
 
     private string _levelName = "Level1";
+    private string _currentSceneName;
 
     private void OnEnable()
     {
         _button.onClick.AddListener(OnAddFuelButtonClick);
         _canvasUI.Player.IsMoneyChanged += OnPlayerMoneyChanded;
         _cost.text = _canvasUI.Garage.FuelCoust.ToString();
+
+        _currentSceneName = SceneManager.GetActiveScene().name;
 
         CheckStatusButton();
     }
@@ -37,7 +40,7 @@ public class AddFuelButton : MonoBehaviour
 
         _canvasUI.GarageSoundController.PlayFuelSound();
 
-        if (_addFuelIndicatorEducation != null)
+        if (_currentSceneName == _levelName)
         {
             foreach (var indicator in _addFuelIndicatorEducation)
             {
@@ -49,8 +52,14 @@ public class AddFuelButton : MonoBehaviour
         {
             foreach (var indicator in _canvasUI.JoystickIndicators)
             {
-                indicator.gameObject.SetActive(true);
-                indicator.StartFlash();
+                if (indicator!=null)
+                {
+                    if (_currentSceneName==_levelName)
+                    {
+                        indicator.gameObject.SetActive(true);
+                        indicator.StartFlash();
+                    }
+                }
             }
         }
     }
