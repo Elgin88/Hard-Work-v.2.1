@@ -1,17 +1,13 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(LineOfPointsCreater))]
-[RequireComponent(typeof(Unloader))]
-
 public class Inventory : MonoBehaviour
 {
     [SerializeField] private List<LineOfPoints> _lines;
+    [SerializeField] private LineOfPointsCreater _lineOfPointsCreater;
 
     private bool _isFull = false;
-    private LineOfPointsCreater _lineOfPointsCreater;
 
     public int GetNumberLines => _lines.Count;
     public event UnityAction <int,int> IsChangedNumberBlocks;

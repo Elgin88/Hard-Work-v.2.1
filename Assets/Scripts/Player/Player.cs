@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
     [SerializeField] private float _deltaBetweenBlocks;
     [SerializeField] private int _hightOfInventory;
     [SerializeField] private float _deltaTimeBetweeUnloadBlocks;
+    [SerializeField] private Garage _garage;
+    [SerializeField] private CollectionPoint _collectionPoint;
 
     private PlayerSoundController _soundController;
     private PlayerLoadController _loadController;
@@ -29,6 +31,9 @@ public class Player : MonoBehaviour
     public float DeltaBetweenUnloadBlocks => _deltaTimeBetweeUnloadBlocks;
     public int Money => _money;
     public int MaxHightOfInventory => _hightOfInventory;
+
+    public Garage Garage => _garage;
+    public CollectionPoint CollectionPoint => _collectionPoint;
 
     public event UnityAction IsPushed;
     public event UnityAction <int> IsMoneyChanged;    

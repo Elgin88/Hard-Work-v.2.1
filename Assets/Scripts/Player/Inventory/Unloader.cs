@@ -1,22 +1,18 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
 
 public class Unloader : MonoBehaviour
 {
+    [SerializeField] private Inventory _inventory;
+    [SerializeField] private Player _player;
+
     private float _deltaBetweenUnloadBlocks;
     private Coroutine _unload;
-    private CollectionPoint _point;
-    private Inventory _inventory;
     private WaitForSeconds _deltaBetweenUnloadBlocksWFS;
 
     private void Start()
     {
-        _point = FindObjectOfType<CollectionPoint>();
-        _deltaBetweenUnloadBlocks = FindObjectOfType<Player>().DeltaBetweenUnloadBlocks;
-
-        _inventory = GetComponent<Inventory>();        
+        _deltaBetweenUnloadBlocks = _player.DeltaBetweenUnloadBlocks;        
 
         _deltaBetweenUnloadBlocksWFS = new WaitForSeconds(_deltaBetweenUnloadBlocks);
     }
@@ -29,7 +25,7 @@ public class Unloader : MonoBehaviour
 
             if (lastAddBlock != null)
             {
-                lastAddBlock.BlockMoverToCollector.StartMoveToCollector(_point.transform.position);
+                lastAddBlock.BlockMoverToCollector.StartMoveToCollector(_player.CollectionPoint.transform.position);
                 lastAddBlock.Point.RemoveBlock();
 
                 if (_inventory.GetNumberBloksInTopLine() == 0 & _inventory.GetCountOfLines() > 1)

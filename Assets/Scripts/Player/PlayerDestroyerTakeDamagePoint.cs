@@ -9,17 +9,14 @@ using static UnityEngine.ParticleSystem;
 
 public class PlayerDestroyerTakeDamagePoint : MonoBehaviour
 {
-    private ParticleSystem _particle;
+    [SerializeField] private Player _player;
+    [SerializeField] private ParticleSystem _particle;
+
     private WaitForSeconds _pauseWFS;
     private Coroutine _pause;
 
-    private Player _player;
-
     private void OnEnable()
     {
-        _player = FindObjectOfType<Player>();
-        _particle = GetComponentInChildren<ParticleSystem>();
-
         if (_particle!=null)
         {
             _particle.gameObject.SetActive(false);
