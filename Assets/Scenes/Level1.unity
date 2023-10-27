@@ -19198,7 +19198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e96787f3cdce4cabad6eebcdc069f7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxProcent: 100
+  _maxProcent: 95
   _middleProcent: 80
   _minProcent: 60
   _nextScene: Level2
