@@ -832,6 +832,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _buttonSoundOff: {fileID: 259404571}
+  _canvasUI: {fileID: 0}
 --- !u!1 &512524056
 GameObject:
   m_ObjectHideFlags: 0
@@ -1145,6 +1146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7683494976bf64b74a1ee0c417a4b447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _soundController: {fileID: 583407479}
 --- !u!114 &583407474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1169,13 +1171,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e96787f3cdce4cabad6eebcdc069f7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxProcent: 100
+  _maxProcent: 95
   _middleProcent: 80
   _minProcent: 60
   _nextScene: Level1
   _endLevelButton: {fileID: 0}
   _reloadButton: {fileID: 0}
   _endLevelPanel: {fileID: 0}
+  _calculatorBlocks: {fileID: 583407477}
+  _chooserMedals: {fileID: 583407476}
 --- !u!114 &583407476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1188,6 +1192,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79b6d2b3cd89c47d69160332084e7fd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _enderLevel: {fileID: 583407475}
+  _calculatorBlocks: {fileID: 583407477}
 --- !u!114 &583407477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1236,6 +1242,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fccecb33be6c4588ab53970288130d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _saver: {fileID: 583407481}
+  _player: {fileID: 0}
 --- !u!114 &583407481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1248,6 +1256,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8431ab295507e4458980459420c85682, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
+  _enderLevel: {fileID: 583407475}
 --- !u!114 &583407482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1260,6 +1270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc68d1ca1cfe4485eb8b73ef66c4ca9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _pauserController: {fileID: 583407484}
 --- !u!114 &583407484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1284,6 +1295,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379c1278537f74344841cfbfa868842d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _fixedJoystick: {fileID: 0}
+  _pauserGame: {fileID: 583407484}
 --- !u!1 &841130403
 GameObject:
   m_ObjectHideFlags: 0
@@ -1563,6 +1576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _buttonOn: {fileID: 1354912060}
+  _canvasUI: {fileID: 0}
 --- !u!114 &1354912060
 MonoBehaviour:
   m_ObjectHideFlags: 0

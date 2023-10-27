@@ -4,14 +4,8 @@ using UnityEngine;
 
 public class UnpauserGameThenUseJoystick : MonoBehaviour
 {
-    private FixedJoystick _fixedJoystick;
-    private PauserGame _pauserGame;
-
-    private void Start()
-    {
-        _fixedJoystick = FindObjectOfType<FixedJoystick>();
-        _pauserGame = FindObjectOfType<PauserGame>();
-    }
+    [SerializeField] private FixedJoystick _fixedJoystick;
+    [SerializeField] private PauserGame _pauserGame;
 
     private void Update()
     {

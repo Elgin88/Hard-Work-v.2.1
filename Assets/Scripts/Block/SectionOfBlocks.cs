@@ -29,15 +29,18 @@ public class SectionOfBlocks : MonoBehaviour
         {
             foreach (Block block in _blocks)
             {
-                block.gameObject.SetActive(true);
-                block.StartTimerPhysicsOff();
-
-                _numberActiveBlocks++;
-
-                if (_numberActiveBlocks > _requireNumberActiveBlocks)
+                if (block!=null)
                 {
-                    yield return null;
-                    _numberActiveBlocks = 0;
+                    block.gameObject.SetActive(true);
+                    block.StartTimerPhysicsOff();
+
+                    _numberActiveBlocks++;
+
+                    if (_numberActiveBlocks > _requireNumberActiveBlocks)
+                    {
+                        yield return null;
+                        _numberActiveBlocks = 0;
+                    }
                 }
             }
 

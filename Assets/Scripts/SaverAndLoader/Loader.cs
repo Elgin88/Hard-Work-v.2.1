@@ -5,15 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Loader : MonoBehaviour
 {
-    private Saver _saver;
-    private Player _player;
+    [SerializeField] private Saver _saver;
+    [SerializeField] private Player _player;
     private string _nameLevel0 = "Level0";
-
-    private void OnEnable()
-    {
-        _saver = FindObjectOfType<Saver>();
-        _player = FindObjectOfType<Player>();
-    }
 
     private void FixedUpdate()
     {

@@ -8,8 +8,9 @@ using UnityEngine.Events;
 
 public class ChooserMedals : MonoBehaviour
 {
-    private EnderLevel _enderLevel;
-    private CalculatorBlocks _calculatorBlocks;
+    [SerializeField] private EnderLevel _enderLevel;
+    [SerializeField] private CalculatorBlocks _calculatorBlocks;
+
     private bool _isMaxMedal = false;
     private bool _isMiddleMedal = false;
     private bool _isMinMedal = false;
@@ -19,12 +20,6 @@ public class ChooserMedals : MonoBehaviour
     public bool IsMinMedal => _isMinMedal;
 
     public event UnityAction<bool, bool, bool> IsMedalsChoosen;
-
-    private void OnEnable()
-    {
-        _enderLevel = GetComponent<EnderLevel>();
-        _calculatorBlocks = GetComponent<CalculatorBlocks>();
-    }
 
     public void ChooseMedals()
     {

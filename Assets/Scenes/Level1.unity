@@ -9686,6 +9686,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec0aea805d20d41d6aff472291859aea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &827877615 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3513216691088164064, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
+  m_PrefabInstance: {fileID: 827877611}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45977bbae16431c46a013576a1aea384, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &834893392 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
@@ -19186,6 +19197,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79b6d2b3cd89c47d69160332084e7fd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _enderLevel: {fileID: 1852628427}
+  _calculatorBlocks: {fileID: 1852628428}
 --- !u!114 &1852628427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19205,6 +19218,8 @@ MonoBehaviour:
   _endLevelButton: {fileID: 827877612}
   _reloadButton: {fileID: 827877614}
   _endLevelPanel: {fileID: 827877613}
+  _calculatorBlocks: {fileID: 1852628428}
+  _chooserMedals: {fileID: 1852628426}
 --- !u!114 &1852628428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19361,6 +19376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7683494976bf64b74a1ee0c417a4b447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _soundController: {fileID: 1852628435}
 --- !u!114 &1852628437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19373,6 +19389,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fccecb33be6c4588ab53970288130d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _saver: {fileID: 1852628438}
+  _player: {fileID: 268018514}
 --- !u!114 &1852628438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19385,6 +19403,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8431ab295507e4458980459420c85682, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 268018514}
+  _enderLevel: {fileID: 1852628427}
 --- !u!114 &1852628439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19397,6 +19417,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc68d1ca1cfe4485eb8b73ef66c4ca9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _pauserController: {fileID: 1852628440}
 --- !u!114 &1852628440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19421,6 +19442,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379c1278537f74344841cfbfa868842d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _fixedJoystick: {fileID: 827877615}
+  _pauserGame: {fileID: 1852628440}
 --- !u!1001 &1856061663
 PrefabInstance:
   m_ObjectHideFlags: 0

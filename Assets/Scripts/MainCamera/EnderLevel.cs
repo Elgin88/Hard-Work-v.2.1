@@ -14,9 +14,9 @@ public class EnderLevel : MonoBehaviour
     [SerializeField] private EndLevelButton _endLevelButton;
     [SerializeField] private ReloadButton _reloadButton;
     [SerializeField] private EndLevelPanel _endLevelPanel;
+    [SerializeField] private CalculatorBlocks _calculatorBlocks;
+    [SerializeField] private ChooserMedals _chooserMedals;
 
-    private CalculatorBlocks _calculatorBlocks;
-    private ChooserMedals _chooserMedals;
     private int _allBlocks;
     private int _middleNumberBlocks;
     private int _minNumberBlocks => _allBlocks * _minProcent / 100;
@@ -31,11 +31,6 @@ public class EnderLevel : MonoBehaviour
 
     private void OnEnable()
     {
-        _reloadButton = FindObjectOfType<ReloadButton>();
-
-        _calculatorBlocks = GetComponent<CalculatorBlocks>();
-        _chooserMedals = GetComponent<ChooserMedals>();
-
         _calculatorBlocks.IsChangedNumberUnloadBlocks += OnChangedNumberUnloadBlocks;
     }
 

@@ -1,16 +1,13 @@
-using System.Collections;
-using TMPro;
 using UnityEngine;
 
 public class TurnOffSoundWhenMinimizingGame : MonoBehaviour
 {
-    private SoundController _soundController;
+    [SerializeField] private SoundController _soundController;
+
     private bool _isSoundOffThenMinimozing;
 
     private void Start()
     {
-        _soundController = FindObjectOfType<SoundController>();
-
         _isSoundOffThenMinimozing = false;
     }
 
