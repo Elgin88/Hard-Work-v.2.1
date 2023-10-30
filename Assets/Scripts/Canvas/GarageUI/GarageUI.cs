@@ -10,6 +10,14 @@ public class GarageUI : MonoBehaviour
     
     private Coroutine _checkDistance;
 
+    private void Start()
+    {
+        if ( _rangeToClosePanel == 0 || _canvasUI == null)
+        {
+            Debug.Log("No serializefiel in " + gameObject.name);
+        }
+    }
+
     private void OnEnable()
     {
         StartCheckDistance();

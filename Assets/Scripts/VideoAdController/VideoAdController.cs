@@ -1,12 +1,22 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 [RequireComponent(typeof(SoundController))]
 
 public class VideoAdController : MonoBehaviour
 {
     [SerializeField] private PauserGame _pauserController;
+
+    private void Start()
+    {
+        if (_pauserController == null)
+
+        {
+            Debug.Log("No serializefiel in " + gameObject.name);
+        }
+    }
 
     private Action _onCloseVideoAdCallback;
 

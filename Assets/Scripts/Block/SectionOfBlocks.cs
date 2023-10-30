@@ -1,4 +1,5 @@
 using System.Collections;
+using Agava.WebUtility;
 using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider))]
@@ -13,6 +14,14 @@ public class SectionOfBlocks : MonoBehaviour
     private int _numberActiveBlocks = 0;
 
     public int NumberOfBlocks => _blocks.Length;
+
+    private void Start()
+    {
+        if (_blocks == null || _player == null)
+        {
+            Debug.Log("No serializefiel in " + gameObject.name);
+        }
+    }
 
     private void OnCollisionEnter(Collision collision)
     {

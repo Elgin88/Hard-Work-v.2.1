@@ -8,6 +8,14 @@ public class BlockFixer : MonoBehaviour
 
     private Coroutine _fixBlock;
 
+    private void Start()
+    {
+        if (_player==null || _block==null)
+        {
+            Debug.Log("No serializefiel in " + gameObject.name);
+        }
+    }
+
     private IEnumerator FixBlock()
     {
         _block.SoundController.PlayPlaceOnCarSFX();

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class Inventory : MonoBehaviour
 {
@@ -11,6 +12,14 @@ public class Inventory : MonoBehaviour
 
     public int GetNumberLines => _lines.Count;
     public event UnityAction <int,int> IsChangedNumberBlocks;
+
+    private void Start()
+    {
+        if (_lines == null || _lineOfPointsCreater == null)
+        {
+            Debug.Log("No serializefiel in " + gameObject.name);
+        }
+    }
 
     private void OnEnable()
     {

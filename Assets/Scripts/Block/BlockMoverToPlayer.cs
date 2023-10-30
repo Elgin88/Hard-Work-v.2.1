@@ -15,6 +15,15 @@ public class BlockMoverToPlayer : MonoBehaviour
     private Vector3 _startBlockPosition;
     private bool _isReachTop;
 
+    private void Start()
+    {
+        if (_blockFixer == null || _block == null || _blockMoverToCollector == null || _blockSoundController == null)
+
+        {
+            Debug.Log("No serializefiel in " + gameObject.name);
+        }
+    }
+
     private IEnumerator Flight()
     {
         _isReachTop = false;

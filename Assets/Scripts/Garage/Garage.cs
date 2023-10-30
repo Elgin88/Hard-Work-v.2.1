@@ -17,4 +17,12 @@ public class Garage : MonoBehaviour
     public int PowerCost => _powerCost;
     public GarageUI GarageUI => _garageUI;
     public CanvasUI CanvasUI => _canvasUI;
+
+    private void Start()
+    {
+        if (_fuelCost == 0 || _tankCost == 0 || _placeCost == 0 || _powerCost == 0 || _garageUI == null || _canvasUI == null)
+        {
+            Debug.Log("No serializefiel in " + gameObject.name);
+        }
+    }
 }

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
 public class AddMoneyForVideoAddButton : MonoBehaviour
 {
     [SerializeField] private CanvasUI _canvasUI;
@@ -16,6 +15,10 @@ public class AddMoneyForVideoAddButton : MonoBehaviour
 
     private void Start()
     {
+        if (_canvasUI == null || _addPlayerMoney == 0 || _button == null || _audioSourse == null || _delay == 0)
+        {
+            Debug.Log("No serializefiel in " + gameObject.name);
+        }
         _button.onClick.AddListener(OnButtonClick);
 
         _delayWFS = new WaitForSeconds(_delay);

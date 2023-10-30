@@ -7,4 +7,12 @@ public class Collector : MonoBehaviour
 
     public Unloader Unloader => _unloader;
     public Player Player => _player;
+
+    private void Start()
+    {
+        if (_unloader == null || _player == null)
+        {
+            Debug.Log("No serializefiel in " + gameObject.name);
+        }
+    }
 }

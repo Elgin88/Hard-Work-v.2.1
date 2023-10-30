@@ -1,12 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 [RequireComponent(typeof(Rigidbody))]
 
 public class CollectionParkingArea : MonoBehaviour
 {
     [SerializeField] private Collector _collector;
+
+    private void Start()
+    {
+        if (_collector == null)
+        {
+            Debug.Log("No serializefiel in " + gameObject.name);
+        }
+    }
 
     private void OnCollisionEnter(Collision collision)
     {

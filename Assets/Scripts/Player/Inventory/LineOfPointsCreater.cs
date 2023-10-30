@@ -10,12 +10,16 @@ public class LineOfPointsCreater : MonoBehaviour
     private float _rangeBetweenBlocks;
     private int _maxNumberOfLines;
 
-
     public int MaxNumberOfLines => _maxNumberOfLines;
     public event UnityAction <int, int> IsChangedMaxNumberBlocks;
 
     private void Start()
     {
+        if (_lineOfPoints == null || _inventory == null || _player == null)
+        {
+            Debug.Log("No serializefiel in " + gameObject.name);
+        }
+
         _rangeBetweenBlocks = _player.RangeBetweenBlocks;
         _maxNumberOfLines = _player.MaxHightOfInventory;
     }

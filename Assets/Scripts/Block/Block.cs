@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Agava.WebUtility;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -29,6 +30,15 @@ public class Block : MonoBehaviour
     public Player Player => _player;
     public Point Point => _point;
     public int Cost => _cost;
+
+    private void Start()
+    {
+        if (_player == null || _rigidbody == null || _boxCollider == null || _soundController == null || _blockMoverToCollector == null || _moverBlock == null)
+
+        {
+            Debug.Log("No serializefiel in " + gameObject.name);
+        }
+    }
 
     private void BlocksUnloaded(bool isUnload)
     {

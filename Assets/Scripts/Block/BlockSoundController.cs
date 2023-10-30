@@ -1,8 +1,18 @@
+using Agava.WebUtility;
 using UnityEngine;
 
 public class BlockSoundController : MonoBehaviour
 {
     [SerializeField] private PlayerSoundController _playerSoundController;
+
+    private void Start()
+    {
+        if (_playerSoundController == null)
+
+        {
+            Debug.Log("No serializefiel in " + gameObject.name);
+        }
+    }
 
     public void PlayFlyOnCarSFX()
     {

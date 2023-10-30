@@ -14227,6 +14227,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1921418015}
     - target: {fileID: 943398948989556032, guid: 6b708a46b44dd4ac1a375c61ebb36430, type: 3}
+      propertyPath: _loader
+      value: 
+      objectReference: {fileID: 1852628437}
+    - target: {fileID: 943398948989556032, guid: 6b708a46b44dd4ac1a375c61ebb36430, type: 3}
+      propertyPath: _collectionPoin
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 943398948989556032, guid: 6b708a46b44dd4ac1a375c61ebb36430, type: 3}
       propertyPath: _collectionPoint
       value: 
       objectReference: {fileID: 913927204}

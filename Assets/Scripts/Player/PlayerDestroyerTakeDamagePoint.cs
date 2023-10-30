@@ -15,6 +15,14 @@ public class PlayerDestroyerTakeDamagePoint : MonoBehaviour
     private WaitForSeconds _pauseWFS;
     private Coroutine _pause;
 
+    private void Start()
+    {
+        if (_player == null || _particle == null)
+        {
+            Debug.Log("No serializefiel in " + gameObject.name);
+        }
+    }
+
     private void OnEnable()
     {
         if (_particle!=null)

@@ -1,10 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(PlayerMover))]
-[RequireComponent(typeof(PlayerLoadController))]
-[RequireComponent(typeof(PlayerSoundController))]
-
 public class Player : MonoBehaviour
 {
     [SerializeField] private float _deltaBetweenBlocks;
@@ -12,15 +8,16 @@ public class Player : MonoBehaviour
     [SerializeField] private float _deltaTimeBetweeUnloadBlocks;
     [SerializeField] private Garage _garage;
     [SerializeField] private CollectionPoint _collectionPoint;
+    [SerializeField] private PlayerSoundController _soundController;
+    [SerializeField] private PlayerLoadController _loadController;
+    [SerializeField] private PlayerMover _mover;
+    [SerializeField] private Inventory _inventory;
+    [SerializeField] private Unloader _unloader;
+    [SerializeField] private CollectionPoint _collectionPoin;
+    [SerializeField] private Loader _loader;
 
-    private PlayerSoundController _soundController;
-    private PlayerLoadController _loadController;
-    private PlayerMover _mover;
-    private Inventory _inventory;
-    private Unloader _unloader;
-    private Vector3 _collectionPointPosition;
-    private Loader _loader;
     private int _money;
+    private Vector3 _collectionPointPosition;
 
     public PlayerSoundController SoundController => _soundController;
     public PlayerLoadController LoadController => _loadController;
@@ -40,14 +37,23 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        _collectionPointPosition = FindObjectOfType<CollectionPoint>().transform.position;
-        _loader = FindObjectOfType<Loader>();
+        if (_deltaBetweenBlocks == 0 ||
+            _hightOfInventory == 0 ||
+            _deltaTimeBetweeUnloadBlocks == 0 ||
+            _garage == null ||
+            _collectionPoint == null ||
+            _soundController == null ||
+            _loadController == null ||
+            _mover == null ||
+            _inventory == null ||
+            _unloader == null ||
+            _collectionPoin == null ||
+            _loader == null )
+        {
+            Debug.Log("No serializefiel in " + gameObject.name);
+        }
 
-        _soundController = GetComponent<PlayerSoundController>();
-        _loadController = GetComponent<PlayerLoadController>();
-        _inventory = GetComponentInChildren<Inventory>();
-        _unloader = GetComponentInChildren<Unloader>();
-        _mover = GetComponent<PlayerMover>();
+        _collectionPointPosition = _collectionPoin.transform.position;
 
         SetMoney(_loader.GetPlayerMoneyCount());
     }

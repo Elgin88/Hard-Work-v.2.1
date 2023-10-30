@@ -12,6 +12,11 @@ public class Unloader : MonoBehaviour
 
     private void Start()
     {
+        if (_inventory == null || _player == null)
+        {
+            Debug.Log("No serializefiel in " + gameObject.name);
+        }
+
         _deltaBetweenUnloadBlocks = _player.DeltaBetweenUnloadBlocks;        
 
         _deltaBetweenUnloadBlocksWFS = new WaitForSeconds(_deltaBetweenUnloadBlocks);

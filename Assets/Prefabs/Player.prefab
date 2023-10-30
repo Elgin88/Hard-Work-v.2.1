@@ -344,7 +344,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50ac806113bea4ab1bd701bcc1c0a446, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _point: {fileID: 0}
   _inventory: {fileID: 2716068640545867419}
   _player: {fileID: 943398948989556032}
 --- !u!114 &2716068640545867419
@@ -509,6 +508,13 @@ MonoBehaviour:
   _deltaTimeBetweeUnloadBlocks: 0.0001
   _garage: {fileID: 0}
   _collectionPoint: {fileID: 0}
+  _soundController: {fileID: 2117114177908344327}
+  _loadController: {fileID: 943398948989556028}
+  _mover: {fileID: 943398948989556030}
+  _inventory: {fileID: 2716068640545867419}
+  _unloader: {fileID: 2716068640545867412}
+  _collectionPoin: {fileID: 0}
+  _loader: {fileID: 0}
 --- !u!114 &943398948989556030
 MonoBehaviour:
   m_ObjectHideFlags: 0
