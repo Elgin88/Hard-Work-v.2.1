@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
+  m_Fog: 1
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.01
@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 0.71
   m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 85cf0b004bc4a654b9e501efcce47902, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
+  m_IndirectSpecularColor: {r: 0.49192446, g: 0.6317225, b: 0.71719855, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10991,26 +10991,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 859f45043ed1d4398aaa7daddafde734, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &940811862
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 948098454}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 1660c7ca8648e464a9b6f3b6db92f1ff, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &948098454
 GameObject:
   m_ObjectHideFlags: 0
@@ -11022,7 +11002,6 @@ GameObject:
   - component: {fileID: 948259254}
   - component: {fileID: 951126422}
   - component: {fileID: 950029142}
-  - component: {fileID: 940811862}
   - component: {fileID: 951126424}
   - component: {fileID: 951126423}
   m_Layer: 0
@@ -19376,7 +19355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7683494976bf64b74a1ee0c417a4b447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _soundController: {fileID: 1852628435}
+  _pauserGame: {fileID: 1852628440}
 --- !u!114 &1852628437
 MonoBehaviour:
   m_ObjectHideFlags: 0

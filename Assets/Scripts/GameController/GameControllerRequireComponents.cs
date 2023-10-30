@@ -6,7 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(CalculatorBlocks))]
 [RequireComponent(typeof(EnderLevel))]
 [RequireComponent(typeof(ChooserMedals))]
-[RequireComponent(typeof(TurnOffSoundWhenMinimizingGame))]
+[RequireComponent(typeof(PauseGameWhenMinimizingGame))]
 [RequireComponent(typeof(SoundController))]
 [RequireComponent(typeof(Saver))]
 [RequireComponent(typeof(Loader))]
