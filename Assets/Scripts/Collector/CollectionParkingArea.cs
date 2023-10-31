@@ -18,7 +18,10 @@ public class CollectionParkingArea : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent<Destroyer>(out Destroyer destroyer))
         {
-            _collector.Unloader.StartUnload();
+            if (_collector!=null)
+            {
+                _collector.Unloader.StartUnload();
+            }            
         }        
     }
 }
