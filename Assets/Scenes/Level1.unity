@@ -2832,6 +2832,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+--- !u!1 &609798718 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3072861227271817939, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
+  m_PrefabInstance: {fileID: 827877611}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &609798723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609798718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b006eb414b0e4058ab26697750a1c65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &617970849
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3041,6 +3058,7 @@ GameObject:
   - component: {fileID: 689222104}
   - component: {fileID: 689222105}
   - component: {fileID: 689222106}
+  - component: {fileID: 689222107}
   m_Layer: 0
   m_Name: BarrelIndicator (1)
   m_TagString: Untagged
@@ -3128,6 +3146,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _collectorIndicators: []
+  _chooserMedals: {fileID: 1852628426}
+  _enderLevel: {fileID: 1852628427}
+  _inventory: {fileID: 1137631204}
+  _calculatorBlocks: {fileID: 1852628428}
+--- !u!114 &689222107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 689222103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b006eb414b0e4058ab26697750a1c65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &699271395
 GameObject:
   m_ObjectHideFlags: 0
@@ -3139,6 +3173,7 @@ GameObject:
   - component: {fileID: 699271396}
   - component: {fileID: 699271398}
   - component: {fileID: 699271397}
+  - component: {fileID: 699271399}
   m_Layer: 0
   m_Name: GarageIndicatorEducation
   m_TagString: Untagged
@@ -3173,6 +3208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f24cd77b1621241389a4520b51cea73a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _canvasUI: {fileID: 1398114053}
 --- !u!212 &699271398
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3225,6 +3261,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &699271399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699271395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b006eb414b0e4058ab26697750a1c65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &715151951
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3539,6 +3587,7 @@ GameObject:
   - component: {fileID: 757350383}
   - component: {fileID: 757350385}
   - component: {fileID: 757350384}
+  - component: {fileID: 757350386}
   m_Layer: 0
   m_Name: BarrelIndicator (2)
   m_TagString: Untagged
@@ -3574,6 +3623,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _collectorIndicators: []
+  _chooserMedals: {fileID: 1852628426}
+  _enderLevel: {fileID: 1852628427}
+  _inventory: {fileID: 1137631204}
+  _calculatorBlocks: {fileID: 1852628428}
 --- !u!212 &757350385
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3626,6 +3679,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &757350386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757350382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b006eb414b0e4058ab26697750a1c65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &760998772
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4008,6 +4073,26 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 297987143312029106, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
+      propertyPath: _garageIndicatorEducation.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 297987143312029106, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
+      propertyPath: _garageIndicatorEducation.Array.data[0]
+      value: 
+      objectReference: {fileID: 699271397}
+    - target: {fileID: 297987143312029106, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
+      propertyPath: _garageIndicatorEducation.Array.data[1]
+      value: 
+      objectReference: {fileID: 2099187734}
+    - target: {fileID: 297987143312029106, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
+      propertyPath: _garageIndicatorEducation.Array.data[2]
+      value: 
+      objectReference: {fileID: 2001226168}
+    - target: {fileID: 297987143312029106, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
+      propertyPath: _garageIndicatorEducation.Array.data[3]
+      value: 
+      objectReference: {fileID: 1976933778}
     - target: {fileID: 345670646493616288, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
       propertyPath: m_Layer
       value: 5
@@ -5048,6 +5133,10 @@ PrefabInstance:
       propertyPath: _garageParkingArea
       value: 
       objectReference: {fileID: 1153158899}
+    - target: {fileID: 6390884785094593398, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
+      propertyPath: _playerSpeedSetter
+      value: 
+      objectReference: {fileID: 1361587970}
     - target: {fileID: 6390884785094593398, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
       propertyPath: _videoAdController
       value: 
@@ -6704,6 +6793,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 859f45043ed1d4398aaa7daddafde734, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1097214742 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2998575669375222529, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
+  m_PrefabInstance: {fileID: 827877611}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1097214747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097214742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b006eb414b0e4058ab26697750a1c65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1097540984 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
@@ -7892,6 +7998,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfac3579c878048b6a8f7570cba2ae69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1361587970 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 943398948989556035, guid: 6b708a46b44dd4ac1a375c61ebb36430, type: 3}
+  m_PrefabInstance: {fileID: 1354737485}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9b5acdef34b4ebdb3a9b291101040d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1362541941
 GameObject:
   m_ObjectHideFlags: 0
@@ -7903,6 +8020,7 @@ GameObject:
   - component: {fileID: 1362541942}
   - component: {fileID: 1362541944}
   - component: {fileID: 1362541943}
+  - component: {fileID: 1362541945}
   m_Layer: 0
   m_Name: CollectorIndicatorEducation (2)
   m_TagString: Untagged
@@ -7938,6 +8056,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _garageIndicatorsEducation: []
+  _player: {fileID: 268018514}
 --- !u!212 &1362541944
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7990,6 +8109,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1362541945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362541941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b006eb414b0e4058ab26697750a1c65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1368724072
 GameObject:
   m_ObjectHideFlags: 0
@@ -8001,6 +8132,7 @@ GameObject:
   - component: {fileID: 1368724073}
   - component: {fileID: 1368724074}
   - component: {fileID: 1368724075}
+  - component: {fileID: 1368724076}
   m_Layer: 0
   m_Name: BarrelIndicator
   m_TagString: Untagged
@@ -8091,6 +8223,22 @@ MonoBehaviour:
   - {fileID: 2061857480}
   - {fileID: 1950459829}
   - {fileID: 1362541943}
+  _chooserMedals: {fileID: 1852628426}
+  _enderLevel: {fileID: 1852628427}
+  _inventory: {fileID: 1137631204}
+  _calculatorBlocks: {fileID: 1852628428}
+--- !u!114 &1368724076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368724072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b006eb414b0e4058ab26697750a1c65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1386876406 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
@@ -10418,6 +10566,23 @@ Transform:
   m_Father: {fileID: 1523990344}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1833369848 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 481716664603584549, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
+  m_PrefabInstance: {fileID: 827877611}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1833369853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833369848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b006eb414b0e4058ab26697750a1c65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1844201622 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
@@ -10875,6 +11040,7 @@ GameObject:
   - component: {fileID: 1950459828}
   - component: {fileID: 1950459830}
   - component: {fileID: 1950459829}
+  - component: {fileID: 1950459831}
   m_Layer: 0
   m_Name: CollectorIndicatorEducation (1)
   m_TagString: Untagged
@@ -10910,6 +11076,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _garageIndicatorsEducation: []
+  _player: {fileID: 268018514}
 --- !u!212 &1950459830
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10962,6 +11129,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1950459831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950459827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b006eb414b0e4058ab26697750a1c65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1961409367
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11074,6 +11253,7 @@ GameObject:
   - component: {fileID: 1976933777}
   - component: {fileID: 1976933779}
   - component: {fileID: 1976933778}
+  - component: {fileID: 1976933780}
   m_Layer: 0
   m_Name: GarageIndicatorEducation (3)
   m_TagString: Untagged
@@ -11108,6 +11288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f24cd77b1621241389a4520b51cea73a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _canvasUI: {fileID: 1398114053}
 --- !u!212 &1976933779
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11160,6 +11341,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1976933780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1976933776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b006eb414b0e4058ab26697750a1c65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2001226166
 GameObject:
   m_ObjectHideFlags: 0
@@ -11171,6 +11364,7 @@ GameObject:
   - component: {fileID: 2001226167}
   - component: {fileID: 2001226169}
   - component: {fileID: 2001226168}
+  - component: {fileID: 2001226170}
   m_Layer: 0
   m_Name: GarageIndicatorEducation (2)
   m_TagString: Untagged
@@ -11205,6 +11399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f24cd77b1621241389a4520b51cea73a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _canvasUI: {fileID: 1398114053}
 --- !u!212 &2001226169
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11257,6 +11452,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2001226170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001226166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b006eb414b0e4058ab26697750a1c65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2004463009 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
@@ -11602,6 +11809,7 @@ GameObject:
   - component: {fileID: 2061857479}
   - component: {fileID: 2061857481}
   - component: {fileID: 2061857480}
+  - component: {fileID: 2061857482}
   m_Layer: 0
   m_Name: CollectorIndicatorEducation
   m_TagString: Untagged
@@ -11641,6 +11849,7 @@ MonoBehaviour:
   - {fileID: 2099187734}
   - {fileID: 2001226168}
   - {fileID: 1976933778}
+  _player: {fileID: 268018514}
 --- !u!212 &2061857481
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11693,6 +11902,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2061857482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061857478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b006eb414b0e4058ab26697750a1c65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2076470651 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
@@ -11849,6 +12070,7 @@ GameObject:
   - component: {fileID: 2099187733}
   - component: {fileID: 2099187735}
   - component: {fileID: 2099187734}
+  - component: {fileID: 2099187736}
   m_Layer: 0
   m_Name: GarageIndicatorEducation (1)
   m_TagString: Untagged
@@ -11883,6 +12105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f24cd77b1621241389a4520b51cea73a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _canvasUI: {fileID: 1398114053}
 --- !u!212 &2099187735
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11935,6 +12158,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2099187736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099187732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b006eb414b0e4058ab26697750a1c65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2102139427 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}

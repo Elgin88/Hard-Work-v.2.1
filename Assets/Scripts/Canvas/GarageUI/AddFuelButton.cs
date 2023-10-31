@@ -65,7 +65,6 @@ public class AddFuelButton : MonoBehaviour
                     if (_currentSceneName==_levelName)
                     {
                         indicator.gameObject.SetActive(true);
-                        indicator.StartFlash();
                     }
                 }
             }

@@ -855,9 +855,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fuelCost: 5
-  _tankCost: 200
-  _placeCost: 300
-  _powerCost: 500
+  _tankCost: 100
+  _placeCost: 150
+  _powerCost: 250
   _garageUI: {fileID: 0}
   _canvasUI: {fileID: 0}
 --- !u!114 &8466611396032591842
