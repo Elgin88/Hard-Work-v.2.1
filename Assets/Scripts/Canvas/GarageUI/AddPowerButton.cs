@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,6 +11,14 @@ public class AddPowerButton : MonoBehaviour
     [SerializeField] private CanvasUI _canvasUI;
 
     private bool _isMaxLevelEngine;
+
+    private void Start()
+    {
+        if (_cost == null || _button == null || _flash == null || _soundController == null || _canvasUI == null)
+        {
+            Debug.Log("No serializefiel in " + gameObject.name);
+        }
+    }
 
     private void OnEnable()
     {

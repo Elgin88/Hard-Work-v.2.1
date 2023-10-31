@@ -14,6 +14,14 @@ public class NextLevelButton : MonoBehaviour
     private string _currentLevelName;
     private Coroutine _startLoadNextLevel;
 
+    private void Start()
+    {
+        if (_canvasUI == null || _nextLevelButton == null)
+        {
+            Debug.Log("No serializefiel in " + gameObject.name);
+        }
+    }
+
     private void OnEnable()
     {
         _currentLevelName = SceneManager.GetActiveScene().name;

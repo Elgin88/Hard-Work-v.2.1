@@ -1,14 +1,5 @@
-using System;
 using System.Collections;
-using Agava.WebUtility;
 using UnityEngine;
-
-[RequireComponent(typeof(Rigidbody))]
-[RequireComponent(typeof(BlockFixer))]
-[RequireComponent(typeof(BoxCollider))]
-[RequireComponent(typeof(BlockMoverToPlayer))]
-[RequireComponent(typeof(BlockMoverToCollector))]
-[RequireComponent(typeof(BlockSoundController))]
 
 public class Block : MonoBehaviour
 {

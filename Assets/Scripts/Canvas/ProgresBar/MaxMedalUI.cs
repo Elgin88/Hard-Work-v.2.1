@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,6 +9,14 @@ public class MaxMedalUI : MonoBehaviour
 
     private WaitForSeconds _delayWFS;
     private Coroutine _showImage;
+
+    private void Start()
+    {
+        if (_image == null || _delay == 0 )
+        {
+            Debug.Log("No serializefiel in " + gameObject.name);
+        }
+    }
 
     private void OnEnable()
     {

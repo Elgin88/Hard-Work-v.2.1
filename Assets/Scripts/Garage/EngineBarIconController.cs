@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class EngineBarIconController : MonoBehaviour
 {
@@ -20,7 +17,15 @@ public class EngineBarIconController : MonoBehaviour
     public float MaxScaleX => _maxDeltaScaleX;
     public float MaxScaleY => _maxDeltaScaleY;
     public float MaxScaleZ => _maxDeltaScaleZ;
-    public float Duration => _duration;    
+    public float Duration => _duration;
+
+    private void Start()
+    {
+        if (_colorSetter1 == null || _colorSetter2 == null || _colorSetter3 == null || _flasher1 == null || _flasher2 == null || _flasher3 == null || _maxDeltaScaleX == 0 || _maxDeltaScaleY == 0 || _maxDeltaScaleZ == 0 || _duration == 0 || _canvasUI == null)
+        {
+            Debug.Log("No serializefiel in " + gameObject.name);
+        }
+    }
 
     private void OnEnable()
     {

@@ -18,6 +18,14 @@ public class EndLevelButtonIndicatorEducation : MonoBehaviour
     private Vector3 _targetScale;
     private float _deltaSclale => (_targetScale.x - _startScale.x) / (_timeOfFlashInSeconds / Time.deltaTime);
 
+    private void Start()
+    {
+        if (_rectTransform == null)
+        {
+            Debug.Log("No serializefiel in " + gameObject.name);
+        }
+    }
+
     private void OnEnable()
     {
         _currentScene = SceneManager.GetActiveScene();

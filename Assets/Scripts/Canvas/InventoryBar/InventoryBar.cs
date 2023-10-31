@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -22,6 +20,11 @@ public class InventoryBar : MonoBehaviour
 
     private void Start()
     {
+        if (_speedOfChange==0||_slider==null || _maxText == null || _middleText == null || _minText == null || _canvasUI == null)
+        {
+            Debug.Log("No serializefiel in " + gameObject.name);
+        }
+
         int maxNumberBlocks = _canvasUI.Player.MaxHightOfInventory * _canvasUI.LineOfPoints.NumberPoints;
 
         _maxText.text = maxNumberBlocks.ToString();

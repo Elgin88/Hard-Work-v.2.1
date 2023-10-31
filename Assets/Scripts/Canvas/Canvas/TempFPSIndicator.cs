@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -13,6 +12,11 @@ public class TempFPSIndicator : MonoBehaviour
 
     private void Start()
     {
+        if (_text == null|| _timeShowFPS == 0)
+        {
+            Debug.Log("No serializefiel in " + gameObject.name);
+        }
+
         _timeShowFPSWFS = new WaitForSeconds(_timeShowFPS);
 
         _showFPS = StartCoroutine(ShowFPS());

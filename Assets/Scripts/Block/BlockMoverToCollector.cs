@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class BlockMoverToCollector : MonoBehaviour
 {
@@ -23,7 +22,6 @@ public class BlockMoverToCollector : MonoBehaviour
     private void Start()
     {
         if (_calculatorBlocks == null || _chooserMedals == null || _blockFixer == null || _block == null || _blockSoundController == null)
-
         {
             Debug.Log("No serializefiel in " + gameObject.name);
         }

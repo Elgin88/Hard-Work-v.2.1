@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(AudioSource))]
@@ -7,6 +5,14 @@ using UnityEngine;
 public class CanvasSoundController : MonoBehaviour
 {
     [SerializeField] private AudioSource _buySound;
+
+    private void Start()
+    {
+        if (_buySound == null)
+        {
+            Debug.Log("No serializefiel in " + gameObject.name);
+        }
+    }
 
     public void PlayBuySound()
     {

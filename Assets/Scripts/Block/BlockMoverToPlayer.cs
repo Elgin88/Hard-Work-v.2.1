@@ -18,7 +18,6 @@ public class BlockMoverToPlayer : MonoBehaviour
     private void Start()
     {
         if (_blockFixer == null || _block == null || _blockMoverToCollector == null || _blockSoundController == null)
-
         {
             Debug.Log("No serializefiel in " + gameObject.name);
         }

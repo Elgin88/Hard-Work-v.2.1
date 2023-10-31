@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,6 +9,14 @@ public class AddPlaceButton : MonoBehaviour
     [SerializeField] private Button _button;
     [SerializeField] private CanvasSoundController _soundController;
     [SerializeField] private CanvasUI _canvasUI;
+
+    private void Start()
+    {
+        if (_cost == null || _button == null || _soundController == null || _canvasUI == null)
+        {
+            Debug.Log("No serializefiel in " + gameObject.name);
+        }
+    }
 
     private void OnEnable()
     {

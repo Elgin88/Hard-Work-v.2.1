@@ -16,6 +16,14 @@ public class EndLevelButtonFlash : MonoBehaviour
 
     private Coroutine _flash;
 
+    private void Start()
+    {
+        if (_deltaScale == 0 || _speedOfFlash == 0 || _rectTransform == null)
+        {
+            Debug.Log("No serializefiel in " + gameObject.name);
+        }
+    }
+
     private void OnEnable()
     {
         _startScale = _rectTransform.localScale;

@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -23,6 +22,14 @@ public class InventoryBarIconFlash : MonoBehaviour
     private float _deltaScaleCalculated;
     private int _currentCountOfBlocks;
     private int _maxCountOfBlocks;
+
+    private void Start()
+    {
+        if (_deltaScale == 0 || _duration == 0 || _targetColor == null || _rectTransform == null || _image == null || _canvasUI == null)
+        {
+            Debug.Log("No serializefiel in " + gameObject.name);
+        }
+    }
 
     private void OnEnable()
     {

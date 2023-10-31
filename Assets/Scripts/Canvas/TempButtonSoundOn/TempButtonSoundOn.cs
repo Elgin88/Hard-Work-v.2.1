@@ -1,4 +1,3 @@
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,6 +7,14 @@ public class TempButtonSoundOn : MonoBehaviour
 {
     [SerializeField] private Button _buttonOn;
     [SerializeField] private CanvasUI _canvasUI;
+
+    private void Start()
+    {
+        if (_buttonOn == null || _canvasUI == null)
+        {
+            Debug.Log("No serializefiel in " + gameObject.name);
+        }
+    }
 
     private void OnEnable()
     {

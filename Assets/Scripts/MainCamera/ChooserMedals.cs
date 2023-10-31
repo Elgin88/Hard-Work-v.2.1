@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -20,6 +18,14 @@ public class ChooserMedals : MonoBehaviour
     public bool IsMinMedal => _isMinMedal;
 
     public event UnityAction<bool, bool, bool> IsMedalsChoosen;
+
+    private void Start()
+    {
+        if (_enderLevel == null || _calculatorBlocks == null )
+        {
+            Debug.Log("No serializefiel in " + gameObject.name);
+        }
+    }
 
     public void ChooseMedals()
     {

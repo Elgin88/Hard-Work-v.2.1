@@ -16,6 +16,14 @@ public class AddFuelButton : MonoBehaviour
     private string _levelName = "Level1";
     private string _currentSceneName;
 
+    private void Start()
+    {
+        if (_cost == null || _button == null || _canvasSoundController == null || _canvasUI == null | _addFuelIndicatorEducation == null)
+        {
+            Debug.Log("No serializefiel in " + gameObject.name);
+        }
+    }
+
     private void OnEnable()
     {
         _button.onClick.AddListener(OnAddFuelButtonClick);

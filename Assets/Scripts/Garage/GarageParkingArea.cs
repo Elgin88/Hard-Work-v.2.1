@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Experimental.GraphView.GraphView;
-using static UnityEngine.ParticleSystem;
 
 public class GarageParkingArea : MonoBehaviour
 {
@@ -20,7 +16,10 @@ public class GarageParkingArea : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent<Destroyer>(out Destroyer destroyer))
         {
-            _garage.GarageUI.gameObject.SetActive(true);
+            if (_garage!=null)
+            {
+                _garage.GarageUI.gameObject.SetActive(true);
+            }            
 
             if (destroyer.Player.Money >= _garage.FuelCoust)
             {

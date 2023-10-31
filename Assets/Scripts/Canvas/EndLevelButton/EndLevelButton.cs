@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +10,11 @@ public class EndLevelButton : MonoBehaviour
 
     private void Start()
     {
+        if (_endLevelButton == null || _endLevelPanel == null)
+        {
+            Debug.Log("No serializefiel in " + gameObject.name);
+        }
+
         gameObject.SetActive(false);
     }
 

@@ -7,6 +7,14 @@ public class TempNextLevel : MonoBehaviour
     [SerializeField] private CanvasUI _canvasUI;
     [SerializeField] private Button _button;
 
+    private void Start()
+    {
+        if (_canvasUI == null || _button == null)
+        {
+            Debug.Log("No serializefiel in " + gameObject.name);
+        }
+    }
+
     private void OnEnable()
     {
         _button = GetComponent<Button>();

@@ -53,4 +53,38 @@ public class CanvasUI : MonoBehaviour
     public LineOfPointsCreater LineOfPointsCreater => _lineOfPointsCreater;
     public Inventory Inventory => _inventory;
     public PauserGame PauserGame => _pauserGame;
+
+    private void Start()
+    {
+        if (_joystickIndicators == null ||
+            _addFuelIndicators == null ||
+            _endLevelButtonIndicatorEducation == null ||
+            _soundController == null ||
+            _garageUI == null ||
+            _soundController == null ||
+            _playerFuelController == null ||
+            _player == null ||
+            _videoAddController == null ||
+            _calculatorBlocks == null ||
+            _endelLevel == null ||
+            _chooserMedals == null ||
+            _videoAdController == null ||
+            _enderLevel == null ||
+            _saver == null ||
+            _destroyerPoint == null ||
+            _garageParkingArea == null ||
+            _garage == null ||
+            _garageSoundController == null ||
+            _playerUpgrade == null ||
+            _playerPowerController == null ||
+            _lineOfPoints == null ||
+            _lineOfPointsCreater == null ||
+            _inventory == null ||
+            _pauserGame == null )
+
+        {
+            Debug.Log("No serializefiel in " + gameObject.name);
+        }
+    }
+
 }

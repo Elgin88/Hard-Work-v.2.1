@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,6 +8,14 @@ public class AddTankButton : MonoBehaviour
     [SerializeField] private Button _button;
     [SerializeField] private CanvasUI _canvasUI;
     [SerializeField] private CanvasSoundController _canvasSoundController;
+
+    private void Start()
+    {
+        if (_cost == null || _button == null || _canvasSoundController == null || _canvasUI == null | _canvasSoundController == null)
+        {
+            Debug.Log("No serializefiel in " + gameObject.name);
+        }
+    }
 
     private void OnEnable()
     {

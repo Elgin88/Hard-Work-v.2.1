@@ -1,6 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -19,6 +17,14 @@ public class ProgressBar : MonoBehaviour
     private float _currentValue;    
 
     public event UnityAction <bool, bool, bool > IsChangedValue;
+
+    private void Start()
+    {
+        if (_speedOfChange == 0 || _slider == null || _canvasUI == null)
+        {
+            Debug.Log("No serializefiel in " + gameObject.name);
+        }
+    }
 
     private void OnEnable()
     {

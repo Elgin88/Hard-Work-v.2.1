@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,6 +10,14 @@ public class EngineBarIconColorSetter : MonoBehaviour
 
     private Color _currentColor;
     private Coroutine _changeColor;
+
+    private void Start()
+    {
+        if (_targetColor == null || _duration == 0 || _image == null)
+        {
+            Debug.Log("No serializefiel in " + gameObject.name);
+        }
+    }
 
     private IEnumerator ChangeColor()
     {

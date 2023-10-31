@@ -8,6 +8,11 @@ public class TempButtonSoundOff : MonoBehaviour
 
     private void Start()
     {
+        if (_buttonSoundOff == null || _canvasUI == null)
+        {
+            Debug.Log("No serializefiel in " + gameObject.name);
+        }
+
         _buttonSoundOff.onClick.AddListener(OnButtonClick);
     }
 

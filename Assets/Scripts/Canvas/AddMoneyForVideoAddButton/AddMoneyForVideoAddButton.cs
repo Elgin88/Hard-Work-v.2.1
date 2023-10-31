@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,6 +18,7 @@ public class AddMoneyForVideoAddButton : MonoBehaviour
         {
             Debug.Log("No serializefiel in " + gameObject.name);
         }
+
         _button.onClick.AddListener(OnButtonClick);
 
         _delayWFS = new WaitForSeconds(_delay);

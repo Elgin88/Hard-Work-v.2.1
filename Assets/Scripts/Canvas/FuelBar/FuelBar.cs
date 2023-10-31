@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -19,6 +18,14 @@ public class FuelBar : MonoBehaviour
     private float _currentValue;
     private float _targetFuel;
     private float _maxFuel;
+
+    private void Start()
+    {
+        if (_speedOfChange == 0 || _max == null || _middle == null || _min == null || _slider == null || _canvasUI == null)
+        {
+            Debug.Log("No serializefiel in " + gameObject.name);
+        }
+    }
 
     private void OnEnable()
     {

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(CalculatorBlocks))]
@@ -27,7 +25,15 @@ public class EnderLevel : MonoBehaviour
     public string NextSceneName => _nextScene;
     public int MaxProcent => _maxProcent;
     public int MiddleProcent => _middleProcent;
-    public int MinProcent => _minProcent;   
+    public int MinProcent => _minProcent;
+
+    private void Start()
+    {
+        if (_maxProcent == 0|| _middleProcent == 0 || _minProcent == 0 || _nextScene == null || _endLevelButton == null || _reloadButton == null || _endLevelPanel == null || _calculatorBlocks == null || _chooserMedals == null)
+        {
+            Debug.Log("No serializefiel in " + gameObject.name);
+        }
+    }
 
     private void OnEnable()
     {

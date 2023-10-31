@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,6 +8,11 @@ public class TempPauseOnButton : MonoBehaviour
 
     private void Start()
     {
+        if (_button == null || _canvasUI == null)
+        {
+            Debug.Log("No serializefiel in " + gameObject.name);
+        }
+
         _button.onClick.AddListener(OnPauseButtonClisk);
     }
 

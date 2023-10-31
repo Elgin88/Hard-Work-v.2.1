@@ -8,7 +8,6 @@ public class BlockSoundController : MonoBehaviour
     private void Start()
     {
         if (_playerSoundController == null)
-
         {
             Debug.Log("No serializefiel in " + gameObject.name);
         }

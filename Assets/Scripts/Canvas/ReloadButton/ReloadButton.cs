@@ -15,6 +15,14 @@ public class ReloadButton : MonoBehaviour
     private Scene _currentScene;
     private PlayerFuelController _playerFuelController;
 
+    private void Start()
+    {
+        if (_flasher1 == null|| _button == null|| _canvasUI == null)
+        {
+            Debug.Log("No serializefiel in " + gameObject.name);
+        }
+    }
+
     private void OnEnable()
     {
         _currentScene = SceneManager.GetActiveScene();

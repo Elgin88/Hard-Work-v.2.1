@@ -9,6 +9,14 @@ public class EndLevelPanel : MonoBehaviour
     [SerializeField] private MaxMedal _maxMedal;
     [SerializeField] private CanvasUI _canvasUI;
 
+    private void Start()
+    {
+        if (_minMedal == null || _middleMedal == null || _maxMedal == null || _canvasUI == null)
+        {
+            Debug.Log("No serializefiel in " + gameObject.name);
+        }
+    }
+
     private void OnEnable()
     {
         OpenPanels(_canvasUI.ChooserMedal.IsMinMedal, _canvasUI.ChooserMedal.IsMiddleMedal, _canvasUI.ChooserMedal.IsMaxMedal);
