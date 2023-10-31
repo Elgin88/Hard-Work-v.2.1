@@ -481,6 +481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b4079b3270464349acd9d6dda8e5212, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _garageIndicatorEducation: []
 --- !u!1 &726152545792434782
 GameObject:
   m_ObjectHideFlags: 0
@@ -6877,6 +6878,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b4079b3270464349acd9d6dda8e5212, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _garageIndicatorEducation: []
 --- !u!1 &3037570159972803629
 GameObject:
   m_ObjectHideFlags: 0
@@ -7101,6 +7103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b4079b3270464349acd9d6dda8e5212, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _garageIndicatorEducation: []
 --- !u!1 &3534339685687851570
 GameObject:
   m_ObjectHideFlags: 0
@@ -10878,7 +10881,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3428648308297988275
 RectTransform:
   m_ObjectHideFlags: 0

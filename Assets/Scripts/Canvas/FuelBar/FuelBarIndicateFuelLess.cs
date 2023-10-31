@@ -28,6 +28,7 @@ public class FuelBarIndicateFuelLess : MonoBehaviour
 
     private void OnEnable()
     {
+        Debug.Log("Здесь убрать гет компонент");
         _fuelController = FindObjectOfType<PlayerFuelController>();
         _rectTransform = GetComponent<RectTransform>();
         _image = GetComponent<Image>();
