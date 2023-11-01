@@ -25,7 +25,10 @@ public class GarageParkingArea : MonoBehaviour
             {
                 foreach (var indicator in _garage.CanvasUI.AddFuelIndicators)
                 {
-                    indicator.gameObject.SetActive(true);
+                    if (indicator !=null)
+                    {
+                        indicator.gameObject.SetActive(true);
+                    }                    
                 }
             }            
         }

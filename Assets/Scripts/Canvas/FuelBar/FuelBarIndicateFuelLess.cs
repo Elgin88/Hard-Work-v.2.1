@@ -13,25 +13,25 @@ public class FuelBarIndicateFuelLess : MonoBehaviour
     [SerializeField] private float _duration;
     [SerializeField] private float _deltaScale;
     [SerializeField] private Color _targetColor;
+    [SerializeField] private CanvasUI _canvasUI;
+    [SerializeField] private RectTransform _rectTransform;
+    [SerializeField] private Image _image;
 
-    private PlayerFuelController _fuelController;
-    private RectTransform _rectTransform;
     private Coroutine _flash;
     private Vector3 _startStale;
     private Vector3 _currentScale;
     private Vector3 _targetScale;
     private Color _startColor;
-    private Image _image;
     private float _currentFuel;
     private float _maxFuel;
     private float _deltaScaleCalculated;
 
     private void OnEnable()
     {
-        Debug.Log("Здесь убрать гет компонент");
-        _fuelController = FindObjectOfType<PlayerFuelController>();
-        _rectTransform = GetComponent<RectTransform>();
-        _image = GetComponent<Image>();
+        if (_minLevelForIndicate==0 || _duration == 0 || _deltaScale == 0 || _targetColor == null || _canvasUI == null || _rectTransform == null || _image == null)
+        {
+            Debug.Log("No SerializeField in " + gameObject.name);
+        }
 
         _startStale = _rectTransform.localScale;
         _startColor = _image.color;
@@ -44,12 +44,12 @@ public class FuelBarIndicateFuelLess : MonoBehaviour
 
         _deltaScaleCalculated = _deltaScale / (_duration / 2 / Time.deltaTime);
 
-        _fuelController.IsFuelChanged += OnFuelChanged;
+        _canvasUI.PlayerFuelController.IsFuelChanged += OnFuelChanged;
     } 
 
     private void OnDisable()
     {
-        _fuelController.IsFuelChanged -= OnFuelChanged;
+        _canvasUI.PlayerFuelController.IsFuelChanged -= OnFuelChanged;
     }
 
     private void OnFuelChanged(float current, float max)
