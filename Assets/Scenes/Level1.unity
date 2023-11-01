@@ -434,6 +434,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 859f45043ed1d4398aaa7daddafde734, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &32456912 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7656873045806514693, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
+  m_PrefabInstance: {fileID: 827877611}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc272b64417b3405cb6c511c6f35a908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &39035348
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2849,6 +2860,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b006eb414b0e4058ab26697750a1c65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &609798727 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6661776985926101572, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
+  m_PrefabInstance: {fileID: 827877611}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609798718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b4079b3270464349acd9d6dda8e5212, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &617970849
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2948,6 +2970,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 859f45043ed1d4398aaa7daddafde734, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &649586651 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3420367340164064637, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
+  m_PrefabInstance: {fileID: 827877611}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc272b64417b3405cb6c511c6f35a908, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &688445476
@@ -3065,7 +3098,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &689222104
 Transform:
   m_ObjectHideFlags: 0
@@ -3180,7 +3213,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &699271396
 Transform:
   m_ObjectHideFlags: 0
@@ -3209,6 +3242,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _canvasUI: {fileID: 1398114053}
+  _player: {fileID: 268018514}
+  _garageParkingArea: {fileID: 1153158899}
+  _addFuelButtonsEducation:
+  - {fileID: 1833369857}
+  - {fileID: 1097214751}
+  - {fileID: 609798727}
 --- !u!212 &699271398
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3594,7 +3633,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &757350383
 Transform:
   m_ObjectHideFlags: 0
@@ -4172,6 +4211,10 @@ PrefabInstance:
     - target: {fileID: 1406380589476955238, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
       propertyPath: m_Layer
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1406380589476955238, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1406380589476955238, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5018,6 +5061,10 @@ PrefabInstance:
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5654187147806222867, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
+      propertyPath: m_Name
+      value: EngineLevelBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 5654187147806222867, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
@@ -5207,7 +5254,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7015667887000045030, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7015667887000045030, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5826,6 +5873,9 @@ MonoBehaviour:
   - {fileID: 2099187734}
   - {fileID: 2001226168}
   - {fileID: 1976933778}
+  _joystickIndicatorEducation:
+  - {fileID: 32456912}
+  - {fileID: 649586651}
 --- !u!4 &888648853 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
@@ -6808,6 +6858,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b006eb414b0e4058ab26697750a1c65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1097214751 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7007768010406576580, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
+  m_PrefabInstance: {fileID: 827877611}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097214742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b4079b3270464349acd9d6dda8e5212, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1097540984 stripped
@@ -8027,7 +8088,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1362541942
 Transform:
   m_ObjectHideFlags: 0
@@ -8139,7 +8200,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1368724073
 Transform:
   m_ObjectHideFlags: 0
@@ -10583,6 +10644,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b006eb414b0e4058ab26697750a1c65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1833369857 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 297987143312029106, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
+  m_PrefabInstance: {fileID: 827877611}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833369848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b4079b3270464349acd9d6dda8e5212, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1844201622 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
@@ -10835,6 +10907,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pauserGame: {fileID: 1852628440}
+  _soundController: {fileID: 1852628435}
 --- !u!114 &1852628437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11047,7 +11120,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1950459828
 Transform:
   m_ObjectHideFlags: 0
@@ -11260,7 +11333,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1976933777
 Transform:
   m_ObjectHideFlags: 0
@@ -11289,6 +11362,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _canvasUI: {fileID: 1398114053}
+  _player: {fileID: 268018514}
+  _garageParkingArea: {fileID: 1153158899}
+  _addFuelButtonsEducation: []
 --- !u!212 &1976933779
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11371,7 +11447,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2001226167
 Transform:
   m_ObjectHideFlags: 0
@@ -11400,6 +11476,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _canvasUI: {fileID: 1398114053}
+  _player: {fileID: 268018514}
+  _garageParkingArea: {fileID: 1153158899}
+  _addFuelButtonsEducation: []
 --- !u!212 &2001226169
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11816,7 +11895,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2061857479
 Transform:
   m_ObjectHideFlags: 0
@@ -12077,7 +12156,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2099187733
 Transform:
   m_ObjectHideFlags: 0
@@ -12106,6 +12185,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _canvasUI: {fileID: 1398114053}
+  _player: {fileID: 268018514}
+  _garageParkingArea: {fileID: 1153158899}
+  _addFuelButtonsEducation: []
 --- !u!212 &2099187735
 SpriteRenderer:
   m_ObjectHideFlags: 0

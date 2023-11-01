@@ -33778,6 +33778,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pauserGame: {fileID: 1387426534}
+  _soundController: {fileID: 1387426529}
 --- !u!114 &1387426534
 MonoBehaviour:
   m_ObjectHideFlags: 0

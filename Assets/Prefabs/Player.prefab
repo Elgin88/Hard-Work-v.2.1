@@ -582,7 +582,7 @@ MonoBehaviour:
   _deltaUpSpeed: 5
   _deltaDownSpeed: 5
   _pushChangeSpeed: 4
-  _delayPush: 0.3
+  _delayPush: 0.1
 --- !u!114 &943398948989556034
 MonoBehaviour:
   m_ObjectHideFlags: 0

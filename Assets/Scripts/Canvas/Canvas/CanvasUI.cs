@@ -6,7 +6,6 @@ public class CanvasUI : MonoBehaviour
 {
     [SerializeField] private JoystickIndicatorEducation[] _joystickIndicators;
     [SerializeField] private AddFuelIndicatorEducation[] _addFuelIndicators;
-    [SerializeField] private EndLevelButtonIndicatorEducation[] _endLevelButtonIndicatorEducation;
     [SerializeField] private GarageUI _garageUI;   
     [SerializeField] private SoundController _soundController;
     [SerializeField] private PlayerFuelController _playerFuelController;
@@ -33,7 +32,6 @@ public class CanvasUI : MonoBehaviour
     public Player Player => _player;
     public JoystickIndicatorEducation[] JoystickIndicators => _joystickIndicators;
     public AddFuelIndicatorEducation[] AddFuelIndicators => _addFuelIndicators;
-    public EndLevelButtonIndicatorEducation[] EndLevelButtonIndicatorEducation => _endLevelButtonIndicatorEducation;
     public VideoAdController VideoAddController => _videoAddController;
     public SoundController SoundController => _soundController;
     public GarageUI GarageUI => _garageUI;
@@ -60,7 +58,6 @@ public class CanvasUI : MonoBehaviour
     {
         if (_joystickIndicators == null ||
             _addFuelIndicators == null ||
-            _endLevelButtonIndicatorEducation == null ||
             _soundController == null ||
             _garageUI == null ||
             _soundController == null ||

@@ -6,12 +6,9 @@ using UnityEngine.SceneManagement;
 public class GarageIndicatorEducation : MonoBehaviour
 {
     [SerializeField] private CanvasUI _canvasUI;
+    [SerializeField] private Player _player;
+    [SerializeField] private GarageParkingArea _garageParkingArea;
+    [SerializeField] private AddFuelIndicatorEducation[] _addFuelButtonsEducation; 
 
-    private string _level1Name = "Level1";  
-    private AddFuelIndicatorEducation[] _addFuelIndicator => _canvasUI.AddFuelIndicators;
-
-    private void Start()
-    {
-        gameObject.SetActive(false);
-    }
+    
 }

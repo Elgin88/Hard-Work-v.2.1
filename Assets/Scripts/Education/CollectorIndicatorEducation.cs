@@ -9,7 +9,6 @@ public class CollectorIndicatorEducation : MonoBehaviour
 
     private void Start()
     {
-        gameObject.SetActive(false);
         _player.Inventory.IsChangedNumberBlocks += OnCangedBlocksInPlayerInventory;
     }
 
@@ -24,7 +23,10 @@ public class CollectorIndicatorEducation : MonoBehaviour
         {
             foreach (var indicator in _garageIndicatorsEducation)
             {
-                indicator?.gameObject.SetActive(true);
+                if (indicator!=null)
+                {
+                    indicator.gameObject.SetActive(true);
+                }                
             }
 
             Destroy(gameObject);

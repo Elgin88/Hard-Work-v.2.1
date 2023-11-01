@@ -8,7 +8,6 @@ using UnityEngine.UI;
 
 public class ReloadButton : MonoBehaviour
 {
-    [SerializeField] private Flasher1 _flasher1;
     [SerializeField] private Button _button;
     [SerializeField] private CanvasUI _canvasUI;
 
@@ -17,7 +16,7 @@ public class ReloadButton : MonoBehaviour
 
     private void Start()
     {
-        if (_flasher1 == null|| _button == null|| _canvasUI == null)
+        if (_button == null|| _canvasUI == null)
         {
             Debug.Log("No serializefiel in " + gameObject.name);
         }
@@ -29,25 +28,11 @@ public class ReloadButton : MonoBehaviour
         _playerFuelController = _canvasUI.PlayerFuelController;
 
         _button.onClick.AddListener(ReloadScene);
-        _playerFuelController.IsFuelChanged += FlashControler;
-    }
-
-    private void FlashControler(float currentFuel, float maxFuel)
-    {
-        if (currentFuel==0)
-        {
-            _flasher1.StartFlash();
-        }
-        else
-        {
-            _flasher1.StopFlash();
-        }
     }
 
     private void OnDisable()
     {
         _button.onClick.RemoveListener(ReloadScene);
-        _playerFuelController.IsFuelChanged -= FlashControler;
     }
 
     private void ReloadScene()
