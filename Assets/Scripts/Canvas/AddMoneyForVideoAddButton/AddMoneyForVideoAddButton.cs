@@ -11,10 +11,11 @@ public class AddMoneyForVideoAddButton : MonoBehaviour
     [SerializeField] private float _delay;
 
     private WaitForSeconds _delayWFS;
+    private WaitForSeconds _delayPressButton = new WaitForSeconds(2);
 
     private void Start()
     {
-        if (_canvasUI == null || _addPlayerMoney == 0 || _button == null || _audioSourse == null || _delay == 0)
+        if (_canvasUI == null || _addPlayerMoney == 0 || _button == null || _audioSourse == null || _delay == 0 )
         {
             Debug.Log("No serializefiel in " + gameObject.name);
         }
@@ -31,10 +32,22 @@ public class AddMoneyForVideoAddButton : MonoBehaviour
 
     private void OnButtonClick()
     {
-        _canvasUI.Player.AddMoney(_addPlayerMoney);        
+        _canvasUI.Player.AddMoney(_addPlayerMoney);
+        _canvasUI.Saver.SaveMoney();
         _audioSourse.Play();
 
+        _button.interactable = false;
+
+        StartCoroutine(DelayForClick());
+
         StartCoroutine(ShowVideoAd());
+    }
+
+    private IEnumerator DelayForClick()
+    {
+        yield return _delayPressButton;
+
+        _button.interactable = true ;
     }
 
     public IEnumerator ShowVideoAd()

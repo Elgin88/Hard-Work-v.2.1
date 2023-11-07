@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Saver : MonoBehaviour
@@ -28,7 +29,7 @@ public class Saver : MonoBehaviour
         SavePlayerPrefsInCloud();
     }
 
-    public void SavePlayerPrefsInCloud()
+    private void SavePlayerPrefsInCloud()
     {
 #if UNITY_EDITOR
         return;
@@ -38,5 +39,12 @@ public class Saver : MonoBehaviour
         if (Agava.YandexGames.YandexGamesSdk.IsInitialized)
             Agava.YandexGames.PlayerPrefs.Save();
 #endif
+    }
+
+    public void SaveMoney()
+    {
+        PlayerPrefs.SetInt(_saveKeyPlayerMoney, _player.Money);
+        PlayerPrefs.Save();
+        SavePlayerPrefsInCloud();
     }
 }
