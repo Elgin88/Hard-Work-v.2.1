@@ -2,12 +2,17 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class StartGameButtonSDKController : MonoBehaviour
+public class StartGameButtonSDKChecker : MonoBehaviour
 {
     [SerializeField] private Button _button;
 
     private void Start()
     {
+        if (_button == null)
+        {
+            Debug.Log("No serializefield in " + gameObject.name);
+        }
+
         StartCoroutine(CheckInitSDK());
     }
 
@@ -23,12 +28,17 @@ public class StartGameButtonSDKController : MonoBehaviour
             if (Agava.YandexGames.YandexGamesSdk.IsInitialized)
             {
                 if (_button.interactable == false)
-                    _button.interactable = true;                
+                {
+                    _button.interactable = true;
+                }
             }
             else
             {
                 if (_button.interactable == true)
+                {
                     _button.interactable = false;
+
+                }
             }
 
             yield return null;
