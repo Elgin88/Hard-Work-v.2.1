@@ -15529,6 +15529,10 @@ PrefabInstance:
       propertyPath: _playerPowerController
       value: 
       objectReference: {fileID: 2716068639730957576}
+    - target: {fileID: 6390884785094593398, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
+      propertyPath: _interstitialController
+      value: 
+      objectReference: {fileID: 1387426536}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
 --- !u!114 &678367336 stripped
@@ -33523,6 +33527,7 @@ GameObject:
   - component: {fileID: 1387426534}
   - component: {fileID: 1387426535}
   - component: {fileID: 1387426520}
+  - component: {fileID: 1387426536}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -33805,6 +33810,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _fixedJoystick: {fileID: 678367336}
   _pauserGame: {fileID: 1387426534}
+--- !u!114 &1387426536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387426519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c082c799c7a50482881fbc6429270751, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1395558631
 GameObject:
   m_ObjectHideFlags: 0

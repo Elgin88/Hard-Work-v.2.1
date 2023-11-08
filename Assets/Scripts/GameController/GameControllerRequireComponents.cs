@@ -9,6 +9,7 @@ using UnityEngine;
 [RequireComponent(typeof(Saver))]
 [RequireComponent(typeof(Loader))]
 [RequireComponent(typeof(VideoAdController))]
+[RequireComponent(typeof(InterstitialController))]
 [RequireComponent(typeof(PauserGame))]
 [RequireComponent(typeof(UnpauserGameThenUseJoystick))]
 

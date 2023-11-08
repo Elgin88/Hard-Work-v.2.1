@@ -1041,6 +1041,7 @@ GameObject:
   - component: {fileID: 583407484}
   - component: {fileID: 583407485}
   - component: {fileID: 583407486}
+  - component: {fileID: 583407487}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -1333,6 +1334,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 85833463a05bd4dcab3f8313b3ad49c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &583407487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583407466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c082c799c7a50482881fbc6429270751, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &841130403
@@ -1835,6 +1848,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _button: {fileID: 1464779412}
   _audio: {fileID: 1464779416}
+  _interstitialController: {fileID: 583407487}
+  _loader: {fileID: 583407480}
 --- !u!82 &1464779416
 AudioSource:
   m_ObjectHideFlags: 0

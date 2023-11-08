@@ -7,17 +7,16 @@ public class StartGameButton : MonoBehaviour
 {
     [SerializeField] private Button _button;
     [SerializeField] private AudioSource _audio;
+    [SerializeField] private InterstitialController _interstitialController;
+    [SerializeField] private Loader _loader;
 
-    private Loader _loader;
     private string _level1Name = "Level1";
     private string _nameSceneForLoad;
-
     private WaitForSeconds _delay = new WaitForSeconds(0.5f);
     private Coroutine _loadScene;
 
     private void OnEnable()
     {
-        _loader = FindObjectOfType<Loader>();
         _button.onClick.AddListener(OnButtonClick);
 
         _nameSceneForLoad = _level1Name;
@@ -28,7 +27,9 @@ public class StartGameButton : MonoBehaviour
         _audio.Play();
 
         if (_loader.GetSceneNameForLoad() != "")
-            _nameSceneForLoad = _loader.GetSceneNameForLoad();            
+            _nameSceneForLoad = _loader.GetSceneNameForLoad();
+
+        _interstitialController.ShowInterstitial();
 
         _loadScene = StartCoroutine(LoadScene());
     }
