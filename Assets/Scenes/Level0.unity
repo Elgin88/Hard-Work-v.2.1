@@ -1028,7 +1028,6 @@ GameObject:
   m_Component:
   - component: {fileID: 583407468}
   - component: {fileID: 583407470}
-  - component: {fileID: 583407472}
   - component: {fileID: 583407473}
   - component: {fileID: 583407478}
   - component: {fileID: 583407477}
@@ -1041,6 +1040,7 @@ GameObject:
   - component: {fileID: 583407482}
   - component: {fileID: 583407484}
   - component: {fileID: 583407485}
+  - component: {fileID: 583407486}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -1159,18 +1159,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &583407472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 583407466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65eea26a931b84df3a366a99c756370d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &583407473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1335,6 +1323,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _fixedJoystick: {fileID: 0}
   _pauserGame: {fileID: 583407484}
+--- !u!114 &583407486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583407466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85833463a05bd4dcab3f8313b3ad49c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &841130403
 GameObject:
   m_ObjectHideFlags: 0

@@ -25,26 +25,11 @@ public class Saver : MonoBehaviour
         PlayerPrefs.SetInt(_saveKeyPlayerMoney, _player.Money);
         PlayerPrefs.SetString(_saveKeyNextLevelName, _enderLevel.NextSceneName);
         PlayerPrefs.Save();
-
-        SavePlayerPrefsInCloud();
-    }
-
-    private void SavePlayerPrefsInCloud()
-    {
-#if UNITY_EDITOR
-        return;
-#endif
-
-#if UNITY_WEBGL
-        if (Agava.YandexGames.YandexGamesSdk.IsInitialized)
-            Agava.YandexGames.PlayerPrefs.Save();
-#endif
     }
 
     public void SaveMoney()
     {
         PlayerPrefs.SetInt(_saveKeyPlayerMoney, _player.Money);
         PlayerPrefs.Save();
-        SavePlayerPrefsInCloud();
     }
 }
