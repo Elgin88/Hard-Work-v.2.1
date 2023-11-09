@@ -9,6 +9,7 @@ public class StartGameButton : MonoBehaviour
     [SerializeField] private AudioSource _audio;
     [SerializeField] private InterstitialController _interstitialController;
     [SerializeField] private Loader _loader;
+    [SerializeField] private PauserGame _pauserGame;
 
     private string _level1Name = "Level1";
     private string _nameSceneForLoad;
@@ -29,9 +30,9 @@ public class StartGameButton : MonoBehaviour
         if (_loader.GetSceneNameForLoad() != "")
             _nameSceneForLoad = _loader.GetSceneNameForLoad();
 
-        _interstitialController.ShowInterstitial();
-
         _loadScene = StartCoroutine(LoadScene());
+
+        _interstitialController.ShowInterstitial();
     }
 
     private IEnumerator LoadScene()

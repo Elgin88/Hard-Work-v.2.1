@@ -28,6 +28,6 @@ public class VideoAdController : MonoBehaviour
 
     private void OnCloseVideoAd()
     {
-        _pauserController.PauseOff();
+        _pauserController.PauseOffInBrauser();
     }
 }

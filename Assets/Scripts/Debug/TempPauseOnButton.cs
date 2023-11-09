@@ -23,6 +23,6 @@ public class TempPauseOnButton : MonoBehaviour
 
     private void OnPauseButtonClisk()
     {
-        _canvasUI.PauserGame.PauseOn();
+        _canvasUI.PauserGame.PauseOnInBrauser();
     }
 }

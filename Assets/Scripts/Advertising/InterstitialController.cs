@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class InterstitialController : MonoBehaviour
 {
+    [SerializeField] private PauserGame _pauserGame;
+
     public void ShowInterstitial()
     {
 #if UNITY_EDITOR

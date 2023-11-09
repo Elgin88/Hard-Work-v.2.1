@@ -26,7 +26,6 @@ public class NextLevelButton : MonoBehaviour
     {
         _currentLevelName = SceneManager.GetActiveScene().name;
 
-        _nextLevelButton = GetComponent<Button>();
         _nextLevelButton.onClick.AddListener(OnNextLevelButtonClick);
     }
 
@@ -38,6 +37,8 @@ public class NextLevelButton : MonoBehaviour
     private void OnNextLevelButtonClick()
     {
         _canvasUI.Saver.SaveData();
+
+        _canvasUI.PauserGame.PauseOnInBrauser();
 
         _canvasUI.InterstitialController.ShowInterstitial();
 

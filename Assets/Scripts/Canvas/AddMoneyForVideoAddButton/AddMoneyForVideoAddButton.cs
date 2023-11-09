@@ -55,7 +55,7 @@ public class AddMoneyForVideoAddButton : MonoBehaviour
         yield return _delayWFS;
 
         _canvasUI.VideoAddController.ShowVideoAd();
-        _canvasUI.PauserGame.PauseOn();
+        _canvasUI.PauserGame.PauseOnInBrauser();
 
         StopCoroutine(ShowVideoAd());
     }

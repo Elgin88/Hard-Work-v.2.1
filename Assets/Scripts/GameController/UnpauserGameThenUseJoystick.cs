@@ -21,7 +21,7 @@ public class UnpauserGameThenUseJoystick : MonoBehaviour
         {
             if (_fixedJoystick.Horizontal != 0)
             {
-                _pauserGame.PauseOff();
+                _pauserGame.PauseOffInBrauser();
             }
         }
     }

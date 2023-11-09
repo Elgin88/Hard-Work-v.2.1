@@ -1348,6 +1348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c082c799c7a50482881fbc6429270751, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _pauserGame: {fileID: 0}
 --- !u!1 &841130403
 GameObject:
   m_ObjectHideFlags: 0
@@ -1850,6 +1851,7 @@ MonoBehaviour:
   _audio: {fileID: 1464779416}
   _interstitialController: {fileID: 583407487}
   _loader: {fileID: 583407480}
+  _pauserGame: {fileID: 583407484}
 --- !u!82 &1464779416
 AudioSource:
   m_ObjectHideFlags: 0
