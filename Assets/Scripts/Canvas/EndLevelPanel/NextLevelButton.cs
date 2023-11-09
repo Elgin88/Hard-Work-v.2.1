@@ -38,8 +38,6 @@ public class NextLevelButton : MonoBehaviour
     {
         _canvasUI.Saver.SaveData();
 
-        _canvasUI.PauserGame.PauseOnInBrauser();
-
         _canvasUI.InterstitialController.ShowInterstitial();
 
         StartLoadNextLevel();           
