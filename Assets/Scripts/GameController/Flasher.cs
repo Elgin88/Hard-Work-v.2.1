@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class Flasher1 : MonoBehaviour
+public class Flasher : MonoBehaviour
 {
     private float _deltaScaleInPercentages = 30;
     private float _timeOfFlashInSeconds = 0.3f;
