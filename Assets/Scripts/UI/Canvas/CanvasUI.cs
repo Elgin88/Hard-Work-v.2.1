@@ -29,6 +29,7 @@ public class CanvasUI : MonoBehaviour
     [SerializeField] private PauserGame _pauserGame;
     [SerializeField] private PlayerSpeedSetter _playerSpeedSetter;
     [SerializeField] private Interstitial _interstitialController;
+    [SerializeField] private Advertising _advertising;
 
     public Player Player => _player;
     public JoystickIndicatorEducation[] JoystickIndicators => _joystickIndicators;
@@ -55,6 +56,7 @@ public class CanvasUI : MonoBehaviour
     public PauserGame PauserGame => _pauserGame;
     public PlayerSpeedSetter PlayerSpeedSetter => _playerSpeedSetter;
     public Interstitial InterstitialController  => _interstitialController;
+    public Advertising Advertising => _advertising;
 
     private void Start()
     {
@@ -83,8 +85,8 @@ public class CanvasUI : MonoBehaviour
             _inventory == null ||
             _pauserGame == null ||
             _playerSpeedSetter == null||
-            _interstitialController == null)
-
+            _interstitialController == null ||
+            _advertising == null)
         {
             Debug.Log("No serializefiel in " + gameObject.name);
         }

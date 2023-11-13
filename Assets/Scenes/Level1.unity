@@ -5689,6 +5689,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1852628440}
     - target: {fileID: 6390884785094593398, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
+      propertyPath: _advertising
+      value: 
+      objectReference: {fileID: 1852628443}
+    - target: {fileID: 6390884785094593398, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
       propertyPath: _lineOfPoints
       value: 
       objectReference: {fileID: 384317251}
@@ -11770,6 +11774,7 @@ GameObject:
   - component: {fileID: 1852628441}
   - component: {fileID: 1852628433}
   - component: {fileID: 1852628442}
+  - component: {fileID: 1852628443}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -12065,6 +12070,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pauserGame: {fileID: 0}
+--- !u!114 &1852628443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852628423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2515fa11e68be4b67b1db345885ba2e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1858453383
 PrefabInstance:
   m_ObjectHideFlags: 0

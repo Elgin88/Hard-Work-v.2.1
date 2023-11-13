@@ -7,22 +7,18 @@ public class AddMoneyForVideoAddButton : MonoBehaviour
     [SerializeField] private CanvasUI _canvasUI;
     [SerializeField] private int _addPlayerMoney;
     [SerializeField] private Button _button;
-    [SerializeField] private AudioSource _audioSourse;
-    [SerializeField] private float _delay;
+    [SerializeField] private AudioSource _moneySound;
 
-    private WaitForSeconds _delayWFS;
     private WaitForSeconds _delayPressButton = new WaitForSeconds(2);
 
     private void Start()
     {
-        if (_canvasUI == null || _addPlayerMoney == 0 || _button == null || _audioSourse == null || _delay == 0 )
+        if (_canvasUI == null || _addPlayerMoney == 0 || _button == null || _moneySound == null)
         {
             Debug.Log("No serializefiel in " + gameObject.name);
         }
 
         _button.onClick.AddListener(OnButtonClick);
-
-        _delayWFS = new WaitForSeconds(_delay);
     }
 
     private void OnDisable()
@@ -34,29 +30,24 @@ public class AddMoneyForVideoAddButton : MonoBehaviour
     {
         _canvasUI.Player.AddMoney(_addPlayerMoney);
         _canvasUI.Saver.SaveMoney();
-        _audioSourse.Play();
+        _moneySound.Play();
 
         _button.interactable = false;
 
-        StartCoroutine(DelayForClick());
-
-        StartCoroutine(ShowVideoAd());
+        StartCoroutine(DelayForDoubleClick());
+        ShowVideoAd();
     }
 
-    private IEnumerator DelayForClick()
+    private IEnumerator DelayForDoubleClick()
     {
         yield return _delayPressButton;
 
         _button.interactable = true ;
     }
 
-    public IEnumerator ShowVideoAd()
+    public void ShowVideoAd()
     {
-        yield return _delayWFS;
-
-        _canvasUI.VideoAddController.ShowVideoAd();
+        _canvasUI.Advertising.ShowVideoAd();
         _canvasUI.PauserGame.PauseOnInBrauser();
-
-        StopCoroutine(ShowVideoAd());
     }
 }

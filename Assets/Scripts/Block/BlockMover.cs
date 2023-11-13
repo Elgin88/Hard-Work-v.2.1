@@ -12,19 +12,17 @@ public class BlockMover : MonoBehaviour
     [SerializeField] private Block _block;
 
     private Coroutine _moveToPlayer;
-    private Vector3 _topPointToPlayer;
-    private Vector3 _startBlockPosition;
-    private float _flightSpeedToPlayer = 10;
-    private float _tossHightToPlayer = 3;
-    private float _deltaPointPosition = 0.001f;
-    private float _deltaHight = 3;
-    private bool _isReachedTopToPlayer = false;
-    private Coroutine _moveToCollector;
-    private Vector3 _topPointToCollector;
-    private float _flightSpeedToCollector = 10;
-    private float _tossHeightToCollector = 1;
-    private bool _isReachedTopToCollector = false;
     private Coroutine _holdOnPlayer;
+    private Coroutine _moveToCollector;
+    private Vector3 _startBlockPosition;
+    private Vector3 _topPointToPlayer;
+    private Vector3 _topPointToCollector;
+    private float _flightSpeedToPlayer = 10;
+    private float _flightSpeedToCollector = 10;
+    private float _tossHightToPlayer = 3;
+    private float _tossHeightToCollector = 1;
+    private bool _isReachedTopToPlayer = false;
+    private bool _isReachedTopToCollector = false;
 
     private void Start()
     {
@@ -103,15 +101,9 @@ public class BlockMover : MonoBehaviour
     {
         StopFixBlock();
 
-        collectorPoint.transform.position = new Vector3 (
-            collectorPoint.transform.position.x + Random.Range(-1 * _deltaPointPosition, _deltaPointPosition),
-            collectorPoint.transform.position.y,
-            collectorPoint.transform.position.z + Random.Range(-1 * _deltaPointPosition, _deltaPointPosition)
-            );
-
         _topPointToCollector = new Vector3 (
             (transform.position.x + collectorPoint.transform.position.x) / 2,
-            collectorPoint.transform.position.y + transform.position.y + _tossHeightToCollector + Random.Range(-1 * _deltaHight, _deltaHight),
+            collectorPoint.transform.position.y + transform.position.y,
             (transform.position.z + collectorPoint.transform.position.z) / 2);
 
         _block.Point.RemoveBlock();

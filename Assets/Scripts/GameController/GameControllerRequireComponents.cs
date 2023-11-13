@@ -12,6 +12,7 @@ using UnityEngine;
 [RequireComponent(typeof(Interstitial))]
 [RequireComponent(typeof(PauserGame))]
 [RequireComponent(typeof(UnpauserGameThenUseJoystick))]
+[RequireComponent(typeof(Advertising))]
 
 public class GameControllerRequireComponents : MonoBehaviour
 {
