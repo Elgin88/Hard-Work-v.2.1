@@ -1,7 +1,7 @@
 using Agava.WebUtility;
 using UnityEngine;
 
-public class BlockSoundController : MonoBehaviour
+public class BlockSound : MonoBehaviour
 {
     [SerializeField] private PlayerSoundController _playerSoundController;
 
@@ -13,7 +13,7 @@ public class BlockSoundController : MonoBehaviour
         }
     }
 
-    public void PlayFlyOnCarSFX()
+    public void PlaySoundFlyOnCar()
     {
         if (_playerSoundController.BlockFly.isPlaying == false)
         {
@@ -21,7 +21,7 @@ public class BlockSoundController : MonoBehaviour
         }        
     }
 
-    public void PlayPlaceOnCarSFX()
+    public void PlayPlaceOnCar()
     {
         if (_playerSoundController.BlockFly.isPlaying == false)
         {

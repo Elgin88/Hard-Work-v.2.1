@@ -7,7 +7,7 @@ public class StartGameButton : MonoBehaviour
 {
     [SerializeField] private Button _button;
     [SerializeField] private AudioSource _audio;
-    [SerializeField] private InterstitialController _interstitialController;
+    [SerializeField] private Interstitial _interstitialController;
     [SerializeField] private Loader _loader;
     [SerializeField] private PauserGame _pauserGame;
 

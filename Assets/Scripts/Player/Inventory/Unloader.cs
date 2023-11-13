@@ -30,7 +30,7 @@ public class Unloader : MonoBehaviour
 
             if (lastAddBlock != null)
             {
-                lastAddBlock.BlockMoverToCollector.StartMoveToCollector(_player.CollectionPoint.transform.position);
+                lastAddBlock.BlockMover.StartMoveToCollector(_player.CollectionPoint.transform.position);
                 lastAddBlock.Point.RemoveBlock();
 
                 if (_inventory.GetNumberBloksInTopLine() == 0 & _inventory.GetCountOfLines() > 1)

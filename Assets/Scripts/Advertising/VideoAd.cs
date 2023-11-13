@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class VideoAdController : MonoBehaviour
+public class VideoAd : MonoBehaviour
 {
     [SerializeField] private PauserGame _pauserController;
 

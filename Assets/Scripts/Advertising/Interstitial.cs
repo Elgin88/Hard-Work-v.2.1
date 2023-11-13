@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InterstitialController : MonoBehaviour
+public class Interstitial : MonoBehaviour
 {
     [SerializeField] private PauserGame _pauserGame;
 

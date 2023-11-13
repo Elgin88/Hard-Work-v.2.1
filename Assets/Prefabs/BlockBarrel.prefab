@@ -13,11 +13,9 @@ GameObject:
   - component: {fileID: 6186762459389763636}
   - component: {fileID: 5012760858346511186}
   - component: {fileID: 5012760858346511184}
-  - component: {fileID: 5012760858346511185}
   - component: {fileID: 5012760858346511191}
-  - component: {fileID: 5012760858346511190}
-  - component: {fileID: 5012760858346511189}
   - component: {fileID: 5012760858346511188}
+  - component: {fileID: 6470160173069189000}
   m_Layer: 0
   m_Name: BlockBarrel
   m_TagString: Untagged
@@ -119,20 +117,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0020000003, y: 0.0019999999, z: 0.0019999999}
   m_Center: {x: 0.000008511473, y: -0.000028582488, z: 0.0010000418}
---- !u!114 &5012760858346511185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5682196780323275233}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 204752114b2014731884799267069717, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _player: {fileID: 0}
-  _block: {fileID: 5012760858346511188}
 --- !u!114 &5012760858346511191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,39 +130,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerSoundController: {fileID: 0}
---- !u!114 &5012760858346511190
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5682196780323275233}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b479697d751e1457abca5a8d6119aa0a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _calculatorBlocks: {fileID: 0}
-  _chooserMedals: {fileID: 0}
-  _blockFixer: {fileID: 5012760858346511185}
-  _block: {fileID: 5012760858346511188}
-  _blockSoundController: {fileID: 5012760858346511191}
---- !u!114 &5012760858346511189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5682196780323275233}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60a9ae0c700684a069d74d97a06b8b4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _blockFixer: {fileID: 5012760858346511185}
-  _block: {fileID: 5012760858346511188}
-  _blockMoverToCollector: {fileID: 5012760858346511190}
-  _blockSoundController: {fileID: 5012760858346511191}
 --- !u!114 &5012760858346511188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,6 +145,22 @@ MonoBehaviour:
   _player: {fileID: 0}
   _rigidbody: {fileID: 5012760858346511186}
   _boxCollider: {fileID: 5012760858346511184}
-  _soundController: {fileID: 5012760858346511191}
-  _blockMoverToCollector: {fileID: 5012760858346511190}
-  _moverBlock: {fileID: 5012760858346511189}
+  _blockSound: {fileID: 5012760858346511191}
+  _blockMover: {fileID: 6470160173069189000}
+--- !u!114 &6470160173069189000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5682196780323275233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 861de51c48cec4ec5aa1812c4bce53f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _calculatorBlocks: {fileID: 0}
+  _chooserMedals: {fileID: 0}
+  _blockSound: {fileID: 5012760858346511191}
+  _player: {fileID: 0}
+  _block: {fileID: 5012760858346511188}

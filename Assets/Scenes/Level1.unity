@@ -226,6 +226,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &17558642
@@ -331,6 +347,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &21399485
@@ -366,7 +398,7 @@ PrefabInstance:
       objectReference: {fileID: 1361587953}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -416,6 +448,30 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectionPointInPlayer
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectionPointInCollector
+      value: 
+      objectReference: {fileID: 913927204}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!4 &21399486 stripped
@@ -540,6 +596,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &48461322
@@ -575,7 +647,7 @@ PrefabInstance:
       objectReference: {fileID: 1361587953}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_LocalScale.y
@@ -637,6 +709,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!4 &59188826 stripped
@@ -777,6 +865,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &89179292
@@ -812,7 +916,7 @@ PrefabInstance:
       objectReference: {fileID: 1361587953}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_LocalScale.y
@@ -874,6 +978,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!4 &95426054 stripped
@@ -925,7 +1045,7 @@ PrefabInstance:
       objectReference: {fileID: 1361587953}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -975,6 +1095,30 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectionPointInPlayer
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectionPointInCollector
+      value: 
+      objectReference: {fileID: 913927204}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!4 &97239771 stripped
@@ -1058,7 +1202,7 @@ PrefabInstance:
       objectReference: {fileID: 1361587953}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_LocalScale.y
@@ -1120,6 +1264,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1 &141811574
@@ -1314,6 +1474,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!4 &155996810 stripped
@@ -1427,6 +1603,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &184401743
@@ -1462,7 +1654,7 @@ PrefabInstance:
       objectReference: {fileID: 1361587953}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_RootOrder
-      value: 26
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_LocalScale.y
@@ -1524,6 +1716,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &207589009
@@ -1609,6 +1817,30 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectionPointInPlayer
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectionPointInCollector
+      value: 
+      objectReference: {fileID: 913927204}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!4 &207589010 stripped
@@ -1730,6 +1962,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &228729669
@@ -1827,6 +2075,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!4 &244601139 stripped
@@ -1971,6 +2235,30 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectionPointInPlayer
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectionPointInCollector
+      value: 
+      objectReference: {fileID: 913927204}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!4 &314707486 stripped
@@ -2100,7 +2388,7 @@ PrefabInstance:
       objectReference: {fileID: 1361587953}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_RootOrder
-      value: 23
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_LocalScale.y
@@ -2162,6 +2450,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1 &467734997
@@ -2232,7 +2536,7 @@ Light:
     serializedVersion: 2
     m_Bits: 2147483647
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -2353,6 +2657,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &526457472
@@ -2450,6 +2770,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &532298738
@@ -2555,6 +2891,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!4 &534739276 stripped
@@ -2622,7 +2974,7 @@ PrefabInstance:
       objectReference: {fileID: 1361587953}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2672,6 +3024,30 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectionPointInPlayer
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectionPointInCollector
+      value: 
+      objectReference: {fileID: 913927204}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!4 &543323519 stripped
@@ -2841,6 +3217,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1 &609798718 stripped
@@ -2904,7 +3296,7 @@ PrefabInstance:
       objectReference: {fileID: 1361587953}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2954,6 +3346,30 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectionPointInPlayer
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectionPointInCollector
+      value: 
+      objectReference: {fileID: 913927204}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!4 &617970850 stripped
@@ -3016,7 +3432,7 @@ PrefabInstance:
       objectReference: {fileID: 1361587953}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_LocalScale.y
@@ -3078,6 +3494,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1 &689222103
@@ -3415,6 +3847,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &740688725
@@ -3450,7 +3898,7 @@ PrefabInstance:
       objectReference: {fileID: 1361587953}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_LocalScale.y
@@ -3512,6 +3960,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &751534236
@@ -3547,7 +4011,7 @@ PrefabInstance:
       objectReference: {fileID: 1361587953}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3597,6 +4061,30 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectionPointInPlayer
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectionPointInCollector
+      value: 
+      objectReference: {fileID: 913927204}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!4 &751534237 stripped
@@ -3833,6 +4321,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!4 &766698738 stripped
@@ -3946,6 +4450,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &797914583
@@ -4051,6 +4571,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!4 &817741501 stripped
@@ -5587,6 +6123,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!95 &857462396
@@ -5929,7 +6481,7 @@ PrefabInstance:
       objectReference: {fileID: 1361587953}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5979,6 +6531,30 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectionPointInPlayer
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectionPointInCollector
+      value: 
+      objectReference: {fileID: 913927204}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!4 &893054479 stripped
@@ -6041,7 +6617,7 @@ PrefabInstance:
       objectReference: {fileID: 1361587953}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6091,6 +6667,30 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectionPointInPlayer
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectionPointInCollector
+      value: 
+      objectReference: {fileID: 913927204}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!4 &926700985 stripped
@@ -6142,7 +6742,7 @@ PrefabInstance:
       objectReference: {fileID: 1361587953}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6192,6 +6792,30 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectionPointInPlayer
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectionPointInCollector
+      value: 
+      objectReference: {fileID: 913927204}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!4 &940225994 stripped
@@ -6481,7 +7105,7 @@ PrefabInstance:
       objectReference: {fileID: 1361587953}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_LocalScale.y
@@ -6543,6 +7167,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!4 &995400460 stripped
@@ -6680,6 +7320,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!4 &1033510396 stripped
@@ -6747,7 +7403,7 @@ PrefabInstance:
       objectReference: {fileID: 1361587953}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6797,6 +7453,30 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectionPointInPlayer
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectionPointInCollector
+      value: 
+      objectReference: {fileID: 913927204}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!4 &1060161383 stripped
@@ -7027,6 +7707,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!114 &1153158899 stripped
@@ -7143,6 +7839,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &1171538418
@@ -7178,7 +7890,7 @@ PrefabInstance:
       objectReference: {fileID: 1361587953}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_RootOrder
-      value: 24
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_LocalScale.y
@@ -7240,6 +7952,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!4 &1174069902 stripped
@@ -7339,7 +8067,7 @@ PrefabInstance:
       objectReference: {fileID: 1361587953}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_LocalScale.y
@@ -7401,6 +8129,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &1270818952
@@ -7436,7 +8180,7 @@ PrefabInstance:
       objectReference: {fileID: 1361587953}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7486,6 +8230,30 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectionPointInPlayer
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectionPointInCollector
+      value: 
+      objectReference: {fileID: 913927204}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!4 &1270818953 stripped
@@ -7537,7 +8305,7 @@ PrefabInstance:
       objectReference: {fileID: 1361587953}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7587,6 +8355,30 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectionPointInPlayer
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectionPointInCollector
+      value: 
+      objectReference: {fileID: 913927204}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!4 &1274750034 stripped
@@ -7955,7 +8747,7 @@ PrefabInstance:
       objectReference: {fileID: 1361587953}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_LocalScale.y
@@ -8017,6 +8809,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!114 &1361587953 stripped
@@ -8592,6 +9400,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &1452497224
@@ -8689,6 +9513,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &1453332470
@@ -8724,7 +9564,7 @@ PrefabInstance:
       objectReference: {fileID: 1361587953}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_LocalScale.y
@@ -8786,6 +9626,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &1461589275
@@ -8821,7 +9677,7 @@ PrefabInstance:
       objectReference: {fileID: 1361587953}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_LocalScale.y
@@ -8883,6 +9739,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!33 &1497773778
@@ -9138,6 +10010,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!4 &1516877307 stripped
@@ -9318,6 +10206,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &1561155862
@@ -9423,6 +10327,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &1562916279
@@ -9595,6 +10515,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &1595517208
@@ -9692,6 +10628,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &1598063143
@@ -9789,6 +10741,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &1630266256
@@ -9886,6 +10854,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &1630857806
@@ -9921,7 +10905,7 @@ PrefabInstance:
       objectReference: {fileID: 1361587953}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_LocalScale.y
@@ -9983,6 +10967,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &1654206425
@@ -10068,6 +11068,30 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectionPointInPlayer
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectionPointInCollector
+      value: 
+      objectReference: {fileID: 913927204}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!4 &1654206426 stripped
@@ -10181,6 +11205,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!4 &1674991471 stripped
@@ -10386,6 +11426,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &1700376437
@@ -10483,6 +11539,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!4 &1728780267 stripped
@@ -10992,6 +12064,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c082c799c7a50482881fbc6429270751, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _pauserGame: {fileID: 0}
 --- !u!1001 &1858453383
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11095,6 +12168,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!114 &1921418014 stripped
@@ -11264,7 +12353,7 @@ PrefabInstance:
       objectReference: {fileID: 1361587953}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11314,6 +12403,30 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectionPointInPlayer
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectionPointInCollector
+      value: 
+      objectReference: {fileID: 913927204}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!4 &1961409368 stripped
@@ -11636,7 +12749,7 @@ PrefabInstance:
       objectReference: {fileID: 1361587953}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_LocalScale.y
@@ -11698,6 +12811,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &2057043187
@@ -11795,6 +12924,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &2059319219
@@ -11830,7 +12975,7 @@ PrefabInstance:
       objectReference: {fileID: 1361587953}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: m_LocalScale.y
@@ -11892,6 +13037,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1 &2061857478
@@ -12121,6 +13282,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!4 &2086307253 stripped
@@ -12388,6 +13565,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &2123982568
@@ -12485,5 +13678,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 268018514}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _chooserMedals
+      value: 
+      objectReference: {fileID: 1852628426}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _calculatorBlocks
+      value: 
+      objectReference: {fileID: 1852628428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}

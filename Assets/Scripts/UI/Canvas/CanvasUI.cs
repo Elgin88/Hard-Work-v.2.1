@@ -10,11 +10,11 @@ public class CanvasUI : MonoBehaviour
     [SerializeField] private SoundController _soundController;
     [SerializeField] private PlayerFuelController _playerFuelController;
     [SerializeField] private Player _player;
-    [SerializeField] private VideoAdController _videoAddController;
+    [SerializeField] private VideoAd _videoAddController;
     [SerializeField] private CalculatorBlocks _calculatorBlocks;
     [SerializeField] private EnderLevel _endelLevel;
     [SerializeField] private ChooserMedals _chooserMedals;
-    [SerializeField] private VideoAdController _videoAdController;
+    [SerializeField] private VideoAd _videoAdController;
     [SerializeField] private EnderLevel _enderLevel;
     [SerializeField] private Saver _saver;
     [SerializeField] private DestroyerPoint _destroyerPoint;
@@ -28,19 +28,19 @@ public class CanvasUI : MonoBehaviour
     [SerializeField] private Inventory _inventory;
     [SerializeField] private PauserGame _pauserGame;
     [SerializeField] private PlayerSpeedSetter _playerSpeedSetter;
-    [SerializeField] private InterstitialController _interstitialController;
+    [SerializeField] private Interstitial _interstitialController;
 
     public Player Player => _player;
     public JoystickIndicatorEducation[] JoystickIndicators => _joystickIndicators;
     public AddFuelIndicatorEducation[] AddFuelIndicators => _addFuelIndicators;
-    public VideoAdController VideoAddController => _videoAddController;
+    public VideoAd VideoAddController => _videoAddController;
     public SoundController SoundController => _soundController;
     public GarageUI GarageUI => _garageUI;
     public PlayerFuelController PlayerFuelController => _playerFuelController;
     public CalculatorBlocks CalculatorBlocks => _calculatorBlocks;
     public EnderLevel EndelLevel => _endelLevel;
     public ChooserMedals ChooserMedal => _chooserMedals;
-    public VideoAdController VideoAdController => _videoAdController;
+    public VideoAd VideoAdController => _videoAdController;
     public EnderLevel EnderLevel => _endelLevel;
     public Saver Saver => _saver;
     public DestroyerPoint DestroyerPoint => _destroyerPoint;
@@ -54,7 +54,7 @@ public class CanvasUI : MonoBehaviour
     public Inventory Inventory => _inventory;
     public PauserGame PauserGame => _pauserGame;
     public PlayerSpeedSetter PlayerSpeedSetter => _playerSpeedSetter;
-    public InterstitialController InterstitialController  => _interstitialController;
+    public Interstitial InterstitialController  => _interstitialController;
 
     private void Start()
     {
