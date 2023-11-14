@@ -15474,6 +15474,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1387426534}
     - target: {fileID: 6390884785094593398, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
+      propertyPath: _advertising
+      value: 
+      objectReference: {fileID: 1387426535}
+    - target: {fileID: 6390884785094593398, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
       propertyPath: _lineOfPoints
       value: 
       objectReference: {fileID: 234694546}
@@ -15508,11 +15512,11 @@ PrefabInstance:
     - target: {fileID: 6390884785094593398, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
       propertyPath: _videoAdController
       value: 
-      objectReference: {fileID: 1387426530}
+      objectReference: {fileID: 0}
     - target: {fileID: 6390884785094593398, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
       propertyPath: _videoAddController
       value: 
-      objectReference: {fileID: 1387426530}
+      objectReference: {fileID: 0}
     - target: {fileID: 6390884785094593398, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
       propertyPath: _lineOfPointsCreater
       value: 
@@ -15532,20 +15536,9 @@ PrefabInstance:
     - target: {fileID: 6390884785094593398, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
       propertyPath: _interstitialController
       value: 
-      objectReference: {fileID: 1387426536}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
---- !u!114 &678367336 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3513216691088164064, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
-  m_PrefabInstance: {fileID: 678367335}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45977bbae16431c46a013576a1aea384, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &678653658
 GameObject:
   m_ObjectHideFlags: 0
@@ -33523,11 +33516,9 @@ GameObject:
   - component: {fileID: 1387426533}
   - component: {fileID: 1387426532}
   - component: {fileID: 1387426531}
-  - component: {fileID: 1387426530}
   - component: {fileID: 1387426534}
-  - component: {fileID: 1387426535}
   - component: {fileID: 1387426520}
-  - component: {fileID: 1387426536}
+  - component: {fileID: 1387426535}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -33729,19 +33720,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 819df617b8e7e41c199b0dc57c9e182b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1387426530
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1387426519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc68d1ca1cfe4485eb8b73ef66c4ca9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pauserController: {fileID: 1387426534}
 --- !u!114 &1387426531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33805,23 +33783,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1387426519}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 379c1278537f74344841cfbfa868842d, type: 3}
+  m_Script: {fileID: 11500000, guid: 2515fa11e68be4b67b1db345885ba2e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fixedJoystick: {fileID: 678367336}
   _pauserGame: {fileID: 1387426534}
---- !u!114 &1387426536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1387426519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c082c799c7a50482881fbc6429270751, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1395558631
 GameObject:
   m_ObjectHideFlags: 0

@@ -1037,9 +1037,7 @@ GameObject:
   - component: {fileID: 583407479}
   - component: {fileID: 583407481}
   - component: {fileID: 583407480}
-  - component: {fileID: 583407482}
   - component: {fileID: 583407484}
-  - component: {fileID: 583407485}
   - component: {fileID: 583407486}
   - component: {fileID: 583407487}
   m_Layer: 0
@@ -1285,19 +1283,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player: {fileID: 0}
   _enderLevel: {fileID: 583407475}
---- !u!114 &583407482
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 583407466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc68d1ca1cfe4485eb8b73ef66c4ca9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pauserController: {fileID: 583407484}
 --- !u!114 &583407484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1310,20 +1295,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fc9737b99830437d9531a5a89f30c53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &583407485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 583407466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 379c1278537f74344841cfbfa868842d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _fixedJoystick: {fileID: 0}
-  _pauserGame: {fileID: 583407484}
 --- !u!114 &583407486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1345,10 +1316,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 583407466}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c082c799c7a50482881fbc6429270751, type: 3}
+  m_Script: {fileID: 11500000, guid: 2515fa11e68be4b67b1db345885ba2e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pauserGame: {fileID: 0}
+  _pauserGame: {fileID: 583407484}
 --- !u!1 &841130403
 GameObject:
   m_ObjectHideFlags: 0
@@ -1725,7 +1696,6 @@ GameObject:
   - component: {fileID: 1464779412}
   - component: {fileID: 1464779416}
   - component: {fileID: 1464779415}
-  - component: {fileID: 1464779417}
   m_Layer: 5
   m_Name: StartGameButton
   m_TagString: Untagged
@@ -1849,9 +1819,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _button: {fileID: 1464779412}
   _audio: {fileID: 1464779416}
-  _interstitialController: {fileID: 583407487}
   _loader: {fileID: 583407480}
   _pauserGame: {fileID: 583407484}
+  _advertising: {fileID: 583407487}
 --- !u!82 &1464779416
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1948,19 +1918,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1464779417
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1464779410}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d88cc50279514c2eabee5de1a8976ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _button: {fileID: 1464779412}
 --- !u!1 &1512250956
 GameObject:
   m_ObjectHideFlags: 0

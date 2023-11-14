@@ -16,7 +16,7 @@ public class NextLevelButton : MonoBehaviour
 
     private void Start()
     {
-        if (_canvasUI == null || _nextLevelButton == null)
+        if (_canvasUI == null || _nextLevelButton == null )
         {
             Debug.Log("No serializefiel in " + gameObject.name);
         }
@@ -38,7 +38,7 @@ public class NextLevelButton : MonoBehaviour
     {
         _canvasUI.Saver.SaveData();
 
-        _canvasUI.InterstitialController.ShowInterstitial();
+        _canvasUI.Advertising.ShowInterstitialAd();
 
         StartLoadNextLevel();           
     }

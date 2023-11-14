@@ -9,7 +9,8 @@ public class AddMoneyForVideoAddButton : MonoBehaviour
     [SerializeField] private Button _button;
     [SerializeField] private AudioSource _moneySound;
 
-    private WaitForSeconds _delayPressButton = new WaitForSeconds(2);
+    private WaitForSeconds _delayPressButton = new WaitForSeconds(0.6f);
+    private WaitForSeconds _delayShowVideoAd = new WaitForSeconds(0.5f);
 
     private void Start()
     {
@@ -35,7 +36,7 @@ public class AddMoneyForVideoAddButton : MonoBehaviour
         _button.interactable = false;
 
         StartCoroutine(DelayForDoubleClick());
-        ShowVideoAd();
+        StartCoroutine(ShowVideoAd());
     }
 
     private IEnumerator DelayForDoubleClick()
@@ -45,9 +46,10 @@ public class AddMoneyForVideoAddButton : MonoBehaviour
         _button.interactable = true ;
     }
 
-    public void ShowVideoAd()
+    private IEnumerator ShowVideoAd()
     {
+        yield return _delayShowVideoAd;
+
         _canvasUI.Advertising.ShowVideoAd();
-        _canvasUI.PauserGame.PauseOnInBrauser();
     }
 }

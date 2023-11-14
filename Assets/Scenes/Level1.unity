@@ -5727,11 +5727,11 @@ PrefabInstance:
     - target: {fileID: 6390884785094593398, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
       propertyPath: _videoAdController
       value: 
-      objectReference: {fileID: 1852628439}
+      objectReference: {fileID: 0}
     - target: {fileID: 6390884785094593398, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
       propertyPath: _videoAddController
       value: 
-      objectReference: {fileID: 1852628439}
+      objectReference: {fileID: 0}
     - target: {fileID: 6390884785094593398, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
       propertyPath: _lineOfPointsCreater
       value: 
@@ -5751,7 +5751,7 @@ PrefabInstance:
     - target: {fileID: 6390884785094593398, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
       propertyPath: _interstitialController
       value: 
-      objectReference: {fileID: 1852628442}
+      objectReference: {fileID: 0}
     - target: {fileID: 6533289347556649745, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
       propertyPath: m_Layer
       value: 5
@@ -5917,17 +5917,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec0aea805d20d41d6aff472291859aea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &827877615 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3513216691088164064, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
-  m_PrefabInstance: {fileID: 827877611}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45977bbae16431c46a013576a1aea384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &843708715
@@ -11769,12 +11758,9 @@ GameObject:
   - component: {fileID: 1852628436}
   - component: {fileID: 1852628438}
   - component: {fileID: 1852628437}
-  - component: {fileID: 1852628439}
   - component: {fileID: 1852628440}
-  - component: {fileID: 1852628441}
-  - component: {fileID: 1852628433}
-  - component: {fileID: 1852628442}
   - component: {fileID: 1852628443}
+  - component: {fileID: 1852628433}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -12018,19 +12004,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player: {fileID: 268018514}
   _enderLevel: {fileID: 1852628427}
---- !u!114 &1852628439
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852628423}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc68d1ca1cfe4485eb8b73ef66c4ca9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pauserController: {fileID: 1852628440}
 --- !u!114 &1852628440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12043,33 +12016,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fc9737b99830437d9531a5a89f30c53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1852628441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852628423}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 379c1278537f74344841cfbfa868842d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _fixedJoystick: {fileID: 827877615}
-  _pauserGame: {fileID: 1852628440}
---- !u!114 &1852628442
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852628423}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c082c799c7a50482881fbc6429270751, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pauserGame: {fileID: 0}
 --- !u!114 &1852628443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12082,6 +12028,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2515fa11e68be4b67b1db345885ba2e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _pauserGame: {fileID: 1852628440}
 --- !u!1001 &1858453383
 PrefabInstance:
   m_ObjectHideFlags: 0
