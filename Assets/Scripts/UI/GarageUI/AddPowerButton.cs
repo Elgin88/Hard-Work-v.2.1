@@ -7,14 +7,14 @@ public class AddPowerButton : MonoBehaviour
     [SerializeField] private TMP_Text _cost;
     [SerializeField] private Button _button;
     [SerializeField] private EngineBarIconFlash _flash;
-    [SerializeField] private CanvasSoundController _soundController;
+    [SerializeField] private AudioSource _soundOfBuy;
     [SerializeField] private CanvasUI _canvasUI;
 
     private bool _isMaxLevelEngine;
 
     private void Start()
     {
-        if (_cost == null || _button == null || _flash == null || _soundController == null || _canvasUI == null)
+        if (_cost == null || _button == null || _flash == null || _soundOfBuy == null || _canvasUI == null)
         {
             Debug.Log("No serializefiel in " + gameObject.name);
         }
@@ -41,7 +41,7 @@ public class AddPowerButton : MonoBehaviour
     private void OnButtonClick()
     {
         _canvasUI.PlayerUpgrader.TryAddPower();
-        _soundController.PlayBuySound();
+        _soundOfBuy.Play();
         _canvasUI.GarageSoundController.StartPlaySoundFinEngine();
     }
 

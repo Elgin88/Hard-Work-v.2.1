@@ -9,7 +9,7 @@ public class AddFuelButton : MonoBehaviour
 {
     [SerializeField] private TMP_Text _cost;
     [SerializeField] private Button _button;
-    [SerializeField] private CanvasSoundController _canvasSoundController;
+    [SerializeField] private AudioSource _soundOfBuy;
     [SerializeField] private CanvasUI _canvasUI;
     [SerializeField] private AddFuelIndicatorEducation[] _addFuelIndicatorEducation;
 
@@ -18,7 +18,7 @@ public class AddFuelButton : MonoBehaviour
 
     private void Start()
     {
-        if (_cost == null || _button == null || _canvasSoundController == null || _canvasUI == null | _addFuelIndicatorEducation == null)
+        if (_cost == null || _button == null || _soundOfBuy == null || _canvasUI == null | _addFuelIndicatorEducation == null)
         {
             Debug.Log("No serializefiel in " + gameObject.name);
         }
@@ -44,7 +44,7 @@ public class AddFuelButton : MonoBehaviour
     private void OnAddFuelButtonClick()
     {
         _canvasUI.PlayerUpgrader.TryBuyFuel();
-        _canvasSoundController.PlayBuySound();
+        _soundOfBuy.Play();
 
         _canvasUI.GarageSoundController.PlayFuelSound();
 

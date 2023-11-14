@@ -7,12 +7,12 @@ public class AddPlaceButton : MonoBehaviour
 {
     [SerializeField] private TMP_Text _cost;
     [SerializeField] private Button _button;
-    [SerializeField] private CanvasSoundController _soundController;
+    [SerializeField] private AudioSource _soundOfBuy;
     [SerializeField] private CanvasUI _canvasUI;
 
     private void Start()
     {
-        if (_cost == null || _button == null || _soundController == null || _canvasUI == null)
+        if (_cost == null || _button == null || _soundOfBuy == null || _canvasUI == null)
         {
             Debug.Log("No serializefiel in " + gameObject.name);
         }
@@ -37,7 +37,7 @@ public class AddPlaceButton : MonoBehaviour
     private void OnAddPlaceButtonClick()
     {
         _canvasUI.PlayerUpgrader.TryAddPlace();
-        _soundController.PlayBuySound();
+        _soundOfBuy.Play();
 
         _canvasUI.GarageSoundController.StartPlaySoundFinEngine();
     }

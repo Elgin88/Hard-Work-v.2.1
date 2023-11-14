@@ -7,11 +7,11 @@ public class AddTankButton : MonoBehaviour
     [SerializeField] private TMP_Text _cost;
     [SerializeField] private Button _button;
     [SerializeField] private CanvasUI _canvasUI;
-    [SerializeField] private CanvasSoundController _canvasSoundController;
+    [SerializeField] private AudioSource _soundOfBuy;
 
     private void Start()
     {
-        if (_cost == null || _button == null || _canvasSoundController == null || _canvasUI == null | _canvasSoundController == null)
+        if (_cost == null || _button == null || _soundOfBuy == null || _canvasUI == null)
         {
             Debug.Log("No serializefiel in " + gameObject.name);
         }
@@ -36,7 +36,7 @@ public class AddTankButton : MonoBehaviour
     private void OnAddTankButton()
     {
         _canvasUI.PlayerUpgrader.TryBuyTank();
-        _canvasSoundController.PlayBuySound();
+        _soundOfBuy.Play();
         _canvasUI.GarageSoundController.StartPlaySoundFinEngine();
     }
 
