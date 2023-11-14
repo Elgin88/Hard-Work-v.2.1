@@ -21,14 +21,14 @@ public class AddFuelIndicatorEducation : MonoBehaviour
         {
             if (indicator != null)
             {
-                if (indicator!=null)
+                if (indicator != null)
                 {
                     Destroy(indicator.gameObject);                    
                 }                
             }            
         }
 
-        if (_button!=null)
+        if (_button != null)
         {
             _button.onClick.AddListener(OnButtonClick);
         }        
@@ -46,7 +46,7 @@ public class AddFuelIndicatorEducation : MonoBehaviour
     {
         foreach (var item in _joystickIndicatorEducation)
         {
-            if (item!=null)
+            if (item != null)
             {
                 item.gameObject.SetActive(true);
             }            

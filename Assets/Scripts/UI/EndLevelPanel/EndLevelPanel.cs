@@ -7,11 +7,11 @@ public class EndLevelPanel : MonoBehaviour
     [SerializeField] private MinMedal _minMedal;
     [SerializeField] private MiddleMedal _middleMedal;
     [SerializeField] private MaxMedal _maxMedal;
-    [SerializeField] private CanvasUI _canvasUI;
+    [SerializeField] private UIRequireComponents _UIRequireComponents;
 
     private void Start()
     {
-        if (_minMedal == null || _middleMedal == null || _maxMedal == null || _canvasUI == null)
+        if (_minMedal == null || _middleMedal == null || _maxMedal == null || _UIRequireComponents == null)
         {
             Debug.Log("No serializefiel in " + gameObject.name);
         }
@@ -19,14 +19,14 @@ public class EndLevelPanel : MonoBehaviour
 
     private void OnEnable()
     {
-        OpenPanels(_canvasUI.ChooserMedal.IsMinMedal, _canvasUI.ChooserMedal.IsMiddleMedal, _canvasUI.ChooserMedal.IsMaxMedal);
+        OpenPanels(_UIRequireComponents.ChooserMedal.IsMinMedal, _UIRequireComponents.ChooserMedal.IsMiddleMedal, _UIRequireComponents.ChooserMedal.IsMaxMedal);
 
-        _canvasUI.ChooserMedal.IsMedalsChoosen += OnMedalsChoosen;
+        _UIRequireComponents.ChooserMedal.IsMedalsChoosen += OnMedalsChoosen;
     }
 
     private void OnDisable()
     {
-        _canvasUI.ChooserMedal.IsMedalsChoosen -= OnMedalsChoosen;
+        _UIRequireComponents.ChooserMedal.IsMedalsChoosen -= OnMedalsChoosen;
     }
 
     private void OnMedalsChoosen(bool isMin, bool isMiddle, bool isMax)

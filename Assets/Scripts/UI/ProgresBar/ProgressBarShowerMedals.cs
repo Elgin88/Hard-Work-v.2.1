@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(ProgressBar))]
-
 public class ProgressBarShowerMedals : MonoBehaviour
 {
     [SerializeField] private MinMedalUI _minMedalUI;

@@ -12,7 +12,7 @@ public class InventoryBarIconFlash : MonoBehaviour
     [SerializeField] private Color _targetColor;
     [SerializeField] private RectTransform _rectTransform;
     [SerializeField] private Image _image;
-    [SerializeField] private CanvasUI _canvasUI;
+    [SerializeField] private UIRequireComponents _UIRequireComponents;
 
     private Coroutine _flash;
     private Vector3 _startScale;
@@ -25,7 +25,7 @@ public class InventoryBarIconFlash : MonoBehaviour
 
     private void Start()
     {
-        if (_deltaScale == 0 || _duration == 0 || _targetColor == null || _rectTransform == null || _image == null || _canvasUI == null)
+        if (_deltaScale == 0 || _duration == 0 || _targetColor == null || _rectTransform == null || _image == null || _UIRequireComponents == null)
         {
             Debug.Log("No serializefiel in " + gameObject.name);
         }
@@ -41,12 +41,12 @@ public class InventoryBarIconFlash : MonoBehaviour
 
         _deltaScaleCalculated = _deltaScale / (_duration / 2 / Time.deltaTime);
 
-        _canvasUI.Inventory.IsChangedNumberBlocks += OnChangedNumberBlocksInInventory;
+        _UIRequireComponents.Inventory.IsChangedNumberBlocks += OnChangedNumberBlocksInInventory;
     }
 
     private void OnDisable()
     {
-        _canvasUI.Inventory.IsChangedNumberBlocks -= OnChangedNumberBlocksInInventory;
+        _UIRequireComponents.Inventory.IsChangedNumberBlocks -= OnChangedNumberBlocksInInventory;
     }
 
     private void OnChangedNumberBlocksInInventory(int current, int max)

@@ -23,7 +23,7 @@ public class SoundOffWhenMinimizingGame : MonoBehaviour
 #endif
 
 #if UNITY_WEBGL
-        if (Agava.WebUtility.WebApplication.InBackground==true & _isSoundOn == true)
+        if (Agava.WebUtility.WebApplication.InBackground == true & _isSoundOn == true)
         {
             _soundController.SetMinSoundValueInBrauser();
             _isSoundOn = false;

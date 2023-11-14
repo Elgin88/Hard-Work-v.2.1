@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class AddMoneyForVideoAddButton : MonoBehaviour
 {
-    [SerializeField] private CanvasUI _canvasUI;
+    [SerializeField] private UIRequireComponents _UIRequireComponents;
     [SerializeField] private int _addPlayerMoney;
     [SerializeField] private Button _button;
     [SerializeField] private AudioSource _moneySound;
@@ -14,7 +14,7 @@ public class AddMoneyForVideoAddButton : MonoBehaviour
 
     private void Start()
     {
-        if (_canvasUI == null || _addPlayerMoney == 0 || _button == null || _moneySound == null)
+        if (_UIRequireComponents == null || _addPlayerMoney == 0 || _button == null || _moneySound == null)
         {
             Debug.Log("No serializefiel in " + gameObject.name);
         }
@@ -29,8 +29,8 @@ public class AddMoneyForVideoAddButton : MonoBehaviour
 
     private void OnButtonClick()
     {
-        _canvasUI.Player.AddMoney(_addPlayerMoney);
-        _canvasUI.Saver.SaveMoney();
+        _UIRequireComponents.Player.AddMoney(_addPlayerMoney);
+        _UIRequireComponents.Saver.SaveMoney();
         _moneySound.Play();
 
         _button.interactable = false;
@@ -50,6 +50,6 @@ public class AddMoneyForVideoAddButton : MonoBehaviour
     {
         yield return _delayShowVideoAd;
 
-        _canvasUI.Advertising.ShowVideoAd();
+        _UIRequireComponents.Advertising.ShowVideoAd();
     }
 }

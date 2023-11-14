@@ -1,12 +1,5 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
-[RequireComponent(typeof(Player))]
-[RequireComponent(typeof(PlayerMover))]
-[RequireComponent(typeof(PlayerFuelController))]
-[RequireComponent(typeof(PlayerSoundController))]
 
 public class PlayerSpeedSetter : MonoBehaviour
 {
@@ -16,13 +9,12 @@ public class PlayerSpeedSetter : MonoBehaviour
     [SerializeField] private float _deltaDownSpeed;
     [SerializeField] private float _pushChangeSpeed;
     [SerializeField] private float _delayPush;
+    [SerializeField] private PlayerSoundController _soundController;
+    [SerializeField] private Player _player;
+    [SerializeField] private PlayerMover _playerMover;
+    [SerializeField] private PlayerFuelController _playerFuelController;
 
-    private PlayerSoundController _soundController;
-    private Player _player;
-    private PlayerMover _playerMover;
     private Coroutine _changeSpeedWork;
-    private PlayerFuelController _playerFuelController;
-
     private float _timeAftetLastPush;
     private float _currentSpeed;    
 
@@ -34,10 +26,18 @@ public class PlayerSpeedSetter : MonoBehaviour
 
     private void Start()
     {
-        _player = GetComponent<Player>();
-        _playerMover = GetComponent<PlayerMover>();
-        _playerFuelController = GetComponent<PlayerFuelController>();
-        _soundController = GetComponent<PlayerSoundController>();
+        if (_maxSpeed == 0 ||
+            _minSpeed == 0 ||
+            _deltaUpSpeed == 0 ||
+            _pushChangeSpeed == 0 ||
+            _delayPush == 0 ||
+            _player == null ||
+            _playerMover == null ||
+            _playerFuelController == null)
+        {
+
+            Debug.Log("No serializefield in " + gameObject.name);
+        }
 
         _player.IsPushed += IsPushedPlayer;
 

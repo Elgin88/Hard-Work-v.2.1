@@ -1,22 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(Button))]
-
 public class ReloadButton : MonoBehaviour
 {
     [SerializeField] private Button _button;
-    [SerializeField] private CanvasUI _canvasUI;
+    [SerializeField] private UIRequireComponents _UIRequireComponents;
 
     private Scene _currentScene;
     private PlayerFuelController _playerFuelController;
 
     private void Start()
     {
-        if (_button == null|| _canvasUI == null)
+        if (_button == null|| _UIRequireComponents == null)
         {
             Debug.Log("No serializefiel in " + gameObject.name);
         }
@@ -25,8 +21,7 @@ public class ReloadButton : MonoBehaviour
     private void OnEnable()
     {
         _currentScene = SceneManager.GetActiveScene();
-        _playerFuelController = _canvasUI.PlayerFuelController;
-
+        _playerFuelController = _UIRequireComponents.PlayerFuelController;
         _button.onClick.AddListener(ReloadScene);
     }
 

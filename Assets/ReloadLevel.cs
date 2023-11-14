@@ -7,21 +7,21 @@ public class ReloadLevel : MonoBehaviour
 {
     [SerializeField] private GameObject _panel;
     [SerializeField] private Button _button;
-    [SerializeField] private CanvasUI _canvasUI;
+    [SerializeField] private UIRequireComponents _UIRequireComponents;
 
     private void OnEnable()
     {
-        if (_panel==null|| _button == null || _canvasUI == null )
+        if (_panel==null|| _button == null || _UIRequireComponents == null )
         {
             Debug.Log("No Serializefield in " + gameObject.name);
         }
 
-        _canvasUI.PlayerFuelController.IsFuelChanged += OnFuelPlayerChanged;
+        _UIRequireComponents.PlayerFuelController.IsFuelChanged += OnFuelPlayerChanged;
     }
 
     private void OnDisable()
     {
-        _canvasUI.PlayerFuelController.IsFuelChanged -= OnFuelPlayerChanged;
+        _UIRequireComponents.PlayerFuelController.IsFuelChanged -= OnFuelPlayerChanged;
     }
 
     private void OnFuelPlayerChanged(float current, float max)

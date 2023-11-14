@@ -9,7 +9,6 @@ public class Block : MonoBehaviour
     [SerializeField] private Player _player;
     [SerializeField] private Rigidbody _rigidbody;
     [SerializeField] private BoxCollider _boxCollider;
-    [SerializeField] private BlockSound _blockSound;
     [SerializeField] private BlockMover _blockMover;
 
     private int _cost = 1;
@@ -19,15 +18,13 @@ public class Block : MonoBehaviour
     private WaitForSeconds _timerWFS = new WaitForSeconds(2);
 
     public BlockMover BlockMover => _blockMover;
-    public BlockSound BlockSound => _blockSound;
     public Player Player => _player;
     public Point Point => _point;
     public int Cost => _cost;
 
     private void Start()
     {
-        if (_player == null || _rigidbody == null || _boxCollider == null || _blockSound == null || _blockMover == null)
-
+        if (_player == null || _rigidbody == null || _boxCollider == null || _blockMover == null)
         {
             Debug.Log("No serializefiel in " + gameObject.name);
         }
@@ -123,7 +120,6 @@ public class Block : MonoBehaviour
         KinematicOn();
         GravityOff();
     }
-
 
     public void StartTimerPhysicsOff()
     {

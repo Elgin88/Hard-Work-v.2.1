@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class SDKInitializer : MonoBehaviour
 {
+    [SerializeField] private ChooserLevelNameForLoad _chooserLevelName;
+
     private void Awake()
     {
         Agava.YandexGames.YandexGamesSdk.CallbackLogging = true;
@@ -16,6 +18,6 @@ public class SDKInitializer : MonoBehaviour
 
     private void OnInitizlized()
     {
-        SceneManager.LoadScene(SceneNames.Level0Name);
+        SceneManager.LoadScene(_chooserLevelName.GetLoadLevelName());
     }
 }

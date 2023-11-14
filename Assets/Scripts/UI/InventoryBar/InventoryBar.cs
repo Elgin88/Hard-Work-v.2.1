@@ -3,8 +3,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(Slider))]
-
 public class InventoryBar : MonoBehaviour
 {
     [SerializeField] private float _speedOfChange;
@@ -12,7 +10,7 @@ public class InventoryBar : MonoBehaviour
     [SerializeField] private TMP_Text _maxText;
     [SerializeField] private TMP_Text _middleText;
     [SerializeField] private TMP_Text _minText;
-    [SerializeField] private CanvasUI _canvasUI;
+    [SerializeField] private UIRequireComponents _canvasUI;
 
     private Coroutine _changeValue;
     private float _currentSliderValue;
@@ -34,11 +32,6 @@ public class InventoryBar : MonoBehaviour
 
     private void OnEnable()
     {
-        _slider = GetComponent<Slider>();
-        _maxText = GetComponentInChildren<InventoryBarMax>().GetComponent<TMP_Text>();
-        _middleText = GetComponentInChildren<InventoryBarMiddle>().GetComponent<TMP_Text>();
-        _minText = GetComponentInChildren<InventoryBarMin>().GetComponent<TMP_Text>();        
-
         _slider.value = 0;
         _canvasUI.Inventory.IsChangedNumberBlocks += OnChangedNumberBlocks;
         _canvasUI.LineOfPointsCreater.IsChangedMaxNumberBlocks += OnChangedMaxNumberBlocks;

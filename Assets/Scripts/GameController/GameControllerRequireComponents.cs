@@ -1,6 +1,5 @@
 using UnityEngine;
 
-[RequireComponent(typeof(GameController))]
 [RequireComponent(typeof(CalculatorBlocks))]
 [RequireComponent(typeof(EnderLevel))]
 [RequireComponent(typeof(ChooserMedals))]

@@ -1,11 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
-
-[RequireComponent(typeof(PlayerFuelController))]
-[RequireComponent(typeof(PlayerPowerController))]
 
 public class PlayerUpgrader : MonoBehaviour
 {
@@ -17,8 +10,6 @@ public class PlayerUpgrader : MonoBehaviour
     private PlayerFuelController _fuelController;
     private LineOfPointsCreater _lineOfPointsCreater;
     private Garage _fuelCost;
-
-  
 
     private void Start()
     {

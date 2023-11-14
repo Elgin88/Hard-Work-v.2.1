@@ -145,7 +145,6 @@ MonoBehaviour:
   _player: {fileID: 0}
   _rigidbody: {fileID: 4009965544656931357}
   _boxCollider: {fileID: 4009965544656931359}
-  _blockSound: {fileID: 4009965544656931352}
   _blockMover: {fileID: 6833209619607676581}
 --- !u!114 &6833209619607676581
 MonoBehaviour:
@@ -161,6 +160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _calculatorBlocks: {fileID: 0}
   _chooserMedals: {fileID: 0}
-  _blockSound: {fileID: 0}
+  _blockSound: {fileID: 4009965544656931352}
+  collectorPoint: {fileID: 0}
   _player: {fileID: 0}
   _block: {fileID: 4009965544656931355}

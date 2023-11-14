@@ -20,6 +20,5 @@ public class IndicatorsEducation : MonoBehaviour
         {
             item.gameObject.SetActive(true);
         }
-
     }
 }

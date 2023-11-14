@@ -3,13 +3,11 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(Slider))]
-
 public class ProgressBar : MonoBehaviour
 {
     [SerializeField] private float _speedOfChange;
     [SerializeField] private Slider _slider;
-    [SerializeField] private CanvasUI _canvasUI;
+    [SerializeField] private UIRequireComponents _UIRequireComponents;
 
     private Coroutine _changeValue;    
     private int _unloadBlocks;
@@ -20,7 +18,7 @@ public class ProgressBar : MonoBehaviour
 
     private void Start()
     {
-        if (_speedOfChange == 0 || _slider == null || _canvasUI == null)
+        if (_speedOfChange == 0 || _slider == null || _UIRequireComponents == null)
         {
             Debug.Log("No serializefiel in " + gameObject.name);
         }
@@ -30,19 +28,19 @@ public class ProgressBar : MonoBehaviour
     {
         _slider.value = 0;
 
-        _canvasUI.CalculatorBlocks.IsChangedNumberUnloadBlocks += OnChangedNumberBlocks;
+        _UIRequireComponents.CalculatorBlocks.IsChangedNumberUnloadBlocks += OnChangedNumberBlocks;
     }
 
     private void OnDisable()
     {
-        _canvasUI.CalculatorBlocks.IsChangedNumberUnloadBlocks -= OnChangedNumberBlocks;
+        _UIRequireComponents.CalculatorBlocks.IsChangedNumberUnloadBlocks -= OnChangedNumberBlocks;
     }
 
     private void OnChangedNumberBlocks(int unloadBlocks)
     {
         if (_allBlocks == 0)
         {
-            _allBlocks = _canvasUI.CalculatorBlocks.AllBlocks;
+            _allBlocks = _UIRequireComponents.CalculatorBlocks.AllBlocks;
         }        
 
         _unloadBlocks = unloadBlocks;
@@ -57,12 +55,12 @@ public class ProgressBar : MonoBehaviour
             _currentValue = _slider.value;
             _slider.value = Mathf.MoveTowards(_currentValue, (float)_unloadBlocks / _allBlocks, _speedOfChange * Time.deltaTime);
 
-            if (_slider.value > (float) _canvasUI.EndelLevel.MinProcent / 100 & _slider.value < (float)_canvasUI.EndelLevel.MiddleProcent / 100)
+            if (_slider.value > (float) _UIRequireComponents.EndelLevel.MinProcent / 100 & _slider.value < (float)_UIRequireComponents.EndelLevel.MiddleProcent / 100)
             {
                 IsChangedValue?.Invoke(true, false, false);
             }
 
-            if (_slider.value > (float)_canvasUI.EndelLevel.MiddleProcent / 100 & _slider.value < (float)_canvasUI.EndelLevel.MaxProcent / 100)
+            if (_slider.value > (float)_UIRequireComponents.EndelLevel.MiddleProcent / 100 & _slider.value < (float)_UIRequireComponents.EndelLevel.MaxProcent / 100)
             {
                 IsChangedValue?.Invoke(true, true, false);
             }

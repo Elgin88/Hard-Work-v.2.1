@@ -8,7 +8,7 @@ public class JoystickIndicatorEducation : MonoBehaviour
 {
     [SerializeField] private BarrelIndicatorEducation[] _barrelIndicators;
     [SerializeField] private FixedJoystick _fixedJoystick;
-    [SerializeField] private CanvasUI _canvasUI;
+    [SerializeField] private UIRequireComponents _UIRequireComponents;
 
     private float _currentPressTime;
     private float _delay = 0.5f;
@@ -36,7 +36,7 @@ public class JoystickIndicatorEducation : MonoBehaviour
 
                 foreach (var indicator in _barrelIndicators)
                 {
-                    if (indicator!=null)
+                    if (indicator != null)
                     {
                         indicator.gameObject.SetActive(true);
                     }                    
@@ -51,7 +51,7 @@ public class JoystickIndicatorEducation : MonoBehaviour
 
     private void StartShowIndicator()
     {
-        if (_showIndicator==null)
+        if (_showIndicator == null)
         {
             _showIndicator = StartCoroutine(ShowIndicator());
         }
@@ -59,17 +59,16 @@ public class JoystickIndicatorEducation : MonoBehaviour
 
     private void StopShowIndicator()
     {
-        if (_showIndicator !=null)
+        if (_showIndicator != null)
         {
             StopCoroutine(_showIndicator);
             _showIndicator = null;
         }
     }
 
-
     private void CalculatePressingTimeOfJoystick()
     {
-        if (_canvasUI.PlayerSpeedSetter.CurrentSpeed > 1)
+        if (_UIRequireComponents.PlayerSpeedSetter.CurrentSpeed > 1)
         {
             _currentPressTime += Time.deltaTime;
         }

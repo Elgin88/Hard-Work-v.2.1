@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(PlayerMover))]
@@ -15,6 +13,5 @@ using UnityEngine;
 
 public class PlayerRequireComponents : MonoBehaviour
 {
-
 
 }

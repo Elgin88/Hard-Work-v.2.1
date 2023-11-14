@@ -1,11 +1,6 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
-[RequireComponent(typeof(RectTransform))]
-[RequireComponent(typeof(Image))]
 
 public class FuelBarIndicateFuelLess : MonoBehaviour
 {
@@ -13,7 +8,7 @@ public class FuelBarIndicateFuelLess : MonoBehaviour
     [SerializeField] private float _duration;
     [SerializeField] private float _deltaScale;
     [SerializeField] private Color _targetColor;
-    [SerializeField] private CanvasUI _canvasUI;
+    [SerializeField] private UIRequireComponents _UIRequireComponents;
     [SerializeField] private RectTransform _rectTransform;
     [SerializeField] private Image _image;
 
@@ -28,7 +23,7 @@ public class FuelBarIndicateFuelLess : MonoBehaviour
 
     private void OnEnable()
     {
-        if (_minLevelForIndicate==0 || _duration == 0 || _deltaScale == 0 || _targetColor == null || _canvasUI == null || _rectTransform == null || _image == null)
+        if (_minLevelForIndicate==0 || _duration == 0 || _deltaScale == 0 || _targetColor == null || _UIRequireComponents == null || _rectTransform == null || _image == null)
         {
             Debug.Log("No SerializeField in " + gameObject.name);
         }
@@ -44,12 +39,12 @@ public class FuelBarIndicateFuelLess : MonoBehaviour
 
         _deltaScaleCalculated = _deltaScale / (_duration / 2 / Time.deltaTime);
 
-        _canvasUI.PlayerFuelController.IsFuelChanged += OnFuelChanged;
+        _UIRequireComponents.PlayerFuelController.IsFuelChanged += OnFuelChanged;
     } 
 
     private void OnDisable()
     {
-        _canvasUI.PlayerFuelController.IsFuelChanged -= OnFuelChanged;
+        _UIRequireComponents.PlayerFuelController.IsFuelChanged -= OnFuelChanged;
     }
 
     private void OnFuelChanged(float current, float max)

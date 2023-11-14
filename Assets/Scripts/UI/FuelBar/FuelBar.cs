@@ -12,7 +12,7 @@ public class FuelBar : MonoBehaviour
     [SerializeField] TMP_Text _middle;
     [SerializeField] TMP_Text _min;
     [SerializeField] private Slider _slider;
-    [SerializeField] private CanvasUI _canvasUI;
+    [SerializeField] private UIRequireComponents _UIRequireComponents;
 
     private Coroutine _changeSliderValue;
     private float _currentValue;
@@ -21,7 +21,7 @@ public class FuelBar : MonoBehaviour
 
     private void Start()
     {
-        if (_speedOfChange == 0 || _max == null || _middle == null || _min == null || _slider == null || _canvasUI == null)
+        if (_speedOfChange == 0 || _max == null || _middle == null || _min == null || _slider == null || _UIRequireComponents == null)
         {
             Debug.Log("No serializefiel in " + gameObject.name);
         }
@@ -32,12 +32,12 @@ public class FuelBar : MonoBehaviour
         _slider = GetComponent<Slider>();
 
         _slider.value = 0;
-        _canvasUI.PlayerFuelController.IsFuelChanged += OnFuelChanged;
+        _UIRequireComponents.PlayerFuelController.IsFuelChanged += OnFuelChanged;
     }
 
     private void OnDisable()
     {
-        _canvasUI.PlayerFuelController.IsFuelChanged -= OnFuelChanged;
+        _UIRequireComponents.PlayerFuelController.IsFuelChanged -= OnFuelChanged;
     }
 
     private void OnFuelChanged(float target, float max)

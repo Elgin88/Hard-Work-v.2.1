@@ -29,7 +29,7 @@ public class Advertising : MonoBehaviour
 
     private void OnErrorCallbackInterstitialAd()
     {
-        Debug.Log("OnErrorCallbackInterstitialAd");
+        
     }
 
     private void OnCloseCallbackVideoAd()
@@ -49,16 +49,16 @@ public class Advertising : MonoBehaviour
 
     private void OnErrorCallback(string error)
     {
-        Debug.Log("OnErrorCallback");
+        
     }
 
     private void OnOfflineCallback()
     {
-        Debug.Log("OnOfflineCallback");
+        
     }
 
     private void OnRewardedCallback()
     {
-        Debug.Log("OnRewardedCallback");
+        
     }
 }

@@ -39,7 +39,7 @@ public class BlockSound : MonoBehaviour
 
     public void PlayBlockPlaceInCollector()
     {
-        if (_playerSoundController.BlockPlaceInCollector.isPlaying==false)
+        if (_playerSoundController.BlockPlaceInCollector.isPlaying == false)
         {
             _playerSoundController.BlockPlaceInCollector.Play();
         }

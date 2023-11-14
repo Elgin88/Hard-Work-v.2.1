@@ -6,12 +6,12 @@ public class AddTankButton : MonoBehaviour
 {
     [SerializeField] private TMP_Text _cost;
     [SerializeField] private Button _button;
-    [SerializeField] private CanvasUI _canvasUI;
+    [SerializeField] private UIRequireComponents _UIRequireComponents;
     [SerializeField] private AudioSource _soundOfBuy;
 
     private void Start()
     {
-        if (_cost == null || _button == null || _soundOfBuy == null || _canvasUI == null)
+        if (_cost == null || _button == null || _soundOfBuy == null || _UIRequireComponents == null)
         {
             Debug.Log("No serializefiel in " + gameObject.name);
         }
@@ -19,10 +19,10 @@ public class AddTankButton : MonoBehaviour
 
     private void OnEnable()
     {
-        _cost.text = _canvasUI.Garage.TankCost.ToString();
+        _cost.text = _UIRequireComponents.Garage.TankCost.ToString();
         _button.onClick.AddListener(OnAddTankButton);
 
-        _canvasUI.Player.IsMoneyChanged += OnPlayerMoneyChanded;
+        _UIRequireComponents.Player.IsMoneyChanged += OnPlayerMoneyChanded;
 
         CheckStatusButton();
     }
@@ -30,14 +30,14 @@ public class AddTankButton : MonoBehaviour
     private void OnDisable()
     {
         _button.onClick.RemoveListener(OnAddTankButton);
-        _canvasUI.Player.IsMoneyChanged -= OnPlayerMoneyChanded;
+        _UIRequireComponents.Player.IsMoneyChanged -= OnPlayerMoneyChanded;
     }
 
     private void OnAddTankButton()
     {
-        _canvasUI.PlayerUpgrader.TryBuyTank();
+        _UIRequireComponents.PlayerUpgrader.TryBuyTank();
         _soundOfBuy.Play();
-        _canvasUI.GarageSoundController.StartPlaySoundFinEngine();
+        _UIRequireComponents.GarageSoundController.StartPlaySoundFinEngine();
     }
 
     private void OnPlayerMoneyChanded(int money)
@@ -47,7 +47,7 @@ public class AddTankButton : MonoBehaviour
 
     private void CheckStatusButton()
     {
-        if (_canvasUI.Player.Money > _canvasUI.Garage.TankCost)
+        if (_UIRequireComponents.Player.Money > _UIRequireComponents.Garage.TankCost)
         {
             _button.interactable = true;
         }

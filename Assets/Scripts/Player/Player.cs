@@ -28,10 +28,8 @@ public class Player : MonoBehaviour
     public float DeltaBetweenUnloadBlocks => _deltaTimeBetweeUnloadBlocks;
     public int Money => _money;
     public int MaxHightOfInventory => _hightOfInventory;
-
     public Garage Garage => _garage;
     public CollectorPoint CollectionPoint => _collectionPoint;
-
     public event UnityAction IsPushed;
     public event UnityAction <int> IsMoneyChanged;    
 

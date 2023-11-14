@@ -13,7 +13,6 @@ public class EndLevelButtonFlash : MonoBehaviour
     private Vector3 _startScale;
     private Vector3 _currentScale;
     private Vector3 _targetScale;
-
     private Coroutine _flash;
 
     private void Start()

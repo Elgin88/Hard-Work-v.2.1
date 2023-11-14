@@ -61,7 +61,7 @@ public class SectionOfBlocks : MonoBehaviour
 
     public void StartActiveBlocks()
     {
-        if (_activeBlocks==null)
+        if (_activeBlocks == null)
         {
             _activeBlocks = StartCoroutine(ActiveBlocks());
         }
@@ -69,7 +69,7 @@ public class SectionOfBlocks : MonoBehaviour
 
     public void StopActiveBlocks()
     {
-        if (_activeBlocks!=null)
+        if (_activeBlocks != null)
         {
             StopCoroutine(_activeBlocks);
             _activeBlocks = null;

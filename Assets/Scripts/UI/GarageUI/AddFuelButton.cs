@@ -3,14 +3,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(Button))]
-
 public class AddFuelButton : MonoBehaviour
 {
     [SerializeField] private TMP_Text _cost;
     [SerializeField] private Button _button;
     [SerializeField] private AudioSource _soundOfBuy;
-    [SerializeField] private CanvasUI _canvasUI;
+    [SerializeField] private UIRequireComponents _UIRequireComponents;
     [SerializeField] private AddFuelIndicatorEducation[] _addFuelIndicatorEducation;
 
     private string _levelName = "Level1";
@@ -18,7 +16,7 @@ public class AddFuelButton : MonoBehaviour
 
     private void Start()
     {
-        if (_cost == null || _button == null || _soundOfBuy == null || _canvasUI == null | _addFuelIndicatorEducation == null)
+        if (_cost == null || _button == null || _soundOfBuy == null || _UIRequireComponents == null | _addFuelIndicatorEducation == null)
         {
             Debug.Log("No serializefiel in " + gameObject.name);
         }
@@ -27,8 +25,8 @@ public class AddFuelButton : MonoBehaviour
     private void OnEnable()
     {
         _button.onClick.AddListener(OnAddFuelButtonClick);
-        _canvasUI.Player.IsMoneyChanged += OnPlayerMoneyChanded;
-        _cost.text = _canvasUI.Garage.FuelCoust.ToString();
+        _UIRequireComponents.Player.IsMoneyChanged += OnPlayerMoneyChanded;
+        _cost.text = _UIRequireComponents.Garage.FuelCoust.ToString();
 
         _currentSceneName = SceneManager.GetActiveScene().name;
 
@@ -38,15 +36,15 @@ public class AddFuelButton : MonoBehaviour
     private void OnDisable()
     {
         _button.onClick.RemoveListener(OnAddFuelButtonClick);
-        _canvasUI.Player.IsMoneyChanged -= OnPlayerMoneyChanded;
+        _UIRequireComponents.Player.IsMoneyChanged -= OnPlayerMoneyChanded;
     }
 
     private void OnAddFuelButtonClick()
     {
-        _canvasUI.PlayerUpgrader.TryBuyFuel();
+        _UIRequireComponents.PlayerUpgrader.TryBuyFuel();
         _soundOfBuy.Play();
 
-        _canvasUI.GarageSoundController.PlayFuelSound();
+        _UIRequireComponents.GarageSoundController.PlayFuelSound();
 
         if (_currentSceneName == _levelName)
         {
@@ -56,9 +54,9 @@ public class AddFuelButton : MonoBehaviour
             }
         }
 
-        if (_canvasUI.JoystickIndicators != null)
+        if (_UIRequireComponents.JoystickIndicators != null)
         {
-            foreach (var indicator in _canvasUI.JoystickIndicators)
+            foreach (var indicator in _UIRequireComponents.JoystickIndicators)
             {
                 if (indicator!=null)
                 {
@@ -78,7 +76,7 @@ public class AddFuelButton : MonoBehaviour
 
     private void CheckStatusButton()
     {
-        if (_canvasUI.Player.Money > _canvasUI.Garage.FuelCoust)
+        if (_UIRequireComponents.Player.Money > _UIRequireComponents.Garage.FuelCoust)
         {
             _button.interactable = true;
         }

@@ -4,11 +4,11 @@ using UnityEngine;
 public class TotalScore : MonoBehaviour
 {
     [SerializeField] private TMP_Text _label;
-    [SerializeField] private CanvasUI _canvasUI;
+    [SerializeField] private UIRequireComponents _UIRequireComponents;
 
     private void Start()
     {
-        if (_label == null || _canvasUI == null)
+        if (_label == null || _UIRequireComponents == null)
         {
             Debug.Log("No serializefiel in " + gameObject.name);
         }
@@ -16,6 +16,6 @@ public class TotalScore : MonoBehaviour
 
     private void OnEnable()
     {
-        _label.text = _canvasUI.CalculatorBlocks.Unload.ToString();
+        _label.text = _UIRequireComponents.CalculatorBlocks.Unload.ToString();
     }
 }

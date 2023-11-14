@@ -83,8 +83,6 @@ public class BlockMover : MonoBehaviour
 
     private IEnumerator HoldOnPlayer()
     {
-        _block.BlockSound.PlayPlaceOnCar();
-
         while (true)
         {
             if (_block.Point != null)
@@ -164,7 +162,6 @@ public class BlockMover : MonoBehaviour
         _block.Player.LoadController.SetUploadStatus(false);
     }
 
-
     public void StartMoveToPlayer()
     {
         if (_moveToPlayer == null)
@@ -183,7 +180,6 @@ public class BlockMover : MonoBehaviour
 
         _block.Player.LoadController.SetUploadStatus(false);
     }
-
 
     public void StartHoldBlockOnPlayer()
     {

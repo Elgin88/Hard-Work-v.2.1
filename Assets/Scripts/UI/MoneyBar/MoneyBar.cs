@@ -4,11 +4,11 @@ using UnityEngine;
 public class MoneyBar : MonoBehaviour
 {
     [SerializeField] private TMP_Text _moneyCount;
-    [SerializeField] private CanvasUI _canvasUI;
+    [SerializeField] private UIRequireComponents _UIRequireComponents;
 
     private void Start()
     {
-        if (_moneyCount == null || _canvasUI == null)
+        if (_moneyCount == null || _UIRequireComponents == null)
         {
             Debug.Log("No serializefiel in " + gameObject.name);
         }
@@ -16,12 +16,12 @@ public class MoneyBar : MonoBehaviour
 
     private void OnEnable()
     {
-        _canvasUI.Player.IsMoneyChanged += OnMoneyChanged;
+        _UIRequireComponents.Player.IsMoneyChanged += OnMoneyChanged;
     }
 
     private void OnDisable()
     {
-        _canvasUI.Player.IsMoneyChanged -= OnMoneyChanged;
+        _UIRequireComponents.Player.IsMoneyChanged -= OnMoneyChanged;
     }
 
     private void OnMoneyChanged(int money)

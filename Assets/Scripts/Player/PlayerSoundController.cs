@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
-[RequireComponent(typeof(PlayerMover))]
 
 public class PlayerSoundController : MonoBehaviour
 {
@@ -29,7 +25,6 @@ public class PlayerSoundController : MonoBehaviour
             _blockHitBamperSound.Play();
         }
     }
-
 
     public void PlayMinEngineSound()
     {
