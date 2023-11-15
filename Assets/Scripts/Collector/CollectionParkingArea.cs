@@ -18,7 +18,7 @@ public class CollectionParkingArea : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent<Destroyer>(out Destroyer destroyer))
         {
-            if (_collector!=null & destroyer.Player.Inventory.GetCurrentCountOfBlocks() != 0)
+            if (_collector!=null & destroyer.Inventory.GetCurrentCountOfBlocks() != 0)
             {
                 _collector.Unloader.StartUnload();
             }            

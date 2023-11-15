@@ -10,7 +10,7 @@ public class InventoryBar : MonoBehaviour
     [SerializeField] private TMP_Text _maxText;
     [SerializeField] private TMP_Text _middleText;
     [SerializeField] private TMP_Text _minText;
-    [SerializeField] private UIRequireComponents _canvasUI;
+    [SerializeField] private UIRequireComponents _UIRequireComponents;
 
     private Coroutine _changeValue;
     private float _currentSliderValue;
@@ -18,12 +18,12 @@ public class InventoryBar : MonoBehaviour
 
     private void Start()
     {
-        if (_speedOfChange==0||_slider==null || _maxText == null || _middleText == null || _minText == null || _canvasUI == null)
+        if (_speedOfChange==0||_slider==null || _maxText == null || _middleText == null || _minText == null || _UIRequireComponents == null)
         {
             Debug.Log("No serializefiel in " + gameObject.name);
         }
 
-        int maxNumberBlocks = _canvasUI.Player.MaxHightOfInventory * _canvasUI.LineOfPoints.NumberPoints;
+        int maxNumberBlocks = _UIRequireComponents.LineOfPointsCreater.MaxNumberOfLines * _UIRequireComponents.LineOfPoints.NumberPoints;
 
         _maxText.text = maxNumberBlocks.ToString();
         _middleText.text = (maxNumberBlocks / 2).ToString();
@@ -33,14 +33,14 @@ public class InventoryBar : MonoBehaviour
     private void OnEnable()
     {
         _slider.value = 0;
-        _canvasUI.Inventory.IsChangedNumberBlocks += OnChangedNumberBlocks;
-        _canvasUI.LineOfPointsCreater.IsChangedMaxNumberBlocks += OnChangedMaxNumberBlocks;
+        _UIRequireComponents.Inventory.IsChangedNumberBlocks += OnChangedNumberBlocks;
+        _UIRequireComponents.LineOfPointsCreater.IsChangedMaxNumberBlocks += OnChangedMaxNumberBlocks;
     }
 
     private void OnDisable()
     {
-        _canvasUI.Inventory.IsChangedNumberBlocks -= OnChangedNumberBlocks;
-        _canvasUI.LineOfPointsCreater.IsChangedMaxNumberBlocks -= OnChangedMaxNumberBlocks;
+        _UIRequireComponents.Inventory.IsChangedNumberBlocks -= OnChangedNumberBlocks;
+        _UIRequireComponents.LineOfPointsCreater.IsChangedMaxNumberBlocks -= OnChangedMaxNumberBlocks;
     }
 
     private void OnChangedNumberBlocks(int target, int max)

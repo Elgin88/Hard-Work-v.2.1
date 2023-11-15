@@ -7,11 +7,11 @@ public class AddPlaceButton : MonoBehaviour
     [SerializeField] private TMP_Text _cost;
     [SerializeField] private Button _button;
     [SerializeField] private AudioSource _soundOfBuy;
-    [SerializeField] private UIRequireComponents _UIRequireComponents;
+    [SerializeField] private UIRequireComponents _uiRequireComponents;
 
     private void Start()
     {
-        if (_cost == null || _button == null || _soundOfBuy == null || _UIRequireComponents == null)
+        if (_cost == null || _button == null || _soundOfBuy == null || _uiRequireComponents == null)
         {
             Debug.Log("No serializefiel in " + gameObject.name);
         }
@@ -20,9 +20,9 @@ public class AddPlaceButton : MonoBehaviour
     private void OnEnable()
     {
         _button.onClick.AddListener(OnAddPlaceButtonClick);
-        _UIRequireComponents.Player.IsMoneyChanged += OnMoneyChanged;
+        _uiRequireComponents.PlayerMoney.IsMoneyChanged += OnMoneyChanged;
 
-        _cost.text = _UIRequireComponents.Garage.PlaceCost.ToString();
+        _cost.text = _uiRequireComponents.Garage.PlaceCost.ToString();
 
         SetStatusButton();        
     }
@@ -30,15 +30,15 @@ public class AddPlaceButton : MonoBehaviour
     private void OnDisable()
     {
         _button.onClick.RemoveListener(OnAddPlaceButtonClick);
-        _UIRequireComponents.Player.IsMoneyChanged -= OnMoneyChanged;
+        _uiRequireComponents.PlayerMoney.IsMoneyChanged -= OnMoneyChanged;
     }
 
     private void OnAddPlaceButtonClick()
     {
-        _UIRequireComponents.PlayerUpgrader.TryAddPlace();
+        _uiRequireComponents.PlayerUpgrader.TryAddPlace();
         _soundOfBuy.Play();
 
-        _UIRequireComponents.GarageSoundController.StartPlaySoundFinEngine();
+        _uiRequireComponents.GarageSoundController.StartPlaySoundFinEngine();
     }
 
     private void OnMoneyChanged(int money)
@@ -48,7 +48,7 @@ public class AddPlaceButton : MonoBehaviour
 
     private void  SetStatusButton()
     {
-        if (_UIRequireComponents.Player.Money > _UIRequireComponents.Garage.PlaceCost)
+        if (_uiRequireComponents.PlayerMoney.Money > _uiRequireComponents.Garage.PlaceCost)
         {
             _button.interactable = true;
         }

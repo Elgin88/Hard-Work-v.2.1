@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class BlockMover : MonoBehaviour
 {
+    [SerializeField] private PlayerLoadController _playerLoadController;
+    [SerializeField] private PlayerInventory _playerInventory;
     [SerializeField] private CalculatorBlocks _calculatorBlocks;
     [SerializeField] private ChooserMedals _chooserMedals;
     [SerializeField] private BlockSound _blockSound;
-    [SerializeField] private CollectorPoint collectorPoint;
-    [SerializeField] private Player _player;
+    [SerializeField] private CollectorPoint _collectorPoint;
+    [SerializeField] private PlayerMover _playerMover;
+    [SerializeField] private PlayerMoney _playerMoney;
     [SerializeField] private Block _block;
 
     private Coroutine _moveToPlayer;
@@ -26,8 +29,8 @@ public class BlockMover : MonoBehaviour
 
     private void Start()
     {
-        if (_calculatorBlocks == null || _chooserMedals == null || _blockSound == null || 
-            collectorPoint == null || _player == null || _block == null)
+        if (_playerLoadController == null || _calculatorBlocks == null || _chooserMedals == null || _blockSound == null || _playerMoney == null ||
+            _collectorPoint == null || _playerMover == null || _block == null)
         {
             Debug.Log("No serializefiel in " + gameObject.name);
         }
@@ -40,7 +43,7 @@ public class BlockMover : MonoBehaviour
 
         while (true)
         {
-            _block.Player.LoadController.SetUploadStatus(true);
+            _playerLoadController.SetUploadStatus(true);
 
             if (_block.Point != null)
             {
@@ -67,14 +70,14 @@ public class BlockMover : MonoBehaviour
                 {
                     StopMoveToPlayer();
                     StartHoldBlockOnPlayer();
-                    _block.Player.Inventory.InitEventBlockIsChanged();
+                    _playerInventory.InitEventBlockIsChanged();
                 }
             }
 
             if (_block.Point == null)
             {
                 StopMoveToPlayer();
-                StartMoveToCollector(_block.Player.CollectionPOintPosition);
+                StartMoveToCollector(_collectorPoint.transform.position);
             }
 
             yield return null;
@@ -88,7 +91,7 @@ public class BlockMover : MonoBehaviour
             if (_block.Point != null)
             {
                 _block.SetPosition(_block.Point.transform.position.x, _block.Point.transform.position.y, _block.Point.transform.position.z);
-                _block.SetQuaternion(_player.GetCurrentDirection());
+                _block.SetQuaternion(_playerMover.CurrentPlayerDirection);
             }
 
             yield return null;
@@ -100,18 +103,18 @@ public class BlockMover : MonoBehaviour
         StopFixBlock();
 
         _topPointToCollector = new Vector3 (
-            (transform.position.x + collectorPoint.transform.position.x) / 2,
-            collectorPoint.transform.position.y + transform.position.y,
-            (transform.position.z + collectorPoint.transform.position.z) / 2);
+            (transform.position.x + _collectorPoint.transform.position.x) / 2,
+            _collectorPoint.transform.position.y + transform.position.y,
+            (transform.position.z + _collectorPoint.transform.position.z) / 2);
 
         _block.Point.RemoveBlock();
-        _block.Player.Inventory.InitEventBlockIsChanged();
+        _playerInventory.InitEventBlockIsChanged();
 
         _blockSound.PlayFlyOnCollectorSFX();
 
         while (true)
         {
-            _block.Player.LoadController.SetUploadStatus(true);
+            _playerLoadController.SetUploadStatus(true);
 
             if (_isReachedTopToCollector == false)
             {
@@ -124,12 +127,12 @@ public class BlockMover : MonoBehaviour
             }
             else if (_isReachedTopToCollector == true)
             {
-                transform.position = Vector3.MoveTowards(transform.position, collectorPoint.transform.position, _flightSpeedToCollector * Time.deltaTime);
+                transform.position = Vector3.MoveTowards(transform.position, _collectorPoint.transform.position, _flightSpeedToCollector * Time.deltaTime);
             }
 
-            if (transform.position.y == collectorPoint.transform.position.y)
+            if (transform.position.y == _collectorPoint.transform.position.y)
             {
-                _block.Player.AddMoney(_block.Cost);
+                _playerMoney.AddMoney(_block.Cost);
                 _calculatorBlocks.CalculateUnloadBloks();
                 _chooserMedals.ChooseMedals();
                 _blockSound.PlayBlockPlaceInCollector();
@@ -159,7 +162,7 @@ public class BlockMover : MonoBehaviour
             _moveToCollector = null;
         }
 
-        _block.Player.LoadController.SetUploadStatus(false);
+        _playerLoadController.SetUploadStatus(false);
     }
 
     public void StartMoveToPlayer()
@@ -178,7 +181,7 @@ public class BlockMover : MonoBehaviour
             _moveToPlayer = null;
         }
 
-        _block.Player.LoadController.SetUploadStatus(false);
+        _playerLoadController.SetUploadStatus(false);
     }
 
     public void StartHoldBlockOnPlayer()

@@ -1,12 +1,11 @@
 using System.Collections;
 using UnityEngine;
 
-[RequireComponent(typeof(BlockMover))]
-[RequireComponent(typeof(BlockSound))]
-
 public class Block : MonoBehaviour
 {
-    [SerializeField] private Player _player;
+    [SerializeField] private PlayerLoadController _playerLoadController;
+    [SerializeField] private PlayerInventory _inventory;
+    [SerializeField] private PlayerMover _playerMover;
     [SerializeField] private Rigidbody _rigidbody;
     [SerializeField] private BoxCollider _boxCollider;
     [SerializeField] private BlockMover _blockMover;
@@ -18,13 +17,12 @@ public class Block : MonoBehaviour
     private WaitForSeconds _timerWFS = new WaitForSeconds(2);
 
     public BlockMover BlockMover => _blockMover;
-    public Player Player => _player;
     public Point Point => _point;
     public int Cost => _cost;
 
     private void Start()
     {
-        if (_player == null || _rigidbody == null || _boxCollider == null || _blockMover == null)
+        if (_playerLoadController == null || _inventory == null || _rigidbody == null || _boxCollider == null || _blockMover == null)
         {
             Debug.Log("No serializefiel in " + gameObject.name);
         }
@@ -39,11 +37,11 @@ public class Block : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent<Destroyer>(out Destroyer destroyer))
         {
-            _player.SlowDown();
+            _playerMover.SlowDown();
 
-            if (_playerIsUnload != true & _player.LoadController.IsUnload == false)
+            if (_playerIsUnload != true & _playerLoadController.IsUnload == false)
             {
-                _point = _player.Inventory.TryTakePoint();
+                _point = _inventory.TryTakePoint();
 
                 if (_point != null)
                 {
@@ -106,11 +104,6 @@ public class Block : MonoBehaviour
     public void Destroy()
     {
         Destroy(gameObject);
-    }
-
-    internal void Init(Player player)
-    {
-        _player = player;
     }
 
     private IEnumerator TimerPhysicsOff()

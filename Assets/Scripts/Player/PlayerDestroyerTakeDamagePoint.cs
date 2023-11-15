@@ -1,11 +1,8 @@
 using UnityEngine;
 
-[RequireComponent(typeof(SphereCollider))]
-[RequireComponent(typeof(Rigidbody))]
-
 public class PlayerDestroyerTakeDamagePoint : MonoBehaviour
 {
-    [SerializeField] private Player _player;
+    [SerializeField] private PlayerSoundController _playerSoundController;
     [SerializeField] private ParticleSystem _particle;
 
     private WaitForSeconds _pauseWFS;
@@ -13,7 +10,7 @@ public class PlayerDestroyerTakeDamagePoint : MonoBehaviour
 
     private void Start()
     {
-        if (_player == null || _particle == null)
+        if (_playerSoundController == null || _particle == null)
         {
             Debug.Log("No serializefiel in " + gameObject.name);
         }
@@ -33,7 +30,7 @@ public class PlayerDestroyerTakeDamagePoint : MonoBehaviour
         {
             _particle.gameObject.SetActive(true);
             _particle.Play();
-            _player.SoundController.PlayBlockHitBumberSound();
+            _playerSoundController.PlayBlockHitBumberSound();
         }
     }    
 }

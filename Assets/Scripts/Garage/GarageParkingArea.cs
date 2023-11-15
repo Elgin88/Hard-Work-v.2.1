@@ -21,7 +21,7 @@ public class GarageParkingArea : MonoBehaviour
                 _garage.GarageUI.gameObject.SetActive(true);
             }            
 
-            if (destroyer.Player.Money >= _garage.FuelCoust)
+            if (destroyer.PlayerMoney.Money >= _garage.FuelCoust)
             {
                 foreach (var indicator in _garage.UIRequireComponents.AddFuelIndicators)
                 {

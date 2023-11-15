@@ -7,7 +7,7 @@ public class UIRequireComponents : MonoBehaviour
     [SerializeField] private GarageUI _garageUI;   
     [SerializeField] private SoundController _soundController;
     [SerializeField] private PlayerFuelController _playerFuelController;
-    [SerializeField] private Player _player;
+    [SerializeField] private PlayerRequireComponents _player;
     [SerializeField] private CalculatorBlocks _calculatorBlocks;
     [SerializeField] private EnderLevel _endelLevel;
     [SerializeField] private ChooserMedals _chooserMedals;
@@ -21,12 +21,13 @@ public class UIRequireComponents : MonoBehaviour
     [SerializeField] private PlayerPowerController _playerPowerController;
     [SerializeField] private LineOfPoints _lineOfPoints;
     [SerializeField] private LineOfPointsCreater _lineOfPointsCreater;
-    [SerializeField] private Inventory _inventory;
+    [SerializeField] private PlayerInventory _inventory;
     [SerializeField] private PauserGame _pauserGame;
     [SerializeField] private PlayerSpeedSetter _playerSpeedSetter;
     [SerializeField] private Advertising _advertising;
+    [SerializeField] private PlayerMoney _playerMoney;
 
-    public Player Player => _player;
+    public PlayerRequireComponents Player => _player;
     public JoystickIndicatorEducation[] JoystickIndicators => _joystickIndicators;
     public AddFuelIndicatorEducation[] AddFuelIndicators => _addFuelIndicators;
     public SoundController SoundController => _soundController;
@@ -45,10 +46,11 @@ public class UIRequireComponents : MonoBehaviour
     public PlayerPowerController PowerController => _playerPowerController;
     public LineOfPoints LineOfPoints => _lineOfPoints;
     public LineOfPointsCreater LineOfPointsCreater => _lineOfPointsCreater;
-    public Inventory Inventory => _inventory;
+    public PlayerInventory Inventory => _inventory;
     public PauserGame PauserGame => _pauserGame;
     public PlayerSpeedSetter PlayerSpeedSetter => _playerSpeedSetter;
     public Advertising Advertising => _advertising;
+    public PlayerMoney PlayerMoney => _playerMoney;
 
     private void Start()
     {
@@ -75,7 +77,8 @@ public class UIRequireComponents : MonoBehaviour
             _inventory == null ||
             _pauserGame == null ||
             _playerSpeedSetter == null||
-            _advertising == null)
+            _advertising == null ||
+            _playerMoney == null)
         {
             Debug.Log("No serializefiel in " + gameObject.name);
         }

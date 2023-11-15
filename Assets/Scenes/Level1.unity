@@ -146,6 +146,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -231,6 +243,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -239,9 +259,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &17558642
@@ -267,6 +299,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -352,6 +396,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -360,9 +412,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &21399485
@@ -384,6 +448,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -453,6 +529,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -461,9 +545,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _collectionPointInPlayer
       value: 
@@ -520,6 +616,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -601,6 +709,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -609,9 +725,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &48461322
@@ -633,6 +761,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -714,6 +854,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -722,9 +870,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!4 &59188826 stripped
@@ -789,6 +949,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -870,6 +1042,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -878,9 +1058,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &89179292
@@ -902,6 +1094,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -983,6 +1187,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -991,9 +1203,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!4 &95426054 stripped
@@ -1031,6 +1255,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -1100,6 +1336,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -1108,9 +1352,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _collectionPointInPlayer
       value: 
@@ -1188,6 +1444,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -1269,6 +1537,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -1277,9 +1553,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1 &141811574
@@ -1398,6 +1686,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -1479,6 +1779,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -1487,9 +1795,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!4 &155996810 stripped
@@ -1527,6 +1847,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -1608,6 +1940,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -1616,9 +1956,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &184401743
@@ -1640,6 +1992,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -1721,6 +2085,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -1729,9 +2101,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &207589009
@@ -1753,6 +2137,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -1822,6 +2218,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -1830,9 +2234,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _collectionPointInPlayer
       value: 
@@ -1882,6 +2298,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -1967,6 +2395,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -1975,9 +2411,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &228729669
@@ -1999,6 +2447,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -2080,6 +2540,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -2088,9 +2556,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!4 &244601139 stripped
@@ -2171,6 +2651,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -2240,6 +2732,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -2248,9 +2748,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _collectionPointInPlayer
       value: 
@@ -2374,6 +2886,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -2455,6 +2979,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -2463,9 +2995,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1 &467734997
@@ -2581,6 +3125,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -2662,6 +3218,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -2670,9 +3234,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &526457472
@@ -2694,6 +3270,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -2775,6 +3363,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -2783,9 +3379,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &532298738
@@ -2811,6 +3419,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -2896,6 +3516,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -2904,9 +3532,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!4 &534739276 stripped
@@ -2960,6 +3600,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -3029,6 +3681,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -3037,9 +3697,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _collectionPointInPlayer
       value: 
@@ -3137,6 +3809,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -3222,6 +3906,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -3230,9 +3922,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1 &609798718 stripped
@@ -3282,6 +3986,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -3351,6 +4067,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -3359,9 +4083,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _collectionPointInPlayer
       value: 
@@ -3418,6 +4154,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -3499,6 +4247,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -3507,9 +4263,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1 &689222103
@@ -3613,7 +4381,7 @@ MonoBehaviour:
   _collectorIndicators: []
   _chooserMedals: {fileID: 1852628426}
   _enderLevel: {fileID: 1852628427}
-  _inventory: {fileID: 1137631204}
+  _inventory: {fileID: 1137631207}
   _calculatorBlocks: {fileID: 1852628428}
 --- !u!114 &689222107
 MonoBehaviour:
@@ -3673,7 +4441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f24cd77b1621241389a4520b51cea73a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _UIRequireComponents: {fileID: 0}
+  _UIRequireComponents: {fileID: 1398114053}
   _player: {fileID: 268018514}
   _garageParkingArea: {fileID: 1153158899}
   _addFuelButtonsEducation:
@@ -3767,6 +4535,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -3852,6 +4632,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -3860,9 +4648,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &740688725
@@ -3884,6 +4684,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -3965,6 +4777,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -3973,9 +4793,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &751534236
@@ -3997,6 +4829,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -4066,6 +4910,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -4074,9 +4926,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _collectionPointInPlayer
       value: 
@@ -4152,7 +5016,7 @@ MonoBehaviour:
   _collectorIndicators: []
   _chooserMedals: {fileID: 1852628426}
   _enderLevel: {fileID: 1852628427}
-  _inventory: {fileID: 1137631204}
+  _inventory: {fileID: 1137631207}
   _calculatorBlocks: {fileID: 1852628428}
 --- !u!212 &757350385
 SpriteRenderer:
@@ -4241,6 +5105,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -4326,6 +5202,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -4334,9 +5218,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!4 &766698738 stripped
@@ -4374,6 +5270,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -4455,6 +5363,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -4463,9 +5379,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &797914583
@@ -4491,6 +5419,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -4576,6 +5516,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -4584,9 +5532,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!4 &817741501 stripped
@@ -5675,7 +6635,7 @@ PrefabInstance:
     - target: {fileID: 6390884785094593398, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
       propertyPath: _inventory
       value: 
-      objectReference: {fileID: 1137631204}
+      objectReference: {fileID: 1137631207}
     - target: {fileID: 6390884785094593398, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
       propertyPath: _endelLevel
       value: 
@@ -5692,6 +6652,10 @@ PrefabInstance:
       propertyPath: _advertising
       value: 
       objectReference: {fileID: 1852628443}
+    - target: {fileID: 6390884785094593398, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
     - target: {fileID: 6390884785094593398, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
       propertyPath: _lineOfPoints
       value: 
@@ -6036,6 +7000,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -6121,6 +7097,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -6129,9 +7113,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!95 &857462396
@@ -6272,7 +7268,7 @@ MonoBehaviour:
   - {fileID: 844713150}
   - {fileID: 95426055}
   - {fileID: 1525193506}
-  _player: {fileID: 268018514}
+  _playerSoundController: {fileID: 1361587953}
 --- !u!65 &867793342
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6460,6 +7456,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -6529,6 +7537,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -6537,9 +7553,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _collectionPointInPlayer
       value: 
@@ -6596,6 +7624,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -6665,6 +7705,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -6673,9 +7721,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _collectionPointInPlayer
       value: 
@@ -6721,6 +7781,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -6790,6 +7862,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -6798,9 +7878,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _collectionPointInPlayer
       value: 
@@ -6940,7 +8032,7 @@ MonoBehaviour:
   - {fileID: 543323520}
   - {fileID: 926700986}
   - {fileID: 1270818954}
-  _player: {fileID: 268018514}
+  _playerSoundController: {fileID: 1361587953}
 --- !u!65 &951126424
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7084,6 +8176,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -7165,6 +8269,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -7173,9 +8285,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!4 &995400460 stripped
@@ -7233,6 +8357,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -7318,6 +8454,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -7326,9 +8470,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!4 &1033510396 stripped
@@ -7382,6 +8538,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -7451,6 +8619,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -7459,9 +8635,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _collectionPointInPlayer
       value: 
@@ -7564,17 +8752,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 859f45043ed1d4398aaa7daddafde734, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1137631204 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2716068640545867419, guid: 6b708a46b44dd4ac1a375c61ebb36430, type: 3}
-  m_PrefabInstance: {fileID: 1354737485}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 769b58cad049c4473a8d1ada15adc503, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1137631205 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2716068640545867412, guid: 6b708a46b44dd4ac1a375c61ebb36430, type: 3}
@@ -7595,6 +8772,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d302ab8e78bf34435a8a58c44718a2f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1137631207 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6210722479887868213, guid: 6b708a46b44dd4ac1a375c61ebb36430, type: 3}
+  m_PrefabInstance: {fileID: 1354737485}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 769b58cad049c4473a8d1ada15adc503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1137721077
@@ -7620,6 +8808,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -7705,6 +8905,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -7713,9 +8921,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!114 &1153158899 stripped
@@ -7752,6 +8972,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -7837,6 +9069,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -7845,9 +9085,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &1171538418
@@ -7869,6 +9121,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -7950,6 +9214,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -7958,9 +9230,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!4 &1174069902 stripped
@@ -8046,6 +9330,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -8127,6 +9423,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -8135,9 +9439,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &1270818952
@@ -8159,6 +9475,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -8228,6 +9556,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -8236,9 +9572,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _collectionPointInPlayer
       value: 
@@ -8284,6 +9632,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -8353,6 +9713,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -8361,9 +9729,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _collectionPointInPlayer
       value: 
@@ -8445,6 +9825,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 943398948989556029, guid: 6b708a46b44dd4ac1a375c61ebb36430, type: 3}
+      propertyPath: _garage
+      value: 
+      objectReference: {fileID: 1921418015}
     - target: {fileID: 943398948989556032, guid: 6b708a46b44dd4ac1a375c61ebb36430, type: 3}
       propertyPath: _garage
       value: 
@@ -8454,13 +9838,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1852628444}
     - target: {fileID: 943398948989556032, guid: 6b708a46b44dd4ac1a375c61ebb36430, type: 3}
+      propertyPath: _fixedJoystick
+      value: 
+      objectReference: {fileID: 1745634969}
+    - target: {fileID: 943398948989556032, guid: 6b708a46b44dd4ac1a375c61ebb36430, type: 3}
       propertyPath: _collectionPoin
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 943398948989556032, guid: 6b708a46b44dd4ac1a375c61ebb36430, type: 3}
+      propertyPath: _collectorPoint
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 943398948989556032, guid: 6b708a46b44dd4ac1a375c61ebb36430, type: 3}
       propertyPath: _collectionPoint
       value: 
       objectReference: {fileID: 913927204}
+    - target: {fileID: 943398948989556034, guid: 6b708a46b44dd4ac1a375c61ebb36430, type: 3}
+      propertyPath: _garage
+      value: 
+      objectReference: {fileID: 1921418015}
     - target: {fileID: 943398948989556035, guid: 6b708a46b44dd4ac1a375c61ebb36430, type: 3}
       propertyPath: _player
       value: 
@@ -8621,6 +10017,14 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 6210722479887868213, guid: 6b708a46b44dd4ac1a375c61ebb36430, type: 3}
+      propertyPath: _lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6210722479887868213, guid: 6b708a46b44dd4ac1a375c61ebb36430, type: 3}
+      propertyPath: _lines.Array.data[0]
+      value: 
+      objectReference: {fileID: 384317251}
     - target: {fileID: 6703788695719423500, guid: 6b708a46b44dd4ac1a375c61ebb36430, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -8742,6 +10146,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -8823,6 +10239,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -8831,9 +10255,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!114 &1361587953 stripped
@@ -8902,6 +10338,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec5128783ee5d4d5f9598de3d4a9870a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1361587982 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4555091069431499519, guid: 6b708a46b44dd4ac1a375c61ebb36430, type: 3}
+  m_PrefabInstance: {fileID: 1354737485}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dba0d7032fe7744cb88941cc3972d1f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1361587984 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 943398948989556028, guid: 6b708a46b44dd4ac1a375c61ebb36430, type: 3}
+  m_PrefabInstance: {fileID: 1354737485}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 349d75c6f310d4e269040941c3a22c6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1362541941
 GameObject:
   m_ObjectHideFlags: 0
@@ -8949,7 +10407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _garageIndicatorsEducation: []
-  _player: {fileID: 268018514}
+  _inventory: {fileID: 1137631207}
 --- !u!212 &1362541944
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9118,7 +10576,7 @@ MonoBehaviour:
   - {fileID: 1362541943}
   _chooserMedals: {fileID: 1852628426}
   _enderLevel: {fileID: 1852628427}
-  _inventory: {fileID: 1137631204}
+  _inventory: {fileID: 1137631207}
   _calculatorBlocks: {fileID: 1852628428}
 --- !u!114 &1368724076
 MonoBehaviour:
@@ -9311,7 +10769,7 @@ MonoBehaviour:
   - {fileID: 155996811}
   - {fileID: 1678877164}
   - {fileID: 557070865}
-  _player: {fileID: 268018514}
+  _playerSoundController: {fileID: 1361587953}
 --- !u!65 &1418242567
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9344,6 +10802,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -9425,6 +10895,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -9433,9 +10911,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &1452497224
@@ -9457,6 +10947,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -9538,6 +11040,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -9546,9 +11056,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &1453332470
@@ -9570,6 +11092,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -9651,6 +11185,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -9659,9 +11201,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &1461589275
@@ -9683,6 +11237,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -9764,6 +11330,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -9772,9 +11346,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!33 &1497773778
@@ -9926,7 +11512,7 @@ MonoBehaviour:
   - {fileID: 1386876407}
   - {fileID: 2076470652}
   - {fileID: 591478993}
-  _player: {fileID: 268018514}
+  _playerSoundController: {fileID: 1361587953}
 --- !u!1001 &1512749555
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9950,6 +11536,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -10035,6 +11633,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -10043,9 +11649,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!4 &1516877307 stripped
@@ -10150,6 +11768,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -10231,6 +11861,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -10239,9 +11877,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &1561155862
@@ -10267,6 +11917,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -10352,6 +12014,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -10360,9 +12030,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &1562916279
@@ -10463,6 +12145,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -10544,6 +12238,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -10552,9 +12254,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &1595517208
@@ -10576,6 +12290,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -10657,6 +12383,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -10665,9 +12399,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &1598063143
@@ -10689,6 +12435,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -10770,6 +12528,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -10778,9 +12544,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &1630266256
@@ -10802,6 +12580,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -10883,6 +12673,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -10891,9 +12689,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &1630857806
@@ -10915,6 +12725,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -10996,6 +12818,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -11004,9 +12834,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &1654206425
@@ -11028,6 +12870,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -11097,6 +12951,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -11105,9 +12967,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _collectionPointInPlayer
       value: 
@@ -11153,6 +13027,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -11234,6 +13120,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -11242,9 +13136,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!4 &1674991471 stripped
@@ -11370,6 +13276,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -11455,6 +13373,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -11463,9 +13389,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &1700376437
@@ -11487,6 +13425,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -11568,6 +13518,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -11576,9 +13534,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!4 &1728780267 stripped
@@ -11595,6 +13565,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 859f45043ed1d4398aaa7daddafde734, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1745634969 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3513216691088164064, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
+  m_PrefabInstance: {fileID: 827877611}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45977bbae16431c46a013576a1aea384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1793771059 stripped
@@ -12013,7 +13994,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8431ab295507e4458980459420c85682, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 268018514}
+  _playerMoney: {fileID: 1361587982}
   _chooserLevelName: {fileID: 1804094066}
 --- !u!114 &1852628440
 MonoBehaviour:
@@ -12076,6 +14057,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -12161,6 +14154,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -12169,9 +14170,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!114 &1921418014 stripped
@@ -12243,7 +14256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _garageIndicatorsEducation: []
-  _player: {fileID: 268018514}
+  _inventory: {fileID: 1137631207}
 --- !u!212 &1950459830
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12327,6 +14340,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -12396,6 +14421,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -12404,9 +14437,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _collectionPointInPlayer
       value: 
@@ -12479,7 +14524,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f24cd77b1621241389a4520b51cea73a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _UIRequireComponents: {fileID: 0}
+  _UIRequireComponents: {fileID: 1398114053}
   _player: {fileID: 268018514}
   _garageParkingArea: {fileID: 1153158899}
   _addFuelButtonsEducation: []
@@ -12593,7 +14638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f24cd77b1621241389a4520b51cea73a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _UIRequireComponents: {fileID: 0}
+  _UIRequireComponents: {fileID: 1398114053}
   _player: {fileID: 268018514}
   _garageParkingArea: {fileID: 1153158899}
   _addFuelButtonsEducation: []
@@ -12723,6 +14768,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -12804,6 +14861,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -12812,9 +14877,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &2057043187
@@ -12836,6 +14913,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -12917,6 +15006,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -12925,9 +15022,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &2059319219
@@ -12949,6 +15058,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -13030,6 +15151,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -13038,9 +15167,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1 &2061857478
@@ -13094,7 +15235,7 @@ MonoBehaviour:
   - {fileID: 2099187734}
   - {fileID: 2001226168}
   - {fileID: 1976933778}
-  _player: {fileID: 268018514}
+  _inventory: {fileID: 1137631207}
 --- !u!212 &2061857481
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13194,6 +15335,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -13275,6 +15428,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -13283,9 +15444,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!4 &2086307253 stripped
@@ -13366,7 +15539,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f24cd77b1621241389a4520b51cea73a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _UIRequireComponents: {fileID: 0}
+  _UIRequireComponents: {fileID: 1398114053}
   _player: {fileID: 268018514}
   _garageParkingArea: {fileID: 1153158899}
   _addFuelButtonsEducation: []
@@ -13473,6 +15646,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -13558,6 +15743,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -13566,9 +15759,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
 --- !u!1001 &2123982568
@@ -13590,6 +15795,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 268018514}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 5012760858346511188, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     - target: {fileID: 5012760858346511190, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
@@ -13671,6 +15888,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 268018514}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1361587982}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerMover
+      value: 
+      objectReference: {fileID: 1361587972}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _chooserMedals
       value: 
       objectReference: {fileID: 1852628426}
@@ -13679,8 +15904,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913927204}
     - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _collectorPoint
+      value: 
+      objectReference: {fileID: 913927204}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1137631207}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
       propertyPath: _calculatorBlocks
       value: 
       objectReference: {fileID: 1852628428}
+    - target: {fileID: 6470160173069189000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
+      propertyPath: _playerLoadController
+      value: 
+      objectReference: {fileID: 1361587984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}

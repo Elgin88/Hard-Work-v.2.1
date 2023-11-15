@@ -1,13 +1,10 @@
 using System.Collections;
-using Agava.WebUtility;
 using UnityEngine;
-
-[RequireComponent(typeof(BoxCollider))]
 
 public class SectionOfBlocks : MonoBehaviour
 {
     [SerializeField] private Block [] _blocks;
-    [SerializeField] private Player _player;
+    [SerializeField] private PlayerSoundController _playerSoundController;
 
     private Coroutine _activeBlocks;
     private int _requireNumberActiveBlocks = 3;
@@ -17,7 +14,7 @@ public class SectionOfBlocks : MonoBehaviour
 
     private void Start()
     {
-        if (_blocks == null || _player == null)
+        if (_blocks == null || _playerSoundController == null)
         {
             Debug.Log("No serializefiel in " + gameObject.name);
         }
@@ -28,7 +25,7 @@ public class SectionOfBlocks : MonoBehaviour
         if (collision.gameObject.TryGetComponent<Destroyer>(out Destroyer destroyer))
         {
             StartActiveBlocks();
-            _player.SoundController.PlayObjectDestractionSound();
+            _playerSoundController.PlayObjectDestractionSound();
         }
     }
 
@@ -55,6 +52,7 @@ public class SectionOfBlocks : MonoBehaviour
 
             gameObject.SetActive(false);
             StopActiveBlocks();
+
             yield return null;
         }
     }

@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class CollectorIndicatorEducation : MonoBehaviour
 {
-    [SerializeField] private GarageIndicatorEducation[] _garageIndicatorsEducation;
-    [SerializeField] private Player _player;
+    [SerializeField] private GarageIndicatorEducation [] _garageIndicatorsEducation;
+    [SerializeField] private PlayerInventory _inventory;
 
     private void Start()
     {
-        _player.Inventory.IsChangedNumberBlocks += OnCangedBlocksInPlayerInventory;
+        _inventory.IsChangedNumberBlocks += OnCangedBlocksInPlayerInventory;
     }
 
     private void OnDisable()
     {
-        _player.Inventory.IsChangedNumberBlocks -= OnCangedBlocksInPlayerInventory;
+        _inventory.IsChangedNumberBlocks -= OnCangedBlocksInPlayerInventory;
     }
 
     private void OnCangedBlocksInPlayerInventory(int current, int max)

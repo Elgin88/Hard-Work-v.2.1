@@ -22,7 +22,7 @@ public class AddPowerButton : MonoBehaviour
     private void OnEnable()
     {
         _button.onClick.AddListener(OnButtonClick);
-        _UIRequireComponents.Player.IsMoneyChanged += OnMoneyChanged;
+        _UIRequireComponents.PlayerMoney.IsMoneyChanged += OnMoneyChanged;
         _UIRequireComponents.PowerController.IsEngineUpgrade += OnEngineLevelChanged;
 
         _cost.text = _UIRequireComponents.Garage.PowerCost.ToString();
@@ -33,7 +33,7 @@ public class AddPowerButton : MonoBehaviour
     private void OnDisable()
     {
         _button.onClick.RemoveListener(OnButtonClick);
-        _UIRequireComponents.Player.IsMoneyChanged -= OnMoneyChanged;
+        _UIRequireComponents.PlayerMoney.IsMoneyChanged -= OnMoneyChanged;
         _UIRequireComponents.PowerController.IsEngineUpgrade -= OnEngineLevelChanged;
     }
 
@@ -57,7 +57,7 @@ public class AddPowerButton : MonoBehaviour
 
     private void CheckButton()
     {
-        if (_UIRequireComponents.Player.Money > _UIRequireComponents.Garage.PowerCost & _isMaxLevelEngine == false)
+        if (_UIRequireComponents.PlayerMoney.Money > _UIRequireComponents.Garage.PowerCost & _isMaxLevelEngine == false)
         {
             _button.interactable = true;
         }

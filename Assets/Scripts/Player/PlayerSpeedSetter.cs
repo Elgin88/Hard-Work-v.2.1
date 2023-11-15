@@ -10,7 +10,6 @@ public class PlayerSpeedSetter : MonoBehaviour
     [SerializeField] private float _pushChangeSpeed;
     [SerializeField] private float _delayPush;
     [SerializeField] private PlayerSoundController _soundController;
-    [SerializeField] private Player _player;
     [SerializeField] private PlayerMover _playerMover;
     [SerializeField] private PlayerFuelController _playerFuelController;
 
@@ -31,7 +30,6 @@ public class PlayerSpeedSetter : MonoBehaviour
             _deltaUpSpeed == 0 ||
             _pushChangeSpeed == 0 ||
             _delayPush == 0 ||
-            _player == null ||
             _playerMover == null ||
             _playerFuelController == null)
         {
@@ -39,7 +37,7 @@ public class PlayerSpeedSetter : MonoBehaviour
             Debug.Log("No serializefield in " + gameObject.name);
         }
 
-        _player.IsPushed += IsPushedPlayer;
+        _playerMover.IsPushed += IsPushedPlayer;
 
         StartCoroutineChangeSpeed();
     }
@@ -51,7 +49,7 @@ public class PlayerSpeedSetter : MonoBehaviour
 
     private void OnDisable()
     {
-        _player.IsPushed -= IsPushedPlayer;
+        _playerMover.IsPushed -= IsPushedPlayer;
     }
 
     private IEnumerator ChangeSpeed()

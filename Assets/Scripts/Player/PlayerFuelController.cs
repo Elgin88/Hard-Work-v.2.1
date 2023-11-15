@@ -6,33 +6,29 @@ using UnityEngine.Events;
 
 public class PlayerFuelController : MonoBehaviour
 {
-    [SerializeField] private float _maxFuel = 100;
-    [SerializeField] private float _deltaFuel = 3;
+    [SerializeField] private float _maxFuel;
+    [SerializeField] private float _deltaFuel;
+    [SerializeField] private PlayerMoney _playerMoney;
+    [SerializeField] private PlayerSpeedSetter _speedSetter;
+    [SerializeField] private Garage _garage;
 
-    private Garage _garage;
-
+    private Coroutine _burnFuel;
     private float _currentFuel;
     private bool _isFuelLoss;
-    private Coroutine _burnFuel;
-    private PlayerSpeedSetter _speedSetter;
-    private Player _player;
 
     public bool IsFuelLoss => _isFuelLoss;
     public float MaxFuel => _maxFuel;
     public float CurrentFuel => _currentFuel;
-
-    public event UnityAction <float, float> IsFuelChanged;
+    public Action <float, float> IsFuelChanged;
 
     private void Start()
     {
-        _garage = FindObjectOfType<Garage>();
-
-        if (_speedSetter == null)
+        if (_maxFuel == 0 || _deltaFuel == 0 || _playerMoney == null || _speedSetter == null || _garage == null)
         {
-            _speedSetter = FindObjectOfType<PlayerSpeedSetter>();
+            Debug.Log("No serializefield in " + gameObject.name);
         }
 
-        _player = GetComponent<Player>();
+
 
         _currentFuel = _maxFuel;
 
@@ -84,19 +80,19 @@ public class PlayerFuelController : MonoBehaviour
 
     public void TryBuyFuel()
     {
-        if (_player.Money > _garage.FuelCoust)
+        if (_playerMoney.Money > _garage.FuelCoust)
         {
             _currentFuel = _maxFuel;
             IsFuelChanged?.Invoke(_currentFuel, _maxFuel);
-            _player.RemoveMoney(_garage.FuelCoust);           
+            _playerMoney.RemoveMoney(_garage.FuelCoust);           
         }
     }
 
     public void TryBuyTank(int addVolumeTank)
     {
-        if (_player.Money > _garage.TankCost)
+        if (_playerMoney.Money > _garage.TankCost)
         {
-            _player.RemoveMoney(_garage.TankCost);
+            _playerMoney.RemoveMoney(_garage.TankCost);
             _maxFuel += addVolumeTank;
             IsFuelChanged?.Invoke(_currentFuel, _maxFuel);
         }

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Saver : MonoBehaviour
 {
-    [SerializeField] private Player _player;
+    [SerializeField] private PlayerMoney _playerMoney;
     [SerializeField] private ChooserLevelNameForLoad _chooserLevelName;
 
     private string _saveKeyPlayerMoney = "SavedPlayerMoney";
@@ -14,7 +14,7 @@ public class Saver : MonoBehaviour
 
     private void Start()
     {
-        if (_player == null || _chooserLevelName == null)
+        if (_playerMoney == null || _chooserLevelName == null)
         {
             Debug.Log("No serializefiel in " + gameObject.name);
         }
@@ -22,14 +22,14 @@ public class Saver : MonoBehaviour
 
     public void SaveData()
     {
-        PlayerPrefs.SetInt(_saveKeyPlayerMoney, _player.Money);
+        PlayerPrefs.SetInt(_saveKeyPlayerMoney, _playerMoney.Money);
         PlayerPrefs.SetString(_saveKeyNextLevelName, _chooserLevelName.CurrentSceneName);
         PlayerPrefs.Save();
     }
 
     public void SaveMoney()
     {
-        PlayerPrefs.SetInt(_saveKeyPlayerMoney, _player.Money);
+        PlayerPrefs.SetInt(_saveKeyPlayerMoney, _playerMoney.Money);
         PlayerPrefs.Save();
     }
 }

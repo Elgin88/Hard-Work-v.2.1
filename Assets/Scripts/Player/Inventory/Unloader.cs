@@ -3,21 +3,19 @@ using UnityEngine;
 
 public class Unloader : MonoBehaviour
 {
-    [SerializeField] private Inventory _inventory;
-    [SerializeField] private Player _player;
+    [SerializeField] private PlayerInventory _inventory;
+    [SerializeField] private PlayerRequireComponents _playerRequreComponents;
+    [SerializeField] private float _deltaBetweenUnloadBlocks;
 
-    private float _deltaBetweenUnloadBlocks;
     private Coroutine _unload;
     private WaitForSeconds _deltaBetweenUnloadBlocksWFS;
 
     private void Start()
     {
-        if (_inventory == null || _player == null)
+        if (_inventory == null || _playerRequreComponents == null || _deltaBetweenUnloadBlocks == 0)
         {
             Debug.Log("No serializefiel in " + gameObject.name);
         }
-
-        _deltaBetweenUnloadBlocks = _player.DeltaBetweenUnloadBlocks;        
 
         _deltaBetweenUnloadBlocksWFS = new WaitForSeconds(_deltaBetweenUnloadBlocks);
     }
@@ -30,7 +28,7 @@ public class Unloader : MonoBehaviour
 
             if (lastAddBlock != null)
             {
-                lastAddBlock.BlockMover.StartMoveToCollector(_player.CollectionPoint.transform.position);
+                lastAddBlock.BlockMover.StartMoveToCollector(_playerRequreComponents.CollectorPoint.transform.position);
                 lastAddBlock.Point.RemoveBlock();
 
                 if (_inventory.GetNumberBloksInTopLine() == 0 & _inventory.GetCountOfLines() > 1)

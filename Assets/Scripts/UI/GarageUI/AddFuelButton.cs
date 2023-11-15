@@ -9,7 +9,7 @@ public class AddFuelButton : MonoBehaviour
     [SerializeField] private Button _button;
     [SerializeField] private AudioSource _soundOfBuy;
     [SerializeField] private UIRequireComponents _UIRequireComponents;
-    [SerializeField] private AddFuelIndicatorEducation[] _addFuelIndicatorEducation;
+    [SerializeField] private AddFuelIndicatorEducation [] _addFuelIndicatorEducation;
 
     private string _levelName = "Level1";
     private string _currentSceneName;
@@ -25,7 +25,7 @@ public class AddFuelButton : MonoBehaviour
     private void OnEnable()
     {
         _button.onClick.AddListener(OnAddFuelButtonClick);
-        _UIRequireComponents.Player.IsMoneyChanged += OnPlayerMoneyChanded;
+        _UIRequireComponents.PlayerMoney.IsMoneyChanged += OnPlayerMoneyChanded;
         _cost.text = _UIRequireComponents.Garage.FuelCoust.ToString();
 
         _currentSceneName = SceneManager.GetActiveScene().name;
@@ -36,7 +36,7 @@ public class AddFuelButton : MonoBehaviour
     private void OnDisable()
     {
         _button.onClick.RemoveListener(OnAddFuelButtonClick);
-        _UIRequireComponents.Player.IsMoneyChanged -= OnPlayerMoneyChanded;
+        _UIRequireComponents.PlayerMoney.IsMoneyChanged -= OnPlayerMoneyChanded;
     }
 
     private void OnAddFuelButtonClick()
@@ -76,7 +76,7 @@ public class AddFuelButton : MonoBehaviour
 
     private void CheckStatusButton()
     {
-        if (_UIRequireComponents.Player.Money > _UIRequireComponents.Garage.FuelCoust)
+        if (_UIRequireComponents.PlayerMoney.Money > _UIRequireComponents.Garage.FuelCoust)
         {
             _button.interactable = true;
         }

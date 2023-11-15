@@ -1,8 +1,8 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
-public class Inventory : MonoBehaviour
+public class PlayerInventory : MonoBehaviour
 {
     [SerializeField] private List<LineOfPoints> _lines;
     [SerializeField] private LineOfPointsCreater _lineOfPointsCreater;
@@ -10,7 +10,7 @@ public class Inventory : MonoBehaviour
     private bool _isFull = false;
 
     public int GetNumberLines => _lines.Count;
-    public event UnityAction <int,int> IsChangedNumberBlocks;
+    public Action <int,int> IsChangedNumberBlocks;
 
     private void Start()
     {

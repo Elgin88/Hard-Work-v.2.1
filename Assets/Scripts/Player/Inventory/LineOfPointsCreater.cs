@@ -1,27 +1,29 @@
+using System;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class LineOfPointsCreater : MonoBehaviour
 {
     [SerializeField] private LineOfPoints _lineOfPoints;
-    [SerializeField] private Inventory _inventory;
-    [SerializeField] private Player _player;
-
-    private float _rangeBetweenBlocks;
-    private int _maxNumberOfLines;
+    [SerializeField] private PlayerRequireComponents _playerRequreComponents;
+    [SerializeField] private PlayerInventory _inventory;
+    [SerializeField] private PlayerMoney _playerMoney;
+    [SerializeField] private float _rangeBetweenBlocks;
+    [SerializeField] private int _maxNumberOfLines;
 
     public int MaxNumberOfLines => _maxNumberOfLines;
-    public event UnityAction <int, int> IsChangedMaxNumberBlocks;
+    public Action <int, int> IsChangedMaxNumberBlocks;
 
     private void Start()
     {
-        if (_lineOfPoints == null || _inventory == null || _player == null)
+        if (_lineOfPoints == null ||
+            _playerRequreComponents == null ||
+            _inventory == null ||
+            _playerMoney == null ||
+            _rangeBetweenBlocks == 0 ||
+            _maxNumberOfLines == 0)
         {
             Debug.Log("No serializefiel in " + gameObject.name);
         }
-
-        _rangeBetweenBlocks = _player.RangeBetweenBlocks;
-        _maxNumberOfLines = _player.MaxHightOfInventory;
     }
 
     public void TryCreateLine()
@@ -37,11 +39,11 @@ public class LineOfPointsCreater : MonoBehaviour
 
     public void TryAddPlace(int numberLines)
     {
-        if (_player.Money > _player.Garage.PlaceCost)
+        if (_playerMoney.Money > _playerRequreComponents.Garage.PlaceCost)
         {
             _maxNumberOfLines += numberLines;
 
-            _player.RemoveMoney(_player.Garage.PlaceCost);
+            _playerMoney.RemoveMoney(_playerRequreComponents.Garage.PlaceCost);
 
             IsChangedMaxNumberBlocks?.Invoke(_inventory.GetCurrentCountOfBlocks(), _inventory.GetMaxCountOfBlocks());
         }

@@ -1,40 +1,33 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
-
-[RequireComponent(typeof(PlayerSpeedSetter))]
-[RequireComponent(typeof(Player))]
 
 public class PlayerPowerController : MonoBehaviour
 {
     [SerializeField] private int _maxLevelEngine;
+    [SerializeField] private PlayerMoney _playerMoney;
+    [SerializeField] private PlayerSpeedSetter _playerSpeedSetter;
+    [SerializeField] private Garage _garage;
 
-    private PlayerSpeedSetter _playerSpeedSetter;
-    private Player _player;
-    private Garage _garage;
     private int _engineLevel;
     private bool _isMaxLevel = false;
 
     public bool IsMaxLevel => _isMaxLevel;
-
-    public event UnityAction<int, bool> IsEngineUpgrade;
+    public Action <int, bool> IsEngineUpgrade;
 
     private void Start()
     {
-        _playerSpeedSetter = GetComponent<PlayerSpeedSetter>();
-        _player = GetComponent<Player>();
-
-        _garage = FindObjectOfType<Garage>();
+        if (_maxLevelEngine == 0 || _playerMoney == null || _playerSpeedSetter == null || _garage == null)
+        {
+            Debug.Log("No serializefield in " + gameObject.name);
+        }
     }
 
     public void TryAddPower(float deltaPower)
     {
-        if (_player.Money > _garage.PowerCost & _engineLevel < 3)
+        if (_playerMoney.Money > _garage.PowerCost & _engineLevel < 3)
         {
             _playerSpeedSetter.ChangeDeltaPushSpeed(deltaPower);
-            _player.RemoveMoney(_garage.PowerCost);
+            _playerMoney.RemoveMoney(_garage.PowerCost);
             _engineLevel++;
 
             if (_engineLevel == _maxLevelEngine)

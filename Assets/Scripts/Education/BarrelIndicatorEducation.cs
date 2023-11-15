@@ -6,7 +6,7 @@ public class BarrelIndicatorEducation : MonoBehaviour
     [SerializeField] private CollectorIndicatorEducation[] _collectorIndicators;
     [SerializeField] private ChooserMedals _chooserMedals;
     [SerializeField] private EnderLevel _enderLevel;
-    [SerializeField] private Inventory _inventory;
+    [SerializeField] private PlayerInventory _inventory;
     [SerializeField] private CalculatorBlocks _calculatorBlocks;
 
     private void Start()

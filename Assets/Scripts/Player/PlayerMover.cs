@@ -1,28 +1,28 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
-[RequireComponent(typeof(PlayerSpeedSetter))]
-[RequireComponent(typeof(PlayerSoundController))]
-
 public class PlayerMover : MonoBehaviour
 {
-    private FixedJoystick _joystick;
-    private PlayerSpeedSetter _playerSpeedSetter;
+    [SerializeField] private PlayerRequireComponents _playerRequreComponents;
+    [SerializeField] private PlayerSpeedSetter _playerSpeedSetter;
+    [SerializeField] private PlayerSoundController _playerSoundController;
+
     private Quaternion _currentPlayerDirection;
     private Coroutine _moveWork;
-    private bool _isJoystickTurn;   
+    private bool _isJoystickTurn;
 
-    public bool IsJoystickTurn => _isJoystickTurn;
     public Quaternion CurrentPlayerDirection => _currentPlayerDirection;
-    public FixedJoystick Joystick => _joystick;
-    private PlayerSoundController _playerSoundController;
-
+    public bool IsJoystickTurn => _isJoystickTurn;
+    public Action IsPushed;
 
     private void Start()
     {
-        _joystick = FindObjectOfType<FixedJoystick>();        
-        _playerSpeedSetter = GetComponent<PlayerSpeedSetter>();
-        _playerSoundController = GetComponent<PlayerSoundController>();
+        if (_playerRequreComponents == null || _playerSpeedSetter == null || _playerSoundController == null)
+        {
+            Debug.Log("No serializefield in " + gameObject.name);
+        }
+
         _isJoystickTurn = false;
 
         StartCoroutineMove();
@@ -32,14 +32,14 @@ public class PlayerMover : MonoBehaviour
     {
         while (true)
         {
-            if (_joystick != null)
+            if (_playerRequreComponents.FixedJoystick != null)
             {
-                if ((_joystick.Horizontal != 0) || (_joystick.Vertical != 0))
+                if ((_playerRequreComponents.FixedJoystick.Horizontal != 0) || (_playerRequreComponents.FixedJoystick.Vertical != 0))
                 {
                     _isJoystickTurn = true;
-                    _currentPlayerDirection = Quaternion.LookRotation(new Vector3(_joystick.Horizontal, 0, _joystick.Vertical));
+                    _currentPlayerDirection = Quaternion.LookRotation(new Vector3(_playerRequreComponents.FixedJoystick.Horizontal, 0, _playerRequreComponents.FixedJoystick.Vertical));
                     transform.rotation = _currentPlayerDirection;
-                    transform.position = new Vector3(transform.position.x + _joystick.Horizontal * Time.deltaTime * _playerSpeedSetter.CurrentSpeed, transform.position.y, transform.position.z + _joystick.Vertical * Time.deltaTime * _playerSpeedSetter.CurrentSpeed);
+                    transform.position = new Vector3(transform.position.x + _playerRequreComponents.FixedJoystick.Horizontal * Time.deltaTime * _playerSpeedSetter.CurrentSpeed, transform.position.y, transform.position.z + _playerRequreComponents.FixedJoystick.Vertical * Time.deltaTime * _playerSpeedSetter.CurrentSpeed);
 
                     _playerSoundController.StopMinEngineSound();
                     _playerSoundController.PlayMaxEngineSound();
@@ -55,6 +55,11 @@ public class PlayerMover : MonoBehaviour
 
             yield return null;
         }
+    }
+
+    public void SlowDown()
+    {
+        IsPushed.Invoke();
     }
 
     public void StartCoroutineMove()
