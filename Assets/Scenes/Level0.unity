@@ -877,6 +877,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pauserGame: {fileID: 583407484}
+  _sceneNames: {fileID: 583407489}
 --- !u!114 &583407488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1367,9 +1368,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _loadLevelButton: {fileID: 1464779412}
   _chooserLevelName: {fileID: 583407488}
-  _uiRequireComponents: {fileID: 0}
-  _advertising: {fileID: 583407487}
-  _sceneNames: {fileID: 583407489}
 --- !u!1 &1696089295
 GameObject:
   m_ObjectHideFlags: 0

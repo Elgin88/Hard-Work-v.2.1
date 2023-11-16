@@ -1,18 +1,23 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Advertising : MonoBehaviour
 {
     [SerializeField] private PauserGame _pauserGame;
+    [SerializeField] private ScenesNames _sceneNames;
 
     private void Start()
     {
-        if (_pauserGame == null)
+        if (_pauserGame == null || _sceneNames == null)
         {
             Debug.Log("No serializefield + " + gameObject.name);
         }
 
-        ShowInterstitialAd();
+        if (SceneManager.GetActiveScene().name != _sceneNames.Level0Name & SceneManager.GetActiveScene().name != _sceneNames.LevelSDK)
+        {
+            ShowInterstitialAd();
+        }        
     }
 
     public void ShowVideoAd()

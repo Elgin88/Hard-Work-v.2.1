@@ -14,7 +14,7 @@ public class Block : MonoBehaviour
     private Point _point;
     private bool _playerIsUnload;
     private Coroutine _timerPhysicsOff;
-    private WaitForSeconds _timerWFS = new WaitForSeconds(2);
+    private WaitForSeconds _phisicsOffTime = new WaitForSeconds(5);
 
     public BlockMover BlockMover => _blockMover;
     public Point Point => _point;
@@ -125,7 +125,7 @@ public class Block : MonoBehaviour
 
     private IEnumerator TimerPhysicsOff()
     {
-        yield return _timerWFS;
+        yield return _phisicsOffTime;
 
         KinematicOn();
         GravityOff();
