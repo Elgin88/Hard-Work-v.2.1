@@ -23,7 +23,7 @@ public class Advertising : MonoBehaviour
     public void ShowInterstitialAd()
     {
 #if UNITY_WEBGL && !UNITY_EDITOR
-        Agava.YandexGames.InterstitialAd.Show(OnOpenCallback, OnCloseCallback, OnErrorCallback, OnErrorCallbackInterstitialAd);
+        Agava.YandexGames.InterstitialAd.Show(OnOpenCallback, OnCloseCallbackInterstitialAd, OnErrorCallback, OnErrorCallbackInterstitialAd);
 #endif
     }
 
@@ -37,7 +37,7 @@ public class Advertising : MonoBehaviour
         _pauserGame.PauseOffInBrauser();
     }
 
-    private void OnCloseCallback(bool close)
+    private void OnCloseCallbackInterstitialAd(bool close)
     {
         _pauserGame.PauseOffInBrauser();
     }

@@ -3012,6 +3012,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _loadLevelButton: {fileID: 1758577149615600959}
   _chooserLevelName: {fileID: 7673415597685511278}
+  _uiRequireComponents: {fileID: 6390884785094593398}
+  _advertising: {fileID: 0}
+  _sceneNames: {fileID: 1706779015290161416}
 --- !u!114 &7673415597685511278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4821,7 +4824,6 @@ GameObject:
   - component: {fileID: 1758577150933686447}
   - component: {fileID: 1758577150933686444}
   - component: {fileID: 1758577150933686440}
-  - component: {fileID: 2138925347120677345}
   m_Layer: 5
   m_Name: EndLevelButton
   m_TagString: Untagged
@@ -4945,21 +4947,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _endLevelButton: {fileID: 1758577150933686444}
   _endLevelPanel: {fileID: 1758577150558851567}
---- !u!114 &2138925347120677345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1758577150933686445}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c1f34d378b874d86b4b8eb2c4e5b0e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deltaScale: 0.1
-  _speedOfFlash: 0.2
-  _rectTransform: {fileID: 1758577150933686441}
 --- !u!1 &1858924253834298723
 GameObject:
   m_ObjectHideFlags: 0
