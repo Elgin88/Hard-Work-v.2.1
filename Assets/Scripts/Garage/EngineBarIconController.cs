@@ -26,12 +26,12 @@ public class EngineBarIconController : MonoBehaviour
 
     private void OnEnable()
     {
-        _UIRequireComponents.PowerController.IsEngineUpgrade += OnUpgradeEngine;
+        _UIRequireComponents.PowerController.IsEngineUpgraded += OnUpgradeEngine;
     }
 
     private void OnDisable()
     {
-        _UIRequireComponents.PowerController.IsEngineUpgrade -= OnUpgradeEngine;
+        _UIRequireComponents.PowerController.IsEngineUpgraded -= OnUpgradeEngine;
     }
 
     private void OnUpgradeEngine(int level, bool isMaxLevel)

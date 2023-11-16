@@ -18,7 +18,9 @@ public class InventoryBar : MonoBehaviour
 
     private void Start()
     {
-        if (_speedOfChange==0||_slider==null || _maxText == null || _middleText == null || _minText == null || _UIRequireComponents == null)
+        if (_speedOfChange==0||_slider==null ||
+            _maxText == null || _middleText == null ||
+            _minText == null || _UIRequireComponents == null)
         {
             Debug.Log("No serializefiel in " + gameObject.name);
         }
@@ -33,20 +35,28 @@ public class InventoryBar : MonoBehaviour
     private void OnEnable()
     {
         _slider.value = 0;
-        _UIRequireComponents.Inventory.IsChangedNumberBlocks += OnChangedNumberBlocks;
-        _UIRequireComponents.LineOfPointsCreater.IsChangedMaxNumberBlocks += OnChangedMaxNumberBlocks;
+        _UIRequireComponents.Inventory.NumberBlocksIsChanged += OnChangedNumberBlocks;
+        _UIRequireComponents.LineOfPointsCreater.MaxNumberBlocksIsChanged += OnChangedMaxNumberBlocks;
     }
 
     private void OnDisable()
     {
-        _UIRequireComponents.Inventory.IsChangedNumberBlocks -= OnChangedNumberBlocks;
-        _UIRequireComponents.LineOfPointsCreater.IsChangedMaxNumberBlocks -= OnChangedMaxNumberBlocks;
+        _UIRequireComponents.Inventory.NumberBlocksIsChanged -= OnChangedNumberBlocks;
+        _UIRequireComponents.LineOfPointsCreater.MaxNumberBlocksIsChanged -= OnChangedMaxNumberBlocks;
+    }
+
+    public void StopChangeValue()
+    {
+        if (_changeValue != null)
+        {
+            StopCoroutine(_changeValue);
+            _changeValue = null;
+        }
     }
 
     private void OnChangedNumberBlocks(int target, int max)
     {
         _targetSliderValue = (float) target / max;
-
         StartChangeValue();
     }
 
@@ -55,7 +65,6 @@ public class InventoryBar : MonoBehaviour
         while (true)
         {
             _currentSliderValue = _slider.value;
-
             _slider.value = Mathf.MoveTowards(_currentSliderValue, _targetSliderValue, _speedOfChange * Time.deltaTime);
 
             if (_slider.value == _targetSliderValue)
@@ -78,15 +87,6 @@ public class InventoryBar : MonoBehaviour
         if (_changeValue == null)
         {
             _changeValue = StartCoroutine(ChangeValue());
-        }
-    }
-
-    public void StopChangeValue()
-    {
-        if (_changeValue != null)
-        {
-            StopCoroutine(_changeValue);
-            _changeValue = null;
         }
     }
 }

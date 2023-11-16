@@ -11,12 +11,13 @@ public class PlayerPowerController : MonoBehaviour
     private int _engineLevel;
     private bool _isMaxLevel = false;
 
+    public Action <int, bool> IsEngineUpgraded;
     public bool IsMaxLevel => _isMaxLevel;
-    public Action <int, bool> IsEngineUpgrade;
 
     private void Start()
     {
-        if (_maxLevelEngine == 0 || _playerMoney == null || _playerSpeedSetter == null || _garage == null)
+        if (_maxLevelEngine == 0 || _playerMoney == null ||
+            _playerSpeedSetter == null || _garage == null)
         {
             Debug.Log("No serializefield in " + gameObject.name);
         }
@@ -33,7 +34,7 @@ public class PlayerPowerController : MonoBehaviour
             if (_engineLevel == _maxLevelEngine)
                 _isMaxLevel = true;
 
-            IsEngineUpgrade?.Invoke(_engineLevel, _isMaxLevel);
+            IsEngineUpgraded?.Invoke(_engineLevel, _isMaxLevel);
         }
     }    
 }

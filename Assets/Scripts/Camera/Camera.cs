@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Camera : MonoBehaviour
 {
+    private PlayerMover _player;
+    private Coroutine _moveWork = null;
     private float _deltaY = 10;
     private float _deltaZ = -9;
     private float _speedChangeX = 4f;
     private float _speedChangeZ = 4f;
     private float _deltaRotationX = 0.3f;
-    private PlayerMover _player;
-    private Coroutine _moveWork = null;
     private float _currentCameraPositionX;
     private float _currentCameraPositionY;
     private float _currentCameraPositionZ;
@@ -30,20 +30,6 @@ public class Camera : MonoBehaviour
         StartCoroutineMove();
     }
 
-    private IEnumerator Move()
-    {
-        while (true)
-        {
-            _currentCameraPositionX = Mathf.MoveTowards(_currentCameraPositionX, _player.transform.position.x, _speedChangeX * Time.deltaTime);
-
-            _currentCameraPositionZ = Mathf.MoveTowards(_currentCameraPositionZ, _player.transform.position.z + _deltaZ, _speedChangeZ * Time.deltaTime);
-
-            transform.position = new Vector3(_currentCameraPositionX, _currentCameraPositionY, _currentCameraPositionZ);     
-
-            yield return null;
-        }
-    }
-
     public void StartCoroutineMove()
     {
         if (_moveWork == null)
@@ -58,6 +44,20 @@ public class Camera : MonoBehaviour
         {
             StopCoroutine(_moveWork);
             _moveWork = null;
+        }
+    }
+
+    private IEnumerator Move()
+    {
+        while (true)
+        {
+            _currentCameraPositionX = Mathf.MoveTowards(_currentCameraPositionX, _player.transform.position.x, _speedChangeX * Time.deltaTime);
+
+            _currentCameraPositionZ = Mathf.MoveTowards(_currentCameraPositionZ, _player.transform.position.z + _deltaZ, _speedChangeZ * Time.deltaTime);
+
+            transform.position = new Vector3(_currentCameraPositionX, _currentCameraPositionY, _currentCameraPositionZ);     
+
+            yield return null;
         }
     }
 }

@@ -17,14 +17,15 @@ public class PlayerRequireComponents : MonoBehaviour
     [SerializeField] private FixedJoystick _fixedJoystick;
     [SerializeField] private Loader _loader;
 
-    public Garage Garage => _garage;
     public CollectorPoint CollectorPoint => _collectorPoint;
     public FixedJoystick FixedJoystick => _fixedJoystick;
+    public Garage Garage => _garage;
     public Loader Loader => _loader;
 
     private void Start()
     {
-        if (_garage == null || _collectorPoint == null || _fixedJoystick == null || _loader == null)
+        if (_garage == null || _collectorPoint == null ||
+            _fixedJoystick == null || _loader == null)
         {
             Debug.Log("No serializefield in " + gameObject.name);
         }

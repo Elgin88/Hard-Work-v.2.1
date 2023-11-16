@@ -36,6 +36,63 @@ public class BlockMover : MonoBehaviour
         }
     }
 
+    public void StartMoveToCollector(Vector3 collectionPoint)
+    {
+        if (_moveToCollector == null)
+        {
+            _moveToCollector = StartCoroutine(MoveToCollector());
+        }
+    }
+
+    public void StopMoveToCollector()
+    {
+        if (_moveToCollector != null)
+        {
+            StopCoroutine(_moveToCollector);
+            _moveToCollector = null;
+        }
+
+        _playerLoadController.SetUploadStatus(false);
+    }
+
+    public void StartMoveToPlayer()
+    {
+        if (_moveToPlayer == null)
+        {
+            _moveToPlayer = StartCoroutine(MoveToPlayer());
+        }
+    }
+
+    public void StopMoveToPlayer()
+    {
+        if (_moveToPlayer != null)
+        {
+            StopCoroutine(_moveToPlayer);
+            _moveToPlayer = null;
+        }
+
+        _playerLoadController.SetUploadStatus(false);
+    }
+
+    public void StartHoldBlockOnPlayer()
+    {
+        _block.KinematicOn();
+
+        if (_holdOnPlayer == null)
+        {
+            _holdOnPlayer = StartCoroutine(HoldOnPlayer());
+        }
+    }
+
+    public void StopFixBlock()
+    {
+        if (_holdOnPlayer != null)
+        {
+            StopCoroutine(_holdOnPlayer);
+            _holdOnPlayer = null;
+        }
+    }
+
     private IEnumerator MoveToPlayer()
     {
         _startBlockPosition = transform.position;
@@ -104,7 +161,7 @@ public class BlockMover : MonoBehaviour
 
         _topPointToCollector = new Vector3 (
             (transform.position.x + _collectorPoint.transform.position.x) / 2,
-            _collectorPoint.transform.position.y + transform.position.y,
+            _collectorPoint.transform.position.y + transform.position.y + _tossHeightToCollector,
             (transform.position.z + _collectorPoint.transform.position.z) / 2);
 
         _block.Point.RemoveBlock();
@@ -143,63 +200,6 @@ public class BlockMover : MonoBehaviour
             }
 
             yield return null;
-        }
-    }
-
-    public void StartMoveToCollector(Vector3 collectionPoint)
-    {
-        if (_moveToCollector == null)
-        {
-            _moveToCollector = StartCoroutine(MoveToCollector());
-        }
-    }
-
-    public void StopMoveToCollector()
-    {
-        if (_moveToCollector != null)
-        {
-            StopCoroutine(_moveToCollector);
-            _moveToCollector = null;
-        }
-
-        _playerLoadController.SetUploadStatus(false);
-    }
-
-    public void StartMoveToPlayer()
-    {
-        if (_moveToPlayer == null)
-        {
-            _moveToPlayer = StartCoroutine(MoveToPlayer());
-        }
-    }
-
-    public void StopMoveToPlayer()
-    {
-        if (_moveToPlayer != null)
-        {
-            StopCoroutine(_moveToPlayer);
-            _moveToPlayer = null;
-        }
-
-        _playerLoadController.SetUploadStatus(false);
-    }
-
-    public void StartHoldBlockOnPlayer()
-    {
-        _block.KinematicOn();
-
-        if (_holdOnPlayer == null)
-        {
-            _holdOnPlayer = StartCoroutine(HoldOnPlayer());
-        }
-    }
-
-    public void StopFixBlock()
-    {
-        if (_holdOnPlayer != null)
-        {
-            StopCoroutine(_holdOnPlayer);
-            _holdOnPlayer = null;
         }
     }
 }

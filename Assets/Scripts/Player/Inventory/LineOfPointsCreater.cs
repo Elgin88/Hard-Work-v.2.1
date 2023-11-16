@@ -10,8 +10,8 @@ public class LineOfPointsCreater : MonoBehaviour
     [SerializeField] private float _rangeBetweenBlocks;
     [SerializeField] private int _maxNumberOfLines;
 
+    public Action <int, int> MaxNumberBlocksIsChanged;
     public int MaxNumberOfLines => _maxNumberOfLines;
-    public Action <int, int> IsChangedMaxNumberBlocks;
 
     private void Start()
     {
@@ -45,7 +45,7 @@ public class LineOfPointsCreater : MonoBehaviour
 
             _playerMoney.RemoveMoney(_playerRequreComponents.Garage.PlaceCost);
 
-            IsChangedMaxNumberBlocks?.Invoke(_inventory.GetCurrentCountOfBlocks(), _inventory.GetMaxCountOfBlocks());
+            MaxNumberBlocksIsChanged?.Invoke(_inventory.GetCurrentCountOfBlocks(), _inventory.GetMaxCountOfBlocks());
         }
     }
 }

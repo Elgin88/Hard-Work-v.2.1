@@ -9,12 +9,12 @@ public class CollectorIndicatorEducation : MonoBehaviour
 
     private void Start()
     {
-        _inventory.IsChangedNumberBlocks += OnCangedBlocksInPlayerInventory;
+        _inventory.NumberBlocksIsChanged += OnCangedBlocksInPlayerInventory;
     }
 
     private void OnDisable()
     {
-        _inventory.IsChangedNumberBlocks -= OnCangedBlocksInPlayerInventory;
+        _inventory.NumberBlocksIsChanged -= OnCangedBlocksInPlayerInventory;
     }
 
     private void OnCangedBlocksInPlayerInventory(int current, int max)

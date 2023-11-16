@@ -38,7 +38,7 @@ public class PlayerSoundController : MonoBehaviour
 
     public void PlayMaxEngineSound()
     {
-        if (_engineMaxSound.isPlaying==false)
+        if (_engineMaxSound.isPlaying == false)
         {
             _engineMaxSound.Play();            
         }

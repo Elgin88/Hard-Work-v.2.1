@@ -1,7 +1,6 @@
+using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class CalculatorBlocks : MonoBehaviour
 {
@@ -12,13 +11,19 @@ public class CalculatorBlocks : MonoBehaviour
     private int _allBlocks;
     private int _numberBlocksOnCar;
 
-    public event UnityAction <int> IsChangedNumberUnloadBlocks;
+    public Action <int> NumberUnloadBlocksIsChanged;
     public int AllBlocks => _allBlocks;
     public int Unload => _numberUnloadBlocks;
 
     private void Start()
     {
         StartCoroutine(CalculateBlocks());
+    }
+
+    public void CalculateUnloadBloks()
+    {
+        _numberUnloadBlocks++;
+        NumberUnloadBlocksIsChanged?.Invoke(_numberUnloadBlocks);
     }
 
     private IEnumerator CalculateBlocks()
@@ -35,11 +40,5 @@ public class CalculatorBlocks : MonoBehaviour
         StopCoroutine(CalculateBlocks());
 
         yield return null;
-    }
-
-    public void CalculateUnloadBloks()
-    {
-        _numberUnloadBlocks++;
-        IsChangedNumberUnloadBlocks?.Invoke(_numberUnloadBlocks);
     }
 }

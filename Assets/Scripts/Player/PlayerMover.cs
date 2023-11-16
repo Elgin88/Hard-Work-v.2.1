@@ -12,9 +12,9 @@ public class PlayerMover : MonoBehaviour
     private Coroutine _moveWork;
     private bool _isJoystickTurn;
 
+    public Action IsPushed;
     public Quaternion CurrentPlayerDirection => _currentPlayerDirection;
     public bool IsJoystickTurn => _isJoystickTurn;
-    public Action IsPushed;
 
     private void Start()
     {
@@ -26,35 +26,6 @@ public class PlayerMover : MonoBehaviour
         _isJoystickTurn = false;
 
         StartCoroutineMove();
-    }
-
-    private IEnumerator Move()
-    {
-        while (true)
-        {
-            if (_playerRequreComponents.FixedJoystick != null)
-            {
-                if ((_playerRequreComponents.FixedJoystick.Horizontal != 0) || (_playerRequreComponents.FixedJoystick.Vertical != 0))
-                {
-                    _isJoystickTurn = true;
-                    _currentPlayerDirection = Quaternion.LookRotation(new Vector3(_playerRequreComponents.FixedJoystick.Horizontal, 0, _playerRequreComponents.FixedJoystick.Vertical));
-                    transform.rotation = _currentPlayerDirection;
-                    transform.position = new Vector3(transform.position.x + _playerRequreComponents.FixedJoystick.Horizontal * Time.deltaTime * _playerSpeedSetter.CurrentSpeed, transform.position.y, transform.position.z + _playerRequreComponents.FixedJoystick.Vertical * Time.deltaTime * _playerSpeedSetter.CurrentSpeed);
-
-                    _playerSoundController.StopMinEngineSound();
-                    _playerSoundController.PlayMaxEngineSound();
-                }
-                else
-                {
-                    _isJoystickTurn = false;
-
-                    _playerSoundController.StopMaxEngineSound();
-                    _playerSoundController.PlayMinEngineSound();
-                }
-            }
-
-            yield return null;
-        }
     }
 
     public void SlowDown()
@@ -76,6 +47,36 @@ public class PlayerMover : MonoBehaviour
         {
             StopCoroutine(_moveWork);
             _moveWork = null;
+        }
+    }
+
+    private IEnumerator Move()
+    {
+        while (true)
+        {
+            if (_playerRequreComponents.FixedJoystick != null)
+            {
+                if (_playerRequreComponents.FixedJoystick.Horizontal != 0 ||
+                    _playerRequreComponents.FixedJoystick.Vertical != 0)
+                {
+                    _isJoystickTurn = true;
+                    _currentPlayerDirection = Quaternion.LookRotation(new Vector3(_playerRequreComponents.FixedJoystick.Horizontal, 0, _playerRequreComponents.FixedJoystick.Vertical));
+                    transform.rotation = _currentPlayerDirection;
+                    transform.position = new Vector3(transform.position.x + _playerRequreComponents.FixedJoystick.Horizontal * Time.deltaTime * _playerSpeedSetter.CurrentSpeed, transform.position.y, transform.position.z + _playerRequreComponents.FixedJoystick.Vertical * Time.deltaTime * _playerSpeedSetter.CurrentSpeed);
+
+                    _playerSoundController.StopMinEngineSound();
+                    _playerSoundController.PlayMaxEngineSound();
+                }
+                else
+                {
+                    _isJoystickTurn = false;
+
+                    _playerSoundController.StopMaxEngineSound();
+                    _playerSoundController.PlayMinEngineSound();
+                }
+            }
+
+            yield return null;
         }
     }
 }	

@@ -32,12 +32,12 @@ public class EnderLevel : MonoBehaviour
 
     private void OnEnable()
     {
-        _calculatorBlocks.IsChangedNumberUnloadBlocks += OnChangedNumberUnloadBlocks;
+        _calculatorBlocks.NumberUnloadBlocksIsChanged += OnChangedNumberUnloadBlocks;
     }
 
     private void OnDisable()
     {
-        _calculatorBlocks.IsChangedNumberUnloadBlocks -= OnChangedNumberUnloadBlocks;
+        _calculatorBlocks.NumberUnloadBlocksIsChanged -= OnChangedNumberUnloadBlocks;
     }
 
     private void OnChangedNumberUnloadBlocks(int unloadBlocks)

@@ -11,7 +11,8 @@ public class AddTankButton : MonoBehaviour
 
     private void Start()
     {
-        if (_cost == null || _button == null || _soundOfBuy == null || _uiRequireComponents == null)
+        if (_cost == null || _button == null ||
+            _soundOfBuy == null || _uiRequireComponents == null)
         {
             Debug.Log("No serializefiel in " + gameObject.name);
         }

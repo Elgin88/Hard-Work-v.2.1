@@ -4,11 +4,7 @@ public class PauserGame : MonoBehaviour
 {
     public void PauseOffInBrauser()
     {
-#if UNITY_EDITOR
-        return;
-#endif
-
-#if UNITY_WEBGL
+#if UNITY_WEBGL && !UNITY_EDITOR
         Time.timeScale = 1;
         AudioListener.pause = false;
 #endif
@@ -16,12 +12,8 @@ public class PauserGame : MonoBehaviour
 
     public void PauseOnInBrauser()
     {
-#if UNITY_EDITOR
-        return;
-#endif
-
-#if UNITY_WEBGL
-        Time.timeScale = 0.000000000000001f;
+#if UNITY_WEBGL && !UNITY_EDITOR
+        Time.timeScale = 0;
         AudioListener.pause = true;
 #endif
     }

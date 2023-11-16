@@ -20,6 +20,23 @@ public class Unloader : MonoBehaviour
         _deltaBetweenUnloadBlocksWFS = new WaitForSeconds(_deltaBetweenUnloadBlocks);
     }
 
+    public void StartUnload()
+    {
+        if (_unload == null)
+        {
+            _unload = StartCoroutine(Unload());
+        }
+    }
+
+    public void StopUnload()
+    {
+        if (_unload != null)
+        {
+            StopCoroutine(_unload);
+            _unload = null;
+        }
+    }
+
     private IEnumerator Unload()
     {
         while (true)
@@ -43,24 +60,6 @@ public class Unloader : MonoBehaviour
             }
 
             yield return _deltaBetweenUnloadBlocksWFS;
-
-        }
-    }
-
-    public void StartUnload()
-    {
-        if (_unload == null)
-        {
-            _unload = StartCoroutine(Unload());
-        }
-    }
-
-    public void StopUnload()
-    {
-        if (_unload != null)
-        {
-            StopCoroutine(_unload);
-            _unload = null;
         }
     }
 }

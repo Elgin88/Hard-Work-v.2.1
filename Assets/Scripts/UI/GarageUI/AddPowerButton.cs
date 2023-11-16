@@ -13,7 +13,8 @@ public class AddPowerButton : MonoBehaviour
 
     private void Start()
     {
-        if (_cost == null || _button == null || _soundOfBuy == null || _UIRequireComponents == null)
+        if (_cost == null || _button == null ||
+            _soundOfBuy == null || _UIRequireComponents == null)
         {
             Debug.Log("No serializefiel in " + gameObject.name);
         }
@@ -23,8 +24,7 @@ public class AddPowerButton : MonoBehaviour
     {
         _button.onClick.AddListener(OnButtonClick);
         _UIRequireComponents.PlayerMoney.IsMoneyChanged += OnMoneyChanged;
-        _UIRequireComponents.PowerController.IsEngineUpgrade += OnEngineLevelChanged;
-
+        _UIRequireComponents.PowerController.IsEngineUpgraded += OnEngineLevelChanged;
         _cost.text = _UIRequireComponents.Garage.PowerCost.ToString();
 
         CheckButton();
@@ -34,7 +34,7 @@ public class AddPowerButton : MonoBehaviour
     {
         _button.onClick.RemoveListener(OnButtonClick);
         _UIRequireComponents.PlayerMoney.IsMoneyChanged -= OnMoneyChanged;
-        _UIRequireComponents.PowerController.IsEngineUpgrade -= OnEngineLevelChanged;
+        _UIRequireComponents.PowerController.IsEngineUpgraded -= OnEngineLevelChanged;
     }
 
     private void OnButtonClick()

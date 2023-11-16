@@ -19,16 +19,6 @@ public class EngineBarIconColorSetter : MonoBehaviour
         }
     }
 
-    private IEnumerator ChangeColor()
-    {
-        while (true)
-        {
-            _image.CrossFadeColor(_targetColor, _duration, false, false);
-
-            yield return null;
-        }
-    }
-
     public void StartChangeColor()
     {
         if (_changeColor == null)
@@ -43,6 +33,16 @@ public class EngineBarIconColorSetter : MonoBehaviour
         {
             _changeColor = StartCoroutine(ChangeColor());
             _changeColor = null;
+        }
+    }
+
+    private IEnumerator ChangeColor()
+    {
+        while (true)
+        {
+            _image.CrossFadeColor(_targetColor, _duration, false, false);
+
+            yield return null;
         }
     }
 }

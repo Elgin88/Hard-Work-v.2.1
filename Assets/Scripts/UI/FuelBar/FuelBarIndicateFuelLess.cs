@@ -23,14 +23,16 @@ public class FuelBarIndicateFuelLess : MonoBehaviour
 
     private void OnEnable()
     {
-        if (_minLevelForIndicate==0 || _duration == 0 || _deltaScale == 0 || _targetColor == null || _UIRequireComponents == null || _rectTransform == null || _image == null)
+        if (_minLevelForIndicate==0 || _duration == 0 ||
+            _deltaScale == 0 || _targetColor == null ||
+            _UIRequireComponents == null || _rectTransform == null ||
+            _image == null)
         {
             Debug.Log("No SerializeField in " + gameObject.name);
         }
 
         _startStale = _rectTransform.localScale;
         _startColor = _image.color;
-
         _currentScale = _startStale;
 
         _targetScale.x = _startStale.x + _deltaScale;
@@ -38,7 +40,6 @@ public class FuelBarIndicateFuelLess : MonoBehaviour
         _targetScale.z = _startStale.z + _deltaScale;
 
         _deltaScaleCalculated = _deltaScale / (_duration / 2 / Time.deltaTime);
-
         _UIRequireComponents.PlayerFuelController.IsFuelChanged += OnFuelChanged;
     } 
 
@@ -109,7 +110,6 @@ public class FuelBarIndicateFuelLess : MonoBehaviour
     {
         _image.CrossFadeColor(color, _duration / 2, false, false);
     }
-
 
     private void StartFlash()
     {

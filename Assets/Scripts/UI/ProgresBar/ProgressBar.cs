@@ -1,6 +1,6 @@
+using System;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class ProgressBar : MonoBehaviour
@@ -14,7 +14,7 @@ public class ProgressBar : MonoBehaviour
     private int _allBlocks;
     private float _currentValue;    
 
-    public event UnityAction <bool, bool, bool > IsChangedValue;
+    public Action <bool, bool, bool > IsChangedValue;
 
     private void Start()
     {
@@ -28,12 +28,12 @@ public class ProgressBar : MonoBehaviour
     {
         _slider.value = 0;
 
-        _UIRequireComponents.CalculatorBlocks.IsChangedNumberUnloadBlocks += OnChangedNumberBlocks;
+        _UIRequireComponents.CalculatorBlocks.NumberUnloadBlocksIsChanged += OnChangedNumberBlocks;
     }
 
     private void OnDisable()
     {
-        _UIRequireComponents.CalculatorBlocks.IsChangedNumberUnloadBlocks -= OnChangedNumberBlocks;
+        _UIRequireComponents.CalculatorBlocks.NumberUnloadBlocksIsChanged -= OnChangedNumberBlocks;
     }
 
     private void OnChangedNumberBlocks(int unloadBlocks)

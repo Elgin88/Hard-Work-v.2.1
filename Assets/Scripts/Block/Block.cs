@@ -28,34 +28,6 @@ public class Block : MonoBehaviour
         }
     }
 
-    private void BlocksUnloaded(bool isUnload)
-    {
-        _playerIsUnload = isUnload;
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.TryGetComponent<Destroyer>(out Destroyer destroyer))
-        {
-            _playerMover.SlowDown();
-
-            if (_playerIsUnload != true & _playerLoadController.IsUnload == false)
-            {
-                _point = _inventory.TryTakePoint();
-
-                if (_point != null)
-                {
-                    KinematicOn();
-                    ColliderOff();
-                    GravityOff();
-
-                    _point.InitBlock(this);
-                    _blockMover.StartMoveToPlayer();
-                }
-            }
-        }
-    }
-
     public void WakeUp()
     {
         _rigidbody.WakeUp();
@@ -106,14 +78,6 @@ public class Block : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private IEnumerator TimerPhysicsOff()
-    {
-        yield return _timerWFS;
-
-        KinematicOn();
-        GravityOff();
-    }
-
     public void StartTimerPhysicsOff()
     {
         if (_timerPhysicsOff == null)
@@ -129,5 +93,41 @@ public class Block : MonoBehaviour
             StopCoroutine(_timerPhysicsOff);
             _timerPhysicsOff = null;
         }
+    }
+
+    private void BlocksUnloaded(bool isUnload)
+    {
+        _playerIsUnload = isUnload;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.TryGetComponent<Destroyer>(out Destroyer destroyer))
+        {
+            _playerMover.SlowDown();
+
+            if (_playerIsUnload != true & _playerLoadController.IsUnload == false)
+            {
+                _point = _inventory.TryTakePoint();
+
+                if (_point != null)
+                {
+                    KinematicOn();
+                    ColliderOff();
+                    GravityOff();
+
+                    _point.InitBlock(this);
+                    _blockMover.StartMoveToPlayer();
+                }
+            }
+        }
+    }
+
+    private IEnumerator TimerPhysicsOff()
+    {
+        yield return _timerWFS;
+
+        KinematicOn();
+        GravityOff();
     }
 }

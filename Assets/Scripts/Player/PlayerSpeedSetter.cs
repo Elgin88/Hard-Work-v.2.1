@@ -42,6 +42,16 @@ public class PlayerSpeedSetter : MonoBehaviour
         StartCoroutineChangeSpeed();
     }
 
+    public void ChangeDeltaPushSpeed(float deltaPush)
+    {
+        _pushChangeSpeed -= deltaPush;
+
+        if (_pushChangeSpeed <= 0)
+        {
+            _pushChangeSpeed = 0;
+        }
+    }
+
     private void Update()
     {
         _timeAftetLastPush += Time.deltaTime;
@@ -109,16 +119,6 @@ public class PlayerSpeedSetter : MonoBehaviour
         {
             StopCoroutine(_changeSpeedWork);
             _changeSpeedWork = null;
-        }
-    }
-
-    public void ChangeDeltaPushSpeed(float deltaPush)
-    {
-        _pushChangeSpeed -= deltaPush;
-
-        if (_pushChangeSpeed <= 0)
-        {
-            _pushChangeSpeed = 0;
         }
     }
 }

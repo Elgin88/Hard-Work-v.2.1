@@ -9,8 +9,8 @@ public class PlayerInventory : MonoBehaviour
 
     private bool _isFull = false;
 
+    public Action <int,int> NumberBlocksIsChanged;
     public int GetNumberLines => _lines.Count;
-    public Action <int,int> IsChangedNumberBlocks;
 
     private void Start()
     {
@@ -115,6 +115,6 @@ public class PlayerInventory : MonoBehaviour
 
     public void InitEventBlockIsChanged()
     {
-        IsChangedNumberBlocks?.Invoke(GetCurrentCountOfBlocks(), GetMaxCountOfBlocks());
+        NumberBlocksIsChanged?.Invoke(GetCurrentCountOfBlocks(), GetMaxCountOfBlocks());
     }
 }

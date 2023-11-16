@@ -20,6 +20,23 @@ public class SectionOfBlocks : MonoBehaviour
         }
     }
 
+    public void StartActiveBlocks()
+    {
+        if (_activeBlocks == null)
+        {
+            _activeBlocks = StartCoroutine(ActiveBlocks());
+        }
+    }
+
+    public void StopActiveBlocks()
+    {
+        if (_activeBlocks != null)
+        {
+            StopCoroutine(_activeBlocks);
+            _activeBlocks = null;
+        }
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.TryGetComponent<Destroyer>(out Destroyer destroyer))
@@ -54,23 +71,6 @@ public class SectionOfBlocks : MonoBehaviour
             StopActiveBlocks();
 
             yield return null;
-        }
-    }
-
-    public void StartActiveBlocks()
-    {
-        if (_activeBlocks == null)
-        {
-            _activeBlocks = StartCoroutine(ActiveBlocks());
-        }
-    }
-
-    public void StopActiveBlocks()
-    {
-        if (_activeBlocks != null)
-        {
-            StopCoroutine(_activeBlocks);
-            _activeBlocks = null;
         }
     }
 }

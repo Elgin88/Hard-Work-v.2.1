@@ -18,11 +18,7 @@ public class SoundOffWhenMinimizingGame : MonoBehaviour
 
     private void Update()
     {
-#if UNITY_EDITOR
-        return;
-#endif
-
-#if UNITY_WEBGL
+#if UNITY_WEBGL && !UNITY_EDITOR
         if (Agava.WebUtility.WebApplication.InBackground == true & _isSoundOn == true)
         {
             _soundController.SetMinSoundValueInBrauser();
@@ -34,5 +30,13 @@ public class SoundOffWhenMinimizingGame : MonoBehaviour
             _isSoundOn = true;
         }
 #endif
+    }
+
+    private void MethodForDeleteErrorInConsol()
+    {
+        if (_isSoundOn)
+        {
+            _isSoundOn = true;
+        }
     }
 }

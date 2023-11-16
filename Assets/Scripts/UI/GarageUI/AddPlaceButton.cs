@@ -11,7 +11,8 @@ public class AddPlaceButton : MonoBehaviour
 
     private void Start()
     {
-        if (_cost == null || _button == null || _soundOfBuy == null || _uiRequireComponents == null)
+        if (_cost == null || _button == null ||
+            _soundOfBuy == null || _uiRequireComponents == null)
         {
             Debug.Log("No serializefiel in " + gameObject.name);
         }
@@ -21,7 +22,6 @@ public class AddPlaceButton : MonoBehaviour
     {
         _button.onClick.AddListener(OnAddPlaceButtonClick);
         _uiRequireComponents.PlayerMoney.IsMoneyChanged += OnMoneyChanged;
-
         _cost.text = _uiRequireComponents.Garage.PlaceCost.ToString();
 
         SetStatusButton();        
@@ -37,7 +37,6 @@ public class AddPlaceButton : MonoBehaviour
     {
         _uiRequireComponents.PlayerUpgrader.TryAddPlace();
         _soundOfBuy.Play();
-
         _uiRequireComponents.GarageSoundController.StartPlaySoundFinEngine();
     }
 

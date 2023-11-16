@@ -6,7 +6,6 @@ public class MoneyBar : MonoBehaviour
     [SerializeField] private TMP_Text _moneyCount;
     [SerializeField] private UIRequireComponents _uiRequireComponents;
 
-
     private void Start()
     {
         if (_moneyCount == null || _uiRequireComponents == null)

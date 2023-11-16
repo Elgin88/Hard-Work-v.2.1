@@ -10,11 +10,11 @@ public class ChooserMedals : MonoBehaviour
     private bool _isMiddleMedal = false;
     private bool _isMinMedal = false;
 
+    public event UnityAction <bool, bool, bool> IsMedalsChoosen;
     public bool IsMaxMedal => _isMaxMedal;
     public bool IsMiddleMedal => _isMiddleMedal;
     public bool IsMinMedal => _isMinMedal;
 
-    public event UnityAction <bool, bool, bool> IsMedalsChoosen;
 
     private void Start()
     {

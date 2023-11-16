@@ -5,9 +5,9 @@ public class PlayerMoney : MonoBehaviour
 {
     [SerializeField] private PlayerRequireComponents _playerRequireComponents;
 
+    public Action <int> IsMoneyChanged;
     private int _money;
     public int Money => _money;
-    public Action <int> IsMoneyChanged;
 
     private void Start()
     {

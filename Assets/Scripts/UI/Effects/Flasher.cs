@@ -25,6 +25,23 @@ public class Flasher : MonoBehaviour
         StopFlash();
     }
 
+    public void StartFlash()
+    {
+        if (_flash == null)
+        {
+            _flash = StartCoroutine(Flash());
+        }
+    }
+
+    public void StopFlash()
+    {
+        if (_flash != null)
+        {
+            StopCoroutine(_flash);
+            _flash = null;
+        }
+    }
+
     private IEnumerator Flash()
     {
         bool isForward = true;
@@ -57,23 +74,6 @@ public class Flasher : MonoBehaviour
             transform.localScale = _currentScale;
 
             yield return null;
-        }
-    }
-
-    public void StartFlash()
-    {
-        if (_flash == null)
-        {
-            _flash = StartCoroutine(Flash());
-        }
-    }
-
-    public void StopFlash()
-    {
-        if (_flash != null)
-        {
-            StopCoroutine(_flash);
-            _flash = null;
         }
     }
 }

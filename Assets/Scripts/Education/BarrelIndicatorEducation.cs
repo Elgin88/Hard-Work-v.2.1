@@ -11,12 +11,12 @@ public class BarrelIndicatorEducation : MonoBehaviour
 
     private void Start()
     {
-        _inventory.IsChangedNumberBlocks += OnChangedNumberBlocksOnPlayer;
+        _inventory.NumberBlocksIsChanged += OnChangedNumberBlocksOnPlayer;
     }
 
     private void OnDisable()
     {
-        _inventory.IsChangedNumberBlocks -= OnChangedNumberBlocksOnPlayer;
+        _inventory.NumberBlocksIsChanged -= OnChangedNumberBlocksOnPlayer;
     }
 
     private void OnChangedNumberBlocksOnPlayer(int current, int max)
