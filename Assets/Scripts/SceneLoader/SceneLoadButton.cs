@@ -6,13 +6,10 @@ public class SceneLoadButton : MonoBehaviour
 {
     [SerializeField] private Button _loadLevelButton;
     [SerializeField] private ChooserLevelNameForLoad _chooserLevelName;
-    [SerializeField] private UIRequireComponents _uiRequireComponents;
-    [SerializeField] private Advertising _advertising;
-    [SerializeField] private ScenesNames _sceneNames;
 
     private void Start()
     {
-        if (_loadLevelButton == null || _chooserLevelName == null || _sceneNames == null)
+        if (_loadLevelButton == null || _chooserLevelName == null)
         {
             Debug.Log("No serializefield in " + gameObject.name);
         }
@@ -27,15 +24,6 @@ public class SceneLoadButton : MonoBehaviour
 
     private void OnLoadButtonClick()
     {
-        if (SceneManager.GetActiveScene().name == _sceneNames.Level0Name)
-        {
-            _advertising.ShowInterstitialAd();
-        }
-        else
-        {
-            _uiRequireComponents.Advertising.ShowInterstitialAd();
-        }
-
         SceneManager.LoadScene(_chooserLevelName.GetLoadLevelName());
     }
 }

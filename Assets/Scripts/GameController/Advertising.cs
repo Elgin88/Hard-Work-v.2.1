@@ -11,6 +11,8 @@ public class Advertising : MonoBehaviour
         {
             Debug.Log("No serializefield + " + gameObject.name);
         }
+
+        ShowInterstitialAd();
     }
 
     public void ShowVideoAd()
