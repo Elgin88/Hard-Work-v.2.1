@@ -14,7 +14,7 @@ public class Advertising : MonoBehaviour
             Debug.Log("No serializefield + " + gameObject.name);
         }
 
-        if (SceneManager.GetActiveScene().name != _sceneNames.Level0Name & SceneManager.GetActiveScene().name != _sceneNames.LevelSDK)
+        if (SceneManager.GetActiveScene().name != _sceneNames.Level0Name)
         {
             ShowInterstitialAd();
         }        
