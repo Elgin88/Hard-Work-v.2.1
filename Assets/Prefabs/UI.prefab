@@ -103,7 +103,6 @@ GameObject:
   - component: {fileID: 5261934273334388728}
   - component: {fileID: 8629677021796622756}
   - component: {fileID: 8853303082456615931}
-  - component: {fileID: 1618253928589634541}
   m_Layer: 5
   m_Name: FuelIcon
   m_TagString: Untagged
@@ -169,18 +168,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1618253928589634541
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 245918126583643359}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b006eb414b0e4058ab26697750a1c65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &266311017951334767
 GameObject:
   m_ObjectHideFlags: 0
@@ -7614,9 +7601,8 @@ GameObject:
   - component: {fileID: 5013134128338672361}
   - component: {fileID: 8882887608997038998}
   - component: {fileID: 6191829458018029712}
-  - component: {fileID: 5747845585685448294}
   m_Layer: 5
-  m_Name: FuelIcon (1)
+  m_Name: FuelIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7680,18 +7666,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5747845585685448294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5178565663336988550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b006eb414b0e4058ab26697750a1c65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5232990436621959398
 GameObject:
   m_ObjectHideFlags: 0
@@ -9228,6 +9202,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5003903023981660145}
   - component: {fileID: 5803170276896260143}
+  - component: {fileID: 1291429958415142978}
   m_Layer: 5
   m_Name: ReloadLevel
   m_TagString: Untagged
@@ -9272,6 +9247,18 @@ MonoBehaviour:
   _panel: {fileID: 1231575240633968300}
   _button: {fileID: 1758577148977956223}
   _UIRequireComponents: {fileID: 6390884785094593398}
+--- !u!114 &1291429958415142978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7064016278426175028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b006eb414b0e4058ab26697750a1c65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7421428531279286580
 GameObject:
   m_ObjectHideFlags: 0
@@ -9359,9 +9346,8 @@ GameObject:
   - component: {fileID: 1503551552892443582}
   - component: {fileID: 2449110076832956365}
   - component: {fileID: 7552704940424693359}
-  - component: {fileID: 5726942737174667887}
   m_Layer: 5
-  m_Name: FuelIcon (2)
+  m_Name: FuelIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9425,18 +9411,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5726942737174667887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8039953648073868975}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b006eb414b0e4058ab26697750a1c65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8809950715012032252
 GameObject:
   m_ObjectHideFlags: 0
