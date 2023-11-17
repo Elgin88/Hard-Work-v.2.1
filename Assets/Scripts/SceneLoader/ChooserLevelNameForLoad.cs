@@ -4,12 +4,11 @@ using UnityEngine.SceneManagement;
 public class ChooserLevelNameForLoad : MonoBehaviour
 {
     [SerializeField] private ScenesNames _sceneNames;
+    [SerializeField] private Loader _loader;
 
     private string _currentSceneName;
     private string _nextSceneName;
-
-    public string CurrentSceneName => _currentSceneName;
-    public string NextSceneName => _nextSceneName;
+    private string _savedSceneName;
 
     private void Start()
     {
@@ -21,7 +20,7 @@ public class ChooserLevelNameForLoad : MonoBehaviour
         _currentSceneName = SceneManager.GetActiveScene().name;
     }
 
-    public string GetLoadLevelName()
+    public string GetNextSceneName()
     {
         if (_currentSceneName == _sceneNames.LevelSDK)
         {
@@ -42,6 +41,11 @@ public class ChooserLevelNameForLoad : MonoBehaviour
         else if (_currentSceneName == _sceneNames.Level3Name)
         {
             _nextSceneName = _sceneNames.Level1Name;
+        }
+
+        if (_loader.GetSceneNameForLoad() != "")
+        {
+            _nextSceneName = _loader.GetSceneNameForLoad();
         }
 
         return _nextSceneName;

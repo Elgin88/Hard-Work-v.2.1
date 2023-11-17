@@ -10,6 +10,7 @@ using UnityEngine;
 [RequireComponent(typeof(PauserGame))]
 [RequireComponent(typeof(Advertising))]
 [RequireComponent(typeof(ScenesNames))]
+[RequireComponent(typeof(ChooserLevelNameForLoad))]
 
 public class GameControllerRequireComponents : MonoBehaviour
 {

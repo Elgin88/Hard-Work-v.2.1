@@ -6716,6 +6716,10 @@ PrefabInstance:
       propertyPath: _interstitialController
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6390884785094593398, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
+      propertyPath: _chooserLevelNameForLoad
+      value: 
+      objectReference: {fileID: 1852628446}
     - target: {fileID: 6533289347556649745, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
       propertyPath: m_Layer
       value: 5
@@ -6888,17 +6892,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1758577149519813682, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
   m_PrefabInstance: {fileID: 827877611}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &827877616 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1706779015290161416, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
-  m_PrefabInstance: {fileID: 827877611}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6748e9d99bd104054825ea87db4fcc59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &843708715
 GameObject:
   m_ObjectHideFlags: 0
@@ -13728,17 +13721,6 @@ Transform:
   m_Father: {fileID: 1523990344}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1804094066 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7673415597685511278, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
-  m_PrefabInstance: {fileID: 827877611}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e68f5faeff1344383864baaabb6e7028, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1807830192 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
@@ -13869,6 +13851,7 @@ GameObject:
   - component: {fileID: 1852628433}
   - component: {fileID: 1852628444}
   - component: {fileID: 1852628445}
+  - component: {fileID: 1852628446}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -14081,7 +14064,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerMoney: {fileID: 1361587982}
-  _chooserLevelName: {fileID: 1804094066}
+  _chooserLevelName: {fileID: 1852628446}
+  _sceneNames: {fileID: 1852628445}
 --- !u!114 &1852628440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14107,7 +14091,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pauserGame: {fileID: 1852628440}
-  _sceneNames: {fileID: 827877616}
+  _sceneNames: {fileID: 1852628445}
 --- !u!114 &1852628444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14133,6 +14117,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6748e9d99bd104054825ea87db4fcc59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1852628446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852628423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e68f5faeff1344383864baaabb6e7028, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sceneNames: {fileID: 1852628445}
+  _loader: {fileID: 1852628444}
 --- !u!1001 &1858453383
 PrefabInstance:
   m_ObjectHideFlags: 0

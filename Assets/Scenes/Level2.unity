@@ -22605,6 +22605,10 @@ PrefabInstance:
       propertyPath: _interstitialController
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6390884785094593398, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
+      propertyPath: _chooserLevelNameForLoad
+      value: 
+      objectReference: {fileID: 1387426536}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
 --- !u!114 &678367336 stripped
@@ -49268,8 +49272,8 @@ GameObject:
   - component: {fileID: 1387426529}
   - component: {fileID: 1387426533}
   - component: {fileID: 1387426532}
-  - component: {fileID: 1387426534}
   - component: {fileID: 1387426520}
+  - component: {fileID: 1387426534}
   - component: {fileID: 1387426535}
   - component: {fileID: 1387426536}
   - component: {fileID: 1387426537}
@@ -49473,6 +49477,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerMoney: {fileID: 2716068639730957568}
   _chooserLevelName: {fileID: 1387426536}
+  _sceneNames: {fileID: 1387426537}
 --- !u!114 &1387426533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49526,6 +49531,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneNames: {fileID: 1387426537}
+  _loader: {fileID: 1387426538}
 --- !u!114 &1387426537
 MonoBehaviour:
   m_ObjectHideFlags: 0

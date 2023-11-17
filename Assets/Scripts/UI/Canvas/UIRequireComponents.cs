@@ -26,6 +26,7 @@ public class UIRequireComponents : MonoBehaviour
     [SerializeField] private PlayerSpeedSetter _playerSpeedSetter;
     [SerializeField] private Advertising _advertising;
     [SerializeField] private PlayerMoney _playerMoney;
+    [SerializeField] private ChooserLevelNameForLoad _chooserLevelNameForLoad;
 
     public PlayerRequireComponents Player => _player;
     public JoystickIndicatorEducation[] JoystickIndicators => _joystickIndicators;
@@ -51,6 +52,7 @@ public class UIRequireComponents : MonoBehaviour
     public PlayerSpeedSetter PlayerSpeedSetter => _playerSpeedSetter;
     public Advertising Advertising => _advertising;
     public PlayerMoney PlayerMoney => _playerMoney;
+    public ChooserLevelNameForLoad ChooserLevelNameForLoad => _chooserLevelNameForLoad;
 
     private void Start()
     {
@@ -78,7 +80,8 @@ public class UIRequireComponents : MonoBehaviour
             _pauserGame == null ||
             _playerSpeedSetter == null||
             _advertising == null ||
-            _playerMoney == null)
+            _playerMoney == null ||
+            _chooserLevelNameForLoad == null)
         {
             Debug.Log("No serializefiel in " + gameObject.name);
         }

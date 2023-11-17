@@ -1264,7 +1264,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7636103801750528478
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2580,6 +2580,7 @@ MonoBehaviour:
   _playerSpeedSetter: {fileID: 0}
   _advertising: {fileID: 0}
   _playerMoney: {fileID: 0}
+  _chooserLevelNameForLoad: {fileID: 0}
 --- !u!82 &1791244643987670448
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2860,9 +2861,7 @@ GameObject:
   - component: {fileID: 1758577149615600953}
   - component: {fileID: 1758577149615600958}
   - component: {fileID: 1758577149615600959}
-  - component: {fileID: 4997859890080629725}
-  - component: {fileID: 7673415597685511278}
-  - component: {fileID: 1706779015290161416}
+  - component: {fileID: 5786923059718928228}
   m_Layer: 5
   m_Name: NextLevelButton
   m_TagString: Untagged
@@ -2985,7 +2984,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &4997859890080629725
+--- !u!114 &5786923059718928228
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2994,36 +2993,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1758577149615600957}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38b600b2556174374a35ff5ba6135317, type: 3}
+  m_Script: {fileID: 11500000, guid: bd7923b9570c340268ca4002f57bc5e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _loadLevelButton: {fileID: 1758577149615600959}
-  _chooserLevelName: {fileID: 7673415597685511278}
---- !u!114 &7673415597685511278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1758577149615600957}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e68f5faeff1344383864baaabb6e7028, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _sceneNames: {fileID: 1706779015290161416}
---- !u!114 &1706779015290161416
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1758577149615600957}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6748e9d99bd104054825ea87db4fcc59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  _nextLevelButton: {fileID: 1758577149615600959}
+  _uiRequireComponents: {fileID: 6390884785094593398}
 --- !u!1 &1758577149661271912
 GameObject:
   m_ObjectHideFlags: 0
@@ -9106,7 +9080,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8584364332588846045
 RectTransform:
   m_ObjectHideFlags: 0
