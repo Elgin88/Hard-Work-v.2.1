@@ -9,7 +9,7 @@ public class AddMoneyForVideoAddButton : MonoBehaviour
     [SerializeField] private Button _button;
     [SerializeField] private AudioSource _moneySound;
 
-    private WaitForSeconds _delayPressButton = new WaitForSeconds(0.6f);
+    private WaitForSeconds _delayPressButton = new WaitForSeconds(1.5f);
     private WaitForSeconds _delayShowVideoAd = new WaitForSeconds(0.5f);
 
     private void Start()

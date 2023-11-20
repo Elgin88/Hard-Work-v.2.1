@@ -43,7 +43,7 @@ public class ChooserLevelNameForLoad : MonoBehaviour
             _nextSceneName = _sceneNames.Level1Name;
         }
 
-        if (_loader.GetSceneNameForLoad() != "")
+        if (_currentSceneName == _sceneNames.Level0Name & _loader.GetSceneNameForLoad() != "")
         {
             _nextSceneName = _loader.GetSceneNameForLoad();
         }
