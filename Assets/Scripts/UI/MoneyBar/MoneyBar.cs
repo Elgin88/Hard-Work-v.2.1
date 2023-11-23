@@ -7,16 +7,16 @@ namespace HardWork
     public class MoneyBar : MonoBehaviour
     {
         [SerializeField] private TMP_Text _moneyCount;
-        [SerializeField] private UIRequireComponents _uiRequireComponents;
+        [SerializeField] private RequireComponentsForUI _requireComponentsForUI;
 
         private void OnEnable()
         {
-            _uiRequireComponents.PlayerMoney.IsMoneyChanged += OnMoneyChanged;
+            _requireComponentsForUI.PlayerMoney.IsMoneyChanged += OnMoneyChanged;
         }
 
         private void OnDisable()
         {
-            _uiRequireComponents.PlayerMoney.IsMoneyChanged -= OnMoneyChanged;
+            _requireComponentsForUI.PlayerMoney.IsMoneyChanged -= OnMoneyChanged;
         }
 
         private void OnMoneyChanged(int money)

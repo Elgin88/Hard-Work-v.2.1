@@ -10,26 +10,18 @@ namespace HardWork
         [SerializeField] private MinMedal _minMedal;
         [SerializeField] private MiddleMedal _middleMedal;
         [SerializeField] private MaxMedal _maxMedal;
-        [SerializeField] private UIRequireComponents _UIRequireComponents;
-
-        private void Start()
-        {
-            if (_minMedal == null || _middleMedal == null || _maxMedal == null || _UIRequireComponents == null)
-            {
-                Debug.Log("No serializefiel in " + gameObject.name);
-            }
-        }
+        [SerializeField] private RequireComponentsForUI _requireComponentsForUI;
 
         private void OnEnable()
         {
-            OpenPanels(_UIRequireComponents.ChooserMedal.IsMinMedal, _UIRequireComponents.ChooserMedal.IsMiddleMedal, _UIRequireComponents.ChooserMedal.IsMaxMedal);
+            OpenPanels(_requireComponentsForUI.ChooserMedal.IsMinMedal, _requireComponentsForUI.ChooserMedal.IsMiddleMedal, _requireComponentsForUI.ChooserMedal.IsMaxMedal);
 
-            _UIRequireComponents.ChooserMedal.IsMedalsChoosen += OnMedalsChoosen;
+            _requireComponentsForUI.ChooserMedal.IsMedalsChoosen += OnMedalsChoosen;
         }
 
         private void OnDisable()
         {
-            _UIRequireComponents.ChooserMedal.IsMedalsChoosen -= OnMedalsChoosen;
+            _requireComponentsForUI.ChooserMedal.IsMedalsChoosen -= OnMedalsChoosen;
         }
 
         private void OnMedalsChoosen(bool isMin, bool isMiddle, bool isMax)

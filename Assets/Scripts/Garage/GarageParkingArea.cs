@@ -18,7 +18,7 @@ namespace HardWork
 
                 if (playerRam.PlayerMoney.Money >= _garage.FuelCoust)
                 {
-                    foreach (var indicator in _garage.UIRequireComponents.AddFuelIndicators)
+                    foreach (var indicator in _garage.RequireComponentsForUI.AddFuelIndicators)
                     {
                         if (indicator != null)
                         {

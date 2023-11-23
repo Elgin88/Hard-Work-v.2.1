@@ -11,7 +11,7 @@ namespace HardWork
         [SerializeField] private float _duration;
         [SerializeField] private float _deltaScale;
         [SerializeField] private Color _targetColor;
-        [SerializeField] private UIRequireComponents _UIRequireComponents;
+        [SerializeField] private RequireComponentsForUI _requireComponentsForUI;
         [SerializeField] private RectTransform _rectTransform;
         [SerializeField] private Image _image;
 
@@ -35,12 +35,12 @@ namespace HardWork
             _targetScale.z = _startStale.z + _deltaScale;
 
             _deltaScaleCalculated = _deltaScale / (_duration / 2 / Time.deltaTime);
-            _UIRequireComponents.PlayerFuelController.IsFuelChanged += OnFuelChanged;
+            _requireComponentsForUI.PlayerFuelController.IsFuelChanged += OnFuelChanged;
         }
 
         private void OnDisable()
         {
-            _UIRequireComponents.PlayerFuelController.IsFuelChanged -= OnFuelChanged;
+            _requireComponentsForUI.PlayerFuelController.IsFuelChanged -= OnFuelChanged;
         }
 
         private void OnFuelChanged(float current, float max)

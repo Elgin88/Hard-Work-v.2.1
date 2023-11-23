@@ -10,32 +10,32 @@ namespace HardWork
     {
         [SerializeField] private float _speedOfChange;
         [SerializeField] private Slider _slider;
-        [SerializeField] private UIRequireComponents _UIRequireComponents;
+        [SerializeField] private RequireComponentsForUI _requireComponentsForUI;
 
         private Coroutine _changeValue;
         private int _unloadBlocks;
         private int _allBlocks;
         private float _currentValue;
 
-        public Action<bool, bool, bool> IsChangedValue;
+        public Action <bool, bool, bool> IsChangedValue;
 
         private void OnEnable()
         {
             _slider.value = 0;
 
-            _UIRequireComponents.CalculatorBlocks.NumberUnloadBlocksIsChanged += OnChangedNumberBlocks;
+            _requireComponentsForUI.CalculatorBlocks.NumberUnloadBlocksIsChanged += OnChangedNumberBlocks;
         }
 
         private void OnDisable()
         {
-            _UIRequireComponents.CalculatorBlocks.NumberUnloadBlocksIsChanged -= OnChangedNumberBlocks;
+            _requireComponentsForUI.CalculatorBlocks.NumberUnloadBlocksIsChanged -= OnChangedNumberBlocks;
         }
 
         private void OnChangedNumberBlocks(int unloadBlocks)
         {
             if (_allBlocks == 0)
             {
-                _allBlocks = _UIRequireComponents.CalculatorBlocks.AllBlocks;
+                _allBlocks = _requireComponentsForUI.CalculatorBlocks.AllBlocks;
             }
 
             _unloadBlocks = unloadBlocks;
@@ -50,12 +50,12 @@ namespace HardWork
                 _currentValue = _slider.value;
                 _slider.value = Mathf.MoveTowards(_currentValue, (float)_unloadBlocks / _allBlocks, _speedOfChange * Time.deltaTime);
 
-                if (_slider.value > (float)_UIRequireComponents.LevelCompleter.MinProcent / 100 & _slider.value < (float)_UIRequireComponents.LevelCompleter.MiddleProcent / 100)
+                if (_slider.value > (float)_requireComponentsForUI.LevelCompleter.MinProcent / 100 & _slider.value < (float)_requireComponentsForUI.LevelCompleter.MiddleProcent / 100)
                 {
                     IsChangedValue?.Invoke(true, false, false);
                 }
 
-                if (_slider.value > (float)_UIRequireComponents.LevelCompleter.MiddleProcent / 100 & _slider.value < (float)_UIRequireComponents.LevelCompleter.MaxProcent / 100)
+                if (_slider.value > (float)_requireComponentsForUI.LevelCompleter.MiddleProcent / 100 & _slider.value < (float)_requireComponentsForUI.LevelCompleter.MaxProcent / 100)
                 {
                     IsChangedValue?.Invoke(true, true, false);
                 }

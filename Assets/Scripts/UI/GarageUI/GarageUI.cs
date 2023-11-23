@@ -7,7 +7,7 @@ namespace HardWork
     public class GarageUI : MonoBehaviour
     {
         [SerializeField] private float _rangeToClosePanel;
-        [SerializeField] private UIRequireComponents _UIRequireComponents;
+        [SerializeField] private RequireComponentsForUI _requireComponentsForUI;
 
         private Coroutine _checkDistance;
 
@@ -25,7 +25,7 @@ namespace HardWork
         {
             while (true)
             {
-                if (Vector3.Distance(_UIRequireComponents.DestroyerPoint.transform.position, _UIRequireComponents.GarageParkingArea.transform.position) > _rangeToClosePanel)
+                if (Vector3.Distance(_requireComponentsForUI.DestroyerPoint.transform.position, _requireComponentsForUI.GarageParkingArea.transform.position) > _rangeToClosePanel)
                 {
                     gameObject.SetActive(false);
                 }

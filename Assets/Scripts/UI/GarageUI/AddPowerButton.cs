@@ -10,25 +10,16 @@ namespace HardWork
         [SerializeField] private TMP_Text _cost;
         [SerializeField] private Button _button;
         [SerializeField] private AudioSource _soundOfBuy;
-        [SerializeField] private UIRequireComponents _UIRequireComponents;
+        [SerializeField] private RequireComponentsForUI _requireComponentsForUI;
 
         private bool _isMaxLevelEngine;
-
-        private void Start()
-        {
-            if (_cost == null || _button == null ||
-                _soundOfBuy == null || _UIRequireComponents == null)
-            {
-                Debug.Log("No serializefiel in " + gameObject.name);
-            }
-        }
 
         private void OnEnable()
         {
             _button.onClick.AddListener(OnButtonClick);
-            _UIRequireComponents.PlayerMoney.IsMoneyChanged += OnMoneyChanged;
-            _UIRequireComponents.PowerController.IsEngineUpgraded += OnEngineLevelChanged;
-            _cost.text = _UIRequireComponents.Garage.PowerCost.ToString();
+            _requireComponentsForUI.PlayerMoney.IsMoneyChanged += OnMoneyChanged;
+            _requireComponentsForUI.PowerController.IsEngineUpgraded += OnEngineLevelChanged;
+            _cost.text = _requireComponentsForUI.Garage.PowerCost.ToString();
 
             CheckButton();
         }
@@ -36,15 +27,15 @@ namespace HardWork
         private void OnDisable()
         {
             _button.onClick.RemoveListener(OnButtonClick);
-            _UIRequireComponents.PlayerMoney.IsMoneyChanged -= OnMoneyChanged;
-            _UIRequireComponents.PowerController.IsEngineUpgraded -= OnEngineLevelChanged;
+            _requireComponentsForUI.PlayerMoney.IsMoneyChanged -= OnMoneyChanged;
+            _requireComponentsForUI.PowerController.IsEngineUpgraded -= OnEngineLevelChanged;
         }
 
         private void OnButtonClick()
         {
-            _UIRequireComponents.PlayerUpgrader.TryAddPower();
+            _requireComponentsForUI.PlayerUpgrader.TryAddPower();
             _soundOfBuy.Play();
-            _UIRequireComponents.GarageSoundController.StartPlaySoundFinEngine();
+            _requireComponentsForUI.GarageSoundController.StartPlaySoundFinEngine();
         }
 
         private void OnMoneyChanged(int money)
@@ -60,7 +51,7 @@ namespace HardWork
 
         private void CheckButton()
         {
-            if (_UIRequireComponents.PlayerMoney.Money > _UIRequireComponents.Garage.PowerCost & _isMaxLevelEngine == false)
+            if (_requireComponentsForUI.PlayerMoney.Money > _requireComponentsForUI.Garage.PowerCost & _isMaxLevelEngine == false)
             {
                 _button.interactable = true;
             }

@@ -7,19 +7,11 @@ namespace HardWork
     public class TotalScore : MonoBehaviour
     {
         [SerializeField] private TMP_Text _label;
-        [SerializeField] private UIRequireComponents _UIRequireComponents;
-
-        private void Start()
-        {
-            if (_label == null || _UIRequireComponents == null)
-            {
-                Debug.Log("No serializefiel in " + gameObject.name);
-            }
-        }
+        [SerializeField] private RequireComponentsForUI _requireComponentsForUI;
 
         private void OnEnable()
         {
-            _label.text = _UIRequireComponents.CalculatorBlocks.Unload.ToString();
+            _label.text = _requireComponentsForUI.CalculatorBlocks.Unload.ToString();
         }
     }
 }

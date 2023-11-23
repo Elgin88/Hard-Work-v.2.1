@@ -10,9 +10,9 @@ namespace HardWork
         [SerializeField] private int _placeCost;
         [SerializeField] private int _powerCost;
         [SerializeField] private GarageUI _garageUI;
-        [SerializeField] private UIRequireComponents _UIRequireComponents;
+        [SerializeField] private RequireComponentsForUI _requireComponentsForUI;
 
-        public UIRequireComponents UIRequireComponents => _UIRequireComponents;
+        public RequireComponentsForUI RequireComponentsForUI => _requireComponentsForUI;
 
         public GarageUI GarageUI => _garageUI;
 

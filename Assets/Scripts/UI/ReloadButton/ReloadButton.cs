@@ -8,7 +8,7 @@ namespace HardWork
     public class ReloadButton : MonoBehaviour
     {
         [SerializeField] private Button _button;
-        [SerializeField] private UIRequireComponents _UIRequireComponents;
+        [SerializeField] private RequireComponentsForUI _requireComponentsForUI;
 
         private Scene _currentScene;
         private PlayerFuelController _playerFuelController;
@@ -16,7 +16,7 @@ namespace HardWork
         private void OnEnable()
         {
             _currentScene = SceneManager.GetActiveScene();
-            _playerFuelController = _UIRequireComponents.PlayerFuelController;
+            _playerFuelController = _requireComponentsForUI.PlayerFuelController;
             _button.onClick.AddListener(ReloadScene);
         }
 

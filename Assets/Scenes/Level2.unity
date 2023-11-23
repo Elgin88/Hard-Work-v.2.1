@@ -22609,7 +22609,8 @@ PrefabInstance:
       propertyPath: _chooserLevelNameForLoad
       value: 
       objectReference: {fileID: 1387426536}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6390884785094593398, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
 --- !u!114 &678367336 stripped
 MonoBehaviour:
@@ -31432,17 +31433,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 859f45043ed1d4398aaa7daddafde734, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &885869142 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6390884785094593398, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
-  m_PrefabInstance: {fileID: 678367335}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 678367337}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e2c83d11dea54dacbc1a6673f4cb162, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &887957440 stripped
@@ -49393,7 +49383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79b6d2b3cd89c47d69160332084e7fd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enderLevel: {fileID: 1387426523}
+  _levelCompleter: {fileID: 1387426523}
   _calculatorBlocks: {fileID: 1387426524}
 --- !u!114 &1387426523
 MonoBehaviour:
@@ -74078,7 +74068,7 @@ PrefabInstance:
     - target: {fileID: 3104848041511164420, guid: 9eaaded09bf5d4e61933ce28d75722f1, type: 3}
       propertyPath: _canvasUI
       value: 
-      objectReference: {fileID: 885869142}
+      objectReference: {fileID: 0}
     - target: {fileID: 3104848041511164420, guid: 9eaaded09bf5d4e61933ce28d75722f1, type: 3}
       propertyPath: _garageUI
       value: 
@@ -74086,7 +74076,7 @@ PrefabInstance:
     - target: {fileID: 3104848041511164420, guid: 9eaaded09bf5d4e61933ce28d75722f1, type: 3}
       propertyPath: _UIRequireComponents
       value: 
-      objectReference: {fileID: 885869142}
+      objectReference: {fileID: 0}
     - target: {fileID: 3467493456101965272, guid: 9eaaded09bf5d4e61933ce28d75722f1, type: 3}
       propertyPath: m_Name
       value: Garage

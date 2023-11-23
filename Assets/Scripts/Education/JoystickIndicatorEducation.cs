@@ -8,7 +8,7 @@ namespace HardWork
     {
         [SerializeField] private BarrelIndicatorEducation[] _barrelIndicators;
         [SerializeField] private FixedJoystick _fixedJoystick;
-        [SerializeField] private UIRequireComponents _UIRequireComponents;
+        [SerializeField] private RequireComponentsForUI _requireComponentsForUI;
 
         private float _currentPressTime;
         private float _delay = 0.5f;
@@ -68,7 +68,7 @@ namespace HardWork
 
         private void CalculatePressingTimeOfJoystick()
         {
-            if (_UIRequireComponents.PlayerSpeedSetter.CurrentSpeed > 1)
+            if (_requireComponentsForUI.PlayerSpeedSetter.CurrentSpeed > 1)
             {
                 _currentPressTime += Time.deltaTime;
             }

@@ -8,7 +8,7 @@ namespace HardWork
     public class NextLevelButton : MonoBehaviour
     {
         [SerializeField] private Button _nextLevelButton;
-        [SerializeField] private UIRequireComponents _uiRequireComponents;
+        [SerializeField] private RequireComponentsForUI _requireComponentsForUI;
 
         private void Start()
         {
@@ -22,8 +22,8 @@ namespace HardWork
 
         private void OnNextLevelButtonClick()
         {
-            _uiRequireComponents.Saver.SaveData();
-            SceneManager.LoadScene(_uiRequireComponents.ChooserLevelNameForLoad.GetNextSceneName());
+            _requireComponentsForUI.Saver.SaveData();
+            SceneManager.LoadScene(_requireComponentsForUI.ChooserLevelNameForLoad.GetNextSceneName());
         }
     }
 }

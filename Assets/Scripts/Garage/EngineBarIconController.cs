@@ -12,7 +12,7 @@ namespace HardWork
         [SerializeField] private float _maxDeltaScaleY;
         [SerializeField] private float _maxDeltaScaleZ;
         [SerializeField] private float _duration;
-        [SerializeField] private UIRequireComponents _UIRequireComponents;
+        [SerializeField] private RequireComponentsForUI _requireComponentsForUI;
 
         public float MaxScaleX => _maxDeltaScaleX;
 
@@ -24,12 +24,12 @@ namespace HardWork
 
         private void OnEnable()
         {
-            _UIRequireComponents.PowerController.IsEngineUpgraded += OnUpgradeEngine;
+            _requireComponentsForUI.PowerController.IsEngineUpgraded += OnUpgradeEngine;
         }
 
         private void OnDisable()
         {
-            _UIRequireComponents.PowerController.IsEngineUpgraded -= OnUpgradeEngine;
+            _requireComponentsForUI.PowerController.IsEngineUpgraded -= OnUpgradeEngine;
         }
 
         private void OnUpgradeEngine(int level, bool isMaxLevel)

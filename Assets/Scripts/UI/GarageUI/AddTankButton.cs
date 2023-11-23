@@ -10,36 +10,27 @@ namespace HardWork
         [SerializeField] private TMP_Text _cost;
         [SerializeField] private Button _button;
         [SerializeField] private AudioSource _soundOfBuy;
-        [SerializeField] private UIRequireComponents _uiRequireComponents;
-
-        private void Start()
-        {
-            if (_cost == null || _button == null ||
-                _soundOfBuy == null || _uiRequireComponents == null)
-            {
-                Debug.Log("No serializefiel in " + gameObject.name);
-            }
-        }
+        [SerializeField] private RequireComponentsForUI _requireComponentsForUI;
 
         private void OnEnable()
         {
-            _cost.text = _uiRequireComponents.Garage.TankCost.ToString();
+            _cost.text = _requireComponentsForUI.Garage.TankCost.ToString();
             _button.onClick.AddListener(OnAddTankButton);
-            _uiRequireComponents.PlayerMoney.IsMoneyChanged += OnPlayerMoneyChanded;
+            _requireComponentsForUI.PlayerMoney.IsMoneyChanged += OnPlayerMoneyChanded;
             CheckStatusButton();
         }
 
         private void OnDisable()
         {
             _button.onClick.RemoveListener(OnAddTankButton);
-            _uiRequireComponents.PlayerMoney.IsMoneyChanged -= OnPlayerMoneyChanded;
+            _requireComponentsForUI.PlayerMoney.IsMoneyChanged -= OnPlayerMoneyChanded;
         }
 
         private void OnAddTankButton()
         {
-            _uiRequireComponents.PlayerUpgrader.TryBuyTank();
+            _requireComponentsForUI.PlayerUpgrader.TryBuyTank();
             _soundOfBuy.Play();
-            _uiRequireComponents.GarageSoundController.StartPlaySoundFinEngine();
+            _requireComponentsForUI.GarageSoundController.StartPlaySoundFinEngine();
         }
 
         private void OnPlayerMoneyChanded(int money)
@@ -49,7 +40,7 @@ namespace HardWork
 
         private void CheckStatusButton()
         {
-            if (_uiRequireComponents.PlayerMoney.Money > _uiRequireComponents.Garage.TankCost)
+            if (_requireComponentsForUI.PlayerMoney.Money > _requireComponentsForUI.Garage.TankCost)
             {
                 _button.interactable = true;
             }

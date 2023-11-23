@@ -15,7 +15,7 @@ namespace HardWork
         [SerializeField] private TMP_Text _middle;
         [SerializeField] private TMP_Text _min;
         [SerializeField] private Slider _slider;
-        [SerializeField] private UIRequireComponents _UIRequireComponents;
+        [SerializeField] private RequireComponentsForUI _requireComponentsForUI;
 
         private Coroutine _changeSliderValue;
         private float _currentValue;
@@ -27,12 +27,12 @@ namespace HardWork
             _slider = GetComponent<Slider>();
 
             _slider.value = 0;
-            _UIRequireComponents.PlayerFuelController.IsFuelChanged += OnFuelChanged;
+            _requireComponentsForUI.PlayerFuelController.IsFuelChanged += OnFuelChanged;
         }
 
         private void OnDisable()
         {
-            _UIRequireComponents.PlayerFuelController.IsFuelChanged -= OnFuelChanged;
+            _requireComponentsForUI.PlayerFuelController.IsFuelChanged -= OnFuelChanged;
         }
 
         private void OnFuelChanged(float target, float max)

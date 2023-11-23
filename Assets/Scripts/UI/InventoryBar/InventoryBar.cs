@@ -13,7 +13,7 @@ namespace HardWork
         [SerializeField] private TMP_Text _maxText;
         [SerializeField] private TMP_Text _middleText;
         [SerializeField] private TMP_Text _minText;
-        [SerializeField] private UIRequireComponents _UIRequireComponents;
+        [SerializeField] private RequireComponentsForUI _requireComponentsForUI;
 
         private Coroutine _changeValue;
         private float _currentSliderValue;
@@ -21,7 +21,7 @@ namespace HardWork
 
         private void Start()
         {
-            int maxNumberBlocks = _UIRequireComponents.LineOfPointsCreater.MaxNumberOfLines * _UIRequireComponents.LineOfPoints.NumberPoints;
+            int maxNumberBlocks = _requireComponentsForUI.LineOfPointsCreater.MaxNumberOfLines * _requireComponentsForUI.LineOfPoints.NumberPoints;
 
             _maxText.text = maxNumberBlocks.ToString();
             _middleText.text = (maxNumberBlocks / 2).ToString();
@@ -31,14 +31,14 @@ namespace HardWork
         private void OnEnable()
         {
             _slider.value = 0;
-            _UIRequireComponents.Inventory.NumberBlocksIsChanged += OnChangedNumberBlocks;
-            _UIRequireComponents.LineOfPointsCreater.MaxNumberBlocksIsChanged += OnChangedMaxNumberBlocks;
+            _requireComponentsForUI.Inventory.NumberBlocksIsChanged += OnChangedNumberBlocks;
+            _requireComponentsForUI.LineOfPointsCreater.MaxNumberBlocksIsChanged += OnChangedMaxNumberBlocks;
         }
 
         private void OnDisable()
         {
-            _UIRequireComponents.Inventory.NumberBlocksIsChanged -= OnChangedNumberBlocks;
-            _UIRequireComponents.LineOfPointsCreater.MaxNumberBlocksIsChanged -= OnChangedMaxNumberBlocks;
+            _requireComponentsForUI.Inventory.NumberBlocksIsChanged -= OnChangedNumberBlocks;
+            _requireComponentsForUI.LineOfPointsCreater.MaxNumberBlocksIsChanged -= OnChangedMaxNumberBlocks;
         }
 
         public void StopChangeValue()

@@ -3,7 +3,7 @@ using HardWork;
 
 namespace HardWork
 {
-    public class UIRequireComponents : MonoBehaviour
+    public class RequireComponentsForUI : MonoBehaviour
     {
         [SerializeField] private JoystickIndicatorEducation[] _joystickIndicators;
         [SerializeField] private AddFuelIndicatorEducation[] _addFuelIndicators;

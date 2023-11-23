@@ -7,7 +7,7 @@ namespace HardWork
 {
     public class AddMoneyForVideoAddButton : MonoBehaviour
     {
-        [SerializeField] private UIRequireComponents _UIrequireComponents;
+        [SerializeField] private RequireComponentsForUI _requireComponentsForUI;
         [SerializeField] private int _addPlayerMoney;
         [SerializeField] private Button _button;
         [SerializeField] private AudioSource _moneySound;
@@ -27,8 +27,8 @@ namespace HardWork
 
         private void OnButtonClick()
         {
-            _UIrequireComponents.PlayerMoney.AddMoney(_addPlayerMoney);
-            _UIrequireComponents.Saver.SaveMoney();
+            _requireComponentsForUI.PlayerMoney.AddMoney(_addPlayerMoney);
+            _requireComponentsForUI.Saver.SaveMoney();
             _moneySound.Play();
 
             _button.interactable = false;
@@ -48,7 +48,7 @@ namespace HardWork
         {
             yield return _delayShowVideoAd;
 
-            _UIrequireComponents.Advertising.ShowVideoAd();
+            _requireComponentsForUI.Advertising.ShowVideoAd();
         }
     }
 }

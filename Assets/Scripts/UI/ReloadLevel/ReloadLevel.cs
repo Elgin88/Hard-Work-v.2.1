@@ -8,16 +8,16 @@ namespace HardWork
     {
         [SerializeField] private GameObject _panel;
         [SerializeField] private Button _button;
-        [SerializeField] private UIRequireComponents _UIRequireComponents;
+        [SerializeField] private RequireComponentsForUI _requireComponentsForUI;
 
         private void OnEnable()
         {
-            _UIRequireComponents.PlayerFuelController.IsFuelChanged += OnFuelPlayerChanged;
+            _requireComponentsForUI.PlayerFuelController.IsFuelChanged += OnFuelPlayerChanged;
         }
 
         private void OnDisable()
         {
-            _UIRequireComponents.PlayerFuelController.IsFuelChanged -= OnFuelPlayerChanged;
+            _requireComponentsForUI.PlayerFuelController.IsFuelChanged -= OnFuelPlayerChanged;
         }
 
         private void OnFuelPlayerChanged(float current, float max)

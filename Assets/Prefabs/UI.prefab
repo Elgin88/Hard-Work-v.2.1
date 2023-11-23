@@ -837,7 +837,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 685615682edfe468b8c58417fb92feee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _UIrequireComponents: {fileID: 6390884785094593398}
+  _requireComponentsForUI: {fileID: 0}
   _addPlayerMoney: 750
   _button: {fileID: 8222775292269247728}
   _moneySound: {fileID: 6485855533355665665}
@@ -1337,7 +1337,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _barrelIndicators: []
   _fixedJoystick: {fileID: 3513216691088164064}
-  _UIRequireComponents: {fileID: 6390884785094593398}
+  _requireComponentsForUI: {fileID: 3004259275157797504}
 --- !u!114 &6220260854642562784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1878,7 +1878,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _button: {fileID: 1758577148977956223}
-  _UIRequireComponents: {fileID: 6390884785094593398}
+  _requireComponentsForUI: {fileID: 3004259275157797504}
 --- !u!1 &1758577149239714187
 GameObject:
   m_ObjectHideFlags: 0
@@ -2068,7 +2068,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speedOfChange: 0.3
   _slider: {fileID: 1758577149254327660}
-  _UIRequireComponents: {fileID: 6390884785094593398}
+  _requireComponentsForUI: {fileID: 3004259275157797504}
 --- !u!114 &8257724571488443745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2262,7 +2262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moneyCount: {fileID: 1758577150549101034}
-  _uiRequireComponents: {fileID: 6390884785094593398}
+  _requireComponentsForUI: {fileID: 3004259275157797504}
 --- !u!1 &1758577149434410773
 GameObject:
   m_ObjectHideFlags: 0
@@ -2440,8 +2440,8 @@ GameObject:
   - component: {fileID: 1758577149519813646}
   - component: {fileID: 1758577149519813647}
   - component: {fileID: 1758577149519813644}
-  - component: {fileID: 6390884785094593398}
   - component: {fileID: 1791244643987670448}
+  - component: {fileID: 3004259275157797504}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -2539,48 +2539,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &6390884785094593398
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1758577149519813682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e2c83d11dea54dacbc1a6673f4cb162, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _joystickIndicators:
-  - {fileID: 7656873045806514693}
-  - {fileID: 3420367340164064637}
-  _addFuelIndicators:
-  - {fileID: 297987143312029106}
-  - {fileID: 7007768010406576580}
-  - {fileID: 6661776985926101572}
-  _garageUI: {fileID: 1758577150085976944}
-  _soundController: {fileID: 0}
-  _playerFuelController: {fileID: 0}
-  _player: {fileID: 0}
-  _calculatorBlocks: {fileID: 0}
-  _endelLevel: {fileID: 0}
-  _chooserMedals: {fileID: 0}
-  _enderLevel: {fileID: 0}
-  _saver: {fileID: 0}
-  _destroyerPoint: {fileID: 0}
-  _garageParkingArea: {fileID: 0}
-  _garage: {fileID: 0}
-  _garageSoundController: {fileID: 0}
-  _playerUpgrade: {fileID: 0}
-  _playerPowerController: {fileID: 0}
-  _lineOfPoints: {fileID: 0}
-  _lineOfPointsCreater: {fileID: 0}
-  _inventory: {fileID: 0}
-  _pauserGame: {fileID: 0}
-  _playerSpeedSetter: {fileID: 0}
-  _advertising: {fileID: 0}
-  _playerMoney: {fileID: 0}
-  _chooserLevelNameForLoad: {fileID: 0}
 --- !u!82 &1791244643987670448
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2677,6 +2635,42 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3004259275157797504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758577149519813682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e2c83d11dea54dacbc1a6673f4cb162, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _joystickIndicators: []
+  _addFuelIndicators: []
+  _garageUI: {fileID: 1758577150085976944}
+  _soundController: {fileID: 0}
+  _playerFuelController: {fileID: 0}
+  _player: {fileID: 0}
+  _calculatorBlocks: {fileID: 0}
+  _chooserMedals: {fileID: 0}
+  _levelCompleter: {fileID: 0}
+  _saver: {fileID: 0}
+  _destroyerPoint: {fileID: 0}
+  _garageParkingArea: {fileID: 0}
+  _garage: {fileID: 0}
+  _garageSoundController: {fileID: 0}
+  _playerUpgrade: {fileID: 0}
+  _playerPowerController: {fileID: 0}
+  _lineOfPoints: {fileID: 0}
+  _lineOfPointsCreater: {fileID: 0}
+  _inventory: {fileID: 0}
+  _pauseSetter: {fileID: 0}
+  _playerSpeedSetter: {fileID: 0}
+  _advertising: {fileID: 0}
+  _playerMoney: {fileID: 0}
+  _chooserLevelNameForLoad: {fileID: 0}
 --- !u!1 &1758577149562654717
 GameObject:
   m_ObjectHideFlags: 0
@@ -2997,7 +2991,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _nextLevelButton: {fileID: 1758577149615600959}
-  _uiRequireComponents: {fileID: 6390884785094593398}
+  _requireComponentsForUI: {fileID: 3004259275157797504}
 --- !u!1 &1758577149661271912
 GameObject:
   m_ObjectHideFlags: 0
@@ -3193,7 +3187,7 @@ MonoBehaviour:
   _middle: {fileID: 2838187938879632086}
   _min: {fileID: 1758577149584342472}
   _slider: {fileID: 1758577149722923428}
-  _UIRequireComponents: {fileID: 6390884785094593398}
+  _requireComponentsForUI: {fileID: 3004259275157797504}
 --- !u!1 &1758577149854974402
 GameObject:
   m_ObjectHideFlags: 0
@@ -3497,7 +3491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _label: {fileID: 1758577150126409430}
-  _UIRequireComponents: {fileID: 6390884785094593398}
+  _requireComponentsForUI: {fileID: 3004259275157797504}
 --- !u!1 &1758577150003654089
 GameObject:
   m_ObjectHideFlags: 0
@@ -3626,7 +3620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rangeToClosePanel: 3.5
-  _UIRequireComponents: {fileID: 6390884785094593398}
+  _requireComponentsForUI: {fileID: 3004259275157797504}
 --- !u!1 &1758577150126409428
 GameObject:
   m_ObjectHideFlags: 0
@@ -3855,7 +3849,7 @@ MonoBehaviour:
   _duration: 1.5
   _deltaScale: 0.25
   _targetColor: {r: 1, g: 0.64708, b: 0, a: 0}
-  _UIRequireComponents: {fileID: 6390884785094593398}
+  _requireComponentsForUI: {fileID: 3004259275157797504}
   _rectTransform: {fileID: 1758577150193827664}
   _image: {fileID: 1758577150193827667}
 --- !u!1 &1758577150199437435
@@ -4391,7 +4385,7 @@ MonoBehaviour:
   _minMedal: {fileID: 1758577150684204515}
   _middleMedal: {fileID: 1758577149493868375}
   _maxMedal: {fileID: 1758577150428786783}
-  _UIRequireComponents: {fileID: 6390884785094593398}
+  _requireComponentsForUI: {fileID: 3004259275157797504}
 --- !u!1 &1758577150598110244
 GameObject:
   m_ObjectHideFlags: 0
@@ -6619,7 +6613,7 @@ MonoBehaviour:
   _maxText: {fileID: 3954327739963536395}
   _middleText: {fileID: 1721183929818806194}
   _minText: {fileID: 3954327740214279676}
-  _UIRequireComponents: {fileID: 6390884785094593398}
+  _requireComponentsForUI: {fileID: 3004259275157797504}
 --- !u!1 &3954327739685474859
 GameObject:
   m_ObjectHideFlags: 0
@@ -7463,7 +7457,7 @@ MonoBehaviour:
   _cost: {fileID: 687222406478704323}
   _button: {fileID: 5122951277019515478}
   _soundOfBuy: {fileID: 8647552923006963018}
-  _UIRequireComponents: {fileID: 6390884785094593398}
+  _requireComponentsForUI: {fileID: 3004259275157797504}
   _addFuelIndicatorEducation:
   - {fileID: 297987143312029106}
   - {fileID: 7007768010406576580}
@@ -7910,7 +7904,7 @@ MonoBehaviour:
   _maxDeltaScaleY: 1.3
   _maxDeltaScaleZ: 1.3
   _duration: 0.3
-  _UIRequireComponents: {fileID: 6390884785094593398}
+  _requireComponentsForUI: {fileID: 3004259275157797504}
 --- !u!1 &5700204133238625903
 GameObject:
   m_ObjectHideFlags: 0
@@ -8203,7 +8197,7 @@ MonoBehaviour:
   _cost: {fileID: 111131339884492738}
   _button: {fileID: 5700204133601088343}
   _soundOfBuy: {fileID: 8165295069421672648}
-  _UIRequireComponents: {fileID: 6390884785094593398}
+  _requireComponentsForUI: {fileID: 3004259275157797504}
 --- !u!82 &8165295069421672648
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8440,7 +8434,7 @@ MonoBehaviour:
   _cost: {fileID: 111131340328103508}
   _button: {fileID: 5700204133962779329}
   _soundOfBuy: {fileID: 2339593766265516987}
-  _uiRequireComponents: {fileID: 6390884785094593398}
+  _requireComponentsForUI: {fileID: 3004259275157797504}
 --- !u!82 &2339593766265516987
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8677,7 +8671,7 @@ MonoBehaviour:
   _cost: {fileID: 111131340270981216}
   _button: {fileID: 5700204134028293365}
   _soundOfBuy: {fileID: 3225769282363396136}
-  _uiRequireComponents: {fileID: 6390884785094593398}
+  _requireComponentsForUI: {fileID: 3004259275157797504}
 --- !u!82 &3225769282363396136
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9153,7 +9147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _barrelIndicators: []
   _fixedJoystick: {fileID: 3513216691088164064}
-  _UIRequireComponents: {fileID: 6390884785094593398}
+  _requireComponentsForUI: {fileID: 3004259275157797504}
 --- !u!114 &3803403494068132758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9220,7 +9214,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _panel: {fileID: 1231575240633968300}
   _button: {fileID: 1758577148977956223}
-  _UIRequireComponents: {fileID: 6390884785094593398}
+  _requireComponentsForUI: {fileID: 3004259275157797504}
 --- !u!114 &1291429958415142978
 MonoBehaviour:
   m_ObjectHideFlags: 0
