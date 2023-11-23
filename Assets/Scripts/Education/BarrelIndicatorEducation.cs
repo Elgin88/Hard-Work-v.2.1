@@ -25,10 +25,10 @@ public class BarrelIndicatorEducation : MonoBehaviour
         {
             foreach (var indikator in _collectorIndicators)
             {
-                if (indikator!=null)
+                if (indikator != null)
                 {
                     indikator.gameObject.SetActive(true);
-                }                
+                }
             }
 
             Destroy(gameObject);

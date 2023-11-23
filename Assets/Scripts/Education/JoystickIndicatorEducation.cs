@@ -21,7 +21,7 @@ public class JoystickIndicatorEducation : MonoBehaviour
         StopShowIndicator();
     }
 
-    private  IEnumerator ShowIndicator()
+    private IEnumerator ShowIndicator()
     {
         while (true)
         {
@@ -36,14 +36,14 @@ public class JoystickIndicatorEducation : MonoBehaviour
                     if (indicator != null)
                     {
                         indicator.gameObject.SetActive(true);
-                    }                    
+                    }
                 }
 
                 gameObject.SetActive(false);
             }
 
             yield return null;
-        }        
+        }
     }
 
     private void StartShowIndicator()

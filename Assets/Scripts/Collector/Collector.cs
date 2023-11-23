@@ -5,8 +5,8 @@ public class Collector : MonoBehaviour
     [SerializeField] private Unloader _unloader;
     [SerializeField] private PlayerRequireComponents _player;
 
-    public Unloader Unloader => _unloader;
     public PlayerRequireComponents Player => _player;
+    public Unloader Unloader => _unloader;
 
     private void Start()
     {

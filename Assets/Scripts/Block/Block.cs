@@ -1,5 +1,5 @@
-using System.Collections;
 using UnityEngine;
+using System.Collections;
 
 public class Block : MonoBehaviour
 {
@@ -18,6 +18,7 @@ public class Block : MonoBehaviour
 
     public BlockMover BlockMover => _blockMover;
     public Point Point => _point;
+
     public int Cost => _cost;
 
     private void Start()
@@ -55,7 +56,7 @@ public class Block : MonoBehaviour
 
     public void KinematicOn()
     {
-        _rigidbody.isKinematic = true;        
+        _rigidbody.isKinematic = true;
     }
 
     public void KinematicOff()

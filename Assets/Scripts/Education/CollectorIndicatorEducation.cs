@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CollectorIndicatorEducation : MonoBehaviour
 {
-    [SerializeField] private GarageIndicatorEducation [] _garageIndicatorsEducation;
+    [SerializeField] private GarageIndicatorEducation[] _garageIndicatorsEducation;
     [SerializeField] private PlayerInventory _inventory;
 
     private void Start()
@@ -23,10 +21,10 @@ public class CollectorIndicatorEducation : MonoBehaviour
         {
             foreach (var indicator in _garageIndicatorsEducation)
             {
-                if (indicator!=null)
+                if (indicator != null)
                 {
                     indicator.gameObject.SetActive(true);
-                }                
+                }
             }
 
             Destroy(gameObject);

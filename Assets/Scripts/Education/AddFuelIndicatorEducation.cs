@@ -23,15 +23,15 @@ public class AddFuelIndicatorEducation : MonoBehaviour
             {
                 if (indicator != null)
                 {
-                    Destroy(indicator.gameObject);                    
-                }                
-            }            
+                    Destroy(indicator.gameObject);
+                }
+            }
         }
 
         if (_button != null)
         {
             _button.onClick.AddListener(OnButtonClick);
-        }        
+        }
     }
 
     private void OnDisable()
@@ -39,7 +39,7 @@ public class AddFuelIndicatorEducation : MonoBehaviour
         if (_button != null)
         {
             _button.onClick.RemoveListener(OnButtonClick);
-        }        
+        }
     }
 
     private void OnButtonClick()
@@ -49,7 +49,7 @@ public class AddFuelIndicatorEducation : MonoBehaviour
             if (item != null)
             {
                 item.gameObject.SetActive(true);
-            }            
+            }
         }
     }
 }

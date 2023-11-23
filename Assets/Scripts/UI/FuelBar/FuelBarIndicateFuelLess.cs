@@ -23,7 +23,7 @@ public class FuelBarIndicateFuelLess : MonoBehaviour
 
     private void OnEnable()
     {
-        if (_minLevelForIndicate==0 || _duration == 0 ||
+        if (_minLevelForIndicate == 0 || _duration == 0 ||
             _deltaScale == 0 || _targetColor == null ||
             _UIRequireComponents == null || _rectTransform == null ||
             _image == null)
@@ -85,11 +85,10 @@ public class FuelBarIndicateFuelLess : MonoBehaviour
                 isBack = false;
             }
 
-            if (_currentFuel/_maxFuel > _minLevelForIndicate)
+            if (_currentFuel / _maxFuel > _minLevelForIndicate)
             {
                 SetScale(_startStale);
                 SetColor(_startColor);
-
                 StopCoroutine(_flash);
             }
 

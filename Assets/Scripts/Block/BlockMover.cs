@@ -104,10 +104,7 @@ public class BlockMover : MonoBehaviour
 
             if (_block.Point != null)
             {
-                _topPointToPlayer = new Vector3
-                    ((_block.Point.transform.position.x + _startBlockPosition.x) / 2,
-                    _block.Point.transform.position.y + _tossHightToPlayer,
-                    (_block.Point.transform.position.z + _startBlockPosition.z) / 2);
+                _topPointToPlayer = new Vector3((_block.Point.transform.position.x + _startBlockPosition.x) / 2, _block.Point.transform.position.y + _tossHightToPlayer, (_block.Point.transform.position.z + _startBlockPosition.z) / 2);
             }
 
             if (_isReachedTopToPlayer == false & _block.Point != null)
@@ -159,10 +156,7 @@ public class BlockMover : MonoBehaviour
     {
         StopFixBlock();
 
-        _topPointToCollector = new Vector3 (
-            (transform.position.x + _collectorPoint.transform.position.x) / 2,
-            _collectorPoint.transform.position.y + transform.position.y + _tossHeightToCollector,
-            (transform.position.z + _collectorPoint.transform.position.z) / 2);
+        _topPointToCollector = new Vector3((transform.position.x + _collectorPoint.transform.position.x) / 2, _collectorPoint.transform.position.y + transform.position.y + _tossHeightToCollector, (transform.position.z + _collectorPoint.transform.position.z) / 2);
 
         _block.Point.RemoveBlock();
         _playerInventory.InitEventBlockIsChanged();

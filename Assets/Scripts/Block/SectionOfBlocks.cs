@@ -52,7 +52,7 @@ public class SectionOfBlocks : MonoBehaviour
         {
             foreach (Block block in _blocks)
             {
-                if (block!=null)
+                if (block != null)
                 {
                     block.gameObject.SetActive(true);
                     block.StartTimerPhysicsOff();

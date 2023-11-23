@@ -55,7 +55,7 @@ public class Camera : MonoBehaviour
 
             _currentCameraPositionZ = Mathf.MoveTowards(_currentCameraPositionZ, _player.transform.position.z + _deltaZ, _speedChangeZ * Time.deltaTime);
 
-            transform.position = new Vector3(_currentCameraPositionX, _currentCameraPositionY, _currentCameraPositionZ);     
+            transform.position = new Vector3(_currentCameraPositionX, _currentCameraPositionY, _currentCameraPositionZ);
 
             yield return null;
         }

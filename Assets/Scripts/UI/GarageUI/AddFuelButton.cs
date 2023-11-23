@@ -9,7 +9,7 @@ public class AddFuelButton : MonoBehaviour
     [SerializeField] private Button _button;
     [SerializeField] private AudioSource _soundOfBuy;
     [SerializeField] private UIRequireComponents _UIRequireComponents;
-    [SerializeField] private AddFuelIndicatorEducation [] _addFuelIndicatorEducation;
+    [SerializeField] private AddFuelIndicatorEducation[] _addFuelIndicatorEducation;
 
     private string _levelName = "Level1";
     private string _currentSceneName;
