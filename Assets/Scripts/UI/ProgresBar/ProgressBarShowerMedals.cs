@@ -1,52 +1,56 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using HardWork;
 
-public class ProgressBarShowerMedals : MonoBehaviour
+namespace HardWork
 {
-    [SerializeField] private MinMedalUI _minMedalUI;
-    [SerializeField] private MiddleMedalUI _middleMedalUI;
-    [SerializeField] private MaxMedalUI _maxMedalUI;
-
-    private ProgressBar _progressBar;
-
-    private void OnEnable()
+    public class ProgressBarShowerMedals : MonoBehaviour
     {
-        if (_progressBar == null)
+        [SerializeField] private MinMedalUI _minMedalUI;
+        [SerializeField] private MiddleMedalUI _middleMedalUI;
+        [SerializeField] private MaxMedalUI _maxMedalUI;
+
+        private ProgressBar _progressBar;
+
+        private void OnEnable()
         {
-            _progressBar = GetComponent<ProgressBar>();
+            if (_progressBar == null)
+            {
+                _progressBar = GetComponent<ProgressBar>();
+            }
+
+            _progressBar.IsChangedValue += OnChangedSliderValue;
         }
 
-        _progressBar.IsChangedValue += OnChangedSliderValue;
-    }
-
-    private void OnDisable()
-    {
-        _progressBar.IsChangedValue -= OnChangedSliderValue;
-    }
-
-    private void OnChangedSliderValue(bool isMin, bool isMiddle, bool isMax)
-    {
-        bool isMinEnabled = false ;
-        bool isMiddleEnabled = false;
-        bool isMaxEnabled = false;
-
-        if (isMin == true & isMinEnabled == false)
+        private void OnDisable()
         {
-            _minMedalUI.gameObject.SetActive(true);
-            isMinEnabled = true;
+            _progressBar.IsChangedValue -= OnChangedSliderValue;
         }
 
-        if (isMiddle == true & isMiddleEnabled == false)
+        private void OnChangedSliderValue(bool isMin, bool isMiddle, bool isMax)
         {
-            _middleMedalUI.gameObject.SetActive(true);
-            isMiddleEnabled = true;
-        }
+            bool isMinEnabled = false;
+            bool isMiddleEnabled = false;
+            bool isMaxEnabled = false;
 
-        if (isMax == true & isMaxEnabled == false)
-        {
-            _maxMedalUI.gameObject.SetActive(true);
-            isMaxEnabled = true;
+            if (isMin == true & isMinEnabled == false)
+            {
+                _minMedalUI.gameObject.SetActive(true);
+                isMinEnabled = true;
+            }
+
+            if (isMiddle == true & isMiddleEnabled == false)
+            {
+                _middleMedalUI.gameObject.SetActive(true);
+                isMiddleEnabled = true;
+            }
+
+            if (isMax == true & isMaxEnabled == false)
+            {
+                _maxMedalUI.gameObject.SetActive(true);
+                isMaxEnabled = true;
+            }
         }
     }
 }

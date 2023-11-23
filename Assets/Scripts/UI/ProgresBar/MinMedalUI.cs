@@ -1,31 +1,35 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using HardWork;
 
-public class MinMedalUI : MonoBehaviour
+namespace HardWork
 {
-    [SerializeField] private Image _image;
-    [SerializeField] private float _delay;
-
-    private WaitForSeconds _delayWFS;
-    private Coroutine _showImage;
-
-    private void OnEnable()
+    public class MinMedalUI : MonoBehaviour
     {
-        _image.gameObject.SetActive(false);
-        _delayWFS = new WaitForSeconds(_delay);
+        [SerializeField] private Image _image;
+        [SerializeField] private float _delay;
 
-        _showImage = StartCoroutine(ShowImage());
-    }
+        private WaitForSeconds _delayWFS;
+        private Coroutine _showImage;
 
-    private IEnumerator ShowImage()
-    {
-        while (true)
+        private void OnEnable()
         {
-            yield return _delayWFS;
+            _image.gameObject.SetActive(false);
+            _delayWFS = new WaitForSeconds(_delay);
 
-            _image.gameObject.SetActive(true);
-            StopCoroutine(_showImage);
+            _showImage = StartCoroutine(ShowImage());
+        }
+
+        private IEnumerator ShowImage()
+        {
+            while (true)
+            {
+                yield return _delayWFS;
+
+                _image.gameObject.SetActive(true);
+                StopCoroutine(_showImage);
+            }
         }
     }
 }

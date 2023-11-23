@@ -1,21 +1,25 @@
 using TMPro;
 using UnityEngine;
+using HardWork;
 
-public class TotalScore : MonoBehaviour
+namespace HardWork
 {
-    [SerializeField] private TMP_Text _label;
-    [SerializeField] private UIRequireComponents _UIRequireComponents;
-
-    private void Start()
+    public class TotalScore : MonoBehaviour
     {
-        if (_label == null || _UIRequireComponents == null)
+        [SerializeField] private TMP_Text _label;
+        [SerializeField] private UIRequireComponents _UIRequireComponents;
+
+        private void Start()
         {
-            Debug.Log("No serializefiel in " + gameObject.name);
+            if (_label == null || _UIRequireComponents == null)
+            {
+                Debug.Log("No serializefiel in " + gameObject.name);
+            }
         }
-    }
 
-    private void OnEnable()
-    {
-        _label.text = _UIRequireComponents.CalculatorBlocks.Unload.ToString();
+        private void OnEnable()
+        {
+            _label.text = _UIRequireComponents.CalculatorBlocks.Unload.ToString();
+        }
     }
 }

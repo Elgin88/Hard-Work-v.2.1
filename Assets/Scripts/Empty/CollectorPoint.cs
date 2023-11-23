@@ -1,6 +1,9 @@
 using UnityEngine;
+using HardWork;
 
-public class CollectorPoint : MonoBehaviour
+namespace HardWork
 {
-
+    public class CollectorPoint : MonoBehaviour
+    {
+    }
 }

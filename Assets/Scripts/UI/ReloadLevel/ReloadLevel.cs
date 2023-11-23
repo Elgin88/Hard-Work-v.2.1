@@ -1,43 +1,42 @@
 using UnityEngine;
 using UnityEngine.UI;
+using HardWork;
 
-public class ReloadLevel : MonoBehaviour
+namespace HardWork
 {
-    [SerializeField] private GameObject _panel;
-    [SerializeField] private Button _button;
-    [SerializeField] private UIRequireComponents _UIRequireComponents;
-
-    private void OnEnable()
+    public class ReloadLevel : MonoBehaviour
     {
-        if (_panel == null|| _button == null || _UIRequireComponents == null )
+        [SerializeField] private GameObject _panel;
+        [SerializeField] private Button _button;
+        [SerializeField] private UIRequireComponents _UIRequireComponents;
+
+        private void OnEnable()
         {
-            Debug.Log("No Serializefield in " + gameObject.name);
+            _UIRequireComponents.PlayerFuelController.IsFuelChanged += OnFuelPlayerChanged;
         }
 
-        _UIRequireComponents.PlayerFuelController.IsFuelChanged += OnFuelPlayerChanged;
-    }
-
-    private void OnDisable()
-    {
-        _UIRequireComponents.PlayerFuelController.IsFuelChanged -= OnFuelPlayerChanged;
-    }
-
-    private void OnFuelPlayerChanged(float current, float max)
-    {
-        if (current != 0)
+        private void OnDisable()
         {
-            return;
+            _UIRequireComponents.PlayerFuelController.IsFuelChanged -= OnFuelPlayerChanged;
         }
 
-        if (current == 0)
+        private void OnFuelPlayerChanged(float current, float max)
         {
-            _panel.SetActive(true);
-            _button.gameObject.SetActive(true);
-        }
-        else
-        {
-            _panel.SetActive(false);
-            _button.gameObject.SetActive(false);
+            if (current != 0)
+            {
+                return;
+            }
+
+            if (current == 0)
+            {
+                _panel.SetActive(true);
+                _button.gameObject.SetActive(true);
+            }
+            else
+            {
+                _panel.SetActive(false);
+                _button.gameObject.SetActive(false);
+            }
         }
     }
 }

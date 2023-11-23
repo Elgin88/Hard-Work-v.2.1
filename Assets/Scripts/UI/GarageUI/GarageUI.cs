@@ -1,58 +1,54 @@
 using System.Collections;
 using UnityEngine;
+using HardWork;
 
-public class GarageUI : MonoBehaviour
+namespace HardWork
 {
-    [SerializeField] private float _rangeToClosePanel;
-    [SerializeField] private UIRequireComponents _UIRequireComponents;
-    
-    private Coroutine _checkDistance;
-
-    private void Start()
+    public class GarageUI : MonoBehaviour
     {
-        if ( _rangeToClosePanel == 0 || _UIRequireComponents == null)
+        [SerializeField] private float _rangeToClosePanel;
+        [SerializeField] private UIRequireComponents _UIRequireComponents;
+
+        private Coroutine _checkDistance;
+
+        private void OnEnable()
         {
-            Debug.Log("No serializefiel in " + gameObject.name);
+            StartCheckDistance();
         }
-    }
 
-    private void OnEnable()
-    {
-        StartCheckDistance();
-    }
-
-    private void OnDisable()
-    {
-        StopCheckDistance();
-    }
-
-    private IEnumerator CheckDistance()
-    {
-        while (true)
+        private void OnDisable()
         {
-            if (Vector3.Distance(_UIRequireComponents.DestroyerPoint.transform.position, _UIRequireComponents.GarageParkingArea.transform.position) > _rangeToClosePanel)
+            StopCheckDistance();
+        }
+
+        private IEnumerator CheckDistance()
+        {
+            while (true)
             {
-                gameObject.SetActive(false);
+                if (Vector3.Distance(_UIRequireComponents.DestroyerPoint.transform.position, _UIRequireComponents.GarageParkingArea.transform.position) > _rangeToClosePanel)
+                {
+                    gameObject.SetActive(false);
+                }
+
+                yield return null;
             }
-
-            yield return null;
         }
-    }
 
-    private void StartCheckDistance()
-    {
-        if (_checkDistance == null)
+        private void StartCheckDistance()
         {
-            _checkDistance = StartCoroutine(CheckDistance());
+            if (_checkDistance == null)
+            {
+                _checkDistance = StartCoroutine(CheckDistance());
+            }
         }
-    }
 
-    private void StopCheckDistance()
-    {
-        if (_checkDistance != null)
+        private void StopCheckDistance()
         {
-            StopCoroutine(_checkDistance);
-            _checkDistance = null;
+            if (_checkDistance != null)
+            {
+                StopCoroutine(_checkDistance);
+                _checkDistance = null;
+            }
         }
     }
 }

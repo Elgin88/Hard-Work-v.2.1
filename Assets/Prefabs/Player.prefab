@@ -211,9 +211,9 @@ GameObject:
   - component: {fileID: 2716068640377253073}
   - component: {fileID: 2716068640377253075}
   - component: {fileID: 2716068640377253068}
-  - component: {fileID: 2716068640377253074}
+  - component: {fileID: 5345232303615983689}
   m_Layer: 0
-  m_Name: Destroyer
+  m_Name: PlayerRam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -269,7 +269,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!114 &2716068640377253074
+--- !u!114 &5345232303615983689
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

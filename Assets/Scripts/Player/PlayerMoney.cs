@@ -1,39 +1,40 @@
 using System;
 using UnityEngine;
+using HardWork;
 
-public class PlayerMoney : MonoBehaviour
+namespace HardWork
 {
-    [SerializeField] private PlayerRequireComponents _playerRequireComponents;
-
-    public Action <int> IsMoneyChanged;
-    private int _money;
-    public int Money => _money;
-
-    private void Start()
+    public class PlayerMoney : MonoBehaviour
     {
-        if (_playerRequireComponents == null)
+        [SerializeField] private RequiredComponentsForPlayer _playerRequireComponents;
+
+        private int _money;
+
+        public Action<int> IsMoneyChanged;
+
+        public int Money => _money;
+
+        private void Start()
         {
-            Debug.Log("No serializefiel in " + gameObject.name);
+            SetMoney(_playerRequireComponents.Loader.GetPlayerMoneyCount());
         }
 
-        SetMoney(_playerRequireComponents.Loader.GetPlayerMoneyCount());
-    }
+        public void AddMoney(int money)
+        {
+            _money += money;
+            IsMoneyChanged?.Invoke(_money);
+        }
 
-    public void AddMoney(int money)
-    {
-        _money += money;
-        IsMoneyChanged?.Invoke(_money);
-    }
+        public void SetMoney(int money)
+        {
+            _money = money;
+            IsMoneyChanged?.Invoke(_money);
+        }
 
-    public void SetMoney(int money)
-    {
-        _money = money;
-        IsMoneyChanged?.Invoke(_money);
-    }
-
-    public void RemoveMoney(int money)
-    {
-        _money -= money;
-        IsMoneyChanged?.Invoke(_money);
+        public void RemoveMoney(int money)
+        {
+            _money -= money;
+            IsMoneyChanged?.Invoke(_money);
+        }
     }
 }

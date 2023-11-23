@@ -1,42 +1,38 @@
 using System.Collections;
 using UnityEngine;
+using HardWork;
 
-public class SoundOffWhenMinimizingGame : MonoBehaviour
+namespace HardWork
 {
-    [SerializeField] private PauserGame _pauserGame;
-    [SerializeField] private SoundController _soundController;
-
-    private bool _isSoundOn = true;
-
-    private void Start()
+    public class SoundOffWhenMinimizingGame : MonoBehaviour
     {
-        if (_pauserGame == null || _soundController == null)
+        [SerializeField] private PauseSetter _pauserGame;
+        [SerializeField] private SoundController _soundController;
+
+        private bool _isSoundOn = true;
+
+        private void Update()
         {
-            Debug.Log("No serializeField in " + gameObject.name);
-        }
-    }
-
-    private void Update()
-    {
 #if UNITY_WEBGL && !UNITY_EDITOR
-        if (Agava.WebUtility.WebApplication.InBackground == true & _isSoundOn == true)
-        {
-            _soundController.SetMinSoundValueInBrauser();
-            _isSoundOn = false;
-        }
-        else if(Agava.WebUtility.WebApplication.InBackground == false & _isSoundOn == false)
-        {
-            _soundController.SetMaxSoundValueInBrauser();
-            _isSoundOn = true;
-        }
+            if (Agava.WebUtility.WebApplication.InBackground == true & _isSoundOn == true)
+            {
+                _soundController.SetMinSoundValueInBrauser();
+                _isSoundOn = false;
+            }
+            else if (Agava.WebUtility.WebApplication.InBackground == false & _isSoundOn == false)
+            {
+                _soundController.SetMaxSoundValueInBrauser();
+                _isSoundOn = true;
+            }
 #endif
-    }
+        }
 
-    private void MethodForDeleteErrorInConsol()
-    {
-        if (_isSoundOn)
+        private void MethodForDeleteErrorInConsol()
         {
-            _isSoundOn = true;
+            if (_isSoundOn)
+            {
+                _isSoundOn = true;
+            }
         }
     }
 }

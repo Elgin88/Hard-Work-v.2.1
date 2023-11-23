@@ -1,37 +1,33 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using HardWork;
 
-public class ReloadButton : MonoBehaviour
+namespace HardWork
 {
-    [SerializeField] private Button _button;
-    [SerializeField] private UIRequireComponents _UIRequireComponents;
-
-    private Scene _currentScene;
-    private PlayerFuelController _playerFuelController;
-
-    private void Start()
+    public class ReloadButton : MonoBehaviour
     {
-        if (_button == null|| _UIRequireComponents == null)
+        [SerializeField] private Button _button;
+        [SerializeField] private UIRequireComponents _UIRequireComponents;
+
+        private Scene _currentScene;
+        private PlayerFuelController _playerFuelController;
+
+        private void OnEnable()
         {
-            Debug.Log("No serializefiel in " + gameObject.name);
+            _currentScene = SceneManager.GetActiveScene();
+            _playerFuelController = _UIRequireComponents.PlayerFuelController;
+            _button.onClick.AddListener(ReloadScene);
         }
-    }
 
-    private void OnEnable()
-    {
-        _currentScene = SceneManager.GetActiveScene();
-        _playerFuelController = _UIRequireComponents.PlayerFuelController;
-        _button.onClick.AddListener(ReloadScene);
-    }
+        private void OnDisable()
+        {
+            _button.onClick.RemoveListener(ReloadScene);
+        }
 
-    private void OnDisable()
-    {
-        _button.onClick.RemoveListener(ReloadScene);
-    }
-
-    private void ReloadScene()
-    {
-        SceneManager.LoadScene(_currentScene.name);
+        private void ReloadScene()
+        {
+            SceneManager.LoadScene(_currentScene.name);
+        }
     }
 }

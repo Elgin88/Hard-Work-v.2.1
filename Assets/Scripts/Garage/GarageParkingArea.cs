@@ -1,36 +1,32 @@
 using UnityEngine;
+using HardWork;
 
-public class GarageParkingArea : MonoBehaviour
+namespace HardWork
 {
-    [SerializeField] private Garage _garage;
-
-    private void Start()
+    public class GarageParkingArea : MonoBehaviour
     {
-        if (_garage == null)
-        {
-            Debug.Log("No serializefiel in " + gameObject.name);
-        }
-    }
+        [SerializeField] private Garage _garage;
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.TryGetComponent<Destroyer>(out Destroyer destroyer))
+        private void OnCollisionEnter(Collision collision)
         {
-            if (_garage != null)
+            if (collision.gameObject.TryGetComponent<PlayerRam>(out PlayerRam playerRam))
             {
-                _garage.GarageUI.gameObject.SetActive(true);
-            }            
-
-            if (destroyer.PlayerMoney.Money >= _garage.FuelCoust)
-            {
-                foreach (var indicator in _garage.UIRequireComponents.AddFuelIndicators)
+                if (_garage != null)
                 {
-                    if (indicator != null)
-                    {
-                        indicator.gameObject.SetActive(true);
-                    }                    
+                    _garage.GarageUI.gameObject.SetActive(true);
                 }
-            }            
+
+                if (playerRam.PlayerMoney.Money >= _garage.FuelCoust)
+                {
+                    foreach (var indicator in _garage.UIRequireComponents.AddFuelIndicators)
+                    {
+                        if (indicator != null)
+                        {
+                            indicator.gameObject.SetActive(true);
+                        }
+                    }
+                }
+            }
         }
     }
 }

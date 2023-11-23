@@ -1,21 +1,25 @@
 using UnityEngine;
+using HardWork;
 
-public class IndicatorsEducation : MonoBehaviour
+namespace HardWork
 {
-    [SerializeField] private BarrelIndicatorEducation[] _barrelIndicatorsEducation;
-    [SerializeField] private CollectorIndicatorEducation[] _collectorIndicatorsEducation;
-    [SerializeField] private GarageIndicatorEducation[] _garageIndicatorsEducation;
-    [SerializeField] private JoystickIndicatorEducation[] _joystickIndicatorEducation;
-
-    public BarrelIndicatorEducation[] BarrelIndicators => _barrelIndicatorsEducation;
-    public CollectorIndicatorEducation[] CollectorIndicatorsEducation => _collectorIndicatorsEducation;
-    public GarageIndicatorEducation[] GarageIndicatorsEducation => _garageIndicatorsEducation;
-
-    private void Start()
+    public class IndicatorsEducation : MonoBehaviour
     {
-        foreach (var item in _joystickIndicatorEducation)
+        [SerializeField] private BarrelIndicatorEducation[] _barrelIndicatorsEducation;
+        [SerializeField] private CollectorIndicatorEducation[] _collectorIndicatorsEducation;
+        [SerializeField] private GarageTrainingIndicator[] _garageIndicatorsEducation;
+        [SerializeField] private JoystickIndicatorEducation[] _joystickIndicatorEducation;
+
+        public BarrelIndicatorEducation[] BarrelIndicators => _barrelIndicatorsEducation;
+        public CollectorIndicatorEducation[] CollectorIndicatorsEducation => _collectorIndicatorsEducation;
+        public GarageTrainingIndicator[] GarageIndicatorsEducation => _garageIndicatorsEducation;
+
+        private void Start()
         {
-            item.gameObject.SetActive(true);
+            foreach (var item in _joystickIndicatorEducation)
+            {
+                item.gameObject.SetActive(true);
+            }
         }
     }
 }

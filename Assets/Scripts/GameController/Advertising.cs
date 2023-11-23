@@ -1,71 +1,65 @@
-using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using HardWork;
 
-public class Advertising : MonoBehaviour
+namespace HardWork
 {
-    [SerializeField] private PauserGame _pauserGame;
-    [SerializeField] private ScenesNames _sceneNames;
-
-    private void Start()
+    public class Advertising : MonoBehaviour
     {
-        if (_pauserGame == null || _sceneNames == null)
+        [SerializeField] private PauseSetter _pauserGame;
+        [SerializeField] private ScenesNames _sceneNames;
+
+        private void Start()
         {
-            Debug.Log("No serializefield + " + gameObject.name);
+            if (SceneManager.GetActiveScene().name != _sceneNames.Level0Name)
+            {
+                ShowInterstitialAd();
+            }
         }
 
-        if (SceneManager.GetActiveScene().name != _sceneNames.Level0Name)
+        public void ShowVideoAd()
         {
-            ShowInterstitialAd();
-        }        
-    }
-
-    public void ShowVideoAd()
-    {
 #if UNITY_WEBGL && !UNITY_EDITOR
-        Agava.YandexGames.VideoAd.Show(OnOpenCallback, OnRewardedCallback, OnCloseCallbackVideoAd, OnErrorCallback);
+            Agava.YandexGames.VideoAd.Show(OnOpenCallback, OnRewardedCallback, OnCloseCallbackVideoAd, OnErrorCallback);
 #endif
-    }
+        }
 
-    public void ShowInterstitialAd()
-    {
+        public void ShowInterstitialAd()
+        {
 #if UNITY_WEBGL && !UNITY_EDITOR
-        Agava.YandexGames.InterstitialAd.Show(OnOpenCallback, OnCloseCallbackInterstitialAd, OnErrorCallback, OnErrorCallbackInterstitialAd);
+            Agava.YandexGames.InterstitialAd.Show(OnOpenCallback, OnCloseCallbackInterstitialAd, OnErrorCallback, OnErrorCallbackInterstitialAd);
 #endif
-    }
+        }
 
-    private void OnErrorCallbackInterstitialAd()
-    {
-        
-    }
+        private void OnErrorCallbackInterstitialAd()
+        {
+        }
 
-    private void OnCloseCallbackVideoAd()
-    {
-        _pauserGame.PauseOffInBrauser();
-    }
+        private void OnCloseCallbackVideoAd()
+        {
+            _pauserGame.PauseOffInBrauser();
+        }
 
-    private void OnCloseCallbackInterstitialAd(bool close)
-    {
-        _pauserGame.PauseOffInBrauser();
-    }
+        private void OnCloseCallbackInterstitialAd(bool close)
+        {
+            _pauserGame.PauseOffInBrauser();
+        }
 
-    private void OnOpenCallback()
-    {
-        _pauserGame.PauseOnInBrauser();
-    }
+        private void OnOpenCallback()
+        {
+            _pauserGame.PauseOnInBrauser();
+        }
 
-    private void OnErrorCallback(string error)
-    {
-        
-    }
+        private void OnErrorCallback(string error)
+        {
+        }
 
-    private void OnOfflineCallback()
-    {
-        
-    }
+        private void OnOfflineCallback()
+        {
+        }
 
-    private void OnRewardedCallback()
-    {
-        
+        private void OnRewardedCallback()
+        {
+        }
     }
 }

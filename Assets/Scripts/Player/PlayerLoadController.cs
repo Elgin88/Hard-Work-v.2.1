@@ -1,20 +1,25 @@
 using UnityEngine;
+using HardWork;
 
-public class PlayerLoadController : MonoBehaviour
+namespace HardWork
 {
-    private bool _isUpLoad;
-    private bool _isUnload;
-
-    public bool IsUpload => _isUpLoad;
-    public bool IsUnload => _isUnload;
-
-    public void SetUploadStatus(bool status)
+    public class PlayerLoadController : MonoBehaviour
     {
-        _isUpLoad = status;
-    }
+        private bool _isUpLoad;
+        private bool _isUnload;
 
-    public void SetUnloadStatus(bool status)
-    {
-        _isUnload = status;
+        public bool IsUpload => _isUpLoad;
+
+        public bool IsUnload => _isUnload;
+
+        public void SetUploadStatus(bool status)
+        {
+            _isUpLoad = status;
+        }
+
+        public void SetUnloadStatus(bool status)
+        {
+            _isUnload = status;
+        }
     }
 }

@@ -2,91 +2,88 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using HardWork;
 
-public class InventoryBar : MonoBehaviour
+namespace HardWork
 {
-    [SerializeField] private float _speedOfChange;
-    [SerializeField] private Slider _slider;
-    [SerializeField] private TMP_Text _maxText;
-    [SerializeField] private TMP_Text _middleText;
-    [SerializeField] private TMP_Text _minText;
-    [SerializeField] private UIRequireComponents _UIRequireComponents;
-
-    private Coroutine _changeValue;
-    private float _currentSliderValue;
-    private float _targetSliderValue;
-
-    private void Start()
+    public class InventoryBar : MonoBehaviour
     {
-        if (_speedOfChange==0||_slider==null ||
-            _maxText == null || _middleText == null ||
-            _minText == null || _UIRequireComponents == null)
+        [SerializeField] private float _speedOfChange;
+        [SerializeField] private Slider _slider;
+        [SerializeField] private TMP_Text _maxText;
+        [SerializeField] private TMP_Text _middleText;
+        [SerializeField] private TMP_Text _minText;
+        [SerializeField] private UIRequireComponents _UIRequireComponents;
+
+        private Coroutine _changeValue;
+        private float _currentSliderValue;
+        private float _targetSliderValue;
+
+        private void Start()
         {
-            Debug.Log("No serializefiel in " + gameObject.name);
+            int maxNumberBlocks = _UIRequireComponents.LineOfPointsCreater.MaxNumberOfLines * _UIRequireComponents.LineOfPoints.NumberPoints;
+
+            _maxText.text = maxNumberBlocks.ToString();
+            _middleText.text = (maxNumberBlocks / 2).ToString();
+            _minText.text = "0";
         }
 
-        int maxNumberBlocks = _UIRequireComponents.LineOfPointsCreater.MaxNumberOfLines * _UIRequireComponents.LineOfPoints.NumberPoints;
-
-        _maxText.text = maxNumberBlocks.ToString();
-        _middleText.text = (maxNumberBlocks / 2).ToString();
-        _minText.text = "0";
-    }
-
-    private void OnEnable()
-    {
-        _slider.value = 0;
-        _UIRequireComponents.Inventory.NumberBlocksIsChanged += OnChangedNumberBlocks;
-        _UIRequireComponents.LineOfPointsCreater.MaxNumberBlocksIsChanged += OnChangedMaxNumberBlocks;
-    }
-
-    private void OnDisable()
-    {
-        _UIRequireComponents.Inventory.NumberBlocksIsChanged -= OnChangedNumberBlocks;
-        _UIRequireComponents.LineOfPointsCreater.MaxNumberBlocksIsChanged -= OnChangedMaxNumberBlocks;
-    }
-
-    public void StopChangeValue()
-    {
-        if (_changeValue != null)
+        private void OnEnable()
         {
-            StopCoroutine(_changeValue);
-            _changeValue = null;
+            _slider.value = 0;
+            _UIRequireComponents.Inventory.NumberBlocksIsChanged += OnChangedNumberBlocks;
+            _UIRequireComponents.LineOfPointsCreater.MaxNumberBlocksIsChanged += OnChangedMaxNumberBlocks;
         }
-    }
 
-    private void OnChangedNumberBlocks(int target, int max)
-    {
-        _targetSliderValue = (float) target / max;
-        StartChangeValue();
-    }
-
-    private IEnumerator ChangeValue()
-    {
-        while (true)
+        private void OnDisable()
         {
-            _currentSliderValue = _slider.value;
-            _slider.value = Mathf.MoveTowards(_currentSliderValue, _targetSliderValue, _speedOfChange * Time.deltaTime);
+            _UIRequireComponents.Inventory.NumberBlocksIsChanged -= OnChangedNumberBlocks;
+            _UIRequireComponents.LineOfPointsCreater.MaxNumberBlocksIsChanged -= OnChangedMaxNumberBlocks;
+        }
 
-            if (_slider.value == _targetSliderValue)
+        public void StopChangeValue()
+        {
+            if (_changeValue != null)
             {
-                StopChangeValue();
+                StopCoroutine(_changeValue);
+                _changeValue = null;
             }
-
-            yield return null;
         }
-    }
 
-    private void OnChangedMaxNumberBlocks(int current, int max)
-    {
-        _maxText.text = max.ToString();
-        _middleText.text = (max / 2).ToString();
-    }
-
-    public void StartChangeValue()
-    {
-        if (_changeValue == null)
+        public void StartChangeValue()
         {
-            _changeValue = StartCoroutine(ChangeValue());
+            if (_changeValue == null)
+            {
+                _changeValue = StartCoroutine(ChangeValue());
+            }
+        }
+
+        private void OnChangedNumberBlocks(int target, int max)
+        {
+            _targetSliderValue = (float)target / max;
+            StartChangeValue();
+        }
+
+        private IEnumerator ChangeValue()
+        {
+            while (true)
+            {
+                _currentSliderValue = _slider.value;
+                _slider.value = Mathf.MoveTowards(_currentSliderValue, _targetSliderValue, _speedOfChange * Time.deltaTime);
+
+                if (_slider.value == _targetSliderValue)
+                {
+                    StopChangeValue();
+                }
+
+                yield return null;
+            }
+        }
+
+        private void OnChangedMaxNumberBlocks(int current, int max)
+        {
+            _maxText.text = max.ToString();
+            _middleText.text = (max / 2).ToString();
         }
     }
 }

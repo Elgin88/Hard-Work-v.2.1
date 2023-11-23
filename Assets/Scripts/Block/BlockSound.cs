@@ -1,47 +1,43 @@
 using Agava.WebUtility;
 using UnityEngine;
+using HardWork;
 
-public class BlockSound : MonoBehaviour
+namespace HardWork
 {
-    [SerializeField] private PlayerSoundController _playerSoundController;
-
-    private void Start()
+    public class BlockSound : MonoBehaviour
     {
-        if (_playerSoundController == null)
+        [SerializeField] private PlayerSoundController _playerSoundController;
+
+        public void PlaySoundFlyOnCar()
         {
-            Debug.Log("No serializefiel in " + gameObject.name);
+            if (_playerSoundController.BlockFly.isPlaying == false)
+            {
+                _playerSoundController.BlockFly.Play();
+            }
         }
-    }
 
-    public void PlaySoundFlyOnCar()
-    {
-        if (_playerSoundController.BlockFly.isPlaying == false)
+        public void PlayPlaceOnCar()
         {
-            _playerSoundController.BlockFly.Play();
-        }        
-    }
-
-    public void PlayPlaceOnCar()
-    {
-        if (_playerSoundController.BlockFly.isPlaying == false)
-        {
-            _playerSoundController.BlockFly.Play();
-        }        
-    }
-
-    public void PlayFlyOnCollectorSFX()
-    {
-        if (_playerSoundController.BlockFlyToCollector.isPlaying == false)
-        {
-            _playerSoundController.BlockFlyToCollector.Play();
+            if (_playerSoundController.BlockFly.isPlaying == false)
+            {
+                _playerSoundController.BlockFly.Play();
+            }
         }
-    }
 
-    public void PlayBlockPlaceInCollector()
-    {
-        if (_playerSoundController.BlockPlaceInCollector.isPlaying == false)
+        public void PlayFlyOnCollectorSFX()
         {
-            _playerSoundController.BlockPlaceInCollector.Play();
+            if (_playerSoundController.BlockFlyToCollector.isPlaying == false)
+            {
+                _playerSoundController.BlockFlyToCollector.Play();
+            }
+        }
+
+        public void PlayBlockPlaceInCollector()
+        {
+            if (_playerSoundController.BlockPlaceInCollector.isPlaying == false)
+            {
+                _playerSoundController.BlockPlaceInCollector.Play();
+            }
         }
     }
 }

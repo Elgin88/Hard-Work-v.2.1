@@ -1,36 +1,32 @@
 using UnityEngine;
+using HardWork;
 
-public class PlayerDestroyerTakeDamagePoint : MonoBehaviour
+namespace HardWork
 {
-    [SerializeField] private PlayerSoundController _playerSoundController;
-    [SerializeField] private ParticleSystem _particle;
-
-    private WaitForSeconds _pauseWFS;
-    private Coroutine _pause;
-
-    private void Start()
+    public class PlayerDestroyerTakeDamagePoint : MonoBehaviour
     {
-        if (_playerSoundController == null || _particle == null)
+        [SerializeField] private PlayerSoundController _playerSoundController;
+        [SerializeField] private ParticleSystem _particle;
+
+        private WaitForSeconds _pauseWFS;
+        private Coroutine _pause;
+
+        private void OnEnable()
         {
-            Debug.Log("No serializefiel in " + gameObject.name);
+            if (_particle != null)
+            {
+                _particle.gameObject.SetActive(false);
+            }
+        }
+
+        private void OnCollisionEnter(Collision collision)
+        {
+            if (collision.gameObject.TryGetComponent<Block>(out Block block) || collision.gameObject.TryGetComponent<SectionOfBlocks>(out SectionOfBlocks section))
+            {
+                _particle.gameObject.SetActive(true);
+                _particle.Play();
+                _playerSoundController.PlayBlockHitBumberSound();
+            }
         }
     }
-
-    private void OnEnable()
-    {
-        if (_particle!=null)
-        {
-            _particle.gameObject.SetActive(false);
-        }        
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.TryGetComponent<Block>(out Block block) || collision.gameObject.TryGetComponent<SectionOfBlocks>(out SectionOfBlocks section))
-        {
-            _particle.gameObject.SetActive(true);
-            _particle.Play();
-            _playerSoundController.PlayBlockHitBumberSound();
-        }
-    }    
 }

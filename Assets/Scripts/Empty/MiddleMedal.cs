@@ -1,6 +1,9 @@
 using UnityEngine;
+using HardWork;
 
-public class MiddleMedal : MonoBehaviour
+namespace HardWork
 {
-
+    public class MiddleMedal : MonoBehaviour
+    {
+    }
 }

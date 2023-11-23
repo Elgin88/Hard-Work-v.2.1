@@ -1,33 +1,37 @@
 using UnityEngine;
+using HardWork;
 
-public class CollectorIndicatorEducation : MonoBehaviour
+namespace HardWork
 {
-    [SerializeField] private GarageIndicatorEducation[] _garageIndicatorsEducation;
-    [SerializeField] private PlayerInventory _inventory;
-
-    private void Start()
+    public class CollectorIndicatorEducation : MonoBehaviour
     {
-        _inventory.NumberBlocksIsChanged += OnCangedBlocksInPlayerInventory;
-    }
+        [SerializeField] private GarageTrainingIndicator[] _garageIndicatorsEducation;
+        [SerializeField] private PlayerInventory _inventory;
 
-    private void OnDisable()
-    {
-        _inventory.NumberBlocksIsChanged -= OnCangedBlocksInPlayerInventory;
-    }
-
-    private void OnCangedBlocksInPlayerInventory(int current, int max)
-    {
-        if (current == 0)
+        private void Start()
         {
-            foreach (var indicator in _garageIndicatorsEducation)
-            {
-                if (indicator != null)
-                {
-                    indicator.gameObject.SetActive(true);
-                }
-            }
+            _inventory.NumberBlocksIsChanged += OnCangedBlocksInPlayerInventory;
+        }
 
-            Destroy(gameObject);
+        private void OnDisable()
+        {
+            _inventory.NumberBlocksIsChanged -= OnCangedBlocksInPlayerInventory;
+        }
+
+        private void OnCangedBlocksInPlayerInventory(int current, int max)
+        {
+            if (current == 0)
+            {
+                foreach (var indicator in _garageIndicatorsEducation)
+                {
+                    if (indicator != null)
+                    {
+                        indicator.gameObject.SetActive(true);
+                    }
+                }
+
+                Destroy(gameObject);
+            }
         }
     }
 }

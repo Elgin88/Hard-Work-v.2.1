@@ -1,27 +1,23 @@
 using UnityEngine;
+using HardWork;
 
-[RequireComponent(typeof(Rigidbody))]
-
-public class CollectionParkingArea : MonoBehaviour
+namespace HardWork
 {
-    [SerializeField] private Collector _collector;
+    [RequireComponent(typeof(Rigidbody))]
 
-    private void Start()
+    public class CollectionParkingArea : MonoBehaviour
     {
-        if (_collector == null)
-        {
-            Debug.Log("No serializefiel in " + gameObject.name);
-        }
-    }
+        [SerializeField] private Collector _collector;
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.TryGetComponent<Destroyer>(out Destroyer destroyer))
+        private void OnCollisionEnter(Collision collision)
         {
-            if (_collector != null & destroyer.Inventory.GetCurrentCountOfBlocks() != 0)
+            if (collision.gameObject.TryGetComponent<PlayerRam>(out PlayerRam destroyer))
             {
-                _collector.Unloader.StartUnload();
+                if (_collector != null & destroyer.Inventory.GetCurrentCountOfBlocks() != 0)
+                {
+                    _collector.Unloader.StartUnload();
+                }
             }
-        }        
+        }
     }
 }

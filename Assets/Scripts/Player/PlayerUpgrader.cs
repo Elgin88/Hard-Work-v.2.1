@@ -1,41 +1,45 @@
 using UnityEngine;
+using HardWork;
 
-public class PlayerUpgrader : MonoBehaviour
+namespace HardWork
 {
-    [SerializeField] private int _deltaMaxFuel;
-    [SerializeField] private int _deltaMaxLines;
-    [SerializeField] private float _deltaPower;
-
-    private PlayerPowerController _powerController;
-    private PlayerFuelController _fuelController;
-    private LineOfPointsCreater _lineOfPointsCreater;
-    private Garage _fuelCost;
-
-    private void Start()
+    public class PlayerUpgrader : MonoBehaviour
     {
-        _fuelController = GetComponent<PlayerFuelController>();
-        _powerController = GetComponent<PlayerPowerController>();
+        [SerializeField] private int _deltaMaxFuel;
+        [SerializeField] private int _deltaMaxLines;
+        [SerializeField] private float _deltaPower;
 
-        _lineOfPointsCreater = FindObjectOfType<LineOfPointsCreater>();
-    }
+        private PlayerPowerController _powerController;
+        private PlayerFuelController _fuelController;
+        private LineOfPointsCreater _lineOfPointsCreater;
+        private Garage _fuelCost;
 
-    public void TryBuyFuel()
-    {
-        _fuelController.TryBuyFuel();
-    }
+        private void Start()
+        {
+            _fuelController = GetComponent<PlayerFuelController>();
+            _powerController = GetComponent<PlayerPowerController>();
 
-    public void TryBuyTank()
-    {
-        _fuelController.TryBuyTank(_deltaMaxFuel);
-    }
+            _lineOfPointsCreater = FindObjectOfType<LineOfPointsCreater>();
+        }
 
-    public void TryAddPlace()
-    {
-        _lineOfPointsCreater.TryAddPlace(_deltaMaxLines);
-    }
+        public void TryBuyFuel()
+        {
+            _fuelController.TryBuyFuel();
+        }
 
-    public void TryAddPower()
-    {
-        _powerController.TryAddPower(_deltaPower);
+        public void TryBuyTank()
+        {
+            _fuelController.TryBuyTank(_deltaMaxFuel);
+        }
+
+        public void TryAddPlace()
+        {
+            _lineOfPointsCreater.TryAddPlace(_deltaMaxLines);
+        }
+
+        public void TryAddPower()
+        {
+            _powerController.TryAddPower(_deltaPower);
+        }
     }
 }

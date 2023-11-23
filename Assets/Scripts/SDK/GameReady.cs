@@ -1,11 +1,15 @@
 using UnityEngine;
+using HardWork;
 
-public class GameReady : MonoBehaviour
+namespace HardWork
 {
-    private void Start()
+    public class GameReady : MonoBehaviour
     {
+        private void Start()
+        {
 #if UNITY_WEBGL && !UNITY_EDITOR
-        Agava.YandexGames.YandexGamesSdk.GameReady();
+            Agava.YandexGames.YandexGamesSdk.GameReady();
 #endif
+        }
     }
 }

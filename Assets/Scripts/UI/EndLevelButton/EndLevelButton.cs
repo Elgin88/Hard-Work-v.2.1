@@ -1,38 +1,37 @@
 using UnityEngine;
 using UnityEngine.UI;
+using HardWork;
 
-[RequireComponent(typeof(Button))]
-
-public class EndLevelButton : MonoBehaviour
+namespace HardWork
 {
-    [SerializeField] private Button _endLevelButton;
-    [SerializeField] private EndLevelPanel _endLevelPanel;
+    [RequireComponent(typeof(Button))]
 
-    private void Start()
+    public class EndLevelButton : MonoBehaviour
     {
-        if (_endLevelButton == null || _endLevelPanel == null)
+        [SerializeField] private Button _endLevelButton;
+        [SerializeField] private EndLevelPanel _endLevelPanel;
+
+        private void Start()
         {
-            Debug.Log("No serializefiel in " + gameObject.name);
+            gameObject.SetActive(false);
         }
 
-        gameObject.SetActive(false);
-    }
-
-    private void OnEnable()
-    {
-        _endLevelButton.onClick.AddListener(OnNextLevelButtonClick);
-    }
-
-    private void OnDisable()
-    {
-        if (_endLevelButton != null)
+        private void OnEnable()
         {
-            _endLevelButton.onClick.RemoveListener(OnNextLevelButtonClick);
-        }        
-    }
+            _endLevelButton.onClick.AddListener(OnNextLevelButtonClick);
+        }
 
-    private void OnNextLevelButtonClick()
-    {
-        _endLevelPanel.gameObject.SetActive(true);
+        private void OnDisable()
+        {
+            if (_endLevelButton != null)
+            {
+                _endLevelButton.onClick.RemoveListener(OnNextLevelButtonClick);
+            }
+        }
+
+        private void OnNextLevelButtonClick()
+        {
+            _endLevelPanel.gameObject.SetActive(true);
+        }
     }
 }

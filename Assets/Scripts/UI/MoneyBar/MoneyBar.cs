@@ -1,31 +1,27 @@
 using TMPro;
 using UnityEngine;
+using HardWork;
 
-public class MoneyBar : MonoBehaviour
+namespace HardWork
 {
-    [SerializeField] private TMP_Text _moneyCount;
-    [SerializeField] private UIRequireComponents _uiRequireComponents;
-
-    private void Start()
+    public class MoneyBar : MonoBehaviour
     {
-        if (_moneyCount == null || _uiRequireComponents == null)
+        [SerializeField] private TMP_Text _moneyCount;
+        [SerializeField] private UIRequireComponents _uiRequireComponents;
+
+        private void OnEnable()
         {
-            Debug.Log("No serializefiel in " + gameObject.name);
+            _uiRequireComponents.PlayerMoney.IsMoneyChanged += OnMoneyChanged;
         }
-    }
 
-    private void OnEnable()
-    {
-        _uiRequireComponents.PlayerMoney.IsMoneyChanged += OnMoneyChanged;
-    }
+        private void OnDisable()
+        {
+            _uiRequireComponents.PlayerMoney.IsMoneyChanged -= OnMoneyChanged;
+        }
 
-    private void OnDisable()
-    {
-        _uiRequireComponents.PlayerMoney.IsMoneyChanged -= OnMoneyChanged;
-    }
-
-    private void OnMoneyChanged(int money)
-    {
-        _moneyCount.text = money.ToString();
+        private void OnMoneyChanged(int money)
+        {
+            _moneyCount.text = money.ToString();
+        }
     }
 }

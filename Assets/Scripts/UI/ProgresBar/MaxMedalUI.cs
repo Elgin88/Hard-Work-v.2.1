@@ -1,39 +1,35 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using HardWork;
 
-public class MaxMedalUI : MonoBehaviour
+namespace HardWork
 {
-    [SerializeField] private Image _image;
-    [SerializeField] private float _delay;
-
-    private WaitForSeconds _delayWFS;
-    private Coroutine _showImage;
-
-    private void Start()
+    public class MaxMedalUI : MonoBehaviour
     {
-        if (_image == null || _delay == 0 )
+        [SerializeField] private Image _image;
+        [SerializeField] private float _delay;
+
+        private WaitForSeconds _delayWFS;
+        private Coroutine _showImage;
+
+        private void OnEnable()
         {
-            Debug.Log("No serializefiel in " + gameObject.name);
+            _image.gameObject.SetActive(false);
+            _delayWFS = new WaitForSeconds(_delay);
+
+            _showImage = StartCoroutine(ShowImage());
         }
-    }
 
-    private void OnEnable()
-    {
-        _image.gameObject.SetActive(false);
-        _delayWFS = new WaitForSeconds(_delay);
-
-        _showImage = StartCoroutine(ShowImage());               
-    }
-
-    private IEnumerator ShowImage()
-    {
-        while (true)
+        private IEnumerator ShowImage()
         {
-            yield return _delayWFS;
+            while (true)
+            {
+                yield return _delayWFS;
 
-            _image.gameObject.SetActive(true);
-            StopCoroutine(_showImage);
+                _image.gameObject.SetActive(true);
+                StopCoroutine(_showImage);
+            }
         }
     }
 }

@@ -1,25 +1,29 @@
 using UnityEngine;
+using HardWork;
 
-public class PlayerExhaustController : MonoBehaviour
+namespace HardWork
 {
-    [SerializeField] private ParticleSystem _exhaust;
-    [SerializeField] private PlayerFuelController _fuelController;
-
-    private void OnEnable()
+    public class PlayerExhaustController : MonoBehaviour
     {
-        _fuelController.IsFuelChanged += OnChangedFuelValue ;
-    }
+        [SerializeField] private ParticleSystem _exhaust;
+        [SerializeField] private PlayerFuelController _fuelController;
 
-    private void OnDisable()
-    {
-        _fuelController.IsFuelChanged -= OnChangedFuelValue;
-    }
-
-    private void OnChangedFuelValue(float current, float max)
-    {
-        if (current == 0)
+        private void OnEnable()
         {
-            _exhaust.Stop();
+            _fuelController.IsFuelChanged += OnChangedFuelValue;
+        }
+
+        private void OnDisable()
+        {
+            _fuelController.IsFuelChanged -= OnChangedFuelValue;
+        }
+
+        private void OnChangedFuelValue(float current, float max)
+        {
+            if (current == 0)
+            {
+                _exhaust.Stop();
+            }
         }
     }
 }

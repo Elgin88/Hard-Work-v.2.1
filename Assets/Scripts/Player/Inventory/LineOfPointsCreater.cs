@@ -1,51 +1,43 @@
 using System;
 using UnityEngine;
+using HardWork;
 
-public class LineOfPointsCreater : MonoBehaviour
+namespace HardWork
 {
-    [SerializeField] private LineOfPoints _lineOfPoints;
-    [SerializeField] private PlayerRequireComponents _playerRequreComponents;
-    [SerializeField] private PlayerInventory _inventory;
-    [SerializeField] private PlayerMoney _playerMoney;
-    [SerializeField] private float _rangeBetweenBlocks;
-    [SerializeField] private int _maxNumberOfLines;
-
-    public Action <int, int> MaxNumberBlocksIsChanged;
-    public int MaxNumberOfLines => _maxNumberOfLines;
-
-    private void Start()
+    public class LineOfPointsCreater : MonoBehaviour
     {
-        if (_lineOfPoints == null ||
-            _playerRequreComponents == null ||
-            _inventory == null ||
-            _playerMoney == null ||
-            _rangeBetweenBlocks == 0 ||
-            _maxNumberOfLines == 0)
+        [SerializeField] private LineOfPoints _lineOfPoints;
+        [SerializeField] private RequiredComponentsForPlayer _playerRequreComponents;
+        [SerializeField] private PlayerInventory _inventory;
+        [SerializeField] private PlayerMoney _playerMoney;
+        [SerializeField] private float _rangeBetweenBlocks;
+        [SerializeField] private int _maxNumberOfLines;
+
+        public Action<int, int> MaxNumberBlocksIsChanged;
+
+        public int MaxNumberOfLines => _maxNumberOfLines;
+
+        public void TryCreateLine()
         {
-            Debug.Log("No serializefiel in " + gameObject.name);
+            if (_inventory.GetCountOfLines() < _maxNumberOfLines)
+            {
+                LineOfPoints line = Instantiate(_lineOfPoints, _inventory.transform);
+                line.MoveUp(_rangeBetweenBlocks * _inventory.GetCountOfLines());
+
+                _inventory.AddLine(line);
+            }
         }
-    }
 
-    public void TryCreateLine()
-    {
-        if (_inventory.GetCountOfLines() <  _maxNumberOfLines)
+        public void TryAddPlace(int numberLines)
         {
-            LineOfPoints line = Instantiate(_lineOfPoints, _inventory.transform);
-            line.MoveUp(_rangeBetweenBlocks * _inventory.GetCountOfLines());
+            if (_playerMoney.Money > _playerRequreComponents.Garage.PlaceCost)
+            {
+                _maxNumberOfLines += numberLines;
 
-            _inventory.AddLine(line);
-        }
-    }
+                _playerMoney.RemoveMoney(_playerRequreComponents.Garage.PlaceCost);
 
-    public void TryAddPlace(int numberLines)
-    {
-        if (_playerMoney.Money > _playerRequreComponents.Garage.PlaceCost)
-        {
-            _maxNumberOfLines += numberLines;
-
-            _playerMoney.RemoveMoney(_playerRequreComponents.Garage.PlaceCost);
-
-            MaxNumberBlocksIsChanged?.Invoke(_inventory.GetCurrentCountOfBlocks(), _inventory.GetMaxCountOfBlocks());
+                MaxNumberBlocksIsChanged?.Invoke(_inventory.GetCurrentCountOfBlocks(), _inventory.GetMaxCountOfBlocks());
+            }
         }
     }
 }

@@ -1,37 +1,32 @@
-using System;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using HardWork;
 
-public class Saver : MonoBehaviour
+namespace HardWork
 {
-    [SerializeField] private PlayerMoney _playerMoney;
-    [SerializeField] private ChooserLevelNameForLoad _chooserLevelName;
-    [SerializeField] private ScenesNames _sceneNames;
-
-    private string _saveKeyPlayerMoney = "SavedPlayerMoney";
-    private string _saveKeyNextLevelName = "SavedLevelName";
-
-    public string SaveKeyPlayerMoney => _saveKeyPlayerMoney;
-    public string SaveKeyNextLevelName => _saveKeyNextLevelName;
-
-    private void Start()
+    public class Saver : MonoBehaviour
     {
-        if (_playerMoney == null || _chooserLevelName == null || _sceneNames == null)
+        [SerializeField] private PlayerMoney _playerMoney;
+        [SerializeField] private ChooserLevelNameForLoad _chooserLevelName;
+        [SerializeField] private ScenesNames _sceneNames;
+
+        private string _saveKeyPlayerMoney = "SavedPlayerMoney";
+        private string _saveKeyNextLevelName = "SavedLevelName";
+
+        public string SaveKeyPlayerMoney => _saveKeyPlayerMoney;
+
+        public string SaveKeyNextLevelName => _saveKeyNextLevelName;
+
+        public void SaveData()
         {
-            Debug.Log("No serializefiel in " + gameObject.name);
+            PlayerPrefs.SetInt(_saveKeyPlayerMoney, _playerMoney.Money);
+            PlayerPrefs.SetString(_saveKeyNextLevelName, _chooserLevelName.GetNextSceneName());
+            PlayerPrefs.Save();
         }
-    }
 
-    public void SaveData()
-    {
-        PlayerPrefs.SetInt(_saveKeyPlayerMoney, _playerMoney.Money);
-        PlayerPrefs.SetString(_saveKeyNextLevelName, _chooserLevelName.GetNextSceneName());
-        PlayerPrefs.Save();
-    }
-
-    public void SaveMoney()
-    {
-        PlayerPrefs.SetInt(_saveKeyPlayerMoney, _playerMoney.Money);
-        PlayerPrefs.Save();
+        public void SaveMoney()
+        {
+            PlayerPrefs.SetInt(_saveKeyPlayerMoney, _playerMoney.Money);
+            PlayerPrefs.Save();
+        }
     }
 }

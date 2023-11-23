@@ -1,45 +1,41 @@
 using UnityEngine;
+using HardWork;
 
-public class EntryPointMainMenu : MonoBehaviour
+namespace HardWork
 {
-    [SerializeField] private GameObject _camera;
-    [SerializeField] private GameObject _gameController;
-    [SerializeField] private GameObject _eventSystem;
-    [SerializeField] private GameObject _canvas;
-
-    private void Start()
+    public class EntryPointMainMenu : MonoBehaviour
     {
-        if (_camera == null ||
-            _gameController == null ||
-            _eventSystem == null ||
-            _canvas == null)
+        [SerializeField] private GameObject _camera;
+        [SerializeField] private GameObject _gameController;
+        [SerializeField] private GameObject _eventSystem;
+        [SerializeField] private GameObject _canvas;
+
+        private void Start()
         {
-            Debug.Log("No serializefield in " + gameObject.name);
+            InitCamera();
+            InitGameController();
+            InitEventSystem();
+            InitCanvas();
         }
 
-        InitCamera();
-        InitGameController();
-        InitEventSystem();
-        InitCanvas();   
-    }
+        private void InitCamera()
+        {
+            _camera.gameObject.SetActive(true);
+        }
 
-    private void InitCamera()
-    {
-        _camera.gameObject.SetActive(true);
-    }
+        private void InitGameController()
+        {
+            _gameController.gameObject.SetActive(true);
+        }
 
-    private void InitGameController()
-    {
-        _gameController.gameObject.SetActive(true);
-    }
+        private void InitEventSystem()
+        {
+            _eventSystem.gameObject.SetActive(true);
+        }
 
-    private void InitEventSystem()
-    {
-        _eventSystem.gameObject.SetActive(true);
-    }
-
-    private void InitCanvas()
-    {
-        _canvas.gameObject.SetActive(true);
+        private void InitCanvas()
+        {
+            _canvas.gameObject.SetActive(true);
+        }
     }
 }

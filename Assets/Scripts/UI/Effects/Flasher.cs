@@ -1,79 +1,84 @@
 using System.Collections;
 using UnityEngine;
+using HardWork;
 
-public class Flasher : MonoBehaviour
+namespace HardWork
 {
-    private float _deltaScaleInPercentages = 30;
-    private float _timeOfFlashInSeconds = 0.3f;
-    private Coroutine _flash;
-    private Vector3 _startScale;
-    private Vector3 _currentScale;
-    private Vector3 _targetScale;
-    private float _deltaScale => (_targetScale.x - _startScale.x) / (_timeOfFlashInSeconds / Time.deltaTime);
-
-    private void OnEnable()
+    public class Flasher : MonoBehaviour
     {
-        _startScale = transform.localScale;
-        _currentScale = _startScale;
-        _targetScale = _startScale * (100 + _deltaScaleInPercentages) / 100;
+        private float _deltaScaleInPercentages = 30;
+        private float _timeOfFlashInSeconds = 0.3f;
+        private Coroutine _flash;
+        private Vector3 _startScale;
+        private Vector3 _currentScale;
+        private Vector3 _targetScale;
 
-        StartFlash();
-    }
+        private float DeltaScale => (_targetScale.x - _startScale.x) / (_timeOfFlashInSeconds / Time.deltaTime);
 
-    private void OnDisable()
-    {
-        StopFlash();
-    }
-
-    public void StartFlash()
-    {
-        if (_flash == null)
+        private void OnEnable()
         {
-            _flash = StartCoroutine(Flash());
+            _startScale = transform.localScale;
+            _currentScale = _startScale;
+            _targetScale = _startScale * (100 + _deltaScaleInPercentages) / 100;
+
+            StartFlash();
         }
-    }
 
-    public void StopFlash()
-    {
-        if (_flash != null)
+        private void OnDisable()
         {
-            StopCoroutine(_flash);
-            _flash = null;
+            StopFlash();
         }
-    }
 
-    private IEnumerator Flash()
-    {
-        bool isForward = true;
-
-        while (true)
+        public void StartFlash()
         {
-            if (isForward)
+            if (_flash == null)
             {
-                _currentScale.x = Mathf.MoveTowards(_currentScale.x, _targetScale.x, _deltaScale);
-                _currentScale.y = Mathf.MoveTowards(_currentScale.y, _targetScale.y, _deltaScale);
-                _currentScale.z = Mathf.MoveTowards(_currentScale.z, _targetScale.z, _deltaScale);
-
-                if (_currentScale.x >= _targetScale.x)
-                {
-                    isForward = false;
-                }
+                _flash = StartCoroutine(Flash());
             }
-            else
+        }
+
+        public void StopFlash()
+        {
+            if (_flash != null)
             {
-                _currentScale.x = Mathf.MoveTowards(_currentScale.x, _startScale.x, _deltaScale);
-                _currentScale.y = Mathf.MoveTowards(_currentScale.y, _startScale.y, _deltaScale);
-                _currentScale.z = Mathf.MoveTowards(_currentScale.z, _startScale.z, _deltaScale);
-
-                if (_currentScale.x <= _startScale.x)
-                {
-                    isForward = true;
-                }
+                StopCoroutine(_flash);
+                _flash = null;
             }
+        }
 
-            transform.localScale = _currentScale;
+        private IEnumerator Flash()
+        {
+            bool isForward = true;
 
-            yield return null;
+            while (true)
+            {
+                if (isForward)
+                {
+                    _currentScale.x = Mathf.MoveTowards(_currentScale.x, _targetScale.x, DeltaScale);
+                    _currentScale.y = Mathf.MoveTowards(_currentScale.y, _targetScale.y, DeltaScale);
+                    _currentScale.z = Mathf.MoveTowards(_currentScale.z, _targetScale.z, DeltaScale);
+
+                    if (_currentScale.x >= _targetScale.x)
+                    {
+                        isForward = false;
+                    }
+                }
+                else
+                {
+                    _currentScale.x = Mathf.MoveTowards(_currentScale.x, _startScale.x, DeltaScale);
+                    _currentScale.y = Mathf.MoveTowards(_currentScale.y, _startScale.y, DeltaScale);
+                    _currentScale.z = Mathf.MoveTowards(_currentScale.z, _startScale.z, DeltaScale);
+
+                    if (_currentScale.x <= _startScale.x)
+                    {
+                        isForward = true;
+                    }
+                }
+
+                transform.localScale = _currentScale;
+
+                yield return null;
+            }
         }
     }
 }

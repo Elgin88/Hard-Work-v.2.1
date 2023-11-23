@@ -1,55 +1,54 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using HardWork;
 
-public class AddMoneyForVideoAddButton : MonoBehaviour
+namespace HardWork
 {
-    [SerializeField] private UIRequireComponents _UIrequireComponents;
-    [SerializeField] private int _addPlayerMoney;
-    [SerializeField] private Button _button;
-    [SerializeField] private AudioSource _moneySound;
-
-    private WaitForSeconds _delayPressButton = new WaitForSeconds(1.5f);
-    private WaitForSeconds _delayShowVideoAd = new WaitForSeconds(0.5f);
-
-    private void Start()
+    public class AddMoneyForVideoAddButton : MonoBehaviour
     {
-        if (_UIrequireComponents == null || _addPlayerMoney == 0 || _button == null || _moneySound == null)
+        [SerializeField] private UIRequireComponents _UIrequireComponents;
+        [SerializeField] private int _addPlayerMoney;
+        [SerializeField] private Button _button;
+        [SerializeField] private AudioSource _moneySound;
+
+        private WaitForSeconds _delayPressButton = new WaitForSeconds(1.5f);
+        private WaitForSeconds _delayShowVideoAd = new WaitForSeconds(0.5f);
+
+        private void Start()
         {
-            Debug.Log("No serializefiel in " + gameObject.name);
+            _button.onClick.AddListener(OnButtonClick);
         }
 
-        _button.onClick.AddListener(OnButtonClick);
-    }
+        private void OnDisable()
+        {
+            _button.onClick.RemoveListener(OnButtonClick);
+        }
 
-    private void OnDisable()
-    {
-        _button.onClick.RemoveListener(OnButtonClick);
-    }
+        private void OnButtonClick()
+        {
+            _UIrequireComponents.PlayerMoney.AddMoney(_addPlayerMoney);
+            _UIrequireComponents.Saver.SaveMoney();
+            _moneySound.Play();
 
-    private void OnButtonClick()
-    {
-        _UIrequireComponents.PlayerMoney.AddMoney(_addPlayerMoney);
-        _UIrequireComponents.Saver.SaveMoney();
-        _moneySound.Play();
+            _button.interactable = false;
 
-        _button.interactable = false;
+            StartCoroutine(DelayForDoubleClick());
+            StartCoroutine(ShowVideoAd());
+        }
 
-        StartCoroutine(DelayForDoubleClick());
-        StartCoroutine(ShowVideoAd());
-    }
+        private IEnumerator DelayForDoubleClick()
+        {
+            yield return _delayPressButton;
 
-    private IEnumerator DelayForDoubleClick()
-    {
-        yield return _delayPressButton;
+            _button.interactable = true;
+        }
 
-        _button.interactable = true ;
-    }
+        private IEnumerator ShowVideoAd()
+        {
+            yield return _delayShowVideoAd;
 
-    private IEnumerator ShowVideoAd()
-    {
-        yield return _delayShowVideoAd;
-
-        _UIrequireComponents.Advertising.ShowVideoAd();
+            _UIrequireComponents.Advertising.ShowVideoAd();
+        }
     }
 }

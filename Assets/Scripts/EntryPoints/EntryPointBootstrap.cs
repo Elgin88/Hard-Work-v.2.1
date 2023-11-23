@@ -1,21 +1,20 @@
 using UnityEngine;
+using HardWork;
 
-public class EntryPointBootstrap : MonoBehaviour
+namespace HardWork
 {
-    [SerializeField] private GameObject _SDK;
-
-    private void Start()
+    public class EntryPointBootstrap : MonoBehaviour
     {
-        if (_SDK == null)
+        [SerializeField] private GameObject _SDK;
+
+        private void Start()
         {
-            Debug.Log("No serializefield in " + gameObject.name);
+            InitSDK();
         }
 
-        InitSDK();
-    }
-
-    private void InitSDK()
-    {
-        _SDK.gameObject.SetActive(true);
+        private void InitSDK()
+        {
+            _SDK.gameObject.SetActive(true);
+        }
     }
 }

@@ -1,77 +1,81 @@
 using System.Collections;
 using UnityEngine;
+using HardWork;
 
-public class JoystickIndicatorEducation : MonoBehaviour
+namespace HardWork
 {
-    [SerializeField] private BarrelIndicatorEducation[] _barrelIndicators;
-    [SerializeField] private FixedJoystick _fixedJoystick;
-    [SerializeField] private UIRequireComponents _UIRequireComponents;
-
-    private float _currentPressTime;
-    private float _delay = 0.5f;
-    private Coroutine _showIndicator;
-
-    private void OnEnable()
+    public class JoystickIndicatorEducation : MonoBehaviour
     {
-        StartShowIndicator();
-    }
+        [SerializeField] private BarrelIndicatorEducation[] _barrelIndicators;
+        [SerializeField] private FixedJoystick _fixedJoystick;
+        [SerializeField] private UIRequireComponents _UIRequireComponents;
 
-    private void OnDisable()
-    {
-        StopShowIndicator();
-    }
+        private float _currentPressTime;
+        private float _delay = 0.5f;
+        private Coroutine _showIndicator;
 
-    private IEnumerator ShowIndicator()
-    {
-        while (true)
+        private void OnEnable()
         {
-            CalculatePressingTimeOfJoystick();
+            StartShowIndicator();
+        }
 
-            if (_currentPressTime > _delay)
+        private void OnDisable()
+        {
+            StopShowIndicator();
+        }
+
+        private IEnumerator ShowIndicator()
+        {
+            while (true)
             {
-                _currentPressTime = 0;
+                CalculatePressingTimeOfJoystick();
 
-                foreach (var indicator in _barrelIndicators)
+                if (_currentPressTime > _delay)
                 {
-                    if (indicator != null)
+                    _currentPressTime = 0;
+
+                    foreach (var indicator in _barrelIndicators)
                     {
-                        indicator.gameObject.SetActive(true);
+                        if (indicator != null)
+                        {
+                            indicator.gameObject.SetActive(true);
+                        }
                     }
+
+                    gameObject.SetActive(false);
                 }
 
-                gameObject.SetActive(false);
+                yield return null;
             }
-
-            yield return null;
         }
-    }
 
-    private void StartShowIndicator()
-    {
-        if (_showIndicator == null)
+        private void StartShowIndicator()
         {
-            _showIndicator = StartCoroutine(ShowIndicator());
+            if (_showIndicator == null)
+            {
+                _showIndicator = StartCoroutine(ShowIndicator());
+            }
         }
-    }
 
-    private void StopShowIndicator()
-    {
-        if (_showIndicator != null)
+        private void StopShowIndicator()
         {
-            StopCoroutine(_showIndicator);
-            _showIndicator = null;
+            if (_showIndicator != null)
+            {
+                StopCoroutine(_showIndicator);
+                _showIndicator = null;
+            }
         }
-    }
 
-    private void CalculatePressingTimeOfJoystick()
-    {
-        if (_UIRequireComponents.PlayerSpeedSetter.CurrentSpeed > 1)
+        private void CalculatePressingTimeOfJoystick()
         {
-            _currentPressTime += Time.deltaTime;
-        }
-        else
-        {
-            _currentPressTime = 0;
+            if (_UIRequireComponents.PlayerSpeedSetter.CurrentSpeed > 1)
+            {
+                _currentPressTime += Time.deltaTime;
+            }
+            else
+            {
+                _currentPressTime = 0;
+            }
         }
     }
 }

@@ -1,46 +1,44 @@
 using UnityEngine;
 using UnityEngine.Events;
+using HardWork;
 
-public class ChooserMedals : MonoBehaviour
+namespace HardWork
 {
-    [SerializeField] private EnderLevel _enderLevel;
-    [SerializeField] private CalculatorBlocks _calculatorBlocks;
-
-    private bool _isMaxMedal = false;
-    private bool _isMiddleMedal = false;
-    private bool _isMinMedal = false;
-
-    public event UnityAction <bool, bool, bool> IsMedalsChoosen;
-    public bool IsMaxMedal => _isMaxMedal;
-    public bool IsMiddleMedal => _isMiddleMedal;
-    public bool IsMinMedal => _isMinMedal;
-
-
-    private void Start()
+    public class ChooserMedals : MonoBehaviour
     {
-        if (_enderLevel == null || _calculatorBlocks == null )
-        {
-            Debug.Log("No serializefiel in " + gameObject.name);
-        }
-    }
+        [SerializeField] private LevelCompletionConditionChecker _levelCompleter;
+        [SerializeField] private CalculatorBlocks _calculatorBlocks;
 
-    public void ChooseMedals()
-    {
-        if (_calculatorBlocks.Unload >= _enderLevel.MinNumberBlocks)
-        {
-            _isMinMedal = true;            
+        private bool _isMaxMedal = false;
+        private bool _isMiddleMedal = false;
+        private bool _isMinMedal = false;
 
-            if (_calculatorBlocks.Unload >= _enderLevel.MiddleNumberBlocks)
+        public event UnityAction<bool, bool, bool> IsMedalsChoosen;
+
+        public bool IsMaxMedal => _isMaxMedal;
+
+        public bool IsMiddleMedal => _isMiddleMedal;
+
+        public bool IsMinMedal => _isMinMedal;
+
+        public void ChooseMedals()
+        {
+            if (_calculatorBlocks.Unload >= _levelCompleter.MinNumberBlocks)
             {
-                _isMiddleMedal = true;
+                _isMinMedal = true;
 
-                if (_calculatorBlocks.Unload == _enderLevel.MaxNumberBlocks)
+                if (_calculatorBlocks.Unload >= _levelCompleter.MiddleNumberBlocks)
                 {
-                    _isMaxMedal = true;
-                }
-            }
+                    _isMiddleMedal = true;
 
-            IsMedalsChoosen?.Invoke(_isMinMedal,_isMiddleMedal, _isMaxMedal);
+                    if (_calculatorBlocks.Unload == _levelCompleter.MaxNumberBlocks)
+                    {
+                        _isMaxMedal = true;
+                    }
+                }
+
+                IsMedalsChoosen?.Invoke(_isMinMedal, _isMiddleMedal, _isMaxMedal);
+            }
         }
     }
 }

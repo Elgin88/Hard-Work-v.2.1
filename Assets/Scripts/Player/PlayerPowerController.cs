@@ -1,40 +1,38 @@
 using System;
 using UnityEngine;
+using HardWork;
 
-public class PlayerPowerController : MonoBehaviour
+namespace HardWork
 {
-    [SerializeField] private int _maxLevelEngine;
-    [SerializeField] private PlayerMoney _playerMoney;
-    [SerializeField] private PlayerSpeedSetter _playerSpeedSetter;
-    [SerializeField] private Garage _garage;
-
-    private int _engineLevel;
-    private bool _isMaxLevel = false;
-
-    public Action <int, bool> IsEngineUpgraded;
-    public bool IsMaxLevel => _isMaxLevel;
-
-    private void Start()
+    public class PlayerPowerController : MonoBehaviour
     {
-        if (_maxLevelEngine == 0 || _playerMoney == null ||
-            _playerSpeedSetter == null || _garage == null)
+        [SerializeField] private int _maxLevelEngine;
+        [SerializeField] private PlayerMoney _playerMoney;
+        [SerializeField] private PlayerSpeedSetter _playerSpeedSetter;
+        [SerializeField] private Garage _garage;
+
+        private int _engineLevel;
+        private bool _isMaxLevel = false;
+
+        public Action<int, bool> IsEngineUpgraded;
+
+        public bool IsMaxLevel => _isMaxLevel;
+
+        public void TryAddPower(float deltaPower)
         {
-            Debug.Log("No serializefield in " + gameObject.name);
+            if (_playerMoney.Money > _garage.PowerCost & _engineLevel < 3)
+            {
+                _playerSpeedSetter.ChangeDeltaPushSpeed(deltaPower);
+                _playerMoney.RemoveMoney(_garage.PowerCost);
+                _engineLevel++;
+
+                if (_engineLevel == _maxLevelEngine)
+                {
+                    _isMaxLevel = true;
+                }
+
+                IsEngineUpgraded?.Invoke(_engineLevel, _isMaxLevel);
+            }
         }
     }
-
-    public void TryAddPower(float deltaPower)
-    {
-        if (_playerMoney.Money > _garage.PowerCost & _engineLevel < 3)
-        {
-            _playerSpeedSetter.ChangeDeltaPushSpeed(deltaPower);
-            _playerMoney.RemoveMoney(_garage.PowerCost);
-            _engineLevel++;
-
-            if (_engineLevel == _maxLevelEngine)
-                _isMaxLevel = true;
-
-            IsEngineUpgraded?.Invoke(_engineLevel, _isMaxLevel);
-        }
-    }    
 }

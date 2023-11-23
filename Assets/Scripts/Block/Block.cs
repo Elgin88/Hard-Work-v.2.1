@@ -1,134 +1,131 @@
 using UnityEngine;
 using System.Collections;
+using HardWork;
 
-public class Block : MonoBehaviour
+namespace HardWork
 {
-    [SerializeField] private PlayerLoadController _playerLoadController;
-    [SerializeField] private PlayerInventory _inventory;
-    [SerializeField] private PlayerMover _playerMover;
-    [SerializeField] private Rigidbody _rigidbody;
-    [SerializeField] private BoxCollider _boxCollider;
-    [SerializeField] private BlockMover _blockMover;
-
-    private int _cost = 1;
-    private Point _point;
-    private bool _playerIsUnload;
-    private Coroutine _timerPhysicsOff;
-    private WaitForSeconds _phisicsOffTime = new WaitForSeconds(5);
-
-    public BlockMover BlockMover => _blockMover;
-    public Point Point => _point;
-
-    public int Cost => _cost;
-
-    private void Start()
+    public class Block : MonoBehaviour
     {
-        if (_playerLoadController == null || _inventory == null || _rigidbody == null || _boxCollider == null || _blockMover == null)
+        [SerializeField] private PlayerLoadController _playerLoadController;
+        [SerializeField] private PlayerInventory _inventory;
+        [SerializeField] private PlayerMover _playerMover;
+        [SerializeField] private Rigidbody _rigidbody;
+        [SerializeField] private BoxCollider _boxCollider;
+        [SerializeField] private BlockMover _blockMover;
+
+        private int _cost = 1;
+        private Point _point;
+        private bool _playerIsUnload;
+        private Coroutine _timerPhysicsOff;
+        private WaitForSeconds _phisicsOffTime = new WaitForSeconds(5);
+
+        public BlockMover BlockMover => _blockMover;
+
+        public Point Point => _point;
+
+        public int Cost => _cost;
+
+        public void WakeUp()
         {
-            Debug.Log("No serializefiel in " + gameObject.name);
+            _rigidbody.WakeUp();
         }
-    }
 
-    public void WakeUp()
-    {
-        _rigidbody.WakeUp();
-    }
-
-    public void GravityOn()
-    {
-        _rigidbody.useGravity = true;
-    }
-
-    public void GravityOff()
-    {
-        _rigidbody.useGravity = false;
-    }
-
-    public void ColliderOn()
-    {
-        _boxCollider.enabled = true;
-    }
-
-    public void ColliderOff()
-    {
-        _boxCollider.enabled = false;
-    }
-
-    public void KinematicOn()
-    {
-        _rigidbody.isKinematic = true;
-    }
-
-    public void KinematicOff()
-    {
-        _rigidbody.isKinematic = false;
-    }
-
-    public void SetPosition(float x, float y, float z)
-    {
-        transform.position = new Vector3 (x, y, z);
-    }
-
-    public void SetQuaternion(Quaternion currentRotation)
-    {
-        transform.rotation = currentRotation;
-    }
-
-    public void Destroy()
-    {
-        Destroy(gameObject);
-    }
-
-    public void StartTimerPhysicsOff()
-    {
-        if (_timerPhysicsOff == null)
+        public void GravityOn()
         {
-            _timerPhysicsOff = StartCoroutine(TimerPhysicsOff());
+            _rigidbody.useGravity = true;
         }
-    }
 
-    public void StopTimerPhysicsOff()
-    {
-        if (_timerPhysicsOff != null)
+        public void GravityOff()
         {
-            StopCoroutine(_timerPhysicsOff);
-            _timerPhysicsOff = null;
+            _rigidbody.useGravity = false;
         }
-    }
 
-    private void BlocksUnloaded(bool isUnload)
-    {
-        _playerIsUnload = isUnload;
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.TryGetComponent<Destroyer>(out Destroyer destroyer))
+        public void ColliderOn()
         {
-            _playerMover.SlowDown();
+            _boxCollider.enabled = true;
+        }
 
-            if (_playerIsUnload != true & _playerLoadController.IsUnload == false)
+        public void ColliderOff()
+        {
+            _boxCollider.enabled = false;
+        }
+
+        public void KinematicOn()
+        {
+            _rigidbody.isKinematic = true;
+        }
+
+        public void KinematicOff()
+        {
+            _rigidbody.isKinematic = false;
+        }
+
+        public void SetPosition(float x, float y, float z)
+        {
+            transform.position = new Vector3(x, y, z);
+        }
+
+        public void SetQuaternion(Quaternion currentRotation)
+        {
+            transform.rotation = currentRotation;
+        }
+
+        public void Destroy()
+        {
+            Destroy(gameObject);
+        }
+
+        public void StartTimerPhysicsOff()
+        {
+            if (_timerPhysicsOff == null)
             {
-                _point = _inventory.TryTakePoint();
+                _timerPhysicsOff = StartCoroutine(TimerPhysicsOff());
+            }
+        }
 
-                if (_point != null)
+        public void StopTimerPhysicsOff()
+        {
+            if (_timerPhysicsOff != null)
+            {
+                StopCoroutine(_timerPhysicsOff);
+                _timerPhysicsOff = null;
+            }
+        }
+
+        private void BlocksUnloaded(bool isUnload)
+        {
+            _playerIsUnload = isUnload;
+        }
+
+        private void OnCollisionEnter(Collision collision)
+        {
+            if (collision.gameObject.TryGetComponent<PlayerRam>(out PlayerRam playerRam))
+            {
+                _playerMover.SlowDown();
+
+                if (_playerIsUnload != true & _playerLoadController.IsUnload == false)
                 {
-                    KinematicOn();
-                    ColliderOff();
-                    GravityOff();
+                    _point = _inventory.TryTakePoint();
 
-                    _point.InitBlock(this);
-                    _blockMover.StartMoveToPlayer();
+                    if (_point != null)
+                    {
+                        KinematicOn();
+                        ColliderOff();
+                        GravityOff();
+
+                        _point.InitBlock(this);
+                        _blockMover.StartMoveToPlayer();
+                    }
                 }
             }
         }
-    }
 
-    private IEnumerator TimerPhysicsOff()
-    {
-        yield return _phisicsOffTime;
+        private IEnumerator TimerPhysicsOff()
+        {
+            yield return _phisicsOffTime;
 
-        KinematicOn();
-        GravityOff();
+            KinematicOn();
+            GravityOff();
+        }
     }
 }

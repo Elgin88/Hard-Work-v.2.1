@@ -2,82 +2,78 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using HardWork;
 
-[RequireComponent(typeof(Slider))]
-
-public class FuelBar : MonoBehaviour
+namespace HardWork
 {
-    [SerializeField] private float _speedOfChange;
-    [SerializeField] private TMP_Text _max;
-    [SerializeField] TMP_Text _middle;
-    [SerializeField] TMP_Text _min;
-    [SerializeField] private Slider _slider;
-    [SerializeField] private UIRequireComponents _UIRequireComponents;
+    [RequireComponent(typeof(Slider))]
 
-    private Coroutine _changeSliderValue;
-    private float _currentValue;
-    private float _targetFuel;
-    private float _maxFuel;
-
-    private void Start()
+    public class FuelBar : MonoBehaviour
     {
-        if (_speedOfChange == 0 || _max == null || _middle == null || _min == null || _slider == null || _UIRequireComponents == null)
+        [SerializeField] private float _speedOfChange;
+        [SerializeField] private TMP_Text _max;
+        [SerializeField] private TMP_Text _middle;
+        [SerializeField] private TMP_Text _min;
+        [SerializeField] private Slider _slider;
+        [SerializeField] private UIRequireComponents _UIRequireComponents;
+
+        private Coroutine _changeSliderValue;
+        private float _currentValue;
+        private float _targetFuel;
+        private float _maxFuel;
+
+        private void OnEnable()
         {
-            Debug.Log("No serializefiel in " + gameObject.name);
+            _slider = GetComponent<Slider>();
+
+            _slider.value = 0;
+            _UIRequireComponents.PlayerFuelController.IsFuelChanged += OnFuelChanged;
         }
-    }
 
-    private void OnEnable()
-    {
-        _slider = GetComponent<Slider>();
-
-        _slider.value = 0;
-        _UIRequireComponents.PlayerFuelController.IsFuelChanged += OnFuelChanged;
-    }
-
-    private void OnDisable()
-    {
-        _UIRequireComponents.PlayerFuelController.IsFuelChanged -= OnFuelChanged;
-    }
-
-    private void OnFuelChanged(float target, float max)
-    {
-        _targetFuel = target;
-        _maxFuel = max;
-
-        _max.text = max.ToString();
-        _middle.text = (max/2).ToString();
-        _min.text = "0";
-
-        StartChangeSliderValue();
-    }
-
-    private IEnumerator ChangeSliderValue()
-    {
-        while (true)
+        private void OnDisable()
         {
-            _currentValue = _slider.value;
-
-            _slider.value = _targetFuel / _maxFuel;
-
-            yield return null;
+            _UIRequireComponents.PlayerFuelController.IsFuelChanged -= OnFuelChanged;
         }
-    }
 
-    private void StartChangeSliderValue()
-    {
-        if (_changeSliderValue == null)
+        private void OnFuelChanged(float target, float max)
         {
-            _changeSliderValue = StartCoroutine(ChangeSliderValue());
+            _targetFuel = target;
+            _maxFuel = max;
+
+            _max.text = max.ToString();
+            _middle.text = (max / 2).ToString();
+            _min.text = "0";
+
+            StartChangeSliderValue();
         }
-    }
 
-    private void StopChangeSliderValue()
-    {
-        if (_changeSliderValue != null)
+        private IEnumerator ChangeSliderValue()
         {
-            StopCoroutine(_changeSliderValue);
-            _changeSliderValue = null;
+            while (true)
+            {
+                _currentValue = _slider.value;
+
+                _slider.value = _targetFuel / _maxFuel;
+
+                yield return null;
+            }
+        }
+
+        private void StartChangeSliderValue()
+        {
+            if (_changeSliderValue == null)
+            {
+                _changeSliderValue = StartCoroutine(ChangeSliderValue());
+            }
+        }
+
+        private void StopChangeSliderValue()
+        {
+            if (_changeSliderValue != null)
+            {
+                StopCoroutine(_changeSliderValue);
+                _changeSliderValue = null;
+            }
         }
     }
 }

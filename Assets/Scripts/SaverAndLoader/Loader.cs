@@ -1,17 +1,21 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using HardWork;
 
-public class Loader : MonoBehaviour
+namespace HardWork
 {
-    [SerializeField] private Saver _saver;
-
-    public int GetPlayerMoneyCount()
+    public class Loader : MonoBehaviour
     {
-        return PlayerPrefs.GetInt(_saver.SaveKeyPlayerMoney);
-    }
+        [SerializeField] private Saver _saver;
 
-    public string GetSceneNameForLoad()
-    {
-        return PlayerPrefs.GetString(_saver.SaveKeyNextLevelName);
+        public int GetPlayerMoneyCount()
+        {
+            return PlayerPrefs.GetInt(_saver.SaveKeyPlayerMoney);
+        }
+
+        public string GetSceneNameForLoad()
+        {
+            return PlayerPrefs.GetString(_saver.SaveKeyNextLevelName);
+        }
     }
 }

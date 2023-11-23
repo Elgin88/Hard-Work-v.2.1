@@ -1,44 +1,50 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using HardWork;
 
-public class CalculatorBlocks : MonoBehaviour
+namespace HardWork
 {
-    private SectionOfBlocks[] _allSections;
-    private Block [] _freeBlocks;
-    private int _allBlocksInSections;
-    private int _numberUnloadBlocks;
-    private int _allBlocks;
-    private int _numberBlocksOnCar;
-
-    public Action <int> NumberUnloadBlocksIsChanged;
-    public int AllBlocks => _allBlocks;
-    public int Unload => _numberUnloadBlocks;
-
-    private void Start()
+    public class CalculatorBlocks : MonoBehaviour
     {
-        StartCoroutine(CalculateBlocks());
-    }
+        private SectionOfBlocks[] _allSections;
+        private Block[] _freeBlocks;
+        private int _allBlocksInSections;
+        private int _numberUnloadBlocks;
+        private int _allBlocks;
+        private int _numberBlocksOnCar;
 
-    public void CalculateUnloadBloks()
-    {
-        _numberUnloadBlocks++;
-        NumberUnloadBlocksIsChanged?.Invoke(_numberUnloadBlocks);
-    }
+        public Action<int> NumberUnloadBlocksIsChanged;
 
-    private IEnumerator CalculateBlocks()
-    {
-        _allSections = FindObjectsOfType<SectionOfBlocks>();
+        public int AllBlocks => _allBlocks;
 
-        foreach (SectionOfBlocks section in _allSections)
+        public int Unload => _numberUnloadBlocks;
+
+        public void CalculateUnloadBloks()
         {
-            _allBlocksInSections += section.NumberOfBlocks;
+            _numberUnloadBlocks++;
+            NumberUnloadBlocksIsChanged?.Invoke(_numberUnloadBlocks);
         }
 
-        _allBlocks = _allBlocksInSections;
+        private void Start()
+        {
+            StartCoroutine(CalculateBlocks());
+        }
 
-        StopCoroutine(CalculateBlocks());
+        private IEnumerator CalculateBlocks()
+        {
+            _allSections = FindObjectsOfType<SectionOfBlocks>();
 
-        yield return null;
+            foreach (SectionOfBlocks section in _allSections)
+            {
+                _allBlocksInSections += section.NumberOfBlocks;
+            }
+
+            _allBlocks = _allBlocksInSections;
+
+            StopCoroutine(CalculateBlocks());
+
+            yield return null;
+        }
     }
 }

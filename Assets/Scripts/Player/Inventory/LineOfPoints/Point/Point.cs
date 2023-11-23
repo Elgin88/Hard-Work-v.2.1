@@ -1,45 +1,49 @@
 using UnityEngine;
+using HardWork;
 
-public class Point : MonoBehaviour
+namespace HardWork
 {
-    private Block _block;
-
-    public Block Block => _block;
-
-    public bool CheckIsTaken()
+    public class Point : MonoBehaviour
     {
-        if (_block == true)
+        private Block _block;
+
+        public Block Block => _block;
+
+        public bool CheckIsTaken()
         {
-            return true;
+            if (_block == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
-        else
+
+        public Point Take()
         {
-            return false;
+            return this;
         }
-    }
 
-    public Point Take()
-    {
-        return this;
-    }
+        public void InitBlock(Block block)
+        {
+            _block = block;
+        }
 
-    public void InitBlock(Block block)
-    {
-        _block = block;
-    }
+        public Block GetBlock()
+        {
+            return _block;
+        }
 
-    public Block GetBlock()
-    {
-        return _block;
-    }
+        public void Destroy()
+        {
+            Destroy(gameObject);
+        }
 
-    public void Destroy()
-    {
-        Destroy(gameObject);
-    }
-
-    public void RemoveBlock()
-    {
-        _block = null;
+        public void RemoveBlock()
+        {
+            _block = null;
+        }
     }
 }

@@ -1,18 +1,15 @@
 using UnityEngine;
+using HardWork;
 
-public class Collector : MonoBehaviour
+namespace HardWork
 {
-    [SerializeField] private Unloader _unloader;
-    [SerializeField] private PlayerRequireComponents _player;
-
-    public PlayerRequireComponents Player => _player;
-    public Unloader Unloader => _unloader;
-
-    private void Start()
+    public class Collector : MonoBehaviour
     {
-        if (_unloader == null || _player == null)
-        {
-            Debug.Log("No serializefiel in " + gameObject.name);
-        }
+        [SerializeField] private Unloader _unloader;
+        [SerializeField] private RequiredComponentsForPlayer _player;
+
+        public RequiredComponentsForPlayer Player => _player;
+
+        public Unloader Unloader => _unloader;
     }
 }

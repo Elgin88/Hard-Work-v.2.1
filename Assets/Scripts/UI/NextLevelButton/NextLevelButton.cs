@@ -1,32 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using HardWork;
 
-public class NextLevelButton : MonoBehaviour
+namespace HardWork
 {
-    [SerializeField] private Button _nextLevelButton;
-    [SerializeField] private UIRequireComponents _uiRequireComponents;
-
-    private void Start()
+    public class NextLevelButton : MonoBehaviour
     {
-        if (_nextLevelButton == null || _uiRequireComponents == null)
+        [SerializeField] private Button _nextLevelButton;
+        [SerializeField] private UIRequireComponents _uiRequireComponents;
+
+        private void Start()
         {
-            Debug.Log("No serializefield in " + gameObject.name) ;
+            _nextLevelButton.onClick.AddListener(OnNextLevelButtonClick);
         }
 
-        _nextLevelButton.onClick.AddListener(OnNextLevelButtonClick);
-    }
+        private void OnDisable()
+        {
+            _nextLevelButton.onClick.RemoveListener(OnNextLevelButtonClick);
+        }
 
-    private void OnDisable()
-    {
-        _nextLevelButton.onClick.RemoveListener(OnNextLevelButtonClick);
-    }
-
-    private void OnNextLevelButtonClick()
-    {
-        _uiRequireComponents.Saver.SaveData();
-        SceneManager.LoadScene(_uiRequireComponents.ChooserLevelNameForLoad.GetNextSceneName());
+        private void OnNextLevelButtonClick()
+        {
+            _uiRequireComponents.Saver.SaveData();
+            SceneManager.LoadScene(_uiRequireComponents.ChooserLevelNameForLoad.GetNextSceneName());
+        }
     }
 }
