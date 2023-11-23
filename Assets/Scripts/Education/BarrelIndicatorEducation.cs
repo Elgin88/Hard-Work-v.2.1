@@ -1,6 +1,4 @@
-using System.Collections;
 using UnityEngine;
-using HardWork;
 
 namespace HardWork
 {
@@ -12,11 +10,6 @@ namespace HardWork
         private void Start()
         {
             _inventory.NumberBlocksIsChanged += OnChangedNumberBlocksOnPlayer;
-        }
-
-        private void OnDisable()
-        {
-            _inventory.NumberBlocksIsChanged -= OnChangedNumberBlocksOnPlayer;
         }
 
         private void OnChangedNumberBlocksOnPlayer(int current, int max)
@@ -31,6 +24,7 @@ namespace HardWork
                     }
                 }
 
+                _inventory.NumberBlocksIsChanged -= OnChangedNumberBlocksOnPlayer;
                 Destroy(gameObject);
             }
         }

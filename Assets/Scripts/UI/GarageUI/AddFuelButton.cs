@@ -2,7 +2,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using HardWork;
 
 namespace HardWork
 {
@@ -36,7 +35,7 @@ namespace HardWork
 
         private void OnAddFuelButtonClick()
         {
-            _requireComponentsForUI.PlayerUpgrader.TryBuyFuel();
+            _requireComponentsForUI.PlayerUpgrader.BuyFuel();
             _soundOfBuy.Play();
 
             _requireComponentsForUI.GarageSoundController.PlayFuelSound();

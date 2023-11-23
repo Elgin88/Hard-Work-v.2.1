@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using HardWork;
 
 namespace HardWork
 {
@@ -12,11 +11,6 @@ namespace HardWork
 
         private void Start()
         {
-            if (_loadLevelButton == null || _chooserLevelName == null)
-            {
-                Debug.Log("No serializefield in " + gameObject.name);
-            }
-
             _loadLevelButton.onClick.AddListener(OnLoadButtonClick);
         }
 

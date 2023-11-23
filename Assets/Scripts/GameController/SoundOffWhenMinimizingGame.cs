@@ -16,23 +16,15 @@ namespace HardWork
 #if UNITY_WEBGL && !UNITY_EDITOR
             if (Agava.WebUtility.WebApplication.InBackground == true & _isSoundOn == true)
             {
-                _soundController.SetMinSoundValueInBrauser();
+                _soundController.SoundOff();
                 _isSoundOn = false;
             }
             else if (Agava.WebUtility.WebApplication.InBackground == false & _isSoundOn == false)
             {
-                _soundController.SetMaxSoundValueInBrauser();
+                _soundController.SoundOn();
                 _isSoundOn = true;
             }
 #endif
-        }
-
-        private void MethodForDeleteErrorInConsol()
-        {
-            if (_isSoundOn)
-            {
-                _isSoundOn = true;
-            }
         }
     }
 }

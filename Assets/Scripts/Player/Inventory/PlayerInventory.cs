@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using HardWork;
 
 namespace HardWork
 {
@@ -29,9 +28,9 @@ namespace HardWork
             _lineOfPointsCreater = GetComponent<LineOfPointsCreater>();
         }
 
-        public void TryCreateLine()
+        public void CreateLine()
         {
-            _lineOfPointsCreater.TryCreateLine();
+            _lineOfPointsCreater.CreateLine();
         }
 
         public void AddLine(LineOfPoints line)
@@ -44,11 +43,11 @@ namespace HardWork
             return _lines.Count;
         }
 
-        public Point TryTakePoint()
+        public Point TakePoint()
         {
             if (CheckIsFull() == true)
             {
-                TryCreateLine();
+                CreateLine();
             }
 
             if (CheckIsFull() == false)
@@ -82,7 +81,7 @@ namespace HardWork
             return _isFull;
         }
 
-        public Block TryGetLastAddBlock()
+        public Block GetLastAddBlock()
         {
             return _lines[_lines.Count - 1].GetLastAddBlockInLine();
         }

@@ -1,13 +1,10 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using HardWork;
 
 namespace HardWork
 {
     public class BlockMover : MonoBehaviour
     {
-        [SerializeField] private PlayerLoadController _playerLoadController;
         [SerializeField] private PlayerInventory _playerInventory;
         [SerializeField] private CalculatorBlocks _calculatorBlocks;
         [SerializeField] private ChooserMedals _chooserMedals;
@@ -45,8 +42,6 @@ namespace HardWork
                 StopCoroutine(_moveToCollector);
                 _moveToCollector = null;
             }
-
-            _playerLoadController.SetUploadStatus(false);
         }
 
         public void StartMoveToPlayer()
@@ -64,8 +59,6 @@ namespace HardWork
                 StopCoroutine(_moveToPlayer);
                 _moveToPlayer = null;
             }
-
-            _playerLoadController.SetUploadStatus(false);
         }
 
         public void StartHoldBlockOnPlayer()
@@ -94,8 +87,6 @@ namespace HardWork
 
             while (true)
             {
-                _playerLoadController.SetUploadStatus(true);
-
                 if (_block.Point != null)
                 {
                     _topPointToPlayer = new Vector3((_block.Point.transform.position.x + _startBlockPosition.x) / 2, _block.Point.transform.position.y + _tossHightToPlayer, (_block.Point.transform.position.z + _startBlockPosition.z) / 2);
@@ -159,8 +150,6 @@ namespace HardWork
 
             while (true)
             {
-                _playerLoadController.SetUploadStatus(true);
-
                 if (_isReachedTopToCollector == false)
                 {
                     transform.position = Vector3.MoveTowards(transform.position, _topPointToCollector, _flightSpeedToCollector * Time.deltaTime);
@@ -179,7 +168,7 @@ namespace HardWork
                 {
                     _playerMoney.AddMoney(_block.Cost);
                     _calculatorBlocks.CalculateUnloadBloks();
-                    _chooserMedals.ChooseMedals();
+                    _chooserMedals.SetMedals();
                     _blockSound.PlayBlockPlaceInCollector();
 
                     StopMoveToCollector();

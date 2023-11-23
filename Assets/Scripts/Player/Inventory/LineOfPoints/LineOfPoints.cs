@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using HardWork;
 
 namespace HardWork
 {
@@ -16,7 +15,7 @@ namespace HardWork
         {
             foreach (Point point in _points)
             {
-                if (point.CheckIsTaken() == false)
+                if (point.Block == false)
                 {
                     point.Take();
                     return point;

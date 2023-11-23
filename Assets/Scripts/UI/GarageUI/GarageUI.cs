@@ -1,6 +1,6 @@
 using System.Collections;
 using UnityEngine;
-using HardWork;
+using UnityEngine.SceneManagement;
 
 namespace HardWork
 {
@@ -10,9 +10,16 @@ namespace HardWork
         [SerializeField] private RequireComponentsForUI _requireComponentsForUI;
 
         private Coroutine _checkDistance;
+        private IndicatorsEducation _indicatorsEducation;
 
         private void OnEnable()
         {
+            if (SceneManager.GetActiveScene().name == "Level1")
+            {
+                _indicatorsEducation = FindObjectOfType<IndicatorsEducation>();
+                _indicatorsEducation.GarageIndicatorsEducationDisable();
+            }
+
             StartCheckDistance();
         }
 

@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using HardWork;
 
 namespace HardWork
 {
@@ -18,7 +17,7 @@ namespace HardWork
 
         public bool IsMaxLevel => _isMaxLevel;
 
-        public void TryAddPower(float deltaPower)
+        public void AddPower(float deltaPower)
         {
             if (_playerMoney.Money > _garage.PowerCost & _engineLevel < 3)
             {

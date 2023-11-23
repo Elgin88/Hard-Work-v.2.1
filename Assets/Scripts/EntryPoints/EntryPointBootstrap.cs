@@ -1,5 +1,4 @@
 using UnityEngine;
-using HardWork;
 
 namespace HardWork
 {
@@ -9,10 +8,10 @@ namespace HardWork
 
         private void Start()
         {
-            InitSDK();
+            EnableSDK();
         }
 
-        private void InitSDK()
+        private void EnableSDK()
         {
             _SDK.gameObject.SetActive(true);
         }

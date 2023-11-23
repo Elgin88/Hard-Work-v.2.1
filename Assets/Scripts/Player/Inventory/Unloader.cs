@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using HardWork;
 
 namespace HardWork
 {
@@ -39,7 +38,7 @@ namespace HardWork
         {
             while (true)
             {
-                Block lastAddBlock = _inventory.TryGetLastAddBlock();
+                Block lastAddBlock = _inventory.GetLastAddBlock();
 
                 if (lastAddBlock != null)
                 {

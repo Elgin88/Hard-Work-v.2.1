@@ -1,12 +1,10 @@
-using UnityEngine;
 using System.Collections;
-using HardWork;
+using UnityEngine;
 
 namespace HardWork
 {
     public class Block : MonoBehaviour
     {
-        [SerializeField] private PlayerLoadController _playerLoadController;
         [SerializeField] private PlayerInventory _inventory;
         [SerializeField] private PlayerMover _playerMover;
         [SerializeField] private Rigidbody _rigidbody;
@@ -103,19 +101,16 @@ namespace HardWork
             {
                 _playerMover.SlowDown();
 
-                if (_playerIsUnload != true & _playerLoadController.IsUnload == false)
+                _point = _inventory.TakePoint();
+
+                if (_point != null)
                 {
-                    _point = _inventory.TryTakePoint();
+                    KinematicOn();
+                    ColliderOff();
+                    GravityOff();
 
-                    if (_point != null)
-                    {
-                        KinematicOn();
-                        ColliderOff();
-                        GravityOff();
-
-                        _point.InitBlock(this);
-                        _blockMover.StartMoveToPlayer();
-                    }
+                    _point.InitBlock(this);
+                    _blockMover.StartMoveToPlayer();
                 }
             }
         }

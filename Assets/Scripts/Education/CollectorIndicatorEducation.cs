@@ -1,5 +1,4 @@
 using UnityEngine;
-using HardWork;
 
 namespace HardWork
 {
@@ -8,14 +7,9 @@ namespace HardWork
         [SerializeField] private GarageTrainingIndicator[] _garageIndicatorsEducation;
         [SerializeField] private PlayerInventory _inventory;
 
-        private void Start()
+        private void OnEnable()
         {
             _inventory.NumberBlocksIsChanged += OnCangedBlocksInPlayerInventory;
-        }
-
-        private void OnDisable()
-        {
-            _inventory.NumberBlocksIsChanged -= OnCangedBlocksInPlayerInventory;
         }
 
         private void OnCangedBlocksInPlayerInventory(int current, int max)
@@ -29,6 +23,8 @@ namespace HardWork
                         indicator.gameObject.SetActive(true);
                     }
                 }
+
+                _inventory.NumberBlocksIsChanged -= OnCangedBlocksInPlayerInventory;
 
                 Destroy(gameObject);
             }

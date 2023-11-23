@@ -1,5 +1,4 @@
 using UnityEngine;
-using HardWork;
 
 namespace HardWork
 {
@@ -8,19 +7,8 @@ namespace HardWork
         [SerializeField] private EngineBarIconColorSetter _colorSetter1;
         [SerializeField] private EngineBarIconColorSetter _colorSetter2;
         [SerializeField] private EngineBarIconColorSetter _colorSetter3;
-        [SerializeField] private float _maxDeltaScaleX;
-        [SerializeField] private float _maxDeltaScaleY;
-        [SerializeField] private float _maxDeltaScaleZ;
         [SerializeField] private float _duration;
         [SerializeField] private RequireComponentsForUI _requireComponentsForUI;
-
-        public float MaxScaleX => _maxDeltaScaleX;
-
-        public float MaxScaleY => _maxDeltaScaleY;
-
-        public float MaxScaleZ => _maxDeltaScaleZ;
-
-        public float Duration => _duration;
 
         private void OnEnable()
         {

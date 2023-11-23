@@ -4403,6 +4403,7 @@ GameObject:
   - component: {fileID: 699271396}
   - component: {fileID: 699271398}
   - component: {fileID: 699271399}
+  - component: {fileID: 699271400}
   m_Layer: 0
   m_Name: GarageTrainingIndicator
   m_TagString: Untagged
@@ -4489,6 +4490,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b006eb414b0e4058ab26697750a1c65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &699271400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699271395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f24cd77b1621241389a4520b51cea73a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _requireComponentsForUI: {fileID: 827877624}
+  _player: {fileID: 268018514}
+  _garageParkingArea: {fileID: 1153158899}
+  _addFuelButtonsEducation:
+  - {fileID: 1833369855}
+  - {fileID: 1097214749}
+  - {fileID: 609798725}
 --- !u!1001 &715151951
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7533,10 +7553,10 @@ MonoBehaviour:
   - {fileID: 1950459829}
   - {fileID: 1362541943}
   _garageIndicatorsEducation:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 699271400}
+  - {fileID: 2099187737}
+  - {fileID: 2001226171}
+  - {fileID: 1976933781}
   _joystickIndicatorEducation:
   - {fileID: 32456912}
   - {fileID: 649586651}
@@ -14681,6 +14701,7 @@ GameObject:
   - component: {fileID: 1976933777}
   - component: {fileID: 1976933779}
   - component: {fileID: 1976933780}
+  - component: {fileID: 1976933781}
   m_Layer: 0
   m_Name: GarageTrainingIndicator
   m_TagString: Untagged
@@ -14767,6 +14788,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b006eb414b0e4058ab26697750a1c65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1976933781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1976933776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f24cd77b1621241389a4520b51cea73a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _requireComponentsForUI: {fileID: 827877624}
+  _player: {fileID: 268018514}
+  _garageParkingArea: {fileID: 1153158899}
+  _addFuelButtonsEducation: []
 --- !u!1 &2001226166
 GameObject:
   m_ObjectHideFlags: 0
@@ -14778,6 +14815,7 @@ GameObject:
   - component: {fileID: 2001226167}
   - component: {fileID: 2001226169}
   - component: {fileID: 2001226170}
+  - component: {fileID: 2001226171}
   m_Layer: 0
   m_Name: GarageTrainingIndicator
   m_TagString: Untagged
@@ -14864,6 +14902,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b006eb414b0e4058ab26697750a1c65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2001226171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001226166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f24cd77b1621241389a4520b51cea73a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _requireComponentsForUI: {fileID: 827877624}
+  _player: {fileID: 268018514}
+  _garageParkingArea: {fileID: 1153158899}
+  _addFuelButtonsEducation: []
 --- !u!4 &2004463009 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
@@ -15389,10 +15443,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _garageIndicatorsEducation:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 699271400}
+  - {fileID: 2099187737}
+  - {fileID: 2001226171}
+  - {fileID: 1976933781}
   _inventory: {fileID: 1137631207}
 --- !u!212 &2061857481
 SpriteRenderer:
@@ -15662,6 +15716,7 @@ GameObject:
   - component: {fileID: 2099187733}
   - component: {fileID: 2099187735}
   - component: {fileID: 2099187736}
+  - component: {fileID: 2099187737}
   m_Layer: 0
   m_Name: GarageTrainingIndicator
   m_TagString: Untagged
@@ -15748,6 +15803,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b006eb414b0e4058ab26697750a1c65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2099187737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099187732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f24cd77b1621241389a4520b51cea73a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _requireComponentsForUI: {fileID: 827877624}
+  _player: {fileID: 268018514}
+  _garageParkingArea: {fileID: 1153158899}
+  _addFuelButtonsEducation: []
 --- !u!4 &2102139427 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}

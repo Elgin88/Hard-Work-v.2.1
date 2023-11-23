@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using HardWork;
 
 namespace HardWork
 {
@@ -24,10 +23,7 @@ namespace HardWork
             {
                 if (indicator != null)
                 {
-                    if (indicator != null)
-                    {
-                        Destroy(indicator.gameObject);
-                    }
+                    Destroy(indicator.gameObject);
                 }
             }
 

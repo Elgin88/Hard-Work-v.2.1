@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.Events;
-using HardWork;
 
 namespace HardWork
 {
@@ -13,7 +12,7 @@ namespace HardWork
         private bool _isMiddleMedal = false;
         private bool _isMinMedal = false;
 
-        public event UnityAction<bool, bool, bool> IsMedalsChoosen;
+        public event UnityAction <bool, bool, bool> IsMedalsChoosen;
 
         public bool IsMaxMedal => _isMaxMedal;
 
@@ -21,24 +20,24 @@ namespace HardWork
 
         public bool IsMinMedal => _isMinMedal;
 
-        public void ChooseMedals()
+        public void SetMedals()
         {
             if (_calculatorBlocks.Unload >= _levelCompleter.MinNumberBlocks)
             {
                 _isMinMedal = true;
-
-                if (_calculatorBlocks.Unload >= _levelCompleter.MiddleNumberBlocks)
-                {
-                    _isMiddleMedal = true;
-
-                    if (_calculatorBlocks.Unload == _levelCompleter.MaxNumberBlocks)
-                    {
-                        _isMaxMedal = true;
-                    }
-                }
-
-                IsMedalsChoosen?.Invoke(_isMinMedal, _isMiddleMedal, _isMaxMedal);
             }
+
+            if (_calculatorBlocks.Unload >= _levelCompleter.MiddleNumberBlocks)
+            {
+                _isMiddleMedal = true;
+            }
+
+            if (_calculatorBlocks.Unload == _levelCompleter.MaxNumberBlocks)
+            {
+                _isMaxMedal = true;
+            }
+
+            IsMedalsChoosen?.Invoke(_isMinMedal, _isMiddleMedal, _isMaxMedal);
         }
     }
 }

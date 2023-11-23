@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using UnityEngine;
-using HardWork;
 
 namespace HardWork
 {
@@ -32,7 +31,7 @@ namespace HardWork
             StartBurnFuel();
         }
 
-        public void TryBuyFuel()
+        public void BuyFuel()
         {
             if (_playerMoney.Money > _garage.FuelCoust)
             {
@@ -42,7 +41,7 @@ namespace HardWork
             }
         }
 
-        public void TryBuyTank(int addVolumeTank)
+        public void BuyTank(int addVolumeTank)
         {
             if (_playerMoney.Money > _garage.TankCost)
             {

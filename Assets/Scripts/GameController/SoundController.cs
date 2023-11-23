@@ -1,32 +1,17 @@
 using UnityEngine;
-using HardWork;
 
 namespace HardWork
 {
     public class SoundController : MonoBehaviour
     {
-        public void SetMaxSoundValue()
+        public void SoundOn()
         {
             AudioListener.volume = 1;
         }
 
-        public void SetMinSoundValue()
+        public void SoundOff()
         {
             AudioListener.volume = 0;
-        }
-
-        public void SetMaxSoundValueInBrauser()
-        {
-#if UNITY_WEBGL && !UNITY_EDITOR
-            AudioListener.volume = 1;
-#endif
-        }
-
-        public void SetMinSoundValueInBrauser()
-        {
-#if UNITY_WEBGL && !UNITY_EDITOR
-            AudioListener.volume = 0;
-#endif
         }
     }
 }

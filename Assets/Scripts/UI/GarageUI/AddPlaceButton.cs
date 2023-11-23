@@ -1,7 +1,6 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using HardWork;
 
 namespace HardWork
 {
@@ -29,7 +28,7 @@ namespace HardWork
 
         private void OnAddPlaceButtonClick()
         {
-            _requireComponentsForUI.PlayerUpgrader.TryAddPlace();
+            _requireComponentsForUI.PlayerUpgrader.AddPlace();
             _soundOfBuy.Play();
             _requireComponentsForUI.GarageSoundController.StartPlaySoundFinEngine();
         }

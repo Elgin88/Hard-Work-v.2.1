@@ -1,7 +1,6 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using HardWork;
 
 namespace HardWork
 {
@@ -33,7 +32,7 @@ namespace HardWork
 
         private void OnButtonClick()
         {
-            _requireComponentsForUI.PlayerUpgrader.TryAddPower();
+            _requireComponentsForUI.PlayerUpgrader.AddPower();
             _soundOfBuy.Play();
             _requireComponentsForUI.GarageSoundController.StartPlaySoundFinEngine();
         }

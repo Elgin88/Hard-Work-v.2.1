@@ -1,13 +1,11 @@
 using System.Collections;
 using UnityEngine;
-using HardWork;
 
 namespace HardWork
 {
     public class JoystickIndicatorEducation : MonoBehaviour
     {
         [SerializeField] private BarrelIndicatorEducation[] _barrelIndicators;
-        [SerializeField] private FixedJoystick _fixedJoystick;
         [SerializeField] private RequireComponentsForUI _requireComponentsForUI;
 
         private float _currentPressTime;

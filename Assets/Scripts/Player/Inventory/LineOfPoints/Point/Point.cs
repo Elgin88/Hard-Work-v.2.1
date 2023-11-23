@@ -1,5 +1,4 @@
 using UnityEngine;
-using HardWork;
 
 namespace HardWork
 {
@@ -8,18 +7,6 @@ namespace HardWork
         private Block _block;
 
         public Block Block => _block;
-
-        public bool CheckIsTaken()
-        {
-            if (_block == true)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
 
         public Point Take()
         {

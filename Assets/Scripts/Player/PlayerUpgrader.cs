@@ -1,5 +1,4 @@
 using UnityEngine;
-using HardWork;
 
 namespace HardWork
 {
@@ -22,24 +21,24 @@ namespace HardWork
             _lineOfPointsCreater = FindObjectOfType<LineOfPointsCreater>();
         }
 
-        public void TryBuyFuel()
+        public void BuyFuel()
         {
-            _fuelController.TryBuyFuel();
+            _fuelController.BuyFuel();
         }
 
-        public void TryBuyTank()
+        public void BuyTank()
         {
-            _fuelController.TryBuyTank(_deltaMaxFuel);
+            _fuelController.BuyTank(_deltaMaxFuel);
         }
 
-        public void TryAddPlace()
+        public void AddPlace()
         {
-            _lineOfPointsCreater.TryAddPlace(_deltaMaxLines);
+            _lineOfPointsCreater.AddPlace(_deltaMaxLines);
         }
 
-        public void TryAddPower()
+        public void AddPower()
         {
-            _powerController.TryAddPower(_deltaPower);
+            _powerController.AddPower(_deltaPower);
         }
     }
 }

@@ -1,5 +1,4 @@
 using UnityEngine;
-using HardWork;
 
 namespace HardWork
 {
@@ -12,28 +11,28 @@ namespace HardWork
 
         private void Start()
         {
-            InitCamera();
-            InitGameController();
-            InitEventSystem();
-            InitCanvas();
+            EnableCamera();
+            EnableGameController();
+            EnableEventSystem();
+            EnableCanvas();
         }
 
-        private void InitCamera()
+        private void EnableCamera()
         {
             _camera.gameObject.SetActive(true);
         }
 
-        private void InitGameController()
+        private void EnableGameController()
         {
             _gameController.gameObject.SetActive(true);
         }
 
-        private void InitEventSystem()
+        private void EnableEventSystem()
         {
             _eventSystem.gameObject.SetActive(true);
         }
 
-        private void InitCanvas()
+        private void EnableCanvas()
         {
             _canvas.gameObject.SetActive(true);
         }

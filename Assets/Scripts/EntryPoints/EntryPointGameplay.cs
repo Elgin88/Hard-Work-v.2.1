@@ -1,5 +1,4 @@
 using UnityEngine;
-using HardWork;
 
 namespace HardWork
 {
@@ -18,64 +17,64 @@ namespace HardWork
 
         private void Start()
         {
-            InitCamera();
-            InitGameController();
-            InitDirectionLight();
-            InitEventSystem();
-            InitTerrain();
-            InitPlayer();
-            InitGarage();
-            InitCollector();
-            InitUI();
-            InitObjects();
+            EnableCamera();
+            EnableGameController();
+            EnableDirectionLight();
+            EnableEventSystem();
+            EnableTerrain();
+            EnablePlayer();
+            EnableGarage();
+            EnableCollector();
+            EnableUI();
+            EnableObjects();
         }
 
-        private void InitCamera()
+        private void EnableCamera()
         {
             _camera.gameObject.SetActive(true);
         }
 
-        private void InitGameController()
+        private void EnableGameController()
         {
             _gameController.gameObject.SetActive(true);
         }
 
-        private void InitDirectionLight()
+        private void EnableDirectionLight()
         {
             _directionLight.gameObject.SetActive(true);
         }
 
-        private void InitEventSystem()
+        private void EnableEventSystem()
         {
             _eventSystem.gameObject.SetActive(true);
         }
 
-        private void InitTerrain()
+        private void EnableTerrain()
         {
             _terrain.gameObject.SetActive(true);
         }
 
-        private void InitPlayer()
+        private void EnablePlayer()
         {
             _player.gameObject.SetActive(true);
         }
 
-        private void InitGarage()
+        private void EnableGarage()
         {
             _garage.gameObject.SetActive(true);
         }
 
-        private void InitCollector()
+        private void EnableCollector()
         {
             _collector.gameObject.SetActive(true);
         }
 
-        private void InitUI()
+        private void EnableUI()
         {
             _ui.gameObject.SetActive(true);
         }
 
-        private void InitObjects()
+        private void EnableObjects()
         {
             _objects.gameObject.SetActive(true);
         }

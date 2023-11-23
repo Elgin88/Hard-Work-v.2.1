@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using HardWork;
 
 namespace HardWork
 {
@@ -17,7 +16,7 @@ namespace HardWork
 
         public int MaxNumberOfLines => _maxNumberOfLines;
 
-        public void TryCreateLine()
+        public void CreateLine()
         {
             if (_inventory.GetCountOfLines() < _maxNumberOfLines)
             {
@@ -28,7 +27,7 @@ namespace HardWork
             }
         }
 
-        public void TryAddPlace(int numberLines)
+        public void AddPlace(int numberLines)
         {
             if (_playerMoney.Money > _playerRequreComponents.Garage.PlaceCost)
             {

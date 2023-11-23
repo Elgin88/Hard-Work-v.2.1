@@ -1,11 +1,9 @@
 using UnityEngine;
-using HardWork;
 
 namespace HardWork
 {
     [RequireComponent(typeof(PlayerMover))]
     [RequireComponent(typeof(PlayerFuelController))]
-    [RequireComponent(typeof(PlayerLoadController))]
     [RequireComponent(typeof(PlayerMover))]
     [RequireComponent(typeof(PlayerPowerController))]
     [RequireComponent(typeof(PlayerSpeedSetter))]

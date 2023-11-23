@@ -1,7 +1,6 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using HardWork;
 
 namespace HardWork
 {
@@ -28,7 +27,7 @@ namespace HardWork
 
         private void OnAddTankButton()
         {
-            _requireComponentsForUI.PlayerUpgrader.TryBuyTank();
+            _requireComponentsForUI.PlayerUpgrader.BuyTank();
             _soundOfBuy.Play();
             _requireComponentsForUI.GarageSoundController.StartPlaySoundFinEngine();
         }
