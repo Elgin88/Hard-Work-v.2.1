@@ -11,7 +11,7 @@ namespace HardWork
 
         private bool _isFull = false;
 
-        public Action<int, int> NumberBlocksIsChanged;
+        public Action <int, int> NumberBlocksIsChanged;
 
         public int GetNumberLines => _lines.Count;
 

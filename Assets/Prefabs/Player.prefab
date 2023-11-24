@@ -456,7 +456,6 @@ GameObject:
   - component: {fileID: 943398948989556032}
   - component: {fileID: 943398948989556030}
   - component: {fileID: 943398948989556029}
-  - component: {fileID: 943398948989556028}
   - component: {fileID: 943398948989556035}
   - component: {fileID: 943398948989556034}
   - component: {fileID: 943398948989556033}
@@ -544,18 +543,6 @@ MonoBehaviour:
   _playerMoney: {fileID: 4555091069431499519}
   _speedSetter: {fileID: 943398948989556035}
   _garage: {fileID: 0}
---- !u!114 &943398948989556028
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3974565282749870195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 349d75c6f310d4e269040941c3a22c6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &943398948989556035
 MonoBehaviour:
   m_ObjectHideFlags: 0

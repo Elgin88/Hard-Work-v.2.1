@@ -11,8 +11,8 @@ namespace HardWork
     [RequireComponent(typeof(Loader))]
     [RequireComponent(typeof(PauseSetter))]
     [RequireComponent(typeof(Advertising))]
-    [RequireComponent(typeof(ScenesNames))]
     [RequireComponent(typeof(ChooserLevelNameForLoad))]
+    [RequireComponent(typeof(ScenesNames))]
 
     public class GameControllerRequireComponents : MonoBehaviour
     {

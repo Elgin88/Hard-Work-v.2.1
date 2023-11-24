@@ -837,8 +837,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 685615682edfe468b8c58417fb92feee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _requireComponentsForUI: {fileID: 0}
-  _addPlayerMoney: 750
+  _requireComponentsForUI: {fileID: 3004259275157797504}
   _button: {fileID: 8222775292269247728}
   _moneySound: {fileID: 6485855533355665665}
 --- !u!82 &6485855533355665665
@@ -1336,7 +1335,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _barrelIndicators: []
-  _fixedJoystick: {fileID: 3513216691088164064}
   _requireComponentsForUI: {fileID: 3004259275157797504}
 --- !u!114 &6220260854642562784
 MonoBehaviour:
@@ -7900,9 +7898,6 @@ MonoBehaviour:
   _colorSetter1: {fileID: 5527340299725239116}
   _colorSetter2: {fileID: 5082068324132008550}
   _colorSetter3: {fileID: 2587851914029282601}
-  _maxDeltaScaleX: 1.3
-  _maxDeltaScaleY: 1.3
-  _maxDeltaScaleZ: 1.3
   _duration: 0.3
   _requireComponentsForUI: {fileID: 3004259275157797504}
 --- !u!1 &5700204133238625903
@@ -9146,7 +9141,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _barrelIndicators: []
-  _fixedJoystick: {fileID: 3513216691088164064}
   _requireComponentsForUI: {fileID: 3004259275157797504}
 --- !u!114 &3803403494068132758
 MonoBehaviour:
@@ -10061,17 +10055,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
---- !u!114 &3513216691088164064 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2929252283123773951, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
-  m_PrefabInstance: {fileID: 1758577150980568351}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45977bbae16431c46a013576a1aea384, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &3513216691088164077 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311915, g: 0.3807396, b: 0.35872662, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -929,7 +929,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79b6d2b3cd89c47d69160332084e7fd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enderLevel: {fileID: 583407475}
+  _levelCompleter: {fileID: 0}
   _calculatorBlocks: {fileID: 583407477}
 --- !u!114 &583407477
 MonoBehaviour:
@@ -943,6 +943,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78f90e8f8b4fe4682ad2c02b23dc36f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _allSections: []
 --- !u!114 &583407479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -969,7 +970,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerMoney: {fileID: 1302266619}
   _chooserLevelName: {fileID: 583407488}
-  _sceneNames: {fileID: 583407489}
 --- !u!114 &583407484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1007,7 +1007,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pauserGame: {fileID: 583407484}
-  _sceneNames: {fileID: 583407489}
+  _playerMoney: {fileID: 1302266619}
+  _saver: {fileID: 583407481}
 --- !u!114 &583407488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1020,7 +1021,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e68f5faeff1344383864baaabb6e7028, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneNames: {fileID: 583407489}
   _loader: {fileID: 583407490}
 --- !u!114 &583407489
 MonoBehaviour:

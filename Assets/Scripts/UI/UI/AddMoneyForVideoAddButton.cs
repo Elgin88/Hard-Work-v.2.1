@@ -7,7 +7,6 @@ namespace HardWork
     public class AddMoneyForVideoAddButton : MonoBehaviour
     {
         [SerializeField] private RequireComponentsForUI _requireComponentsForUI;
-        [SerializeField] private int _addPlayerMoney;
         [SerializeField] private Button _button;
         [SerializeField] private AudioSource _moneySound;
 
@@ -26,8 +25,6 @@ namespace HardWork
 
         private void OnButtonClick()
         {
-            _requireComponentsForUI.PlayerMoney.AddMoney(_addPlayerMoney);
-            _requireComponentsForUI.Saver.SaveMoney();
             _moneySound.Play();
 
             _button.interactable = false;

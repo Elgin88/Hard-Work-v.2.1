@@ -9,7 +9,7 @@ namespace HardWork
 
         private int _money;
 
-        public Action<int> IsMoneyChanged;
+        public Action <int> IsMoneyChanged;
 
         public int Money => _money;
 

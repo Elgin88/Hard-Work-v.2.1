@@ -6,11 +6,14 @@ namespace HardWork
     public class Advertising : MonoBehaviour
     {
         [SerializeField] private PauseSetter _pauserGame;
-        [SerializeField] private ScenesNames _sceneNames;
+        [SerializeField] private PlayerMoney _playerMoney;
+        [SerializeField] private Saver _saver;
+
+        private int _moneyCountForVideoAd = 777;
 
         private void Start()
         {
-            if (SceneManager.GetActiveScene().name != _sceneNames.Level0Name)
+            if (SceneManager.GetActiveScene().name != ScenesNames.Level0Name)
             {
                 ShowInterstitialAd();
             }
@@ -37,6 +40,8 @@ namespace HardWork
         private void OnCloseCallbackVideoAd()
         {
             _pauserGame.PauseOffInBrauser();
+            _playerMoney.AddMoney(_moneyCountForVideoAd);
+            _saver.SaveMoney();
         }
 
         private void OnCloseCallbackInterstitialAd(bool close)

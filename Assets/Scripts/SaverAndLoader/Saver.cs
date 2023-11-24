@@ -6,7 +6,6 @@ namespace HardWork
     {
         [SerializeField] private PlayerMoney _playerMoney;
         [SerializeField] private ChooserLevelNameForLoad _chooserLevelName;
-        [SerializeField] private ScenesNames _sceneNames;
 
         private string _saveKeyPlayerMoney = "SavedPlayerMoney";
         private string _saveKeyNextLevelName = "SavedLevelName";

@@ -11,7 +11,7 @@ namespace HardWork
         private PlayerPowerController _powerController;
         private PlayerFuelController _fuelController;
         private LineOfPointsCreater _lineOfPointsCreater;
-        private Garage _fuelCost;
+        private Garage _garage;
 
         private void Start()
         {

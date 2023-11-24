@@ -5,7 +5,6 @@ namespace HardWork
 {
     public class ChooserLevelNameForLoad : MonoBehaviour
     {
-        [SerializeField] private ScenesNames _sceneNames;
         [SerializeField] private Loader _loader;
 
         private string _currentSceneName;
@@ -19,28 +18,28 @@ namespace HardWork
 
         public string GetNextSceneName()
         {
-            if (_currentSceneName == _sceneNames.LevelSDK)
+            if (_currentSceneName == ScenesNames.LevelSDK)
             {
-                _nextSceneName = _sceneNames.Level0Name;
+                _nextSceneName = ScenesNames.Level0Name;
             }
-            else if (_currentSceneName == _sceneNames.Level0Name)
+            else if (_currentSceneName == ScenesNames.Level0Name)
             {
-                _nextSceneName = _sceneNames.Level1Name;
+                _nextSceneName = ScenesNames.Level1Name;
             }
-            else if (_currentSceneName == _sceneNames.Level1Name)
+            else if (_currentSceneName == ScenesNames.Level1Name)
             {
-                _nextSceneName = _sceneNames.Level2Name;
+                _nextSceneName = ScenesNames.Level2Name;
             }
-            else if (_currentSceneName == _sceneNames.Level2Name)
+            else if (_currentSceneName == ScenesNames.Level2Name)
             {
-                _nextSceneName = _sceneNames.Level3Name;
+                _nextSceneName = ScenesNames.Level3Name;
             }
-            else if (_currentSceneName == _sceneNames.Level3Name)
+            else if (_currentSceneName == ScenesNames.Level3Name)
             {
-                _nextSceneName = _sceneNames.Level1Name;
+                _nextSceneName = ScenesNames.Level1Name;
             }
 
-            if (_currentSceneName == _sceneNames.Level0Name & _loader.GetSceneNameForLoad() != string.Empty)
+            if (_currentSceneName == ScenesNames.Level0Name & _loader.GetSceneNameForLoad() != string.Empty)
             {
                 _nextSceneName = _loader.GetSceneNameForLoad();
             }

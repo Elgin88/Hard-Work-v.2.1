@@ -10,11 +10,9 @@ namespace HardWork
         [SerializeField] private JoystickIndicatorEducation[] _joystickIndicatorEducation;
         [SerializeField] private Button _button;
 
-        private string _level1Name = "Level1";
-
         private void OnEnable()
         {
-            if (SceneManager.GetActiveScene().name != _level1Name)
+            if (SceneManager.GetActiveScene().name != ScenesNames.Level1Name)
             {
                 Destroy(gameObject);
             }
