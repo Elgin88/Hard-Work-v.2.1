@@ -57,7 +57,6 @@ namespace HardWork
         {
             if (_moveToCollector != null)
             {
-                _playerInventory.SetFalseIsMoveBlocksToCollector();
                 StopCoroutine(_moveToCollector);
                 _moveToCollector = null;
             }
@@ -67,7 +66,6 @@ namespace HardWork
         {
             if (_moveToPlayer != null)
             {
-                _playerInventory.SetFalseIsMoveBlocksToPlayer();
                 StopCoroutine(_moveToPlayer);
                 _moveToPlayer = null;
             }
@@ -112,6 +110,7 @@ namespace HardWork
                     if (transform.position == _block.Point.transform.position)
                     {
                         StopMoveToPlayer();
+                        _playerInventory.SetFalseIsMoveBlocksToPlayer();
                         StartHoldBlockOnPlayer();
                         _playerInventory.InitEventBlockIsChanged();
                     }
@@ -179,6 +178,7 @@ namespace HardWork
 
                     StopMoveToCollector();
 
+                    _playerInventory.SetFalseIsMoveBlocksToCollector();
                     _block.Destroy();
                 }
 
