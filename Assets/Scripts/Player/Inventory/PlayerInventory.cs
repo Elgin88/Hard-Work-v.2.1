@@ -10,22 +10,35 @@ namespace HardWork
         [SerializeField] private LineOfPointsCreater _lineOfPointsCreater;
 
         private bool _isFull = false;
+        private bool _isMoveBlocksToPlayer = false;
+        private bool _isMoveBlocksToCollector = false;
 
         public Action <int, int> NumberBlocksIsChanged;
 
         public int GetNumberLines => _lines.Count;
 
-        private void Start()
+        public bool IsMoveBlocksToPlayer => _isMoveBlocksToPlayer;
+
+        public bool IsMoveBlocksToCollector => _isMoveBlocksToCollector;
+
+        public void SetTrueIsMoveBlocksToPlayer()
         {
-            if (_lines == null || _lineOfPointsCreater == null)
-            {
-                Debug.Log("No serializefiel in " + gameObject.name);
-            }
+            _isMoveBlocksToPlayer = true;
         }
 
-        private void OnEnable()
+        public void SetFalseIsMoveBlocksToPlayer()
         {
-            _lineOfPointsCreater = GetComponent<LineOfPointsCreater>();
+            _isMoveBlocksToPlayer = false;
+        }
+
+        public void SetTrueIsMoveBlocksToCollector()
+        {
+            _isMoveBlocksToCollector = true;
+        }
+
+        public void SetFalseIsMoveBlocksToCollector()
+        {
+            _isMoveBlocksToCollector = false;
         }
 
         public void CreateLine()
@@ -119,6 +132,11 @@ namespace HardWork
         public void InitEventBlockIsChanged()
         {
             NumberBlocksIsChanged?.Invoke(GetCurrentCountOfBlocks(), GetMaxCountOfBlocks());
+        }
+
+        private void OnEnable()
+        {
+            _lineOfPointsCreater = GetComponent<LineOfPointsCreater>();
         }
     }
 }

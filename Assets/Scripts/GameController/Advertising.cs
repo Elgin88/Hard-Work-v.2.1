@@ -9,7 +9,7 @@ namespace HardWork
         [SerializeField] private PlayerMoney _playerMoney;
         [SerializeField] private Saver _saver;
 
-        private int _moneyCountForVideoAd = 777;
+        private int _moneyCountForVideoAd = 750;
 
         private void Start()
         {

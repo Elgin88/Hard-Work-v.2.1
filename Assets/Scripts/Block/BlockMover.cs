@@ -35,29 +35,11 @@ namespace HardWork
             }
         }
 
-        public void StopMoveToCollector()
-        {
-            if (_moveToCollector != null)
-            {
-                StopCoroutine(_moveToCollector);
-                _moveToCollector = null;
-            }
-        }
-
         public void StartMoveToPlayer()
         {
             if (_moveToPlayer == null)
             {
                 _moveToPlayer = StartCoroutine(MoveToPlayer());
-            }
-        }
-
-        public void StopMoveToPlayer()
-        {
-            if (_moveToPlayer != null)
-            {
-                StopCoroutine(_moveToPlayer);
-                _moveToPlayer = null;
             }
         }
 
@@ -71,7 +53,27 @@ namespace HardWork
             }
         }
 
-        public void StopFixBlock()
+        public void StopMoveToCollector()
+        {
+            if (_moveToCollector != null)
+            {
+                _playerInventory.SetFalseIsMoveBlocksToCollector();
+                StopCoroutine(_moveToCollector);
+                _moveToCollector = null;
+            }
+        }
+
+        public void StopMoveToPlayer()
+        {
+            if (_moveToPlayer != null)
+            {
+                _playerInventory.SetFalseIsMoveBlocksToPlayer();
+                StopCoroutine(_moveToPlayer);
+                _moveToPlayer = null;
+            }
+        }
+
+        public void StopHoldBlockOnPlayer()
         {
             if (_holdOnPlayer != null)
             {
@@ -87,6 +89,8 @@ namespace HardWork
 
             while (true)
             {
+                _playerInventory.SetTrueIsMoveBlocksToPlayer();
+
                 if (_block.Point != null)
                 {
                     _topPointToPlayer = new Vector3((_block.Point.transform.position.x + _startBlockPosition.x) / 2, _block.Point.transform.position.y + _tossHightToPlayer, (_block.Point.transform.position.z + _startBlockPosition.z) / 2);
@@ -139,7 +143,7 @@ namespace HardWork
 
         private IEnumerator MoveToCollector()
         {
-            StopFixBlock();
+            StopHoldBlockOnPlayer();
 
             _topPointToCollector = new Vector3((transform.position.x + _collectorPoint.transform.position.x) / 2, _collectorPoint.transform.position.y + transform.position.y + _tossHeightToCollector, (transform.position.z + _collectorPoint.transform.position.z) / 2);
 
@@ -150,6 +154,8 @@ namespace HardWork
 
             while (true)
             {
+                _playerInventory.SetTrueIsMoveBlocksToCollector();
+
                 if (_isReachedTopToCollector == false)
                 {
                     transform.position = Vector3.MoveTowards(transform.position, _topPointToCollector, _flightSpeedToCollector * Time.deltaTime);

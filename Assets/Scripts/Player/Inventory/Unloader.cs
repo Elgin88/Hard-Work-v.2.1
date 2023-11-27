@@ -40,7 +40,7 @@ namespace HardWork
             {
                 Block lastAddBlock = _inventory.GetLastAddBlock();
 
-                if (lastAddBlock != null)
+                if (lastAddBlock != null & _inventory.IsMoveBlocksToPlayer == false)
                 {
                     lastAddBlock.BlockMover.StartMoveToCollector(_playerRequreComponents.CollectorPoint.transform.position);
                     lastAddBlock.Point.RemoveBlock();

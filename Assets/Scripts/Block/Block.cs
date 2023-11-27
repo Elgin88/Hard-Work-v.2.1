@@ -103,7 +103,7 @@ namespace HardWork
 
                 _point = _inventory.TakePoint();
 
-                if (_point != null)
+                if (_point != null & _inventory.IsMoveBlocksToCollector == false)
                 {
                     KinematicOn();
                     ColliderOff();
