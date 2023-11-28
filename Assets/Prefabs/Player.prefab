@@ -366,6 +366,7 @@ MonoBehaviour:
   _lines:
   - {fileID: 4243400324691061653}
   _lineOfPointsCreater: {fileID: 2716068640545867413}
+  _playerRam: {fileID: 5345232303615983689}
 --- !u!1 &3953665368607418691
 GameObject:
   m_ObjectHideFlags: 0

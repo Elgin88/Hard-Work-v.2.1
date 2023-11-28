@@ -23,6 +23,8 @@ namespace HardWork
         {
             if (current != 0)
             {
+                _panel.SetActive(false);
+                _button.gameObject.SetActive(false);
                 return;
             }
 
@@ -30,11 +32,6 @@ namespace HardWork
             {
                 _panel.SetActive(true);
                 _button.gameObject.SetActive(true);
-            }
-            else
-            {
-                _panel.SetActive(false);
-                _button.gameObject.SetActive(false);
             }
         }
     }

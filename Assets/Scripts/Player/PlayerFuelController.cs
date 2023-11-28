@@ -98,5 +98,10 @@ namespace HardWork
                 _burnFuel = null;
             }
         }
+
+        internal void InitActionChangeFuel()
+        {
+            IsFuelChanged?.Invoke(_currentFuel, _maxFuel);
+        }
     }
 }

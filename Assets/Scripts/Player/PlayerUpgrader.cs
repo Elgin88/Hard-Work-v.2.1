@@ -24,6 +24,7 @@ namespace HardWork
         public void BuyFuel()
         {
             _fuelController.BuyFuel();
+            _fuelController.InitActionChangeFuel();
         }
 
         public void BuyTank()

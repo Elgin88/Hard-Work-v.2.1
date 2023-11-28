@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,6 +13,9 @@ namespace HardWork
         private bool _isFull = false;
         private bool _isMoveBlocksToPlayer = false;
         private bool _isMoveBlocksToCollector = false;
+        private WaitForSeconds _delayChangeStatusToMoveBlocks = new WaitForSeconds(0.2f);
+        private Coroutine _changeStatusMoveToPlayerFromTrueToFalse;
+        private Coroutine _changeStatusMoveToCollectorFromTrueToFalse;
 
         public Action <int, int> NumberBlocksIsChanged;
 
@@ -20,26 +24,6 @@ namespace HardWork
         public bool IsMoveBlocksToPlayer => _isMoveBlocksToPlayer;
 
         public bool IsMoveBlocksToCollector => _isMoveBlocksToCollector;
-
-        public void SetTrueIsMoveBlocksToPlayer()
-        {
-            _isMoveBlocksToPlayer = true;
-        }
-
-        public void SetFalseIsMoveBlocksToPlayer()
-        {
-            _isMoveBlocksToPlayer = false;
-        }
-
-        public void SetTrueIsMoveBlocksToCollector()
-        {
-            _isMoveBlocksToCollector = true;
-        }
-
-        public void SetFalseIsMoveBlocksToCollector()
-        {
-            _isMoveBlocksToCollector = false;
-        }
 
         public void CreateLine()
         {
@@ -132,6 +116,62 @@ namespace HardWork
         public void InitEventBlockIsChanged()
         {
             NumberBlocksIsChanged?.Invoke(GetCurrentCountOfBlocks(), GetMaxCountOfBlocks());
+        }
+
+        public void StartChangeStatusMoveToPlayerFromTrueToFalse()
+        {
+            if (_changeStatusMoveToPlayerFromTrueToFalse == null)
+            {
+                _changeStatusMoveToPlayerFromTrueToFalse = StartCoroutine(ChangeStatusMoveToPlayerFromTrueToFalse());
+            }
+        }
+
+        public void StopChangeStatusMoveToPlayerFromTrueToFalse()
+        {
+            if (_changeStatusMoveToPlayerFromTrueToFalse != null)
+            {
+                StopCoroutine(_changeStatusMoveToPlayerFromTrueToFalse);
+                _changeStatusMoveToPlayerFromTrueToFalse = null;
+            }
+        }
+
+        public void StartChangeStatusMoveToCollectorFromTrueToFalse()
+        {
+            if (_changeStatusMoveToCollectorFromTrueToFalse == null)
+            {
+                _changeStatusMoveToCollectorFromTrueToFalse = StartCoroutine(ChangeStatusMoveToCollectorFromTrueToFalse());
+            }
+        }
+
+        public void StopChangeStatusMoveToCollectorFromTrueToFalse()
+        {
+            if (_changeStatusMoveToCollectorFromTrueToFalse != null)
+            {
+                StopCoroutine(_changeStatusMoveToCollectorFromTrueToFalse);
+                _changeStatusMoveToCollectorFromTrueToFalse = null;
+            }
+        }
+
+        private IEnumerator ChangeStatusMoveToPlayerFromTrueToFalse()
+        {
+            _isMoveBlocksToPlayer = true;
+
+            yield return _delayChangeStatusToMoveBlocks;
+
+            _isMoveBlocksToPlayer = false;
+
+            StopChangeStatusMoveToPlayerFromTrueToFalse();
+        }
+
+        private IEnumerator ChangeStatusMoveToCollectorFromTrueToFalse()
+        {
+            _isMoveBlocksToCollector = true;
+
+            yield return _delayChangeStatusToMoveBlocks;
+
+            _isMoveBlocksToCollector = false;
+
+            StopChangeStatusMoveToCollectorFromTrueToFalse();
         }
 
         private void OnEnable()

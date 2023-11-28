@@ -15,8 +15,8 @@ namespace HardWork
         [SerializeField] private Block _block;
 
         private Coroutine _moveToPlayer;
-        private Coroutine _holdOnPlayer;
         private Coroutine _moveToCollector;
+        private Coroutine _holdOnPlayer;
         private Vector3 _startBlockPosition;
         private Vector3 _topPointToPlayer;
         private Vector3 _topPointToCollector;
@@ -27,19 +27,19 @@ namespace HardWork
         private bool _isReachedTopToPlayer = false;
         private bool _isReachedTopToCollector = false;
 
-        public void StartMoveToCollector(Vector3 collectionPoint)
-        {
-            if (_moveToCollector == null)
-            {
-                _moveToCollector = StartCoroutine(MoveToCollector());
-            }
-        }
-
         public void StartMoveToPlayer()
         {
             if (_moveToPlayer == null)
             {
                 _moveToPlayer = StartCoroutine(MoveToPlayer());
+            }
+        }
+
+        public void StartMoveToCollector(Vector3 collectionPoint)
+        {
+            if (_moveToCollector == null)
+            {
+                _moveToCollector = StartCoroutine(MoveToCollector());
             }
         }
 
@@ -53,21 +53,21 @@ namespace HardWork
             }
         }
 
-        public void StopMoveToCollector()
-        {
-            if (_moveToCollector != null)
-            {
-                StopCoroutine(_moveToCollector);
-                _moveToCollector = null;
-            }
-        }
-
         public void StopMoveToPlayer()
         {
             if (_moveToPlayer != null)
             {
                 StopCoroutine(_moveToPlayer);
                 _moveToPlayer = null;
+            }
+        }
+
+        public void StopMoveToCollector()
+        {
+            if (_moveToCollector != null)
+            {
+                StopCoroutine(_moveToCollector);
+                _moveToCollector = null;
             }
         }
 
@@ -87,7 +87,7 @@ namespace HardWork
 
             while (true)
             {
-                _playerInventory.SetTrueIsMoveBlocksToPlayer();
+                _playerInventory.StartChangeStatusMoveToPlayerFromTrueToFalse();
 
                 if (_block.Point != null)
                 {
@@ -110,16 +110,52 @@ namespace HardWork
                     if (transform.position == _block.Point.transform.position)
                     {
                         StopMoveToPlayer();
-                        _playerInventory.SetFalseIsMoveBlocksToPlayer();
                         StartHoldBlockOnPlayer();
                         _playerInventory.InitEventBlockIsChanged();
                     }
                 }
 
-                if (_block.Point == null)
+                yield return null;
+            }
+        }
+
+        private IEnumerator MoveToCollector()
+        {
+            StopHoldBlockOnPlayer();
+
+            _topPointToCollector = new Vector3((transform.position.x + _collectorPoint.transform.position.x) / 2, _collectorPoint.transform.position.y + transform.position.y + _tossHeightToCollector, (transform.position.z + _collectorPoint.transform.position.z) / 2);
+            _block.Point.RemoveBlock();
+            _playerInventory.InitEventBlockIsChanged();
+            _blockSound.PlayFlyOnCollectorSFX();
+
+            while (true)
+            {
+                _playerInventory.StartChangeStatusMoveToCollectorFromTrueToFalse();
+
+                if (_isReachedTopToCollector == false)
                 {
-                    StopMoveToPlayer();
-                    StartMoveToCollector(_collectorPoint.transform.position);
+                    transform.position = Vector3.MoveTowards(transform.position, _topPointToCollector, _flightSpeedToCollector * Time.deltaTime);
+
+                    if (transform.position == _topPointToCollector)
+                    {
+                        _isReachedTopToCollector = true;
+                    }
+                }
+                else
+                {
+                    transform.position = Vector3.MoveTowards(transform.position, _collectorPoint.transform.position, _flightSpeedToCollector * Time.deltaTime);
+                }
+
+                if (transform.position == _collectorPoint.transform.position)
+                {
+                    _playerMoney.AddMoney(_block.Cost);
+                    _calculatorBlocks.CalculateUnloadBloks();
+                    _chooserMedals.SetMedals();
+                    _blockSound.PlayBlockPlaceInCollector();
+
+                    StopMoveToCollector();
+
+                    Destroy(_block.gameObject);
                 }
 
                 yield return null;
@@ -134,52 +170,6 @@ namespace HardWork
                 {
                     _block.SetPosition(_block.Point.transform.position.x, _block.Point.transform.position.y, _block.Point.transform.position.z);
                     _block.SetQuaternion(_playerMover.CurrentPlayerDirection);
-                }
-
-                yield return null;
-            }
-        }
-
-        private IEnumerator MoveToCollector()
-        {
-            StopHoldBlockOnPlayer();
-
-            _topPointToCollector = new Vector3((transform.position.x + _collectorPoint.transform.position.x) / 2, _collectorPoint.transform.position.y + transform.position.y + _tossHeightToCollector, (transform.position.z + _collectorPoint.transform.position.z) / 2);
-
-            _block.Point.RemoveBlock();
-            _playerInventory.InitEventBlockIsChanged();
-
-            _blockSound.PlayFlyOnCollectorSFX();
-
-            while (true)
-            {
-                _playerInventory.SetTrueIsMoveBlocksToCollector();
-
-                if (_isReachedTopToCollector == false)
-                {
-                    transform.position = Vector3.MoveTowards(transform.position, _topPointToCollector, _flightSpeedToCollector * Time.deltaTime);
-
-                    if (transform.position == _topPointToCollector)
-                    {
-                        _isReachedTopToCollector = true;
-                    }
-                }
-                else if (_isReachedTopToCollector == true)
-                {
-                    transform.position = Vector3.MoveTowards(transform.position, _collectorPoint.transform.position, _flightSpeedToCollector * Time.deltaTime);
-                }
-
-                if (transform.position.y == _collectorPoint.transform.position.y)
-                {
-                    _playerMoney.AddMoney(_block.Cost);
-                    _calculatorBlocks.CalculateUnloadBloks();
-                    _chooserMedals.SetMedals();
-                    _blockSound.PlayBlockPlaceInCollector();
-
-                    StopMoveToCollector();
-
-                    _playerInventory.SetFalseIsMoveBlocksToCollector();
-                    _block.Destroy();
                 }
 
                 yield return null;

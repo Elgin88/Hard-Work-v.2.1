@@ -68,11 +68,6 @@ namespace HardWork
             transform.rotation = currentRotation;
         }
 
-        public void Destroy()
-        {
-            Destroy(gameObject);
-        }
-
         public void StartTimerPhysicsOff()
         {
             if (_timerPhysicsOff == null)
@@ -88,11 +83,6 @@ namespace HardWork
                 StopCoroutine(_timerPhysicsOff);
                 _timerPhysicsOff = null;
             }
-        }
-
-        private void BlocksUnloaded(bool isUnload)
-        {
-            _playerIsUnload = isUnload;
         }
 
         private void OnCollisionEnter(Collision collision)
