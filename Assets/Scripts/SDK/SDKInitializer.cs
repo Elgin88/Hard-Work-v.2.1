@@ -1,8 +1,9 @@
 using System.Collections;
+using HardWork.SceneLoader;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace HardWork
+namespace HardWork.SDK
 {
     public class SDKInitializer : MonoBehaviour
     {

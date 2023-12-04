@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace HardWork
+namespace HardWork.Garage
 {
     public class EngineBarIconColorSetter : MonoBehaviour
     {
@@ -35,6 +35,11 @@ namespace HardWork
             while (true)
             {
                 _image.CrossFadeColor(_targetColor, _duration, false, false);
+
+                if (_image.color == _targetColor)
+                {
+                    StopChangeColor();
+                }
 
                 yield return null;
             }

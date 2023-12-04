@@ -1,31 +1,22 @@
+using HardWork.Block;
 using UnityEngine;
 
-namespace HardWork
+namespace HardWork.Player
 {
     public class Point : MonoBehaviour
     {
-        private Block _block;
+        private BlockMain _block;
 
-        public Block Block => _block;
+        public BlockMain Block => _block;
 
         public Point Take()
         {
             return this;
         }
 
-        public void InitBlock(Block block)
+        public void InitBlock(BlockMain block)
         {
             _block = block;
-        }
-
-        public Block GetBlock()
-        {
-            return _block;
-        }
-
-        public void Destroy()
-        {
-            Destroy(gameObject);
         }
 
         public void RemoveBlock()

@@ -1,6 +1,7 @@
+using HardWork.Player;
 using UnityEngine;
 
-namespace HardWork
+namespace HardWork.Collector
 {
     public class Collector : MonoBehaviour
     {

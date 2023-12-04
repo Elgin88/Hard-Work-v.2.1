@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-namespace HardWork
+namespace HardWork.SceneLoader
 {
     public class StartGameButton : MonoBehaviour
     {

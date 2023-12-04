@@ -1,10 +1,11 @@
+using HardWork.Player;
 using UnityEngine;
 
-namespace HardWork
+namespace HardWork.Garage
 {
     public class GarageParkingArea : MonoBehaviour
     {
-        [SerializeField] private Garage _garage;
+        [SerializeField] private GarageMain _garage;
 
         private void OnCollisionEnter(Collision collision)
         {

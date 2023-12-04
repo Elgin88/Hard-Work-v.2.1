@@ -366,7 +366,6 @@ MonoBehaviour:
   _lines:
   - {fileID: 4243400324691061653}
   _lineOfPointsCreater: {fileID: 2716068640545867413}
-  _playerRam: {fileID: 5345232303615983689}
 --- !u!1 &3953665368607418691
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,6 +460,7 @@ GameObject:
   - component: {fileID: 943398948989556034}
   - component: {fileID: 943398948989556033}
   - component: {fileID: 2117114177908344327}
+  - component: {fileID: 4555091069431499519}
   - component: {fileID: 7371658550035953919}
   - component: {fileID: 4544600202965451390}
   - component: {fileID: 6100215083713563110}
@@ -469,7 +469,6 @@ GameObject:
   - component: {fileID: 264342643279156102}
   - component: {fileID: 3340290455890093070}
   - component: {fileID: 8052142493303922894}
-  - component: {fileID: 4555091069431499519}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -616,6 +615,19 @@ MonoBehaviour:
   _blockPlaceInCollector: {fileID: 264342643279156102}
   _sectionDestractionSound: {fileID: 3340290455890093070}
   _blockHitBamperSound: {fileID: 8052142493303922894}
+--- !u!114 &4555091069431499519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3974565282749870195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dba0d7032fe7744cb88941cc3972d1f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerRequireComponents: {fileID: 943398948989556032}
 --- !u!82 &7371658550035953919
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1384,19 +1396,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &4555091069431499519
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3974565282749870195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dba0d7032fe7744cb88941cc3972d1f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerRequireComponents: {fileID: 943398948989556032}
 --- !u!1 &5047614626407900335
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,7 +1,8 @@
 using System.Collections.Generic;
+using HardWork.Block;
 using UnityEngine;
 
-namespace HardWork
+namespace HardWork.Player
 {
     public class LineOfPoints : MonoBehaviour
     {
@@ -45,9 +46,9 @@ namespace HardWork
             transform.position = new Vector3(transform.position.x, transform.position.y + deltaBetweenBlocks, transform.position.z);
         }
 
-        public Block GetLastAddBlockInLine()
+        public BlockMain GetLastAddBlockInLine()
         {
-            Block lastAddBlock = null;
+            BlockMain lastAddBlock = null;
 
             foreach (Point point in _points)
             {

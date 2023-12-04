@@ -1,7 +1,10 @@
 using System.Collections;
+using HardWork.Empty;
+using HardWork.GameController;
+using HardWork.Player;
 using UnityEngine;
 
-namespace HardWork
+namespace HardWork.Block
 {
     public class BlockMover : MonoBehaviour
     {
@@ -12,7 +15,7 @@ namespace HardWork
         [SerializeField] private CollectorPoint _collectorPoint;
         [SerializeField] private PlayerMover _playerMover;
         [SerializeField] private PlayerMoney _playerMoney;
-        [SerializeField] private Block _block;
+        [SerializeField] private BlockMain _block;
 
         private Coroutine _moveToPlayer;
         private Coroutine _moveToCollector;
@@ -32,14 +35,16 @@ namespace HardWork
             if (_moveToPlayer == null)
             {
                 _moveToPlayer = StartCoroutine(MoveToPlayer());
+                _playerInventory.AddBlockMovingToPlayer(_block);
             }
         }
 
-        public void StartMoveToCollector(Vector3 collectionPoint)
+        public void StartMoveToCollector()
         {
             if (_moveToCollector == null)
             {
                 _moveToCollector = StartCoroutine(MoveToCollector());
+                _playerInventory.AddBlockMovingToCollector(_block);
             }
         }
 
@@ -59,6 +64,7 @@ namespace HardWork
             {
                 StopCoroutine(_moveToPlayer);
                 _moveToPlayer = null;
+                _playerInventory.RemoveBlockMovingToPlayer(_block);
             }
         }
 
@@ -68,6 +74,7 @@ namespace HardWork
             {
                 StopCoroutine(_moveToCollector);
                 _moveToCollector = null;
+                _playerInventory.RemoveBlockMovingToCollector(_block);
             }
         }
 
@@ -87,8 +94,6 @@ namespace HardWork
 
             while (true)
             {
-                _playerInventory.StartChangeStatusMoveToPlayerFromTrueToFalse();
-
                 if (_block.Point != null)
                 {
                     _topPointToPlayer = new Vector3((_block.Point.transform.position.x + _startBlockPosition.x) / 2, _block.Point.transform.position.y + _tossHightToPlayer, (_block.Point.transform.position.z + _startBlockPosition.z) / 2);
@@ -130,8 +135,6 @@ namespace HardWork
 
             while (true)
             {
-                _playerInventory.StartChangeStatusMoveToCollectorFromTrueToFalse();
-
                 if (_isReachedTopToCollector == false)
                 {
                     transform.position = Vector3.MoveTowards(transform.position, _topPointToCollector, _flightSpeedToCollector * Time.deltaTime);

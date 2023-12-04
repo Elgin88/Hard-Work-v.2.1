@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace HardWork
+namespace HardWork.GameController
 {
     public class ChooserMedals : MonoBehaviour
     {
@@ -12,7 +12,7 @@ namespace HardWork
         private bool _isMiddleMedal = false;
         private bool _isMinMedal = false;
 
-        public event UnityAction <bool, bool, bool> IsMedalsChoosen;
+        public event UnityAction<bool, bool, bool> IsMedalsChoosen;
 
         public bool IsMaxMedal => _isMaxMedal;
 

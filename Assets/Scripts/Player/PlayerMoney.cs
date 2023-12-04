@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace HardWork
+namespace HardWork.Player
 {
     public class PlayerMoney : MonoBehaviour
     {
@@ -9,7 +9,7 @@ namespace HardWork
 
         private int _money;
 
-        public Action <int> IsMoneyChanged;
+        public Action<int> IsMoneyChanged;
 
         public int Money => _money;
 

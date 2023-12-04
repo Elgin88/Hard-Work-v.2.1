@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace HardWork
+namespace HardWork.SDK
 {
     public class GameReady : MonoBehaviour
     {

@@ -1,6 +1,7 @@
+using HardWork.Player;
 using UnityEngine;
 
-namespace HardWork
+namespace HardWork.Education
 {
     public class CollectorIndicatorEducation : MonoBehaviour
     {
@@ -10,6 +11,11 @@ namespace HardWork
         private void OnEnable()
         {
             _inventory.NumberBlocksIsChanged += OnCangedBlocksInPlayerInventory;
+        }
+
+        private void OnDisable()
+        {
+            _inventory.NumberBlocksIsChanged -= OnCangedBlocksInPlayerInventory;
         }
 
         private void OnCangedBlocksInPlayerInventory(int current, int max)

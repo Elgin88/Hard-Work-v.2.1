@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace HardWork
+namespace HardWork.Empty
 {
     public class MaxMedal : MonoBehaviour
     {

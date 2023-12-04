@@ -1667,6 +1667,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fe4971af068e49be9ed8ef361ba266c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerMover: {fileID: 1361587972}
 --- !u!1001 &147161082
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4502,13 +4503,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f24cd77b1621241389a4520b51cea73a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _requireComponentsForUI: {fileID: 827877624}
-  _player: {fileID: 268018514}
-  _garageParkingArea: {fileID: 1153158899}
-  _addFuelButtonsEducation:
-  - {fileID: 1833369855}
-  - {fileID: 1097214749}
-  - {fileID: 609798725}
 --- !u!1001 &715151951
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5990,9 +5984,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 1758577150085976944, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
+      propertyPath: _indicatorsEducation
+      value: 
+      objectReference: {fileID: 880322096}
     - target: {fileID: 1758577150085976951, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
       propertyPath: m_Layer
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1758577150085976951, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1758577150085976951, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -13952,6 +13954,7 @@ GameObject:
   - component: {fileID: 1852628444}
   - component: {fileID: 1852628445}
   - component: {fileID: 1852628446}
+  - component: {fileID: 1852628447}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -14004,7 +14007,6 @@ MonoBehaviour:
   _reloadButton: {fileID: 827877614}
   _endLevelPanel: {fileID: 827877613}
   _calculatorBlocks: {fileID: 1852628428}
-  _chooserMedals: {fileID: 1852628426}
 --- !u!114 &1852628428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14235,6 +14237,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _loader: {fileID: 1852628444}
+--- !u!114 &1852628447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852628423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffade932ae78f4e73829fdd38305eef3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1858453383
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14789,10 +14803,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f24cd77b1621241389a4520b51cea73a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _requireComponentsForUI: {fileID: 827877624}
-  _player: {fileID: 268018514}
-  _garageParkingArea: {fileID: 1153158899}
-  _addFuelButtonsEducation: []
 --- !u!1 &2001226166
 GameObject:
   m_ObjectHideFlags: 0
@@ -14903,10 +14913,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f24cd77b1621241389a4520b51cea73a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _requireComponentsForUI: {fileID: 827877624}
-  _player: {fileID: 268018514}
-  _garageParkingArea: {fileID: 1153158899}
-  _addFuelButtonsEducation: []
 --- !u!4 &2004463009 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}
@@ -15804,10 +15810,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f24cd77b1621241389a4520b51cea73a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _requireComponentsForUI: {fileID: 827877624}
-  _player: {fileID: 268018514}
-  _garageParkingArea: {fileID: 1153158899}
-  _addFuelButtonsEducation: []
 --- !u!4 &2102139427 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5012760858346511195, guid: c2c588d9bff94401b9fdd07c1f08159e, type: 3}

@@ -1,20 +1,13 @@
+using HardWork.Player;
 using UnityEngine;
 
-namespace HardWork
+namespace HardWork.Block
 {
     public class BlockSound : MonoBehaviour
     {
         [SerializeField] private PlayerSoundController _playerSoundController;
 
         public void PlaySoundFlyOnCar()
-        {
-            if (_playerSoundController.BlockFly.isPlaying == false)
-            {
-                _playerSoundController.BlockFly.Play();
-            }
-        }
-
-        public void PlayPlaceOnCar()
         {
             if (_playerSoundController.BlockFly.isPlaying == false)
             {

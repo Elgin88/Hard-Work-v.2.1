@@ -1,13 +1,13 @@
+using HardWork.UI;
 using UnityEngine;
 
-namespace HardWork
+namespace HardWork.Garage
 {
     public class EngineBarIconController : MonoBehaviour
     {
         [SerializeField] private EngineBarIconColorSetter _colorSetter1;
         [SerializeField] private EngineBarIconColorSetter _colorSetter2;
         [SerializeField] private EngineBarIconColorSetter _colorSetter3;
-        [SerializeField] private float _duration;
         [SerializeField] private RequireComponentsForUI _requireComponentsForUI;
 
         private void OnEnable()

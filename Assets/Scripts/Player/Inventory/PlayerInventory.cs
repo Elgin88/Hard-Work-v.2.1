@@ -1,29 +1,46 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using HardWork.Block;
 using UnityEngine;
 
-namespace HardWork
+namespace HardWork.Player
 {
     public class PlayerInventory : MonoBehaviour
     {
         [SerializeField] private List<LineOfPoints> _lines;
         [SerializeField] private LineOfPointsCreater _lineOfPointsCreater;
 
-        private bool _isFull = false;
-        private bool _isMoveBlocksToPlayer = false;
-        private bool _isMoveBlocksToCollector = false;
-        private WaitForSeconds _delayChangeStatusToMoveBlocks = new WaitForSeconds(0.2f);
-        private Coroutine _changeStatusMoveToPlayerFromTrueToFalse;
-        private Coroutine _changeStatusMoveToCollectorFromTrueToFalse;
+        private List<BlockMain> _blocksMovingToPlayer;
+        private List<BlockMain> _blocksMovingToCollector;
 
-        public Action <int, int> NumberBlocksIsChanged;
+        public Action<int, int> NumberBlocksIsChanged;
 
         public int GetNumberLines => _lines.Count;
 
-        public bool IsMoveBlocksToPlayer => _isMoveBlocksToPlayer;
+        public int CountOfBlocksMovingToPlayer => _blocksMovingToPlayer.Count;
 
-        public bool IsMoveBlocksToCollector => _isMoveBlocksToCollector;
+        public int CountOfBlocksMovingToCollector => _blocksMovingToCollector.Count;
+
+        public void AddBlockMovingToPlayer(BlockMain block)
+        {
+            _blocksMovingToPlayer.Add(block);
+        }
+
+        public void RemoveBlockMovingToPlayer(BlockMain block)
+        {
+            _blocksMovingToPlayer.Remove(block);
+        }
+
+        public void AddBlockMovingToCollector(BlockMain block)
+        {
+            _blocksMovingToCollector.Add(block);
+        }
+
+        public void RemoveBlockMovingToCollector(BlockMain block)
+        {
+            _blocksMovingToCollector.Remove(block);
+        }
 
         public void CreateLine()
         {
@@ -69,16 +86,14 @@ namespace HardWork
             {
                 if (line.CheckIsFull() == false)
                 {
-                    _isFull = false;
-                    return _isFull;
+                    return false;
                 }
             }
 
-            _isFull = true;
-            return _isFull;
+            return true;
         }
 
-        public Block GetLastAddBlock()
+        public BlockMain GetLastAddBlock()
         {
             return _lines[_lines.Count - 1].GetLastAddBlockInLine();
         }
@@ -118,65 +133,10 @@ namespace HardWork
             NumberBlocksIsChanged?.Invoke(GetCurrentCountOfBlocks(), GetMaxCountOfBlocks());
         }
 
-        public void StartChangeStatusMoveToPlayerFromTrueToFalse()
+        private void Start()
         {
-            if (_changeStatusMoveToPlayerFromTrueToFalse == null)
-            {
-                _changeStatusMoveToPlayerFromTrueToFalse = StartCoroutine(ChangeStatusMoveToPlayerFromTrueToFalse());
-            }
-        }
-
-        public void StopChangeStatusMoveToPlayerFromTrueToFalse()
-        {
-            if (_changeStatusMoveToPlayerFromTrueToFalse != null)
-            {
-                StopCoroutine(_changeStatusMoveToPlayerFromTrueToFalse);
-                _changeStatusMoveToPlayerFromTrueToFalse = null;
-            }
-        }
-
-        public void StartChangeStatusMoveToCollectorFromTrueToFalse()
-        {
-            if (_changeStatusMoveToCollectorFromTrueToFalse == null)
-            {
-                _changeStatusMoveToCollectorFromTrueToFalse = StartCoroutine(ChangeStatusMoveToCollectorFromTrueToFalse());
-            }
-        }
-
-        public void StopChangeStatusMoveToCollectorFromTrueToFalse()
-        {
-            if (_changeStatusMoveToCollectorFromTrueToFalse != null)
-            {
-                StopCoroutine(_changeStatusMoveToCollectorFromTrueToFalse);
-                _changeStatusMoveToCollectorFromTrueToFalse = null;
-            }
-        }
-
-        private IEnumerator ChangeStatusMoveToPlayerFromTrueToFalse()
-        {
-            _isMoveBlocksToPlayer = true;
-
-            yield return _delayChangeStatusToMoveBlocks;
-
-            _isMoveBlocksToPlayer = false;
-
-            StopChangeStatusMoveToPlayerFromTrueToFalse();
-        }
-
-        private IEnumerator ChangeStatusMoveToCollectorFromTrueToFalse()
-        {
-            _isMoveBlocksToCollector = true;
-
-            yield return _delayChangeStatusToMoveBlocks;
-
-            _isMoveBlocksToCollector = false;
-
-            StopChangeStatusMoveToCollectorFromTrueToFalse();
-        }
-
-        private void OnEnable()
-        {
-            _lineOfPointsCreater = GetComponent<LineOfPointsCreater>();
+            _blocksMovingToPlayer = new List<BlockMain>();
+            _blocksMovingToCollector = new List<BlockMain>();
         }
     }
 }

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace HardWork
+namespace HardWork.Education
 {
     public class IndicatorsEducation : MonoBehaviour
     {

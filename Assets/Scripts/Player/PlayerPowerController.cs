@@ -1,14 +1,15 @@
 using System;
+using HardWork.Garage;
 using UnityEngine;
 
-namespace HardWork
+namespace HardWork.Player
 {
     public class PlayerPowerController : MonoBehaviour
     {
         [SerializeField] private int _maxLevelEngine;
         [SerializeField] private PlayerMoney _playerMoney;
         [SerializeField] private PlayerSpeedSetter _playerSpeedSetter;
-        [SerializeField] private Garage _garage;
+        [SerializeField] private GarageMain _garage;
 
         private int _engineLevel;
         private bool _isMaxLevel = false;

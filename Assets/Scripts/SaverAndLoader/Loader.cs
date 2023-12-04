@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace HardWork
+namespace HardWork.SaverAndLoader
 {
     public class Loader : MonoBehaviour
     {

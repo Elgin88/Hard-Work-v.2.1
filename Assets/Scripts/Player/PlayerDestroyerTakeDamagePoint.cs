@@ -1,6 +1,7 @@
+using HardWork.Block;
 using UnityEngine;
 
-namespace HardWork
+namespace HardWork.Player
 {
     public class PlayerDestroyerTakeDamagePoint : MonoBehaviour
     {
@@ -20,7 +21,7 @@ namespace HardWork
 
         private void OnCollisionEnter(Collision collision)
         {
-            if (collision.gameObject.TryGetComponent<Block>(out Block block) || collision.gameObject.TryGetComponent<SectionOfBlocks>(out SectionOfBlocks section))
+            if (collision.gameObject.TryGetComponent<BlockMain>(out BlockMain block) || collision.gameObject.TryGetComponent<SectionOfBlocks>(out SectionOfBlocks section))
             {
                 _particle.gameObject.SetActive(true);
                 _particle.Play();

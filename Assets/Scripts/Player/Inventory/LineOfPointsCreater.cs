@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace HardWork
+namespace HardWork.Player
 {
     public class LineOfPointsCreater : MonoBehaviour
     {

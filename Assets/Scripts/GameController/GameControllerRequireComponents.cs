@@ -1,6 +1,8 @@
+using HardWork.SaverAndLoader;
+using HardWork.SceneLoader;
 using UnityEngine;
 
-namespace HardWork
+namespace HardWork.GameController
 {
     [RequireComponent(typeof(CalculatorBlocks))]
     [RequireComponent(typeof(LevelCompletionConditionChecker))]

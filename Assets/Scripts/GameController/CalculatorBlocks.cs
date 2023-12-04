@@ -1,20 +1,21 @@
 using System;
 using System.Collections;
+using HardWork.Block;
 using UnityEngine;
 
-namespace HardWork
+namespace HardWork.GameController
 {
     public class CalculatorBlocks : MonoBehaviour
     {
         [SerializeField] private SectionOfBlocks[] _allSections;
 
-        private Block[] _freeBlocks;
+        private BlockMain[] _freeBlocks;
         private int _allBlocksInSections;
         private int _numberUnloadBlocks;
         private int _allBlocks;
         private int _numberBlocksOnCar;
 
-        public Action <int> NumberUnloadBlocksIsChanged;
+        public Action<int> NumberUnloadBlocksIsChanged;
 
         public int AllBlocks => _allBlocks;
 

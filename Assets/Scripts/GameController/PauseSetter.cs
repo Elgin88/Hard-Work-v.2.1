@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace HardWork
+namespace HardWork.GameController
 {
     public class PauseSetter : MonoBehaviour
     {

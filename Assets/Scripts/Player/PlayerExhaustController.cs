@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace HardWork
+namespace HardWork.Player
 {
     public class PlayerExhaustController : MonoBehaviour
     {

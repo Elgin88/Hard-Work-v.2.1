@@ -1,17 +1,16 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-namespace HardWork
+public class SoundController : MonoBehaviour
 {
-    public class SoundController : MonoBehaviour
+    public void SoundOn()
     {
-        public void SoundOn()
-        {
-            AudioListener.volume = 1;
-        }
+        AudioListener.volume = 1;
+    }
 
-        public void SoundOff()
-        {
-            AudioListener.volume = 0;
-        }
+    public void SoundOff()
+    {
+        AudioListener.volume = 0;
     }
 }

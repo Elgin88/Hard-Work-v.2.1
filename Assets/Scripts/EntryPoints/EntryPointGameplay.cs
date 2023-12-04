@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace HardWork
+namespace HardWork.EntryPoints
 {
     public class EntryPointGameplay : MonoBehaviour
     {

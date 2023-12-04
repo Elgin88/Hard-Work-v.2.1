@@ -1,6 +1,8 @@
+using HardWork.Player;
+using HardWork.SceneLoader;
 using UnityEngine;
 
-namespace HardWork
+namespace HardWork.SaverAndLoader
 {
     public class Saver : MonoBehaviour
     {

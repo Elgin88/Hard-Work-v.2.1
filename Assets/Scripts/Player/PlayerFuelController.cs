@@ -1,8 +1,9 @@
 using System;
 using System.Collections;
+using HardWork.Garage;
 using UnityEngine;
 
-namespace HardWork
+namespace HardWork.Player
 {
     public class PlayerFuelController : MonoBehaviour
     {
@@ -10,7 +11,7 @@ namespace HardWork
         [SerializeField] private float _deltaFuel;
         [SerializeField] private PlayerMoney _playerMoney;
         [SerializeField] private PlayerSpeedSetter _speedSetter;
-        [SerializeField] private Garage _garage;
+        [SerializeField] private GarageMain _garage;
 
         private Coroutine _burnFuel;
         private float _currentFuel;

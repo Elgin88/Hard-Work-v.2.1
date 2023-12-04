@@ -1,6 +1,7 @@
+using HardWork.Player;
 using UnityEngine;
 
-namespace HardWork
+namespace HardWork.Education
 {
     public class BarrelIndicatorEducation : MonoBehaviour
     {

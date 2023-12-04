@@ -1,8 +1,6 @@
-using System.Collections;
 using UnityEngine;
-using HardWork;
 
-namespace HardWork
+namespace HardWork.GameController
 {
     public class SoundOffWhenMinimizingGame : MonoBehaviour
     {

@@ -1,11 +1,13 @@
 using System.Collections;
+using HardWork.Player;
 using UnityEngine;
 
-namespace HardWork
+namespace HardWork.Camera
 {
     public class Camera : MonoBehaviour
     {
-        private PlayerMover _player;
+        [SerializeField] private PlayerMover _playerMover;
+
         private Coroutine _moveWork = null;
         private float _deltaY = 10;
         private float _deltaZ = -9;
@@ -19,16 +21,19 @@ namespace HardWork
 
         private void Start()
         {
-            _player = FindObjectOfType<PlayerMover>();
-
-            _currentCameraPositionX = _player.transform.position.x;
-            _currentCameraPositionY = _player.transform.position.y + _deltaY;
-            _currentCameraPositionZ = _player.transform.position.z + _deltaZ;
+            _currentCameraPositionX = _playerMover.transform.position.x;
+            _currentCameraPositionY = _playerMover.transform.position.y + _deltaY;
+            _currentCameraPositionZ = _playerMover.transform.position.z + _deltaZ;
 
             transform.rotation = new Quaternion(_deltaRotationX, transform.rotation.y, transform.rotation.z, transform.rotation.w);
             transform.position = new Vector3(_currentCameraPositionX, _currentCameraPositionY, _currentCameraPositionZ);
 
             StartCoroutineMove();
+        }
+
+        private void OnDisable()
+        {
+            StopCoroutineMove();
         }
 
         public void StartCoroutineMove()
@@ -52,9 +57,9 @@ namespace HardWork
         {
             while (true)
             {
-                _currentCameraPositionX = Mathf.MoveTowards(_currentCameraPositionX, _player.transform.position.x, _speedChangeX * Time.deltaTime);
+                _currentCameraPositionX = Mathf.MoveTowards(_currentCameraPositionX, _playerMover.transform.position.x, _speedChangeX * Time.deltaTime);
 
-                _currentCameraPositionZ = Mathf.MoveTowards(_currentCameraPositionZ, _player.transform.position.z + _deltaZ, _speedChangeZ * Time.deltaTime);
+                _currentCameraPositionZ = Mathf.MoveTowards(_currentCameraPositionZ, _playerMover.transform.position.z + _deltaZ, _speedChangeZ * Time.deltaTime);
 
                 transform.position = new Vector3(_currentCameraPositionX, _currentCameraPositionY, _currentCameraPositionZ);
 

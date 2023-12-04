@@ -1,8 +1,9 @@
+using HardWork.SceneLoader;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-namespace HardWork
+namespace HardWork.Education
 {
     public class AddFuelIndicatorEducation : MonoBehaviour
     {

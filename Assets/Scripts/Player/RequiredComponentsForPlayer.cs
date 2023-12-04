@@ -1,6 +1,9 @@
+using HardWork.Empty;
+using HardWork.Garage;
+using HardWork.SaverAndLoader;
 using UnityEngine;
 
-namespace HardWork
+namespace HardWork.Player
 {
     [RequireComponent(typeof(PlayerMover))]
     [RequireComponent(typeof(PlayerFuelController))]
@@ -13,7 +16,7 @@ namespace HardWork
 
     public class RequiredComponentsForPlayer : MonoBehaviour
     {
-        [SerializeField] private Garage _garage;
+        [SerializeField] private GarageMain _garage;
         [SerializeField] private CollectorPoint _collectorPoint;
         [SerializeField] private FixedJoystick _fixedJoystick;
         [SerializeField] private Loader _loader;
@@ -22,7 +25,7 @@ namespace HardWork
 
         public FixedJoystick FixedJoystick => _fixedJoystick;
 
-        public Garage Garage => _garage;
+        public GarageMain Garage => _garage;
 
         public Loader Loader => _loader;
     }

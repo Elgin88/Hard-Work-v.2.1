@@ -1,7 +1,8 @@
 using System.Collections;
+using HardWork.UI;
 using UnityEngine;
 
-namespace HardWork
+namespace HardWork.Education
 {
     public class JoystickIndicatorEducation : MonoBehaviour
     {

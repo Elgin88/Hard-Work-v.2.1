@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-namespace HardWork
+namespace HardWork.Player
 {
     public class PlayerSpeedSetter : MonoBehaviour
     {

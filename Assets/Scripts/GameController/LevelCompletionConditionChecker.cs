@@ -1,6 +1,7 @@
+using HardWork.UI;
 using UnityEngine;
 
-namespace HardWork
+namespace HardWork.GameController
 {
     public class LevelCompletionConditionChecker : MonoBehaviour
     {
@@ -8,14 +9,13 @@ namespace HardWork
         [SerializeField] private ReloadButton _reloadButton;
         [SerializeField] private EndLevelPanel _endLevelPanel;
         [SerializeField] private CalculatorBlocks _calculatorBlocks;
-        [SerializeField] private ChooserMedals _chooserMedals;
 
         private int _maxProcent = 95;
         private int _middleProcent = 80;
         private int _minProcent = 60;
         private int _allBlocks;
         private int _middleNumberBlocks;
-        private int _minNumberBlocks => _allBlocks * _minProcent / 100;
+        private int _minNumberBlocks;
 
         public int MaxNumberBlocks => _allBlocks;
 
@@ -31,6 +31,7 @@ namespace HardWork
 
         private void OnEnable()
         {
+            _minNumberBlocks = _allBlocks * _minProcent / 100;
             _calculatorBlocks.NumberUnloadBlocksIsChanged += OnChangedNumberUnloadBlocks;
         }
 

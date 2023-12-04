@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-namespace HardWork
+namespace HardWork.Player
 {
     public class PlayerMover : MonoBehaviour
     {
@@ -55,13 +55,12 @@ namespace HardWork
             {
                 if (_playerRequreComponents.FixedJoystick != null)
                 {
-                    if (_playerRequreComponents.FixedJoystick.Horizontal != 0 ||
-                        _playerRequreComponents.FixedJoystick.Vertical != 0)
+                    if (_playerRequreComponents.FixedJoystick.Horizontal != 0 || _playerRequreComponents.FixedJoystick.Vertical != 0)
                     {
-                        _isJoystickTurn = true;
+                        transform.position = new Vector3(transform.position.x + _playerRequreComponents.FixedJoystick.Horizontal * Time.deltaTime * _playerSpeedSetter.CurrentSpeed, transform.position.y, transform.position.z + _playerRequreComponents.FixedJoystick.Vertical * Time.deltaTime * _playerSpeedSetter.CurrentSpeed);
                         _currentPlayerDirection = Quaternion.LookRotation(new Vector3(_playerRequreComponents.FixedJoystick.Horizontal, 0, _playerRequreComponents.FixedJoystick.Vertical));
                         transform.rotation = _currentPlayerDirection;
-                        transform.position = new Vector3(transform.position.x + _playerRequreComponents.FixedJoystick.Horizontal * Time.deltaTime * _playerSpeedSetter.CurrentSpeed, transform.position.y, transform.position.z + _playerRequreComponents.FixedJoystick.Vertical * Time.deltaTime * _playerSpeedSetter.CurrentSpeed);
+                        _isJoystickTurn = true;
 
                         _playerSoundController.StopMinEngineSound();
                         _playerSoundController.PlayMaxEngineSound();

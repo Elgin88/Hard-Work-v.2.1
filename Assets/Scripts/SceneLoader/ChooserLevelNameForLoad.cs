@@ -1,7 +1,8 @@
+using HardWork.SaverAndLoader;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace HardWork
+namespace HardWork.SceneLoader
 {
     public class ChooserLevelNameForLoad : MonoBehaviour
     {

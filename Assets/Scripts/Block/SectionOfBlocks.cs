@@ -1,11 +1,12 @@
 using System.Collections;
+using HardWork.Player;
 using UnityEngine;
 
-namespace HardWork
+namespace HardWork.Block
 {
     public class SectionOfBlocks : MonoBehaviour
     {
-        [SerializeField] private Block[] _blocks;
+        [SerializeField] private BlockMain[] _blocks;
         [SerializeField] private PlayerSoundController _playerSoundController;
 
         private Coroutine _activeBlocks;
@@ -44,7 +45,7 @@ namespace HardWork
         {
             while (true)
             {
-                foreach (Block block in _blocks)
+                foreach (BlockMain block in _blocks)
                 {
                     if (block != null)
                     {

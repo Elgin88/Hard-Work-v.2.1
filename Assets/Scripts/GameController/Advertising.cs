@@ -1,7 +1,10 @@
+using HardWork.Player;
+using HardWork.SaverAndLoader;
+using HardWork.SceneLoader;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace HardWork
+namespace HardWork.GameController
 {
     public class Advertising : MonoBehaviour
     {

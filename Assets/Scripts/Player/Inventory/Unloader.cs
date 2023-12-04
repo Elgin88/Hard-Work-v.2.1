@@ -1,7 +1,8 @@
 using System.Collections;
+using HardWork.Block;
 using UnityEngine;
 
-namespace HardWork
+namespace HardWork.Player
 {
     public class Unloader : MonoBehaviour
     {
@@ -21,7 +22,7 @@ namespace HardWork
         {
             if (_unload == null)
             {
-                _unload = StartCoroutine(Unload());
+                _unload = StartCoroutine(BlockMoveToCollector());
             }
         }
 
@@ -34,15 +35,15 @@ namespace HardWork
             }
         }
 
-        private IEnumerator Unload()
+        private IEnumerator BlockMoveToCollector()
         {
             while (true)
             {
-                Block lastAddBlock = _inventory.GetLastAddBlock();
+                BlockMain lastAddBlock = _inventory.GetLastAddBlock();
 
-                if (lastAddBlock != null & _inventory.IsMoveBlocksToPlayer == false)
+                if (lastAddBlock != null & _inventory.CountOfBlocksMovingToPlayer == 0)
                 {
-                    lastAddBlock.BlockMover.StartMoveToCollector(_playerRequreComponents.CollectorPoint.transform.position);
+                    lastAddBlock.BlockMover.StartMoveToCollector();
                     lastAddBlock.Point.RemoveBlock();
 
                     if (_inventory.GetNumberBloksInTopLine() == 0 & _inventory.GetCountOfLines() > 1)
