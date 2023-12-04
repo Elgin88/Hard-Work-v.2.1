@@ -1,4 +1,3 @@
-using HardWork.Garage;
 using UnityEngine;
 
 namespace HardWork.Player
@@ -12,7 +11,6 @@ namespace HardWork.Player
         private PlayerPowerController _powerController;
         private PlayerFuelController _fuelController;
         private LineOfPointsCreater _lineOfPointsCreater;
-        private GarageMain _garage;
 
         private void Start()
         {

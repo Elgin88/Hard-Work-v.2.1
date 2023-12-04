@@ -11,12 +11,10 @@ namespace HardWork.UI
         [SerializeField] private RequireComponentsForUI _requireComponentsForUI;
 
         private Scene _currentScene;
-        private PlayerFuelController _playerFuelController;
 
         private void OnEnable()
         {
             _currentScene = SceneManager.GetActiveScene();
-            _playerFuelController = _requireComponentsForUI.PlayerFuelController;
             _button.onClick.AddListener(ReloadScene);
         }
 

@@ -17,7 +17,6 @@ namespace HardWork.Camera
         private float _currentCameraPositionX;
         private float _currentCameraPositionY;
         private float _currentCameraPositionZ;
-        private float _currentCameraRotationX;
 
         private void Start()
         {

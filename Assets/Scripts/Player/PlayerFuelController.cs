@@ -57,6 +57,11 @@ namespace HardWork.Player
             _currentFuel = _maxFuel;
         }
 
+        public void InitActionChangeFuel()
+        {
+            IsFuelChanged?.Invoke(_currentFuel, _maxFuel);
+        }
+
         private IEnumerator LessFuel()
         {
             while (true)
@@ -89,20 +94,6 @@ namespace HardWork.Player
             {
                 _burnFuel = StartCoroutine(LessFuel());
             }
-        }
-
-        private void StopBurnFuel()
-        {
-            if (_burnFuel != null)
-            {
-                StopCoroutine(_burnFuel);
-                _burnFuel = null;
-            }
-        }
-
-        internal void InitActionChangeFuel()
-        {
-            IsFuelChanged?.Invoke(_currentFuel, _maxFuel);
         }
     }
 }

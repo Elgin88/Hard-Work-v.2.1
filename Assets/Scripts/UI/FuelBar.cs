@@ -65,14 +65,5 @@ namespace HardWork.UI
                 _changeSliderValue = StartCoroutine(ChangeSliderValue());
             }
         }
-
-        private void StopChangeSliderValue()
-        {
-            if (_changeSliderValue != null)
-            {
-                StopCoroutine(_changeSliderValue);
-                _changeSliderValue = null;
-            }
-        }
     }
 }

@@ -10,7 +10,6 @@ namespace HardWork.Garage
         [SerializeField] private float _duration;
         [SerializeField] private Image _image;
 
-        private Color _currentColor;
         private Coroutine _changeColor;
 
         public void StartChangeColor()

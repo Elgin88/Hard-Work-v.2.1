@@ -75,14 +75,5 @@ namespace HardWork.UI
                 _changeValue = StartCoroutine(ChangeValue());
             }
         }
-
-        private void StopChangeValue()
-        {
-            if (_changeValue != null)
-            {
-                StopCoroutine(_changeValue);
-                _changeValue = null;
-            }
-        }
     }
 }

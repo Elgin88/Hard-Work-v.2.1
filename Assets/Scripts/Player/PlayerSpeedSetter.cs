@@ -106,14 +106,5 @@ namespace HardWork.Player
                 _changeSpeedWork = StartCoroutine(ChangeSpeed());
             }
         }
-
-        private void StopCoroutineChangeSpeed()
-        {
-            if (_changeSpeedWork != null)
-            {
-                StopCoroutine(_changeSpeedWork);
-                _changeSpeedWork = null;
-            }
-        }
     }
 }

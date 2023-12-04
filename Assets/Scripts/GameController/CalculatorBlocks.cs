@@ -9,11 +9,9 @@ namespace HardWork.GameController
     {
         [SerializeField] private SectionOfBlocks[] _allSections;
 
-        private BlockMain[] _freeBlocks;
         private int _allBlocksInSections;
         private int _numberUnloadBlocks;
         private int _allBlocks;
-        private int _numberBlocksOnCar;
 
         public Action<int> NumberUnloadBlocksIsChanged;
 

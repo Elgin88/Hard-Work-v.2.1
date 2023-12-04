@@ -14,7 +14,6 @@ namespace HardWork.Block
 
         private int _cost = 1;
         private Point _point;
-        private bool _playerIsUnload;
         private Coroutine _timerPhysicsOff;
         private WaitForSeconds _phisicsOffTime = new WaitForSeconds(5);
 

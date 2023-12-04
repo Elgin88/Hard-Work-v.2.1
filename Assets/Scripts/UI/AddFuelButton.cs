@@ -1,4 +1,5 @@
 using HardWork.Education;
+using HardWork.SceneLoader;
 using HardWork.UI;
 using TMPro;
 using UnityEngine;
@@ -15,7 +16,6 @@ namespace HardWork.Block
         [SerializeField] private RequireComponentsForUI _requireComponentsForUI;
         [SerializeField] private AddFuelIndicatorEducation[] _addFuelIndicatorEducation;
 
-        private string _levelName = "Level1";
         private string _currentSceneName;
 
         private void OnEnable()
@@ -42,7 +42,7 @@ namespace HardWork.Block
 
             _requireComponentsForUI.GarageSoundController.PlayFuelSound();
 
-            if (_currentSceneName == _levelName)
+            if (_currentSceneName == ScenesNames.Level1Name)
             {
                 foreach (var indicator in _addFuelIndicatorEducation)
                 {
@@ -54,12 +54,9 @@ namespace HardWork.Block
             {
                 foreach (var indicator in _requireComponentsForUI.JoystickIndicators)
                 {
-                    if (indicator != null)
+                    if (indicator != null & _currentSceneName == ScenesNames.Level1Name)
                     {
-                        if (_currentSceneName == _levelName)
-                        {
-                            indicator.gameObject.SetActive(true);
-                        }
+                        indicator.gameObject.SetActive(true);
                     }
                 }
             }

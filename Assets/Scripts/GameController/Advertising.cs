@@ -61,10 +61,6 @@ namespace HardWork.GameController
         {
         }
 
-        private void OnOfflineCallback()
-        {
-        }
-
         private void OnRewardedCallback()
         {
         }

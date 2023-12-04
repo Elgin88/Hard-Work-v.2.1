@@ -111,14 +111,5 @@ namespace HardWork.UI
                 _flash = StartCoroutine(Flash());
             }
         }
-
-        private void StopFlash()
-        {
-            if (_flash != null)
-            {
-                StopCoroutine(_flash);
-                _flash = null;
-            }
-        }
     }
 }
