@@ -10,8 +10,8 @@ namespace HardWork.UI
         [SerializeField] private Button _button;
         [SerializeField] private AudioSource _moneySound;
 
-        private WaitForSeconds _delayPressButton = new WaitForSeconds(1.5f);
         private WaitForSeconds _delayShowVideoAd = new WaitForSeconds(0.5f);
+        private WaitForSeconds _timeToInteractableButton = new WaitForSeconds(3);
 
         private void Start()
         {
@@ -29,15 +29,8 @@ namespace HardWork.UI
 
             _button.interactable = false;
 
-            StartCoroutine(DelayForDoubleClick());
             StartCoroutine(ShowVideoAd());
-        }
-
-        private IEnumerator DelayForDoubleClick()
-        {
-            yield return _delayPressButton;
-
-            _button.interactable = true;
+            StartCoroutine(InteractableButton());
         }
 
         private IEnumerator ShowVideoAd()
@@ -45,6 +38,13 @@ namespace HardWork.UI
             yield return _delayShowVideoAd;
 
             _requireComponentsForUI.Advertising.ShowVideoAd();
+        }
+
+        private IEnumerator InteractableButton()
+        {
+            yield return _timeToInteractableButton;
+
+            _button.interactable = true;
         }
     }
 }

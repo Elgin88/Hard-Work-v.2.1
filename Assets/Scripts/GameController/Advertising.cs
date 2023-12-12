@@ -3,6 +3,7 @@ using HardWork.SaverAndLoader;
 using HardWork.SceneLoader;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace HardWork.GameController
 {
@@ -11,6 +12,7 @@ namespace HardWork.GameController
         [SerializeField] private PauseSetter _pauserGame;
         [SerializeField] private PlayerMoney _playerMoney;
         [SerializeField] private Saver _saver;
+        [SerializeField] private Button _buttonForVideoAdd;
 
         private int _moneyCountForVideoAd = 750;
 
@@ -45,6 +47,7 @@ namespace HardWork.GameController
             _pauserGame.PauseOffInBrauser();
             _playerMoney.AddMoney(_moneyCountForVideoAd);
             _saver.SaveMoney();
+            _buttonForVideoAdd.interactable = true;
         }
 
         private void OnCloseCallbackInterstitialAd(bool close)

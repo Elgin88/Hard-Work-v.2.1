@@ -22553,7 +22553,7 @@ PrefabInstance:
     - target: {fileID: 3004259275157797504, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
       propertyPath: _soundController
       value: 
-      objectReference: {fileID: 1387426529}
+      objectReference: {fileID: 1387426539}
     - target: {fileID: 3004259275157797504, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
       propertyPath: _calculatorBlocks
       value: 
@@ -22649,7 +22649,7 @@ PrefabInstance:
     - target: {fileID: 6390884785094593398, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
       propertyPath: _soundController
       value: 
-      objectReference: {fileID: 1387426529}
+      objectReference: {fileID: 0}
     - target: {fileID: 6390884785094593398, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
       propertyPath: _calculatorBlocks
       value: 
@@ -22713,6 +22713,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1758577149519813682, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
   m_PrefabInstance: {fileID: 678367335}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &678367338 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8222775292269247728, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
+  m_PrefabInstance: {fileID: 678367335}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &678367339 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3004259275157797504, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
@@ -49355,7 +49366,6 @@ GameObject:
   - component: {fileID: 1387426524}
   - component: {fileID: 1387426523}
   - component: {fileID: 1387426522}
-  - component: {fileID: 1387426529}
   - component: {fileID: 1387426533}
   - component: {fileID: 1387426532}
   - component: {fileID: 1387426520}
@@ -49364,6 +49374,7 @@ GameObject:
   - component: {fileID: 1387426536}
   - component: {fileID: 1387426537}
   - component: {fileID: 1387426538}
+  - component: {fileID: 1387426539}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -49497,7 +49508,6 @@ MonoBehaviour:
   _reloadButton: {fileID: 940153007}
   _endLevelPanel: {fileID: 43932435}
   _calculatorBlocks: {fileID: 1387426524}
-  _chooserMedals: {fileID: 1387426522}
 --- !u!114 &1387426524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49570,18 +49580,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1387426529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1387426519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 819df617b8e7e41c199b0dc57c9e182b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1387426532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49609,7 +49607,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pauserGame: {fileID: 1387426534}
-  _soundController: {fileID: 1387426529}
+  _soundController: {fileID: 1387426539}
 --- !u!114 &1387426534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49637,6 +49635,7 @@ MonoBehaviour:
   _pauserGame: {fileID: 1387426534}
   _playerMoney: {fileID: 2716068639730957568}
   _saver: {fileID: 1387426532}
+  _buttonForVideoAdd: {fileID: 678367338}
 --- !u!114 &1387426536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49675,6 +49674,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _saver: {fileID: 1387426532}
+--- !u!114 &1387426539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387426519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffade932ae78f4e73829fdd38305eef3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1395558631
 GameObject:
   m_ObjectHideFlags: 0
