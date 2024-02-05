@@ -31,6 +31,7 @@ namespace HardWork.GameController
 
         private void OnEnable()
         {
+            _minNumberBlocks = _allBlocks * _minProcent / 100;
             _calculatorBlocks.NumberUnloadBlocksIsChanged += OnChangedNumberUnloadBlocks;
         }
 
@@ -41,10 +42,6 @@ namespace HardWork.GameController
 
         private void OnChangedNumberUnloadBlocks(int unloadBlocks)
         {
-            _allBlocks = _calculatorBlocks.AllBlocks;
-
-            _minNumberBlocks = _allBlocks * _minProcent / 100;
-
             if (_allBlocks == 0)
             {
                 _allBlocks = _calculatorBlocks.AllBlocks;
