@@ -6396,7 +6396,7 @@ PrefabInstance:
     - target: {fileID: 3004259275157797504, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
       propertyPath: _soundController
       value: 
-      objectReference: {fileID: 1852628447}
+      objectReference: {fileID: 1852628435}
     - target: {fileID: 3004259275157797504, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
       propertyPath: _calculatorBlocks
       value: 
@@ -6920,7 +6920,7 @@ PrefabInstance:
     - target: {fileID: 6390884785094593398, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
       propertyPath: _soundController
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1852628435}
     - target: {fileID: 6390884785094593398, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
       propertyPath: _calculatorBlocks
       value: 
@@ -7149,17 +7149,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1758577149519813682, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
   m_PrefabInstance: {fileID: 827877611}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &827877616 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8222775292269247728, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
-  m_PrefabInstance: {fileID: 827877611}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &827877624 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3004259275157797504, guid: 842d8c8e16b474496b77c9bb32a371c2, type: 3}
@@ -14278,6 +14267,7 @@ GameObject:
   - component: {fileID: 1852628428}
   - component: {fileID: 1852628427}
   - component: {fileID: 1852628426}
+  - component: {fileID: 1852628435}
   - component: {fileID: 1852628436}
   - component: {fileID: 1852628438}
   - component: {fileID: 1852628440}
@@ -14464,6 +14454,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1852628435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852628423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 819df617b8e7e41c199b0dc57c9e182b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1852628436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14477,7 +14479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pauserGame: {fileID: 1852628440}
-  _soundController: {fileID: 1852628447}
+  _soundController: {fileID: 1852628435}
 --- !u!114 &1852628438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14519,7 +14521,6 @@ MonoBehaviour:
   _pauserGame: {fileID: 1852628440}
   _playerMoney: {fileID: 1361587982}
   _saver: {fileID: 1852628438}
-  _buttonForVideoAdd: {fileID: 827877616}
 --- !u!114 &1852628444
 MonoBehaviour:
   m_ObjectHideFlags: 0
